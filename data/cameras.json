@@ -12,8 +12,8 @@
     "install_date": "2026-07-01",
     "model": "IP Wildcam 4K TrailCam",
     "status": "active",
-    "desc": "문금리 능선 진입로 멧돼지미끼틀 및 유인제 비교 실험구",
-    "bait_type": "멧돼지미끼틀 + 유인제배합",
+    "desc": "문금리 능선 진입로 멧돼지미끼틀 및 유인제배합 고형사료 실험구",
+    "bait_type": "멧돼지미끼틀 + 유인제배합 고형사료",
     "total_clips": 39,
     "wildboar_confirmed": 3,
     "deer_ignored": 0
@@ -31,8 +31,8 @@
     "install_date": "2026-07-01",
     "model": "IP Wildcam 4K TrailCam",
     "status": "active",
-    "desc": "유인제배합 고형사료 집중 반응 지점 (최다 출몰 및 섭취)",
-    "bait_type": "유인제배합 고형사료",
+    "desc": "문금리 집중 출몰구역 멧돼지미끼틀 및 유인제배합 고형사료 실험구",
+    "bait_type": "멧돼지미끼틀 + 유인제배합 고형사료",
     "total_clips": 403,
     "wildboar_confirmed": 15,
     "deer_ignored": 2
@@ -50,8 +50,8 @@
     "install_date": "2026-07-01",
     "model": "IP Wildcam 4K TrailCam",
     "status": "active",
-    "desc": "멧돼지미끼틀 매몰지 및 울타리 설치구역",
-    "bait_type": "멧돼지미끼틀",
+    "desc": "문금리 산135 멧돼지미끼틀 및 유인제배합 고형사료 실험구",
+    "bait_type": "멧돼지미끼틀 + 유인제배합 고형사료",
     "total_clips": 181,
     "wildboar_confirmed": 25,
     "deer_ignored": 0
@@ -69,8 +69,8 @@
     "install_date": "2026-07-22",
     "model": "IP Wildcam 4K TrailCam",
     "status": "active",
-    "desc": "경상북도 경산시 하양읍 남하리 산 127 일원 멧돼지 미끼백신 모니터링",
-    "bait_type": "멧돼지미끼틀 + 유인제배합",
+    "desc": "경산시 하양읍 남하리 산 127 멧돼지미끼틀 및 유인제배합 고형사료 모니터링",
+    "bait_type": "멧돼지미끼틀 + 유인제배합 고형사료",
     "total_clips": 42,
     "wildboar_confirmed": 2,
     "deer_ignored": 0

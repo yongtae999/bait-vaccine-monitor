@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           🌿 ${cam.desc}
         </div>
         <div class="cam-stats-row">
-          <span>미끼: <b>${cam.bait_type.split(' ')[0]}</b></span>
+          <span>미끼: <b>미끼틀+고형사료</b></span>
           <span style="color: ${isStandby ? '#94a3b8' : '#f43f5e'}; font-weight: bold;">
             🐗 멧돼지 ${cam.wildboar_confirmed}건
           </span>
