@@ -59,8 +59,10 @@ class VideoManager {
     // 3. Filter by Category or Date Tab
     if (this.activeFilter === 'all') {
       return list;
-    } else if (this.activeFilter === 'confirmed') {
-      return list.filter(v => v.category !== '제외 (비대상 동물)');
+    } else if (this.activeFilter === 'boar') {
+      return list.filter(v => v.category === '멧돼지확정' || v.category === '멧돼지 선별영상');
+    } else if (this.activeFilter === 'install') {
+      return list.filter(v => v.category && v.category.includes('설치'));
     } else if (this.activeFilter === 'ignored') {
       return list.filter(v => v.category && v.category.includes('제외'));
     } else {
@@ -82,7 +84,8 @@ class VideoManager {
     }
 
     const dates = Array.from(new Set(baseList.map(v => v.recorded_date))).sort().reverse();
-    const boarCount = baseList.filter(v => v.category !== '제외 (비대상 동물)').length;
+    const boarCount = baseList.filter(v => v.category === '멧돼지확정' || v.category === '멧돼지 선별영상').length;
+    const installCount = baseList.filter(v => v.category && v.category.includes('설치')).length;
     const deerCount = baseList.filter(v => v.category && v.category.includes('제외')).length;
 
     let filterChipsHtml = '';
@@ -98,7 +101,8 @@ class VideoManager {
     container.innerHTML = `
       ${filterChipsHtml}
       <button class="tab-pill ${this.activeFilter === 'all' && !this.activeCameraId ? 'active' : ''}" data-filter="all">전체 (${baseList.length})</button>
-      <button class="tab-pill ${this.activeFilter === 'confirmed' ? 'active' : ''}" data-filter="confirmed">🐗 멧돼지 (${boarCount})</button>
+      ${boarCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'boar' ? 'active' : ''}" data-filter="boar">🐗 멧돼지 (${boarCount})</button>` : ''}
+      ${installCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'install' ? 'active' : ''}" data-filter="install">🛠️ 설치점검 (${installCount})</button>` : ''}
       ${deerCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'ignored' ? 'active' : ''}" data-filter="ignored">🦌 고라니 (${deerCount})</button>` : ''}
     `;
 
@@ -132,7 +136,7 @@ class VideoManager {
       'cam-gj-59-3': '공주 2호기 (59-3)',
       'cam-gj-san135': '공주 3호기 (산135)',
       'cam-gj-142-5': '공주 1호기 (142-5)',
-      'cam-dg-1': '대구 4호기 (달성)'
+      'cam-dg-1': '대구 4호기 (달성 비슬산)'
     };
     return names[camId] || camId;
   }
@@ -164,18 +168,26 @@ class VideoManager {
       card.className = 'video-card-item';
 
       const isIgnored = vid.category && vid.category.includes('제외');
+      const isInstall = vid.category && vid.category.includes('설치');
       const isNight = vid.is_night;
       
       let tagClass = isNight ? 'eat' : 'approach';
-      if (isIgnored) tagClass = 'pass';
+      let iconClass = 'fa-play';
+      if (isIgnored) {
+        tagClass = 'pass';
+        iconClass = 'fa-paw';
+      } else if (isInstall) {
+        tagClass = 'approach';
+        iconClass = 'fa-wrench';
+      }
 
       card.innerHTML = `
-        <div class="video-thumb-wrap" style="${isNight ? 'color: var(--hud-cyan);' : 'color: var(--hud-amber);'}">
-          <i class="fa-solid ${isIgnored ? 'fa-paw' : 'fa-play'}"></i>
+        <div class="video-thumb-wrap" style="${isInstall ? 'color: var(--accent-emerald);' : (isNight ? 'color: var(--hud-cyan);' : 'color: var(--hud-amber);')}">
+          <i class="fa-solid ${iconClass}"></i>
         </div>
         <div class="video-info">
           <div class="video-title">${vid.site_name}</div>
-          <div class="video-sub">${vid.recorded_date} ${vid.recorded_time} · ${vid.animal_type ? vid.animal_type.split(' ')[0] : '멧돼지'}</div>
+          <div class="video-sub">${vid.recorded_date} ${vid.recorded_time} · ${vid.animal_type ? vid.animal_type.split(' ')[0] : '영상'}</div>
           <span class="reaction-tag ${tagClass}">${vid.reaction}</span>
         </div>
       `;
