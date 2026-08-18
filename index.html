@@ -54,6 +54,10 @@
         </select>
       </div>
 
+      <button id="btn-open-sync-guide" class="btn-action secondary" title="신규 영상 업데이트 및 폴더 동기화 방법">
+        <i class="fa-solid fa-folder-tree text-cyan"></i> <span>영상 동기화</span>
+      </button>
+
       <a href="assets/templates/미끼백신_활동일지_양식.xlsx" download="국립야생동물질병관리원_미끼백신_활동일지_양식.xlsx" class="btn-action secondary" title="공식 엑셀 활동일지 양식 다운로드">
         <i class="fa-solid fa-file-excel text-emerald"></i> <span>활동일지 양식</span>
       </a>
@@ -78,7 +82,7 @@
       <div class="sidebar-section">
         <div class="section-title">
           <span><i class="fa-solid fa-video"></i> IP 동작감지 카메라 (4개소)</span>
-          <span style="font-size: 0.7rem; color: var(--accent-emerald);">공주 3개소 ON AIR</span>
+          <span style="font-size: 0.7rem; color: var(--accent-emerald);">공주 3개소 설치 운영</span>
         </div>
         <div class="camera-grid" id="camera-cards-container">
           <!-- Populated by app.js -->
@@ -122,7 +126,7 @@
       <div class="map-hud-overlay">
         <div class="top-hud-bar">
           <div class="hud-pill">
-            <i class="fa-solid fa-crosshairs"></i> AI 야생동물 동작감지 실시간 관제 모드
+            <i class="fa-solid fa-camera"></i> AI 동작감지 무인카메라 수집 영상 모니터링
           </div>
         </div>
 
@@ -319,6 +323,47 @@
               </button>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: Video Synchronization Guide & Automated Pipeline -->
+  <div id="sync-modal" class="modal-overlay hidden">
+    <div class="modal-card" style="width: 760px; max-width: 95vw;">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-folder-tree text-cyan"></i>
+          <h3>무인카메라 신규 영상 수집 및 자동 동기화 방법</h3>
+        </div>
+        <button class="modal-close-btn" id="btn-close-sync-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" style="padding: 24px; display: flex; flex-direction: column; gap: 16px; background: #0c121d;">
+        <div style="background: rgba(19, 28, 44, 0.7); border: 1px solid var(--hud-cyan); border-radius: 8px; padding: 16px;">
+          <h4 style="color: var(--hud-cyan); margin-bottom: 8px; font-size: 0.95rem;">
+            <i class="fa-solid fa-circle-info"></i> UBOX IP카메라 영상 수집 특성 안내
+          </h4>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6;">
+            UBOX 및 시중 4G 트레일 카메라는 보안 P2P 앱 전용 프로토콜을 사용하므로, 웹 브라우저에서 직접 실시간 접속하는 대신 
+            <b>SD카드 또는 클라우드에 기록된 동작감지 클립 영상을 주기적으로 수집·분석</b>하여 대시보드에 업로드 및 동기화합니다.
+          </p>
+        </div>
+
+        <div style="background: rgba(6, 9, 14, 0.6); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 16px;">
+          <h4 style="color: #f8fafc; margin-bottom: 12px; font-size: 0.9rem;">
+            <i class="fa-solid fa-list-check text-emerald"></i> 주기적 영상 업데이트 3단계 순서
+          </h4>
+          <ol style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.8; padding-left: 20px;">
+            <li><b>1단계 (영상 저장)</b>: 카메라에서 수거한 영상을 <code style="color: var(--hud-cyan); background: #000; padding: 2px 6px; border-radius: 4px;">E:\0. 2026년\미끼백신관련</code> 또는 하위 날짜별 폴더에 저장합니다.</li>
+            <li><b>2단계 (자동 동기화)</b>: 터미널에서 <code style="color: #fbbf24; background: #000; padding: 2px 6px; border-radius: 4px;">python update_videos.py</code> 명령을 실행합니다.</li>
+            <li><b>3단계 (결과 확인)</b>: 자동으로 날짜·시간·주야간·지점 파싱, 고화질 썸네일 생성 및 대시보드 갤러리에 즉시 반영됩니다.</li>
+          </ol>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 6px;">
+          <button class="btn-action primary" id="btn-close-sync-modal-footer">
+            <i class="fa-solid fa-check"></i> 확인 완료
+          </button>
         </div>
       </div>
     </div>

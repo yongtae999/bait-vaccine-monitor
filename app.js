@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="cam-card-header">
           <span class="cam-name">${cam.name}</span>
           <span class="cam-badge" style="${isStandby ? 'background: rgba(148, 163, 184, 0.2); color: #94a3b8;' : ''}">
-            ${isStandby ? '설치 준비 중' : 'ON AIR'}
+            ${isStandby ? '설치 준비 중' : '설치 운영'}
           </span>
         </div>
         <div class="cam-meta">
@@ -98,6 +98,21 @@ document.addEventListener('DOMContentLoaded', async () => {
       } else {
         document.exitFullscreen().catch(() => {});
       }
+    });
+  }
+
+  // 8. Video Sync Guide Modal
+  const syncBtn = document.getElementById('btn-open-sync-guide');
+  const syncModal = document.getElementById('sync-modal');
+  const syncCloseBtn = document.getElementById('btn-close-sync-modal');
+  const syncCloseFooter = document.getElementById('btn-close-sync-modal-footer');
+
+  if (syncBtn && syncModal) {
+    syncBtn.addEventListener('click', () => syncModal.classList.remove('hidden'));
+    if (syncCloseBtn) syncCloseBtn.addEventListener('click', () => syncModal.classList.add('hidden'));
+    if (syncCloseFooter) syncCloseFooter.addEventListener('click', () => syncModal.classList.add('hidden'));
+    syncModal.addEventListener('click', (e) => {
+      if (e.target === syncModal) syncModal.classList.add('hidden');
     });
   }
 
