@@ -77,7 +77,7 @@ class AnalyticsManager {
     if (ctx2 && cameras && cameras.length) {
       if (this.cameraChart) this.cameraChart.destroy();
 
-      const labels = cameras.map(c => c.name.replace(' (문금리 142-5)', '').replace(' (문금리 59-3)', '').replace(' (문금리 산135 공주먹이)', '').replace(' (달성 비슬산 관제구역)', ''));
+      const labels = cameras.map(c => c.name.replace(' (문금리 142-5)', '').replace(' (문금리 59-3)', '').replace(' (문금리 산135 공주먹이)', '').replace(' (남하리 산 127)', '').replace(' (달성 비슬산 관제구역)', ''));
       const dataVals = cameras.map(c => c.wildboar_confirmed);
       const colors = ['#fbbf24', '#38bdf8', '#10b981', '#a855f7'];
 
@@ -100,7 +100,7 @@ class AnalyticsManager {
             legend: { display: false },
             title: {
               display: true,
-              text: '카메라 지점별 선별 영상 분포 (공주 3개소 + 대구 1개소)',
+              text: '카메라 지점별 선별 영상 분포 (공주 3개소 + 경산 1개소)',
               color: '#f8fafc',
               font: { size: 11, weight: 'bold' }
             }

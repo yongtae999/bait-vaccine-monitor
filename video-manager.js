@@ -20,7 +20,7 @@ class VideoManager {
   }
 
   setRegionFilter(regionKey) {
-    this.activeRegion = (regionKey === 'daegu') ? 'daegu' : 'gongju';
+    this.activeRegion = (regionKey === 'gyeongsan' || regionKey === 'daegu') ? 'gyeongsan' : 'gongju';
     this.activeCameraId = null; // reset specific camera filter
     this.activeFilter = 'all'; // reset date/type filter
     this.renderFilterTabs();
@@ -32,16 +32,20 @@ class VideoManager {
     this.activeFilter = 'all';
 
     // Auto synchronize region with camera
-    if (cameraId && (cameraId.includes('dg') || cameraId.includes('daegu'))) {
-      this.activeRegion = 'daegu';
+    if (cameraId && (cameraId.includes('dg') || cameraId.includes('gs') || cameraId.includes('gyeongsan') || cameraId.includes('daegu'))) {
+      this.activeRegion = 'gyeongsan';
     } else {
       this.activeRegion = 'gongju';
     }
 
     // Sync header dropdown if exists
     const regionSelector = document.getElementById('region-selector');
-    if (regionSelector && regionSelector.value !== this.activeRegion) {
-      regionSelector.value = this.activeRegion;
+    if (regionSelector) {
+      if (this.activeRegion === 'gyeongsan') {
+        regionSelector.value = regionSelector.querySelector('option[value="gyeongsan"]') ? 'gyeongsan' : 'daegu';
+      } else {
+        regionSelector.value = 'gongju';
+      }
     }
 
     this.renderFilterTabs();
@@ -60,15 +64,15 @@ class VideoManager {
 
     // 1. If a specific camera is clicked, filter by that camera directly
     if (this.activeCameraId) {
-      if (this.activeCameraId.includes('dg') || this.activeCameraId.includes('daegu')) {
-        list = list.filter(v => v.camera_id === this.activeCameraId || v.region === '대구');
+      if (this.activeCameraId.includes('dg') || this.activeCameraId.includes('gs') || this.activeCameraId.includes('gyeongsan') || this.activeCameraId.includes('daegu')) {
+        list = list.filter(v => v.camera_id === this.activeCameraId || v.region === '경산' || v.region === '대구');
       } else {
         list = list.filter(v => v.camera_id === this.activeCameraId);
       }
     } else {
       // 2. Otherwise filter by region
-      if (this.activeRegion === 'daegu') {
-        list = list.filter(v => v.region === '대구' || (v.camera_id && v.camera_id.includes('dg')));
+      if (this.activeRegion === 'gyeongsan' || this.activeRegion === 'daegu') {
+        list = list.filter(v => v.region === '경산' || v.region === '대구' || (v.camera_id && (v.camera_id.includes('dg') || v.camera_id.includes('gs'))));
       } else {
         list = list.filter(v => v.region === '공주' || !v.region || (v.camera_id && v.camera_id.includes('gj')));
       }
@@ -95,14 +99,14 @@ class VideoManager {
     // Base list for current region/camera
     let baseList = this.videos;
     if (this.activeCameraId) {
-      if (this.activeCameraId.includes('dg')) {
-        baseList = baseList.filter(v => v.camera_id === this.activeCameraId || v.region === '대구');
+      if (this.activeCameraId.includes('dg') || this.activeCameraId.includes('gs')) {
+        baseList = baseList.filter(v => v.camera_id === this.activeCameraId || v.region === '경산' || v.region === '대구');
       } else {
         baseList = baseList.filter(v => v.camera_id === this.activeCameraId);
       }
     } else {
-      if (this.activeRegion === 'daegu') {
-        baseList = baseList.filter(v => v.region === '대구' || (v.camera_id && v.camera_id.includes('dg')));
+      if (this.activeRegion === 'gyeongsan' || this.activeRegion === 'daegu') {
+        baseList = baseList.filter(v => v.region === '경산' || v.region === '대구' || (v.camera_id && (v.camera_id.includes('dg') || v.camera_id.includes('gs'))));
       } else {
         baseList = baseList.filter(v => v.region === '공주' || !v.region || (v.camera_id && v.camera_id.includes('gj')));
       }
@@ -161,7 +165,7 @@ class VideoManager {
       'cam-gj-59-3': '공주 2호기 (59-3)',
       'cam-gj-san135': '공주 3호기 (산135)',
       'cam-gj-142-5': '공주 1호기 (142-5)',
-      'cam-dg-1': '대구 4호기 (달성 비슬산)'
+      'cam-dg-1': '경산 4호기 (남하리 산 127)'
     };
     return names[camId] || camId;
   }

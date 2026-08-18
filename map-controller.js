@@ -168,13 +168,13 @@ class MapController {
   }
 
   flyToRegion(regionKey) {
-    if (regionKey === 'daegu') {
-      const dgCam = this.cameras.find(c => c.region === '대구') || this.cameras[3];
+    if (regionKey === 'gyeongsan' || regionKey === 'daegu') {
+      const gsCam = this.cameras.find(c => c.region === '경산' || c.region === '대구') || this.cameras[3];
       this.map.flyTo({
-        center: [dgCam.lng, dgCam.lat],
-        zoom: 16.5,
-        pitch: 60,
-        bearing: dgCam.bearing || 135,
+        center: [gsCam.lng, gsCam.lat],
+        zoom: 17.5,
+        pitch: 62,
+        bearing: gsCam.bearing || 135,
         duration: 2500,
         essential: true
       });
