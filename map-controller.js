@@ -51,7 +51,7 @@ class MapController {
       },
       center: defaultCenter,
       zoom: 16.8,
-      pitch: 65,
+      pitch: 55,
       bearing: 328,
       maxPitch: 85,
       antialias: true
@@ -66,9 +66,11 @@ class MapController {
       this.updateHudTelemetry();
     });
 
-    this.map.on('move', () => {
-      this.updateHudTelemetry();
-    });
+    this.map.on('move', () => this.updateHudTelemetry());
+    this.map.on('moveend', () => this.updateHudTelemetry());
+    this.map.on('zoom', () => this.updateHudTelemetry());
+    this.map.on('pitch', () => this.updateHudTelemetry());
+    this.map.on('rotate', () => this.updateHudTelemetry());
 
     return this.map;
   }
@@ -131,7 +133,7 @@ class MapController {
           </div>
         `);
 
-      const marker = new maplibregl.Marker({ element: el })
+      const marker = new maplibregl.Marker({ element: el, anchor: 'center' })
         .setLngLat([cam.lng, cam.lat])
         .setPopup(popup)
         .addTo(this.map);
@@ -155,10 +157,10 @@ class MapController {
 
     this.map.flyTo({
       center: [cam.lng, cam.lat],
-      zoom: 18.2,
-      pitch: cam.pitch || 65,
+      zoom: 17.8,
+      pitch: 45,
       bearing: cam.bearing || 45,
-      duration: 2200,
+      duration: 2000,
       essential: true
     });
 
@@ -169,13 +171,13 @@ class MapController {
 
   flyToRegion(regionKey) {
     if (regionKey === 'gyeongsan' || regionKey === 'daegu') {
-      const gsCam = this.cameras.find(c => c.id === 'cam-dg-1' || c.region === '경산' || c.region === '대구') || { lng: 128.768866, lat: 35.891543, pitch: 62, bearing: 135 };
+      const gsCam = this.cameras.find(c => c.id === 'cam-dg-1' || c.region === '경산' || c.region === '대구') || { lng: 128.768866, lat: 35.891543, bearing: 135 };
       this.map.flyTo({
         center: [gsCam.lng, gsCam.lat],
-        zoom: 17.8,
-        pitch: gsCam.pitch || 62,
+        zoom: 17.5,
+        pitch: 45,
         bearing: gsCam.bearing || 135,
-        duration: 2500,
+        duration: 2200,
         essential: true
       });
     } else {
@@ -183,9 +185,9 @@ class MapController {
       this.map.flyTo({
         center: [127.010993, 36.640800],
         zoom: 16.5,
-        pitch: 62,
+        pitch: 55,
         bearing: 328,
-        duration: 2500,
+        duration: 2200,
         essential: true
       });
     }
