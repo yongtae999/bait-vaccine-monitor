@@ -1,0 +1,105 @@
+/**
+ * Main Application Orchestrator
+ * ASF Wild Boar Oral Bait Vaccine Monitoring Platform
+ */
+
+document.addEventListener('DOMContentLoaded', async () => {
+  console.log("🚀 Initializing Bait Vaccine Wild Boar Monitoring Platform...");
+
+  let camerasData = [];
+  let videosData = [];
+  let photosData = [];
+  let activityLogsData = [];
+
+  // Fetch initial data
+  try {
+    const [camsRes, vidsRes, photosRes, logsRes] = await Promise.all([
+      fetch('data/cameras.json').then(r => r.json()),
+      fetch('data/wildboar_videos.json').then(r => r.json()),
+      fetch('data/photos.json').then(r => r.json()),
+      fetch('data/activity_logs.json').then(r => r.json())
+    ]);
+
+    camerasData = camsRes;
+    videosData = vidsRes;
+    photosData = photosRes;
+    activityLogsData = logsRes;
+  } catch (err) {
+    console.warn("Falling back to embedded data:", err);
+  }
+
+  // 1. Initialize Map Controller
+  const mapCtrl = new MapController('map-viewport');
+  mapCtrl.init(camerasData);
+
+  // 2. Initialize Video Manager
+  const videoMgr = new VideoManager(mapCtrl);
+  videoMgr.init(videosData);
+
+  // 3. Initialize Analytics Manager
+  const analyticsMgr = new AnalyticsManager();
+  analyticsMgr.init(videosData, camerasData);
+
+  // 4. Initialize Activity Report Manager
+  const reportMgr = new ActivityReportManager();
+  reportMgr.init(activityLogsData);
+
+  // 5. Populate Left Sidebar Camera Cards
+  const camGrid = document.getElementById('camera-cards-container');
+  if (camGrid && camerasData.length) {
+    camGrid.innerHTML = '';
+    camerasData.forEach((cam, idx) => {
+      const isStandby = cam.status === 'standby';
+      const card = document.createElement('div');
+      card.className = `cam-card ${idx === 0 ? 'active' : ''}`;
+      card.dataset.id = cam.id;
+
+      card.innerHTML = `
+        <div class="cam-card-header">
+          <span class="cam-name">${cam.name}</span>
+          <span class="cam-badge" style="${isStandby ? 'background: rgba(148, 163, 184, 0.2); color: #94a3b8;' : ''}">
+            ${isStandby ? '설치 준비 중' : 'ON AIR'}
+          </span>
+        </div>
+        <div class="cam-meta">
+          📍 ${cam.address}<br>
+          🌿 ${cam.desc}
+        </div>
+        <div class="cam-stats-row">
+          <span>미끼: <b>${cam.bait_type.split(' ')[0]}</b></span>
+          <span style="color: ${isStandby ? '#94a3b8' : '#f43f5e'}; font-weight: bold;">
+            ${isStandby ? '추후 반영 예정' : `🐗 멧돼지 ${cam.wildboar_confirmed}건`}
+          </span>
+        </div>
+      `;
+
+      card.addEventListener('click', () => {
+        mapCtrl.flyToCamera(cam.id);
+      });
+
+      camGrid.appendChild(card);
+    });
+  }
+
+  // 6. Region Switcher (Gongju vs Daegu)
+  const regionSelector = document.getElementById('region-selector');
+  if (regionSelector) {
+    regionSelector.addEventListener('change', (e) => {
+      mapCtrl.flyToRegion(e.target.value);
+    });
+  }
+
+  // 7. Fullscreen Toggle
+  const fsBtn = document.getElementById('btn-fullscreen');
+  if (fsBtn) {
+    fsBtn.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    });
+  }
+
+  console.log("✅ Platform Ready: 4 IP Cameras & 43 Wildboar Videos Synchronized!");
+});

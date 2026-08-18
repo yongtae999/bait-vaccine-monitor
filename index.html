@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국립야생동물질병관리원 | 야생 멧돼지 미끼백신 섭취 관찰 및 영상 분석 대시보드</title>
+  
+  <!-- MapLibre GL JS & Chart.js & FontAwesome -->
+  <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header class="top-header">
+    <div class="header-left">
+      <span class="agency-badge">
+        <i class="fa-solid fa-shield-virus"></i> NIWDC
+      </span>
+      <div class="title-group">
+        <h1>
+          야생 멧돼지 미끼백신 섭취 모니터링 시스템
+          <small>국립야생동물질병관리원 · (사)야생생물관리협회</small>
+        </h1>
+      </div>
+    </div>
+
+    <div class="header-controls">
+      <div class="select-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <select id="region-selector" class="region-dropdown">
+          <option value="gongju" selected>📍 충남 공주 권역 (문금리 3개소 가동 중)</option>
+          <option value="daegu">📍 대구 달성 권역 (설치 준비 중)</option>
+        </select>
+      </div>
+
+      <a href="assets/templates/미끼백신_활동일지_양식.xlsx" download="국립야생동물질병관리원_미끼백신_활동일지_양식.xlsx" class="btn-action secondary" title="공식 엑셀 활동일지 양식 다운로드">
+        <i class="fa-solid fa-file-excel text-emerald"></i> <span>활동일지 양식</span>
+      </a>
+
+      <button id="btn-open-new-report" class="btn-action emerald">
+        <i class="fa-solid fa-pen-to-square"></i> <span>+ 활동일지 작성</span>
+      </button>
+
+      <button id="btn-fullscreen" class="btn-action icon-only" title="전체화면 전환">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- 3-Column Main Dashboard Layout -->
+  <main class="main-layout">
+
+    <!-- LEFT SIDEBAR: IP Camera Orbiting & Wildboar Videos -->
+    <aside class="sidebar left-sidebar">
+      
+      <!-- IP Camera Orbiting Cards -->
+      <div class="sidebar-section">
+        <div class="section-title">
+          <span><i class="fa-solid fa-video"></i> IP 동작감지 카메라 (4개소)</span>
+          <span style="font-size: 0.7rem; color: var(--accent-emerald);">공주 3개소 ON AIR</span>
+        </div>
+        <div class="camera-grid" id="camera-cards-container">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Wildboar Confirmed Video Gallery -->
+      <div class="sidebar-section" style="flex: 1;">
+        <div class="section-title">
+          <span><i class="fa-solid fa-film"></i> 멧돼지 선별 영상 갤러리</span>
+          <span id="video-count-badge" style="font-size: 0.7rem; color: var(--hud-cyan);">45건 판독</span>
+        </div>
+        
+        <!-- Filter Tabs -->
+        <div class="filter-tabs" id="video-filter-tabs">
+          <!-- Filter pills -->
+        </div>
+
+        <div class="video-cards-list" id="video-cards-container">
+          <!-- Populated by video-manager.js -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- CENTER STAGE: 3D Satellite Map & HUD -->
+    <section class="center-stage">
+      <div id="map-viewport" class="map-viewport"></div>
+
+      <!-- Real-time Tactical Center Sight (Aiming Point) -->
+      <div class="map-center-sight">
+        <div class="sight-ring"></div>
+        <div class="sight-line top"></div>
+        <div class="sight-line bottom"></div>
+        <div class="sight-line left"></div>
+        <div class="sight-line right"></div>
+        <div class="sight-dot"></div>
+        <div class="sight-tag" id="sight-coord-tag">36.640111° N, 127.010993° E</div>
+      </div>
+
+      <!-- Tactical Map HUD -->
+      <div class="map-hud-overlay">
+        <div class="top-hud-bar">
+          <div class="hud-pill">
+            <i class="fa-solid fa-crosshairs"></i> AI 야생동물 동작감지 실시간 관제 모드
+          </div>
+        </div>
+
+        <div class="telemetry-wing">
+          <div class="tele-row"><span>위도:</span> <b id="hud-lat">36.640111° N</b></div>
+          <div class="tele-row"><span>경도:</span> <b id="hud-lon">127.010993° E</b></div>
+          <div class="tele-row"><span>고도:</span> <b id="hud-alt">348m</b></div>
+          <div class="tele-row"><span>방위:</span> <b id="hud-hdg">HDG 328°</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT SIDEBAR: KPIs, Analytics & Activity Logs -->
+    <aside class="sidebar right-sidebar">
+      
+      <!-- KPI Stats Grid -->
+      <div class="sidebar-section">
+        <div class="section-title">
+          <i class="fa-solid fa-chart-line"></i> 모니터링 종합 진척 현황
+        </div>
+        
+        <div class="kpi-grid">
+          <div class="kpi-box primary">
+            <span class="kpi-label">전체 판독 영상</span>
+            <span class="kpi-val"><span id="kpi-scanned-clips">668</span> <small>건</small></span>
+          </div>
+          <div class="kpi-box accent">
+            <span class="kpi-label">선별 영상 (멧돼지/점검)</span>
+            <span class="kpi-val"><span id="kpi-confirmed-boar">45</span> <small>건</small></span>
+          </div>
+          <div class="kpi-box emerald">
+            <span class="kpi-label">미끼 기호도 평가</span>
+            <span class="kpi-val" style="font-size: 0.95rem; color: var(--hud-amber);">실증 관찰 중</span>
+          </div>
+          <div class="kpi-box amber">
+            <span class="kpi-label">공주 설치 가동</span>
+            <span class="kpi-val">3 <small>개소 (대구 준비)</small></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two Experimental Bait Frames Info Card -->
+      <div class="sidebar-section">
+        <div class="section-title">
+          <i class="fa-solid fa-cubes-stacked"></i> 실험 미끼 2종 실물 & 제원
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center; background: rgba(6, 9, 14, 0.6); padding: 8px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <img src="assets/photos/미끼틀_실물사진.jpg" alt="미끼틀 실물 사진" style="width: 78px; height: 60px; object-fit: cover; border-radius: 4px; border: 1px solid var(--hud-cyan);">
+          <div style="font-size: 0.72rem; line-height: 1.4; color: var(--text-secondary);">
+            <b style="color: #f8fafc;">1. 멧돼지미끼틀</b><br>
+            <span style="color: #94a3b8;">· 동물사료를 틀 형태로 굳혀서 제작</span><br>
+            <b style="color: #f43f5e;">2. 유인제배합 고형사료</b><br>
+            <span style="color: #94a3b8;">· 멧돼지 유인제를 배합하여 굳힌 사료</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Analytics Charts (Fact-based Real Data) -->
+      <div class="sidebar-section">
+        <div class="section-title">
+          <i class="fa-solid fa-chart-bar"></i> 실측 영상 수집 & 출현 통계
+        </div>
+        <div class="chart-wrap" style="height: 155px;">
+          <canvas id="dailyCollectionChart"></canvas>
+        </div>
+        <div class="chart-wrap" style="height: 145px; margin-top: 8px;">
+          <canvas id="cameraDistributionChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Activity Logs List -->
+      <div class="sidebar-section">
+        <div class="section-title">
+          <i class="fa-solid fa-clipboard-list"></i> 질병관리원 활동일지 목록
+        </div>
+        <div class="activity-list" id="activity-logs-container">
+          <!-- Populated by activity-report.js -->
+        </div>
+      </div>
+
+    </aside>
+  </main>
+
+  <!-- MODAL 1: High-Definition Video Player & Metadata -->
+  <div id="video-modal" class="modal-overlay hidden">
+    <div class="modal-card video-modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-play-circle text-cyan"></i>
+          <h3 id="modal-video-title">멧돼지 출현 및 미끼 섭취 영상 판독</h3>
+        </div>
+        <button class="modal-close-btn" id="btn-close-video-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body video-modal-body">
+        <div class="video-player-box">
+          <video id="modal-video-player" controls autoplay loop playsinline></video>
+        </div>
+        <div class="video-meta-panel">
+          <div class="meta-group">
+            <label>설치 지점</label>
+            <span id="modal-meta-site">-</span>
+          </div>
+          <div class="meta-group">
+            <label>촬영 일시</label>
+            <span id="modal-meta-time">-</span>
+          </div>
+          <div class="meta-group">
+            <label>감지 동물종</label>
+            <span id="modal-meta-animal" style="color: #f87171;">야생 멧돼지 (Sus scrofa)</span>
+          </div>
+          <div class="meta-group">
+            <label>미끼 반응 단계</label>
+            <span id="modal-meta-reaction" style="color: #38bdf8; font-weight: bold;">섭취 (Ingestion)</span>
+          </div>
+          <div class="meta-group">
+            <label>영상 파일명</label>
+            <span id="modal-meta-file" style="font-size: 0.72rem; color: #94a3b8; word-break: break-all;">-</span>
+          </div>
+
+          <button id="btn-fly-to-video-cam" class="btn-action primary" style="margin-top: 10px;">
+            <i class="fa-solid fa-location-crosshairs"></i> 이 카메라 지점으로 3D 이동
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: National Wildlife Disease Control Official Activity Log Form -->
+  <div id="report-modal" class="modal-overlay hidden">
+    <div class="modal-card report-modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-file-signature text-emerald"></i>
+          <h3>국립야생동물질병관리원 미끼백신 모니터링 활동일지</h3>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button id="btn-print-report" class="btn-action secondary"><i class="fa-solid fa-print"></i> 인쇄 / PDF 출력</button>
+          <button class="modal-close-btn" id="btn-close-report-modal"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+
+      <div class="modal-body report-modal-body" id="printable-activity-area">
+        <div class="gov-form-sheet">
+          <div class="gov-form-header">
+            <h2>활  동  일  지</h2>
+            <div class="sub-org">(사)야생생물관리협회 대전ㆍ세종ㆍ충남지부</div>
+          </div>
+
+          <form id="activity-log-form">
+            <table class="gov-table">
+              <tr>
+                <th>사 업 명</th>
+                <td><input type="text" id="form-project-name" value="야생 멧돼지 미끼백신 섭취 기호도 평가 실증 모니터링" required></td>
+                <th>발 주 처</th>
+                <td><input type="text" id="form-agency" value="국립야생동물질병관리원" required></td>
+              </tr>
+              <tr>
+                <th>작업일자</th>
+                <td><input type="date" id="form-date" value="2026-07-01" required></td>
+                <th>날    씨</th>
+                <td><input type="text" id="form-weather" value="흐림 (26℃)"></td>
+              </tr>
+              <tr>
+                <th>작업장소</th>
+                <td colspan="3"><input type="text" id="form-location" value="충남 공주시 유구읍 문금길 340-3 일원 (문금리 142-5, 59-3, 산135)" required></td>
+              </tr>
+              <tr>
+                <th>작업시간</th>
+                <td><input type="text" id="form-hours" value="14:00 ~ 17:00 (3시간)"></td>
+                <th>참여인원</th>
+                <td><input type="text" id="form-workers-cnt" value="총 4명"></td>
+              </tr>
+              <tr>
+                <th>사용장비</th>
+                <td><input type="text" id="form-equipment" value="IP동작감지 트레일카메라, 그물망, 지지대, 미끼틀"></td>
+                <th>사용약품</th>
+                <td><input type="text" id="form-chemicals" value="해당 없음 (미끼백신 살포)"></td>
+              </tr>
+              <tr>
+                <th>작업내용</th>
+                <td colspan="3">
+                  <textarea id="form-content" rows="6">① 미끼틀 매몰지 주변 멧돼지 유도 울타리 설치 작업
+
+② IP카메라 설치 지역(3군데: 문금리 142-5, 59-3, 산135) 미끼틀 살포 및 각도 보정
+
+③ 실험지 주변 제초 및 센서 감지 장애물 제거 작업</textarea>
+                </td>
+              </tr>
+            </table>
+
+            <div class="form-submit-footer" style="display: flex; justify-content: flex-end; margin-top: 14px;">
+              <button type="submit" class="btn-action primary">
+                <i class="fa-solid fa-floppy-disk"></i> 활동일지 등록 및 저장
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Modules -->
+  <script src="map-controller.js"></script>
+  <script src="video-manager.js"></script>
+  <script src="analytics.js"></script>
+  <script src="activity-report.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
