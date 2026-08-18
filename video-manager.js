@@ -20,7 +20,7 @@ class VideoManager {
   }
 
   setRegionFilter(regionKey) {
-    this.activeRegion = regionKey;
+    this.activeRegion = (regionKey === 'daegu') ? 'daegu' : 'gongju';
     this.activeCameraId = null; // reset specific camera filter
     this.activeFilter = 'all'; // reset date/type filter
     this.renderFilterTabs();
@@ -32,7 +32,7 @@ class VideoManager {
     this.activeFilter = 'all';
 
     // Auto synchronize region with camera
-    if (cameraId === 'cam-dg-1') {
+    if (cameraId && (cameraId.includes('dg') || cameraId.includes('daegu'))) {
       this.activeRegion = 'daegu';
     } else {
       this.activeRegion = 'gongju';
@@ -60,13 +60,17 @@ class VideoManager {
 
     // 1. If a specific camera is clicked, filter by that camera directly
     if (this.activeCameraId) {
-      list = list.filter(v => v.camera_id === this.activeCameraId);
+      if (this.activeCameraId.includes('dg') || this.activeCameraId.includes('daegu')) {
+        list = list.filter(v => v.camera_id === this.activeCameraId || v.region === '대구');
+      } else {
+        list = list.filter(v => v.camera_id === this.activeCameraId);
+      }
     } else {
       // 2. Otherwise filter by region
-      if (this.activeRegion === 'gongju') {
-        list = list.filter(v => (v.region === '공주' || !v.region));
-      } else if (this.activeRegion === 'daegu') {
-        list = list.filter(v => v.region === '대구');
+      if (this.activeRegion === 'daegu') {
+        list = list.filter(v => v.region === '대구' || (v.camera_id && v.camera_id.includes('dg')));
+      } else {
+        list = list.filter(v => v.region === '공주' || !v.region || (v.camera_id && v.camera_id.includes('gj')));
       }
     }
 
@@ -91,10 +95,17 @@ class VideoManager {
     // Base list for current region/camera
     let baseList = this.videos;
     if (this.activeCameraId) {
-      baseList = baseList.filter(v => v.camera_id === this.activeCameraId);
+      if (this.activeCameraId.includes('dg')) {
+        baseList = baseList.filter(v => v.camera_id === this.activeCameraId || v.region === '대구');
+      } else {
+        baseList = baseList.filter(v => v.camera_id === this.activeCameraId);
+      }
     } else {
-      if (this.activeRegion === 'gongju') baseList = baseList.filter(v => (v.region === '공주' || !v.region));
-      else if (this.activeRegion === 'daegu') baseList = baseList.filter(v => v.region === '대구');
+      if (this.activeRegion === 'daegu') {
+        baseList = baseList.filter(v => v.region === '대구' || (v.camera_id && v.camera_id.includes('dg')));
+      } else {
+        baseList = baseList.filter(v => v.region === '공주' || !v.region || (v.camera_id && v.camera_id.includes('gj')));
+      }
     }
 
     const dates = Array.from(new Set(baseList.map(v => v.recorded_date))).sort().reverse();
