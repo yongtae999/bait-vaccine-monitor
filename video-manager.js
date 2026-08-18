@@ -7,9 +7,9 @@ class VideoManager {
   constructor(mapController) {
     this.mapCtrl = mapController;
     this.videos = [];
-    this.activeFilter = 'all'; // 'all', 'confirmed', 'ignored', or date
-    this.activeRegion = 'gongju'; // 'all', 'gongju', 'daegu'
-    this.activeCameraId = null; // null or specific camera id (e.g. 'cam-gj-59-3')
+    this.activeFilter = 'all'; // 'all', 'boar', 'install', 'ignored', or date
+    this.activeRegion = 'gongju'; // 'gongju' or 'daegu'
+    this.activeCameraId = null; // null or specific camera id (e.g. 'cam-dg-1')
   }
 
   init(videosData) {
@@ -30,6 +30,20 @@ class VideoManager {
   setCameraFilter(cameraId) {
     this.activeCameraId = cameraId;
     this.activeFilter = 'all';
+
+    // Auto synchronize region with camera
+    if (cameraId === 'cam-dg-1') {
+      this.activeRegion = 'daegu';
+    } else {
+      this.activeRegion = 'gongju';
+    }
+
+    // Sync header dropdown if exists
+    const regionSelector = document.getElementById('region-selector');
+    if (regionSelector && regionSelector.value !== this.activeRegion) {
+      regionSelector.value = this.activeRegion;
+    }
+
     this.renderFilterTabs();
     this.renderVideoCards();
   }
@@ -44,16 +58,16 @@ class VideoManager {
   getFilteredVideos() {
     let list = this.videos;
 
-    // 1. Filter by Region
-    if (this.activeRegion === 'gongju') {
-      list = list.filter(v => (v.region === '공주' || !v.region));
-    } else if (this.activeRegion === 'daegu') {
-      list = list.filter(v => v.region === '대구');
-    }
-
-    // 2. Filter by Specific Camera
+    // 1. If a specific camera is clicked, filter by that camera directly
     if (this.activeCameraId) {
       list = list.filter(v => v.camera_id === this.activeCameraId);
+    } else {
+      // 2. Otherwise filter by region
+      if (this.activeRegion === 'gongju') {
+        list = list.filter(v => (v.region === '공주' || !v.region));
+      } else if (this.activeRegion === 'daegu') {
+        list = list.filter(v => v.region === '대구');
+      }
     }
 
     // 3. Filter by Category or Date Tab
@@ -76,11 +90,11 @@ class VideoManager {
 
     // Base list for current region/camera
     let baseList = this.videos;
-    if (this.activeRegion === 'gongju') baseList = baseList.filter(v => (v.region === '공주' || !v.region));
-    else if (this.activeRegion === 'daegu') baseList = baseList.filter(v => v.region === '대구');
-
     if (this.activeCameraId) {
       baseList = baseList.filter(v => v.camera_id === this.activeCameraId);
+    } else {
+      if (this.activeRegion === 'gongju') baseList = baseList.filter(v => (v.region === '공주' || !v.region));
+      else if (this.activeRegion === 'daegu') baseList = baseList.filter(v => v.region === '대구');
     }
 
     const dates = Array.from(new Set(baseList.map(v => v.recorded_date))).sort().reverse();
@@ -222,7 +236,9 @@ class VideoManager {
     if (videoEl) {
       videoEl.src = vid.rel_path;
       videoEl.load();
-      videoEl.play().catch(() => {});
+      videoEl.play().catch((err) => {
+        console.warn('Auto-play prevented or codec issue:', err);
+      });
     }
 
     // Fly to camera button
