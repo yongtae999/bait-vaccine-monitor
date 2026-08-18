@@ -957,3 +957,232 @@ body {
     display: none !important;
   }
 }
+
+/* =========================================================
+   8. Mobile & Tablet Fully Responsive Design (@media)
+   ========================================================= */
+
+/* Tablet & Smaller Laptops (<= 1200px) */
+@media (max-width: 1200px) {
+  .main-layout {
+    grid-template-columns: 310px 1fr 310px;
+  }
+}
+
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+  .top-header {
+    padding: 8px 14px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .main-layout {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  .center-stage {
+    height: 48vh;
+    min-height: 360px;
+    order: 1;
+  }
+
+  .sidebar.left-sidebar {
+    order: 2;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    max-height: 450px;
+  }
+
+  .sidebar.right-sidebar {
+    order: 3;
+    border-left: none;
+    max-height: none;
+  }
+
+  .video-modal-card, .report-modal-card {
+    width: 95vw;
+    max-height: 92vh;
+  }
+
+  .video-modal-body {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 14px;
+  }
+}
+
+/* Mobile Devices (<= 768px) */
+@media (max-width: 768px) {
+  .top-header {
+    padding: 8px 10px;
+  }
+
+  .agency-badge {
+    padding: 3px 8px;
+    font-size: 0.72rem;
+  }
+
+  .title-group h1 {
+    font-size: 0.92rem;
+  }
+
+  .title-group small {
+    display: none; /* Hide subtitle for mobile space */
+  }
+
+  .header-controls {
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .region-dropdown {
+    width: 100%;
+    font-size: 0.75rem;
+    padding: 6px 10px 6px 28px;
+  }
+
+  .select-box {
+    flex: 1;
+  }
+
+  .btn-action {
+    padding: 6px 10px;
+    font-size: 0.74rem;
+  }
+
+  .btn-action span {
+    font-size: 0.72rem;
+  }
+
+  #btn-fullscreen {
+    display: none; /* Fullscreen not needed on mobile browser */
+  }
+
+  /* Center Map Stage */
+  .center-stage {
+    height: 42vh;
+    min-height: 300px;
+  }
+
+  .telemetry-wing {
+    top: 10px;
+    left: 10px;
+    padding: 6px 8px;
+    font-size: 0.65rem;
+  }
+
+  .top-hud-bar {
+    display: none; /* Hide top pill to prevent clutter */
+  }
+
+  .map-center-sight {
+    width: 70px;
+    height: 70px;
+  }
+  .sight-ring {
+    width: 28px;
+    height: 28px;
+  }
+  .sight-tag {
+    font-size: 0.58rem;
+    bottom: -18px;
+  }
+
+  /* Sidebars on Mobile */
+  .sidebar {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .sidebar-section {
+    padding: 10px;
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .kpi-val {
+    font-size: 1.05rem;
+  }
+
+  /* Modals on Mobile */
+  .modal-overlay {
+    padding: 8px;
+  }
+
+  .modal-card {
+    width: 100vw;
+    height: 95vh;
+    border-radius: var(--radius-sm);
+  }
+
+  .modal-header {
+    padding: 10px 14px;
+  }
+  .modal-title-group h3 {
+    font-size: 0.92rem;
+  }
+
+  .video-modal-body {
+    padding: 10px;
+  }
+  .video-player-box video {
+    max-height: 240px;
+  }
+
+  .report-modal-body {
+    padding: 12px;
+  }
+  .gov-form-sheet {
+    padding: 12px;
+  }
+  .gov-table th, .gov-table td {
+    padding: 6px 8px;
+    font-size: 0.72rem;
+  }
+  .gov-table th {
+    width: 28%;
+  }
+}
+
+/* Small SmartPhones (<= 480px) */
+@media (max-width: 480px) {
+  .title-group h1 {
+    font-size: 0.85rem;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter-tabs {
+    gap: 4px;
+  }
+  .tab-pill {
+    padding: 3px 8px;
+    font-size: 0.68rem;
+  }
+
+  .video-card-item {
+    padding: 6px 8px;
+  }
+  .video-thumb-wrap {
+    width: 44px;
+    height: 34px;
+  }
+  .video-title {
+    font-size: 0.72rem;
+  }
+  .video-sub {
+    font-size: 0.64rem;
+  }
+}
+
