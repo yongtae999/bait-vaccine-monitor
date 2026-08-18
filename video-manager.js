@@ -1,13 +1,15 @@
 /**
  * Video Manager Module
- * Wildboar Confirmed Video Gallery, AI Metadata & High-Definition Video Player
+ * Wildboar Confirmed Video Gallery, Location-specific Filtering & Video Player
  */
 
 class VideoManager {
   constructor(mapController) {
     this.mapCtrl = mapController;
     this.videos = [];
-    this.activeFilter = 'all'; // 'all', 'confirmed', 'ignored', or date '2026-08-05' etc.
+    this.activeFilter = 'all'; // 'all', 'confirmed', 'ignored', or date
+    this.activeRegion = 'gongju'; // 'all', 'gongju', 'daegu'
+    this.activeCameraId = null; // null or specific camera id (e.g. 'cam-gj-59-3')
   }
 
   init(videosData) {
@@ -17,31 +19,106 @@ class VideoManager {
     this.bindModalEvents();
   }
 
+  setRegionFilter(regionKey) {
+    this.activeRegion = regionKey;
+    this.activeCameraId = null; // reset specific camera filter
+    this.activeFilter = 'all'; // reset date/type filter
+    this.renderFilterTabs();
+    this.renderVideoCards();
+  }
+
+  setCameraFilter(cameraId) {
+    this.activeCameraId = cameraId;
+    this.activeFilter = 'all';
+    this.renderFilterTabs();
+    this.renderVideoCards();
+  }
+
+  resetLocationFilter() {
+    this.activeCameraId = null;
+    this.activeFilter = 'all';
+    this.renderFilterTabs();
+    this.renderVideoCards();
+  }
+
+  getFilteredVideos() {
+    let list = this.videos;
+
+    // 1. Filter by Region
+    if (this.activeRegion === 'gongju') {
+      list = list.filter(v => (v.region === '공주' || !v.region));
+    } else if (this.activeRegion === 'daegu') {
+      list = list.filter(v => v.region === '대구');
+    }
+
+    // 2. Filter by Specific Camera
+    if (this.activeCameraId) {
+      list = list.filter(v => v.camera_id === this.activeCameraId);
+    }
+
+    // 3. Filter by Category or Date Tab
+    if (this.activeFilter === 'all') {
+      return list;
+    } else if (this.activeFilter === 'confirmed') {
+      return list.filter(v => v.category !== '제외 (비대상 동물)');
+    } else if (this.activeFilter === 'ignored') {
+      return list.filter(v => v.category && v.category.includes('제외'));
+    } else {
+      return list.filter(v => v.recorded_date === this.activeFilter);
+    }
+  }
+
   renderFilterTabs() {
     const container = document.getElementById('video-filter-tabs');
     if (!container) return;
 
-    // Distinct dates
-    const dates = Array.from(new Set(this.videos.map(v => v.recorded_date))).sort().reverse();
+    // Base list for current region/camera
+    let baseList = this.videos;
+    if (this.activeRegion === 'gongju') baseList = baseList.filter(v => (v.region === '공주' || !v.region));
+    else if (this.activeRegion === 'daegu') baseList = baseList.filter(v => v.region === '대구');
 
-    const boarCount = this.videos.filter(v => v.category !== '제외 (비대상 동물)').length;
-    const deerCount = this.videos.filter(v => v.category.includes('제외')).length;
+    if (this.activeCameraId) {
+      baseList = baseList.filter(v => v.camera_id === this.activeCameraId);
+    }
+
+    const dates = Array.from(new Set(baseList.map(v => v.recorded_date))).sort().reverse();
+    const boarCount = baseList.filter(v => v.category !== '제외 (비대상 동물)').length;
+    const deerCount = baseList.filter(v => v.category && v.category.includes('제외')).length;
+
+    let filterChipsHtml = '';
+    if (this.activeCameraId) {
+      const camName = this.getCameraName(this.activeCameraId);
+      filterChipsHtml = `
+        <button class="tab-pill active" id="btn-reset-cam-filter" style="background: #0284c7; color: #fff; border-color: #38bdf8;" title="클릭 시 해당 권역 전체 영상 보기">
+          📍 ${camName} <i class="fa-solid fa-xmark" style="margin-left: 4px;"></i>
+        </button>
+      `;
+    }
 
     container.innerHTML = `
-      <button class="tab-pill active" data-filter="all">전체 (${this.videos.length})</button>
-      <button class="tab-pill" data-filter="confirmed">🐗 멧돼지 선별영상 (${boarCount})</button>
-      <button class="tab-pill" data-filter="ignored">🦌 고라니제외 (${deerCount})</button>
+      ${filterChipsHtml}
+      <button class="tab-pill ${this.activeFilter === 'all' && !this.activeCameraId ? 'active' : ''}" data-filter="all">전체 (${baseList.length})</button>
+      <button class="tab-pill ${this.activeFilter === 'confirmed' ? 'active' : ''}" data-filter="confirmed">🐗 멧돼지 (${boarCount})</button>
+      ${deerCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'ignored' ? 'active' : ''}" data-filter="ignored">🦌 고라니 (${deerCount})</button>` : ''}
     `;
 
     dates.forEach(d => {
       const btn = document.createElement('button');
-      btn.className = 'tab-pill';
+      btn.className = `tab-pill ${this.activeFilter === d ? 'active' : ''}`;
       btn.dataset.filter = d;
       btn.textContent = d.replace('2026-', '');
       container.appendChild(btn);
     });
 
-    container.querySelectorAll('.tab-pill').forEach(btn => {
+    // Reset specific cam filter listener
+    const resetBtn = document.getElementById('btn-reset-cam-filter');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        this.resetLocationFilter();
+      });
+    }
+
+    container.querySelectorAll('.tab-pill[data-filter]').forEach(btn => {
       btn.addEventListener('click', () => {
         container.querySelectorAll('.tab-pill').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
@@ -50,27 +127,35 @@ class VideoManager {
     });
   }
 
+  getCameraName(camId) {
+    const names = {
+      'cam-gj-59-3': '공주 2호기 (59-3)',
+      'cam-gj-san135': '공주 3호기 (산135)',
+      'cam-gj-142-5': '공주 1호기 (142-5)',
+      'cam-dg-1': '대구 4호기 (달성)'
+    };
+    return names[camId] || camId;
+  }
+
   applyFilter(filterKey) {
     this.activeFilter = filterKey;
     this.renderVideoCards();
   }
 
-  getFilteredVideos() {
-    if (this.activeFilter === 'all') return this.videos;
-    if (this.activeFilter === 'confirmed') return this.videos.filter(v => v.category !== '제외 (비대상 동물)');
-    if (this.activeFilter === 'ignored') return this.videos.filter(v => v.category.includes('제외'));
-    return this.videos.filter(v => v.recorded_date === this.activeFilter);
-  }
-
   renderVideoCards() {
     const list = document.getElementById('video-cards-container');
+    const badge = document.getElementById('video-count-badge');
     if (!list) return;
 
     list.innerHTML = '';
     const filtered = this.getFilteredVideos();
 
+    if (badge) {
+      badge.textContent = `${filtered.length}건 표출`;
+    }
+
     if (filtered.length === 0) {
-      list.innerHTML = '<div style="color: var(--text-muted); font-size: 0.75rem; text-align: center; padding: 20px;">조건에 해당하는 영상이 없습니다.</div>';
+      list.innerHTML = '<div style="color: var(--text-muted); font-size: 0.75rem; text-align: center; padding: 24px;">선택한 지점/조건에 해당하는 영상이 없습니다.</div>';
       return;
     }
 
@@ -78,7 +163,7 @@ class VideoManager {
       const card = document.createElement('div');
       card.className = 'video-card-item';
 
-      const isIgnored = vid.category.includes('제외');
+      const isIgnored = vid.category && vid.category.includes('제외');
       const isNight = vid.is_night;
       
       let tagClass = isNight ? 'eat' : 'approach';
@@ -90,7 +175,7 @@ class VideoManager {
         </div>
         <div class="video-info">
           <div class="video-title">${vid.site_name}</div>
-          <div class="video-sub">${vid.recorded_date} ${vid.recorded_time} · ${vid.animal_type.split(' ')[0]}</div>
+          <div class="video-sub">${vid.recorded_date} ${vid.recorded_time} · ${vid.animal_type ? vid.animal_type.split(' ')[0] : '멧돼지'}</div>
           <span class="reaction-tag ${tagClass}">${vid.reaction}</span>
         </div>
       `;
@@ -112,7 +197,6 @@ class VideoManager {
     const siteEl = document.getElementById('modal-meta-site');
     const timeEl = document.getElementById('modal-meta-time');
     const animalEl = document.getElementById('modal-meta-animal');
-    const countEl = document.getElementById('modal-meta-count');
     const reactionEl = document.getElementById('modal-meta-reaction');
     const fileEl = document.getElementById('modal-meta-file');
 

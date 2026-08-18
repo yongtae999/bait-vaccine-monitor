@@ -44,6 +44,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const reportMgr = new ActivityReportManager();
   reportMgr.init(activityLogsData);
 
+  // Connect Map camera selection with Video filtering
+  mapCtrl.onCameraSelect = (camId) => {
+    videoMgr.setCameraFilter(camId);
+  };
+
   // 5. Populate Left Sidebar Camera Cards
   const camGrid = document.getElementById('camera-cards-container');
   if (camGrid && camerasData.length) {
@@ -68,13 +73,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="cam-stats-row">
           <span>미끼: <b>${cam.bait_type.split(' ')[0]}</b></span>
           <span style="color: ${isStandby ? '#94a3b8' : '#f43f5e'}; font-weight: bold;">
-            ${isStandby ? '추후 반영 예정' : `🐗 멧돼지 ${cam.wildboar_confirmed}건`}
+            🐗 멧돼지 ${cam.wildboar_confirmed}건
           </span>
         </div>
       `;
 
       card.addEventListener('click', () => {
         mapCtrl.flyToCamera(cam.id);
+        videoMgr.setCameraFilter(cam.id);
       });
 
       camGrid.appendChild(card);
@@ -85,7 +91,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   const regionSelector = document.getElementById('region-selector');
   if (regionSelector) {
     regionSelector.addEventListener('change', (e) => {
-      mapCtrl.flyToRegion(e.target.value);
+      const regionVal = e.target.value;
+      mapCtrl.flyToRegion(regionVal);
+      videoMgr.setRegionFilter(regionVal);
     });
   }
 

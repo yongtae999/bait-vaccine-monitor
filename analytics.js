@@ -74,17 +74,21 @@ class AnalyticsManager {
 
     // 2. Camera Site Video Distribution Bar Chart
     const ctx2 = document.getElementById('cameraDistributionChart');
-    if (ctx2) {
+    if (ctx2 && cameras && cameras.length) {
       if (this.cameraChart) this.cameraChart.destroy();
+
+      const labels = cameras.map(c => c.name.replace(' (문금리 142-5)', '').replace(' (문금리 59-3)', '').replace(' (문금리 산135 공주먹이)', '').replace(' (달성 비슬산 관제구역)', ''));
+      const dataVals = cameras.map(c => c.wildboar_confirmed);
+      const colors = ['#fbbf24', '#38bdf8', '#10b981', '#a855f7'];
 
       this.cameraChart = new Chart(ctx2, {
         type: 'bar',
         data: {
-          labels: ['3호기 (산135)', '2호기 (59-3)', '1호기 (142-5)'],
+          labels: labels,
           datasets: [{
-            label: '지점별 영상 수',
-            data: [25, 17, 3],
-            backgroundColor: ['#10b981', '#38bdf8', '#fbbf24'],
+            label: '지점별 선별 영상 수',
+            data: dataVals,
+            backgroundColor: colors,
             borderRadius: 4
           }]
         },
@@ -96,7 +100,7 @@ class AnalyticsManager {
             legend: { display: false },
             title: {
               display: true,
-              text: '카메라 지점별 판독 영상 분포 (실측)',
+              text: '카메라 지점별 선별 영상 분포 (공주 3개소 + 대구 1개소)',
               color: '#f8fafc',
               font: { size: 11, weight: 'bold' }
             }

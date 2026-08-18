@@ -161,6 +161,10 @@ class MapController {
       duration: 2200,
       essential: true
     });
+
+    if (this.onCameraSelect) {
+      this.onCameraSelect(cameraId, cam);
+    }
   }
 
   flyToRegion(regionKey) {

@@ -66,13 +66,13 @@
     "alt": 480.0,
     "bearing": 135,
     "pitch": 60,
-    "install_date": "2026-08-25 (예정)",
+    "install_date": "2026-07-21",
     "model": "IP Wildcam 4K TrailCam",
-    "status": "standby",
-    "desc": "대구 권역 설치 준비 중 (추후 카메라 설치 후 실시간 연동 예정)",
-    "bait_type": "사료형 + 유인제틀 (예정)",
-    "total_clips": 0,
-    "wildboar_confirmed": 0,
+    "status": "active",
+    "desc": "대구 달성군 비슬산 일원 미끼백신 섭취 및 이동경로 모니터링",
+    "bait_type": "멧돼지미끼틀 + 유인제배합",
+    "total_clips": 42,
+    "wildboar_confirmed": 2,
     "deer_ignored": 0
   }
 ]
