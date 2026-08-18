@@ -11,13 +11,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   let photosData = [];
   let activityLogsData = [];
 
-  // Fetch initial data
+  // Fetch initial data with cache-busting timestamp
   try {
+    const t = Date.now();
     const [camsRes, vidsRes, photosRes, logsRes] = await Promise.all([
-      fetch('data/cameras.json').then(r => r.json()),
-      fetch('data/wildboar_videos.json').then(r => r.json()),
-      fetch('data/photos.json').then(r => r.json()),
-      fetch('data/activity_logs.json').then(r => r.json())
+      fetch(`data/cameras.json?t=${t}`).then(r => r.json()),
+      fetch(`data/wildboar_videos.json?t=${t}`).then(r => r.json()),
+      fetch(`data/photos.json?t=${t}`).then(r => r.json()),
+      fetch(`data/activity_logs.json?t=${t}`).then(r => r.json())
     ]);
 
     camerasData = camsRes;
