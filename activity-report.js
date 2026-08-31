@@ -55,18 +55,21 @@ class ActivityReportManager {
     const modal = document.getElementById('report-modal');
     if (!modal) return;
 
-    document.getElementById('form-project-name').value = log.project_name || "야생 멧돼지 미끼백신 섭취 기호도 평가 실증 모니터링";
+    document.getElementById('form-project-name').value = log.project_name || "미끼백신사업";
     document.getElementById('form-agency').value = log.agency || "국립야생동물질병관리원";
     document.getElementById('form-date').value = log.work_date || "2026-07-01";
-    document.getElementById('form-location').value = log.location || "충남 공주시 유구읍 문금길 340-3 일원";
-    document.getElementById('form-weather').value = log.weather || "흐림 (26℃)";
-    document.getElementById('form-hours').value = log.work_hours || "14:00 ~ 17:00 (3시간)";
-    document.getElementById('form-workers-cnt').value = `${log.workers_count}명`;
-    document.getElementById('form-equipment').value = log.equipment || "IP동작감지 트레일카메라, 미끼틀";
-    document.getElementById('form-chemicals').value = log.chemicals || "해당 없음 (미끼틀 살포)";
+    document.getElementById('form-location').value = log.location || "충남 공주시 유구읍 문금길 340-3";
+    document.getElementById('form-weather').value = log.weather || "흐림";
+    document.getElementById('form-hours').value = log.work_hours || "14:00 ~ 17:00";
+    document.getElementById('form-workers-cnt').value = `총 ${log.workers_count}명`;
+    document.getElementById('form-equipment').value = log.equipment || "그물망, 지지대 등";
+    document.getElementById('form-chemicals').value = log.chemicals || "해당 없음";
 
-    const contentText = Array.isArray(log.work_content) ? log.work_content.join('\n\n') : log.work_content;
-    document.getElementById('form-content').value = contentText || "";
+    let contentText = Array.isArray(log.work_content) ? log.work_content.join('\n\n') : (log.work_content || "");
+    if (log.notes && log.notes !== '-') {
+      contentText += `\n\n[특이사항 및 향후계획]\n${log.notes}`;
+    }
+    document.getElementById('form-content').value = contentText;
 
     modal.classList.remove('hidden');
   }
@@ -75,16 +78,16 @@ class ActivityReportManager {
     const modal = document.getElementById('report-modal');
     if (!modal) return;
 
-    document.getElementById('form-project-name').value = "야생 멧돼지 미끼백신 섭취 기호도 평가 실증 모니터링";
+    document.getElementById('form-project-name').value = "미끼백신사업";
     document.getElementById('form-agency').value = "국립야생동물질병관리원";
     document.getElementById('form-date').value = new Date().toISOString().split('T')[0];
-    document.getElementById('form-location').value = "충남 공주시 유구읍 문금리 59-3 일원";
+    document.getElementById('form-location').value = "충남 공주시 유구읍 문금길 340-3";
     document.getElementById('form-weather').value = "맑음";
-    document.getElementById('form-hours').value = "10:00 ~ 16:00 (6시간)";
-    document.getElementById('form-workers-cnt').value = "4명";
-    document.getElementById('form-equipment').value = "IP카메라, 예비 배터리, 추가 미끼백신";
-    document.getElementById('form-chemicals').value = "미끼백신 보충분";
-    document.getElementById('form-content').value = "① IP카메라 배터리 교체 및 SD카드 영상 수거\n\n② 멧돼지 미끼백신 추가 살포 및 기호도 모니터링\n\n③ 주변 훼손지 정리 및 센서 감지 점검";
+    document.getElementById('form-hours').value = "14:00 ~ 17:00";
+    document.getElementById('form-workers-cnt').value = "총 1명";
+    document.getElementById('form-equipment').value = "제초 도구, 점검 장비";
+    document.getElementById('form-chemicals').value = "해당 없음";
+    document.getElementById('form-content').value = "① 실험지 주변 풀 제거작업\n\n② IP카메라 설치 지역 미끼틀 살포 및 상태 점검";
 
     modal.classList.remove('hidden');
   }

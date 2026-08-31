@@ -213,7 +213,7 @@
       <!-- Activity Logs List -->
       <div class="sidebar-section">
         <div class="section-title">
-          <i class="fa-solid fa-clipboard-list"></i> 질병관리원 활동일지 목록
+          <i class="fa-solid fa-clipboard-list"></i> 야생생물관리협회 활동일지 목록
         </div>
         <div class="activity-list" id="activity-logs-container">
           <!-- Populated by activity-report.js -->
@@ -328,14 +328,14 @@
   </div>
 
   <!-- ===================================================================
-       MODAL 4: National Wildlife Disease Control Official Activity Log Form
+       MODAL 4: Korea Wildlife Management Association Official Activity Log Form
        =================================================================== -->
   <div id="report-modal" class="modal-overlay hidden">
     <div class="modal-card report-modal-card">
       <div class="modal-header">
         <div class="modal-title-group">
           <i class="fa-solid fa-file-signature text-emerald"></i>
-          <h3>국립야생동물질병관리원 미끼백신 모니터링 활동일지</h3>
+          <h3>(사)야생생물관리협회 미끼백신 모니터링 활동일지</h3>
         </div>
         <div style="display: flex; gap: 8px;">
           <button id="btn-print-report" class="btn-action secondary"><i class="fa-solid fa-print"></i> 인쇄 / PDF 출력</button>
@@ -354,7 +354,7 @@
             <table class="gov-table">
               <tr>
                 <th>사 업 명</th>
-                <td><input type="text" id="form-project-name" value="야생 멧돼지 미끼백신 섭취 기호도 평가 실증 모니터링" required></td>
+                <td><input type="text" id="form-project-name" value="미끼백신사업" required></td>
                 <th>발 주 처</th>
                 <td><input type="text" id="form-agency" value="국립야생동물질병관리원" required></td>
               </tr>
@@ -362,32 +362,32 @@
                 <th>작업일자</th>
                 <td><input type="date" id="form-date" value="2026-07-01" required></td>
                 <th>날    씨</th>
-                <td><input type="text" id="form-weather" value="흐림 (26℃)"></td>
+                <td><input type="text" id="form-weather" value="흐림"></td>
               </tr>
               <tr>
                 <th>작업장소</th>
-                <td colspan="3"><input type="text" id="form-location" value="충남 공주시 유구읍 문금길 340-3 일원 (문금리 142-5, 59-3, 산135)" required></td>
+                <td colspan="3"><input type="text" id="form-location" value="충남 공주시 유구읍 문금길 340-3" required></td>
               </tr>
               <tr>
                 <th>작업시간</th>
-                <td><input type="text" id="form-hours" value="14:00 ~ 17:00 (3시간)"></td>
+                <td><input type="text" id="form-hours" value="14:00 ~ 17:00"></td>
                 <th>참여인원</th>
                 <td><input type="text" id="form-workers-cnt" value="총 4명"></td>
               </tr>
               <tr>
                 <th>사용장비</th>
-                <td><input type="text" id="form-equipment" value="IP동작감지 트레일카메라, 그물망, 지지대, 미끼틀"></td>
+                <td><input type="text" id="form-equipment" value="그물망, 지지대 등"></td>
                 <th>사용약품</th>
-                <td><input type="text" id="form-chemicals" value="해당 없음 (미끼백신 살포)"></td>
+                <td><input type="text" id="form-chemicals" value="해당 없음"></td>
               </tr>
               <tr>
                 <th>작업내용</th>
                 <td colspan="3">
-                  <textarea id="form-content" rows="6">① 미끼틀 매몰지 주변 멧돼지 유도 울타리 설치 작업
+                  <textarea id="form-content" rows="6">①  미끼틀 매몰지 주변 울타리 작업
 
-② IP카메라 설치 지역(3군데: 문금리 142-5, 59-3, 산135) 미끼틀 살포 및 각도 보정
+②  IP카메라 설치 지역(3군데) 미끼틀 살포
 
-③ 실험지 주변 제초 및 센서 감지 장애물 제거 작업</textarea>
+③  실험지 주변 풀 제거작업</textarea>
                 </td>
               </tr>
             </table>
@@ -447,11 +447,11 @@
   </div>
 
   <!-- App Modules (Cache-busted) -->
-  <script src="map-controller.js?v=20260901_0725"></script>
-  <script src="video-manager.js?v=20260901_0725"></script>
-  <script src="photo-manager.js?v=20260901_0725"></script>
-  <script src="analytics.js?v=20260901_0725"></script>
-  <script src="activity-report.js?v=20260901_0725"></script>
-  <script src="app.js?v=20260901_0725"></script>
+  <script src="map-controller.js?v=20260901_0738"></script>
+  <script src="video-manager.js?v=20260901_0738"></script>
+  <script src="photo-manager.js?v=20260901_0738"></script>
+  <script src="analytics.js?v=20260901_0738"></script>
+  <script src="activity-report.js?v=20260901_0738"></script>
+  <script src="app.js?v=20260901_0738"></script>
 </body>
 </html>
