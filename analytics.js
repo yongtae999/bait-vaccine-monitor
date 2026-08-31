@@ -15,14 +15,14 @@ class AnalyticsManager {
   }
 
   renderKPIs(videos, cameras) {
-    const totalVideos = videos.length || 45;
-    const totalClips = 668; // Total scanned raw clips from IP cams
+    const confirmedVideos = videos.filter(v => v.category === '멧돼지확정');
+    const totalClips = cameras.reduce((acc, c) => acc + (c.total_clips || 0), 0);
 
     const kpiScanned = document.getElementById('kpi-scanned-clips');
     const kpiConfirmed = document.getElementById('kpi-confirmed-boar');
 
     if (kpiScanned) kpiScanned.textContent = `${totalClips.toLocaleString()}`;
-    if (kpiConfirmed) kpiConfirmed.textContent = `${totalVideos}`;
+    if (kpiConfirmed) kpiConfirmed.textContent = `${confirmedVideos.length}`;
   }
 
   renderCharts(videos, cameras) {
@@ -34,7 +34,8 @@ class AnalyticsManager {
       // Aggregate real date counts
       const dateMap = {};
       videos.forEach(v => {
-        const d = v.recorded_date.replace('2026-', '');
+        const rawD = v.date || v.recorded_date || "2026-08-01";
+        const d = rawD.replace('2026-', '');
         dateMap[d] = (dateMap[d] || 0) + 1;
       });
 
@@ -65,7 +66,7 @@ class AnalyticsManager {
             }
           },
           scales: {
-            x: { ticks: { color: '#94a3b8', font: { size: 9 } }, grid: { display: false } },
+            x: { ticks: { color: '#94a3b8', font: { size: 8.5 } }, grid: { display: false } },
             y: { ticks: { color: '#64748b', font: { size: 9 }, stepSize: 2 }, grid: { color: 'rgba(255,255,255,0.05)' } }
           }
         }
@@ -77,7 +78,7 @@ class AnalyticsManager {
     if (ctx2 && cameras && cameras.length) {
       if (this.cameraChart) this.cameraChart.destroy();
 
-      const labels = cameras.map(c => c.name.replace(' (문금리 142-5)', '').replace(' (문금리 59-3)', '').replace(' (문금리 산135 공주먹이)', '').replace(' (남하리 산 127)', '').replace(' (달성 비슬산 관제구역)', ''));
+      const labels = cameras.map(c => c.name.replace(' (문금리 142-5)', '').replace(' (문금리 59-3)', '').replace(' (문금리 산135 공주먹이)', '').replace(' (남하리 산 127)', ''));
       const dataVals = cameras.map(c => c.wildboar_confirmed);
       const colors = ['#fbbf24', '#38bdf8', '#10b981', '#a855f7'];
 

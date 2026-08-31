@@ -23,13 +23,24 @@ class ActivityReportManager {
     this.logs.forEach(log => {
       const item = document.createElement('div');
       item.className = 'activity-item';
+      item.style.cursor = 'pointer';
 
       item.innerHTML = `
-        <div>
+        <div style="flex: 1;">
           <div class="act-title">${log.title}</div>
-          <div class="act-date">${log.work_date} · 참여 ${log.workers_count}명</div>
+          <div class="act-date">
+            📅 ${log.work_date} · 참여 ${log.workers_count}명
+            ${log.photo_count ? `<span style="margin-left: 6px; color: #38bdf8; font-weight: 700;"><i class="fa-solid fa-camera"></i> 사진 ${log.photo_count}장</span>` : ''}
+          </div>
         </div>
-        <span class="reaction-tag eat">보고 완료</span>
+        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+          <span class="reaction-tag eat">보고 완료</span>
+          ${log.photo_count ? `
+            <button class="btn-action secondary icon-only" style="padding: 2px 6px; font-size: 0.65rem;" title="해당 일자 현장 사진 갤러리 열기" onclick="event.stopPropagation(); window.photoManager && window.photoManager.openGalleryModal('${log.work_date}');">
+              <i class="fa-solid fa-images text-cyan"></i>
+            </button>
+          ` : ''}
+        </div>
       `;
 
       item.addEventListener('click', () => {

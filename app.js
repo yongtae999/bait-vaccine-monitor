@@ -45,12 +45,30 @@ document.addEventListener('DOMContentLoaded', async () => {
   const reportMgr = new ActivityReportManager();
   reportMgr.init(activityLogsData);
 
+  // 5. Initialize Photo Gallery Manager
+  if (window.photoManager) {
+    window.photoManager.init();
+  }
+
   // Connect Map camera selection with Video filtering
   mapCtrl.onCameraSelect = (camId) => {
     videoMgr.setCameraFilter(camId);
   };
 
-  // 5. Populate Left Sidebar Camera Cards
+  // 6. Dynamic KPI Rollup
+  const totalClips = camerasData.reduce((acc, c) => acc + (c.total_clips || 0), 0);
+  const confirmedBoar = videosData.filter(v => v.category === '멧돼지확정').length;
+
+  const kpiScanned = document.getElementById('kpi-scanned-clips');
+  if (kpiScanned) kpiScanned.textContent = totalClips.toLocaleString();
+
+  const kpiConfirmed = document.getElementById('kpi-confirmed-boar');
+  if (kpiConfirmed) kpiConfirmed.textContent = confirmedBoar.toString();
+
+  const kpiPhotos = document.getElementById('kpi-photos-count');
+  if (kpiPhotos) kpiPhotos.textContent = photosData.length.toString();
+
+  // 7. Populate Left Sidebar Camera Cards
   const camGrid = document.getElementById('camera-cards-container');
   if (camGrid && camerasData.length) {
     camGrid.innerHTML = '';
@@ -88,7 +106,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  // 6. Region Switcher (Gongju vs Daegu)
+  // 8. Region Switcher (Gongju vs Daegu/Gyeongsan)
   const regionSelector = document.getElementById('region-selector');
   if (regionSelector) {
     regionSelector.addEventListener('change', (e) => {
@@ -98,7 +116,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  // 7. Fullscreen Toggle
+  // 9. Fullscreen Toggle
   const fsBtn = document.getElementById('btn-fullscreen');
   if (fsBtn) {
     fsBtn.addEventListener('click', () => {
@@ -110,7 +128,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  // 8. Video Sync Guide Modal
+  // 10. Video Sync Guide Modal
   const syncBtn = document.getElementById('btn-open-sync-guide');
   const syncModal = document.getElementById('sync-modal');
   const syncCloseBtn = document.getElementById('btn-close-sync-modal');
@@ -125,5 +143,5 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-  console.log("✅ Platform Ready: 4 IP Cameras & 43 Wildboar Videos Synchronized!");
+  console.log(`✅ Platform Ready: 4 IP Cameras, ${totalClips} Analyzed Clips, ${confirmedBoar} Confirmed Boar Videos & ${photosData.length} Photos Synchronized!`);
 });

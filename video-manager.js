@@ -8,7 +8,7 @@ class VideoManager {
     this.mapCtrl = mapController;
     this.videos = [];
     this.activeFilter = 'all'; // 'all', 'boar', 'install', 'ignored', or date
-    this.activeRegion = 'gongju'; // 'gongju' or 'daegu'
+    this.activeRegion = 'gongju'; // 'gongju' or 'gyeongsan'
     this.activeCameraId = null; // null or specific camera id (e.g. 'cam-dg-1')
   }
 
@@ -88,7 +88,7 @@ class VideoManager {
     } else if (this.activeFilter === 'ignored') {
       return list.filter(v => v.category && v.category.includes('제외'));
     } else {
-      return list.filter(v => v.recorded_date === this.activeFilter);
+      return list.filter(v => (v.date || v.recorded_date) === this.activeFilter);
     }
   }
 
@@ -112,7 +112,7 @@ class VideoManager {
       }
     }
 
-    const dates = Array.from(new Set(baseList.map(v => v.recorded_date))).sort().reverse();
+    const dates = Array.from(new Set(baseList.map(v => (v.date || v.recorded_date)))).filter(Boolean).sort().reverse();
     const boarCount = baseList.filter(v => v.category === '멧돼지확정' || v.category === '멧돼지 선별영상').length;
     const installCount = baseList.filter(v => v.category && v.category.includes('설치')).length;
     const deerCount = baseList.filter(v => v.category && v.category.includes('제외')).length;
@@ -139,21 +139,18 @@ class VideoManager {
       const btn = document.createElement('button');
       btn.className = `tab-pill ${this.activeFilter === d ? 'active' : ''}`;
       btn.dataset.filter = d;
-      btn.textContent = d.replace('2026-', '');
+      btn.textContent = `📅 ${d.slice(5)}`;
       container.appendChild(btn);
     });
 
-    // Reset specific cam filter listener
-    const resetBtn = document.getElementById('btn-reset-cam-filter');
-    if (resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        this.resetLocationFilter();
-      });
-    }
-
-    container.querySelectorAll('.tab-pill[data-filter]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        container.querySelectorAll('.tab-pill').forEach(b => b.classList.remove('active'));
+    // Bind pill click events
+    container.querySelectorAll('.tab-pill').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (btn.id === 'btn-reset-cam-filter') {
+          this.resetLocationFilter();
+          return;
+        }
+        container.querySelectorAll('.tab-pill').forEach(p => p.classList.remove('active'));
         btn.classList.add('active');
         this.applyFilter(btn.dataset.filter);
       });
@@ -162,10 +159,10 @@ class VideoManager {
 
   getCameraName(camId) {
     const names = {
+      'cam-gj-142-5': '공주 1호기 (142-5)',
       'cam-gj-59-3': '공주 2호기 (59-3)',
       'cam-gj-san135': '공주 3호기 (산135)',
-      'cam-gj-142-5': '공주 1호기 (142-5)',
-      'cam-dg-1': '경산 4호기 (남하리 산 127)'
+      'cam-dg-1': '경산 4호기 (남하리)'
     };
     return names[camId] || camId;
   }
@@ -199,6 +196,8 @@ class VideoManager {
       const isIgnored = vid.category && vid.category.includes('제외');
       const isInstall = vid.category && vid.category.includes('설치');
       const isNight = vid.is_night;
+      const vDate = vid.date || vid.recorded_date || '';
+      const vTime = vid.time || vid.recorded_time || '';
       
       let tagClass = isNight ? 'eat' : 'approach';
       let iconClass = 'fa-play';
@@ -216,7 +215,7 @@ class VideoManager {
         </div>
         <div class="video-info">
           <div class="video-title">${vid.site_name}</div>
-          <div class="video-sub">${vid.recorded_date} ${vid.recorded_time} · ${vid.animal_type ? vid.animal_type.split(' ')[0] : '영상'}</div>
+          <div class="video-sub">${vDate} ${vTime} · ${vid.animal_type ? vid.animal_type.split(' ')[0] : '영상'}</div>
           <span class="reaction-tag ${tagClass}">${vid.reaction}</span>
         </div>
       `;
@@ -231,38 +230,31 @@ class VideoManager {
 
   openVideoModal(vid) {
     const modal = document.getElementById('video-modal');
-    if (!modal) return;
+    const player = document.getElementById('modal-video-player');
+    if (!modal || !player) return;
 
-    const videoEl = document.getElementById('modal-video-player');
-    const titleEl = document.getElementById('modal-video-title');
-    const siteEl = document.getElementById('modal-meta-site');
-    const timeEl = document.getElementById('modal-meta-time');
-    const animalEl = document.getElementById('modal-meta-animal');
-    const reactionEl = document.getElementById('modal-meta-reaction');
-    const fileEl = document.getElementById('modal-meta-file');
+    const vDate = vid.date || vid.recorded_date || '';
+    const vTime = vid.time || vid.recorded_time || '';
 
-    if (titleEl) titleEl.textContent = `${vid.site_name} - ${vid.category} 영상`;
-    if (siteEl) siteEl.textContent = vid.site_name;
-    if (timeEl) timeEl.textContent = `${vid.recorded_date} ${vid.recorded_time} (${vid.is_night ? '야간' : '주간'})`;
-    if (animalEl) animalEl.textContent = vid.animal_type;
-    if (reactionEl) reactionEl.textContent = vid.reaction;
-    if (fileEl) fileEl.textContent = vid.filename;
+    // Populate metadata
+    document.getElementById('modal-video-title').textContent = `${vid.site_name} 멧돼지 선별 영상`;
+    document.getElementById('modal-meta-site').textContent = vid.site_name;
+    document.getElementById('modal-meta-time').textContent = `${vDate} ${vTime} (${vid.is_night ? '야간' : '주간'})`;
+    document.getElementById('modal-meta-animal').textContent = vid.animal_type || "야생 멧돼지 (Sus scrofa)";
+    document.getElementById('modal-meta-reaction').textContent = vid.reaction;
+    document.getElementById('modal-meta-file').textContent = vid.filename;
 
-    if (videoEl) {
-      videoEl.src = vid.rel_path;
-      videoEl.load();
-      videoEl.play().catch((err) => {
-        console.warn('Auto-play prevented or codec issue:', err);
-      });
-    }
+    // Set video source
+    player.src = vid.video_url || `assets/videos/confirmed/${vid.filename}`;
+    player.load();
+    player.play().catch(() => {});
 
-    // Fly to camera button
-    const locateBtn = document.getElementById('btn-fly-to-video-cam');
-    if (locateBtn && this.mapCtrl) {
-      locateBtn.onclick = () => {
-        modal.classList.add('hidden');
-        if (videoEl) videoEl.pause();
+    // Bind 3D camera fly button
+    const btnFly = document.getElementById('btn-fly-to-video-cam');
+    if (btnFly && this.mapCtrl) {
+      btnFly.onclick = () => {
         this.mapCtrl.flyToCamera(vid.camera_id);
+        modal.classList.add('hidden');
       };
     }
 
@@ -272,17 +264,20 @@ class VideoManager {
   bindModalEvents() {
     const modal = document.getElementById('video-modal');
     const closeBtn = document.getElementById('btn-close-video-modal');
-    const videoEl = document.getElementById('modal-video-player');
+    const player = document.getElementById('modal-video-player');
 
     if (closeBtn && modal) {
       closeBtn.addEventListener('click', () => {
         modal.classList.add('hidden');
-        if (videoEl) videoEl.pause();
+        if (player) player.pause();
       });
+    }
+
+    if (modal) {
       modal.addEventListener('click', (e) => {
         if (e.target === modal) {
           modal.classList.add('hidden');
-          if (videoEl) videoEl.pause();
+          if (player) player.pause();
         }
       });
     }

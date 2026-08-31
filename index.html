@@ -29,7 +29,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260901_0725">
 </head>
 <body>
 
@@ -53,6 +53,10 @@
           <option value="gyeongsan">📍 경북 경산 권역 (남하리 1개소)</option>
         </select>
       </div>
+
+      <button id="btn-open-photo-gallery" class="btn-action primary" title="날짜별 현장 점검 사진 갤러리 열기">
+        <i class="fa-solid fa-images text-cyan"></i> <span>현장 사진 갤러리</span>
+      </button>
 
       <button id="btn-open-sync-guide" class="btn-action secondary" title="신규 영상 업데이트 및 폴더 동기화 방법">
         <i class="fa-solid fa-folder-tree text-cyan"></i> <span>영상 동기화</span>
@@ -151,15 +155,15 @@
         <div class="kpi-grid">
           <div class="kpi-box primary">
             <span class="kpi-label">전체 분석 영상</span>
-            <span class="kpi-val"><span id="kpi-scanned-clips">710</span> <small>건</small></span>
+            <span class="kpi-val"><span id="kpi-scanned-clips">682</span> <small>건</small></span>
           </div>
           <div class="kpi-box accent">
-            <span class="kpi-label">선별 영상 (멧돼지/점검)</span>
+            <span class="kpi-label">멧돼지 확정 판독</span>
             <span class="kpi-val"><span id="kpi-confirmed-boar">47</span> <small>건</small></span>
           </div>
           <div class="kpi-box emerald">
-            <span class="kpi-label">미끼 기호도 평가</span>
-            <span class="kpi-val" style="font-size: 0.95rem; color: var(--hud-amber);">실증 관찰 중</span>
+            <span class="kpi-label">현장 점검 사진</span>
+            <span class="kpi-val"><span id="kpi-photos-count">61</span> <small>장</small></span>
           </div>
           <div class="kpi-box amber">
             <span class="kpi-label">설치 운영 카메라</span>
@@ -219,7 +223,9 @@
     </aside>
   </main>
 
-  <!-- MODAL 1: High-Definition Video Player & Metadata -->
+  <!-- ===================================================================
+       MODAL 1: High-Definition Video Player & Metadata
+       =================================================================== -->
   <div id="video-modal" class="modal-overlay hidden">
     <div class="modal-card video-modal-card">
       <div class="modal-header">
@@ -263,7 +269,67 @@
     </div>
   </div>
 
-  <!-- MODAL 2: National Wildlife Disease Control Official Activity Log Form -->
+  <!-- ===================================================================
+       MODAL 2: Photo Gallery Modal (Tabs by 8 dates + Grid)
+       =================================================================== -->
+  <div id="photo-gallery-modal" class="modal-overlay hidden">
+    <div class="modal-card photo-gallery-modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-camera-retro text-cyan"></i>
+          <h3>미끼백신 모니터링 날짜별 현장 점검 사진 갤러리</h3>
+        </div>
+        <button class="modal-close-btn" id="btn-close-photo-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="modal-body photo-gallery-modal-body">
+        <!-- Date Tabs -->
+        <div class="photo-date-tabs" id="photo-date-tabs">
+          <!-- Populated by photo-manager.js -->
+        </div>
+
+        <!-- Photos Grid -->
+        <div class="photo-grid-container" id="photo-grid-container">
+          <!-- Populated by photo-manager.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL 3: Photo Lightbox Modal (High-Res Viewer + Next/Prev)
+       =================================================================== -->
+  <div id="photo-lightbox-modal" class="modal-overlay hidden" style="z-index: 10000;">
+    <div class="modal-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-card">
+      <div class="lightbox-header">
+        <div class="lightbox-title-wrap">
+          <h4 id="lightbox-title">현장 사진</h4>
+          <span id="lightbox-meta" style="font-size: 0.75rem; color: var(--text-muted);">-</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span id="lightbox-counter" style="font-size: 0.8rem; font-weight: 700; color: var(--hud-cyan);">1 / 61</span>
+          <button class="modal-close-btn" id="btn-close-lightbox"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+
+      <div class="lightbox-body">
+        <button class="lightbox-nav-btn prev" id="btn-lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="lightbox-img-wrap">
+          <img id="lightbox-img" src="" alt="현장 사진 확대 보기">
+        </div>
+        <button class="lightbox-nav-btn next" id="btn-lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+      <div class="lightbox-footer">
+        <p id="lightbox-desc">-</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL 4: National Wildlife Disease Control Official Activity Log Form
+       =================================================================== -->
   <div id="report-modal" class="modal-overlay hidden">
     <div class="modal-card report-modal-card">
       <div class="modal-header">
@@ -337,7 +403,9 @@
     </div>
   </div>
 
-  <!-- MODAL 3: Video Synchronization Guide & Automated Pipeline -->
+  <!-- ===================================================================
+       MODAL 5: Video Synchronization Guide & Automated Pipeline
+       =================================================================== -->
   <div id="sync-modal" class="modal-overlay hidden">
     <div class="modal-card" style="width: 760px; max-width: 95vw;">
       <div class="modal-header">
@@ -364,7 +432,7 @@
           </h4>
           <ol style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.8; padding-left: 20px;">
             <li><b>1단계 (영상 저장)</b>: 카메라에서 수거한 영상을 <code style="color: var(--hud-cyan); background: #000; padding: 2px 6px; border-radius: 4px;">E:\0. 2026년\미끼백신관련</code> 또는 하위 날짜별 폴더에 저장합니다.</li>
-            <li><b>2단계 (자동 동기화)</b>: 터미널에서 <code style="color: #fbbf24; background: #000; padding: 2px 6px; border-radius: 4px;">python update_videos.py</code> 명령을 실행합니다.</li>
+            <li><b>2단계 (자동 동기화)</b>: 터미널에서 <code style="color: #fbbf24; background: #000; padding: 2px 6px; border-radius: 4px;">python update_all_videos.py</code> 명령을 실행합니다.</li>
             <li><b>3단계 (결과 확인)</b>: 자동으로 날짜·시간·주야간·지점 파싱, 고화질 썸네일 생성 및 대시보드 갤러리에 즉시 반영됩니다.</li>
           </ol>
         </div>
@@ -379,10 +447,11 @@
   </div>
 
   <!-- App Modules (Cache-busted) -->
-  <script src="map-controller.js?v=20260819_0635"></script>
-  <script src="video-manager.js?v=20260819_0635"></script>
-  <script src="analytics.js?v=20260819_0635"></script>
-  <script src="activity-report.js?v=20260819_0635"></script>
-  <script src="app.js?v=20260819_0635"></script>
+  <script src="map-controller.js?v=20260901_0725"></script>
+  <script src="video-manager.js?v=20260901_0725"></script>
+  <script src="photo-manager.js?v=20260901_0725"></script>
+  <script src="analytics.js?v=20260901_0725"></script>
+  <script src="activity-report.js?v=20260901_0725"></script>
+  <script src="app.js?v=20260901_0725"></script>
 </body>
 </html>
