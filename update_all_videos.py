@@ -84,7 +84,8 @@ def sync_curated_videos():
 
     confirmed_sources = [
         os.path.join(SRC_BASE, "미끼백신 동영상 정리_공주시", "멧돼지 선별결과", "멧돼지확정"),
-        os.path.join(SRC_BASE, "미끼백신 동영상 정리_대구시", "멧돼지 선별결과", "멧돼지확정")
+        os.path.join(SRC_BASE, "미끼백신 동영상 정리_대구시", "멧돼지 선별결과", "멧돼지확정"),
+        os.path.join(SRC_BASE, "미끼백신 동영상 정리_공주시", "동영상", "미끼문금리142-5", "2026-09-01")
     ]
     ignored_sources = [
         os.path.join(SRC_BASE, "미끼백신 동영상 정리_공주시", "멧돼지 선별결과", "제외_고라니")
