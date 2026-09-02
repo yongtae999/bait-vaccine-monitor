@@ -865,5 +865,23 @@
     "bait_type": "멧돼지미끼틀 + 유인제배합",
     "lat": 36.64276,
     "lng": 127.012234
+  },
+  {
+    "id": "vid-gj142-20260804-0459",
+    "camera_id": "cam-gj-142-5",
+    "site_name": "공주 1호기 (문금리 142-5)",
+    "region": "공주",
+    "date": "2026-08-04",
+    "time": "04:59:13",
+    "is_night": true,
+    "animal_type": "야생 멧돼지 (Sus scrofa)",
+    "category": "멧돼지확정",
+    "filename": "0560_V20260804_045913000_9DCA3BFB-AA29-4AEF-AE8F-3D2F20F5F88D.mp4",
+    "video_url": "assets/videos/confirmed/0560_V20260804_045913000_9DCA3BFB-AA29-4AEF-AE8F-3D2F20F5F88D.mp4",
+    "thumbnail_url": "assets/thumbnails/0560_V20260804_045913000_9DCA3BFB-AA29-4AEF-AE8F-3D2F20F5F88D.jpg",
+    "confidence": 0.96,
+    "behavior": "당일 새벽 미끼틀 접근 및 고형사료 섭취 (활동일지 특이사항 기록)",
+    "temperature": "24°C",
+    "duration_sec": 10
   }
 ]
