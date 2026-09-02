@@ -450,51 +450,294 @@ class InterimReportManager {
   }
 
   exportCurrentReportToCSV() {
-    let rows = [];
-    rows.push(["실험지구분", "일자", "시간", "구분", "수행업무상세(작업일지)", "출현동물/개체수", "미끼반응단계", "참여인원/촬영근거"]);
+    this.exportCurrentReportToExcel();
+  }
+
+  exportCurrentReportToExcel() {
+    const baseUrl = window.location.origin.includes('github.io') 
+      ? 'https://yongtae999.github.io/bait-vaccine-monitor' 
+      : window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+
+    let sheetHtml = '';
+    const nowStr = new Date().toISOString().slice(0,10);
 
     if (this.activeSiteTab === 'all') {
-      this.reports.forEach(r => {
-        r.timeline.forEach(t => {
-          rows.push([
-            `"${r.site_name}"`,
-            `"${t.date}"`,
-            `"${t.time}"`,
-            `"${t.category}"`,
-            `"${t.work_content.replace(/"/g, '""')}"`,
-            `"${t.animal_appearance} (${t.boar_count})"`,
-            `"${t.reaction_stage}"`,
-            `"${t.workers}"`
-          ]);
-        });
-      });
+      sheetHtml = `
+        <table style="width: 100%; margin-bottom: 20px;">
+          <tr>
+            <td colspan="6" style="border: none; font-size: 16pt; font-weight: bold; text-align: left; padding: 10px 0;">
+              야생 멧돼지 미끼백신 섭취 기호도 평가 4대 실험지 종합 집계표
+            </td>
+            <td colspan="2" style="border: none; text-align: right;">
+              <table style="border-collapse: collapse; display: inline-table; width: 220px; text-align: center; border: 1.5pt solid #000;">
+                <tr>
+                  <th rowspan="2" style="width: 25px; background: #e2e8f0; border: 1pt solid #000; font-size: 8pt;">결<br>재</th>
+                  <th style="background: #f1f5f9; border: 1pt solid #000; font-size: 8pt; width: 65px;">담 당</th>
+                  <th style="background: #f1f5f9; border: 1pt solid #000; font-size: 8pt; width: 65px;">검 토</th>
+                  <th style="background: #f1f5f9; border: 1pt solid #000; font-size: 8pt; width: 65px;">결 재</th>
+                </tr>
+                <tr>
+                  <td style="height: 38px; border: 1pt solid #000;"></td>
+                  <td style="height: 38px; border: 1pt solid #000;"></td>
+                  <td style="height: 38px; border: 1pt solid #000;"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Summary Matrix Table -->
+        <h3 style="font-size: 11pt; font-weight: bold; margin: 10px 0 5px 0;">1. 4대 실험지별 기본 설치 제원 및 실증 실적 비교 집계표</h3>
+        <table border="1" style="border-collapse: collapse; width: 100%; margin-bottom: 25px; font-size: 9pt;">
+          <thead>
+            <tr style="background-color: #E2E8F0; font-weight: bold;">
+              <th style="width: 50px; padding: 6px;">구분</th>
+              <th style="padding: 6px;">실험지명 및 소재지</th>
+              <th style="padding: 6px;">정밀 GPS 좌표 (위도, 경도)</th>
+              <th style="width: 90px; padding: 6px;">설치일자</th>
+              <th style="width: 80px; padding: 6px;">수집 영상</th>
+              <th style="width: 90px; padding: 6px;">멧돼지 확정</th>
+              <th style="width: 120px; padding: 6px;">실증 평가</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${this.reports.map(r => `
+              <tr>
+                <td style="text-align: center; font-weight: bold; color: #0369a1; padding: 6px;">${r.site_num}</td>
+                <td style="padding: 6px;"><b>${r.site_name}</b><br><small style="color: #64748b;">${r.address}</small></td>
+                <td style="padding: 6px; font-family: monospace;">${r.coordinates}</td>
+                <td style="text-align: center; padding: 6px;">${r.install_date}</td>
+                <td style="text-align: center; font-weight: bold; padding: 6px;">${r.total_scanned_clips}건</td>
+                <td style="text-align: center; font-weight: bold; color: #e11d48; padding: 6px;">🐗 ${r.confirmed_boar_count}건</td>
+                <td style="text-align: center; padding: 6px;"><b>${r.bait_palatability.split('(')[0]}</b></td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+
+        <!-- Chronological Unified Timeline Table -->
+        <h3 style="font-size: 11pt; font-weight: bold; margin: 15px 0 5px 0;">2. 4대 실험지 날짜별 작업일지 및 멧돼지 출현/반응 실증 집계표 (시간순 타임라인)</h3>
+        <table border="1" style="border-collapse: collapse; width: 100%; font-size: 8.5pt;">
+          <thead>
+            <tr style="background-color: #E2E8F0; font-weight: bold;">
+              <th style="width: 90px; padding: 6px;">실험지구분</th>
+              <th style="width: 75px; padding: 6px;">일자</th>
+              <th style="width: 70px; padding: 6px;">시간</th>
+              <th style="width: 95px; padding: 6px;">구분</th>
+              <th style="padding: 6px;">수행 업무 상세 (작업일지 사실 기록)</th>
+              <th style="width: 110px; padding: 6px;">출현동물 / 개체수</th>
+              <th style="width: 120px; padding: 6px;">미끼 반응 / 진행단계</th>
+              <th style="width: 220px; padding: 6px;">현장 증빙 자료 (사진 및 캡처)</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${this.buildAllTimelineRowsForExcel(baseUrl)}
+          </tbody>
+        </table>
+      `;
     } else {
       const site = this.reports.find(r => r.site_id === this.activeSiteTab);
-      if (site) {
-        site.timeline.forEach(t => {
-          rows.push([
-            `"${site.site_name}"`,
-            `"${t.date}"`,
-            `"${t.time}"`,
-            `"${t.category}"`,
-            `"${t.work_content.replace(/"/g, '""')}"`,
-            `"${t.animal_appearance} (${t.boar_count})"`,
-            `"${t.reaction_stage}"`,
-            `"${t.workers}"`
-          ]);
-        });
-      }
+      if (!site) return;
+
+      sheetHtml = `
+        <table style="width: 100%; margin-bottom: 20px;">
+          <tr>
+            <td colspan="5" style="border: none; font-size: 16pt; font-weight: bold; text-align: left; padding: 10px 0;">
+              ${site.site_name} 실증 집계 및 시간순 타임라인 보고서
+            </td>
+            <td colspan="2" style="border: none; text-align: right;">
+              <table style="border-collapse: collapse; display: inline-table; width: 220px; text-align: center; border: 1.5pt solid #000;">
+                <tr>
+                  <th rowspan="2" style="width: 25px; background: #e2e8f0; border: 1pt solid #000; font-size: 8pt;">결<br>재</th>
+                  <th style="background: #f1f5f9; border: 1pt solid #000; font-size: 8pt; width: 65px;">담 당</th>
+                  <th style="background: #f1f5f9; border: 1pt solid #000; font-size: 8pt; width: 65px;">검 토</th>
+                  <th style="background: #f1f5f9; border: 1pt solid #000; font-size: 8pt; width: 65px;">결 재</th>
+                </tr>
+                <tr>
+                  <td style="height: 38px; border: 1pt solid #000;"></td>
+                  <td style="height: 38px; border: 1pt solid #000;"></td>
+                  <td style="height: 38px; border: 1pt solid #000;"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Profile Table -->
+        <h3 style="font-size: 11pt; font-weight: bold; margin: 10px 0 5px 0;">1. 실험지 기본 설치 제원 및 실증 현황</h3>
+        <table border="1" style="border-collapse: collapse; width: 100%; margin-bottom: 25px; font-size: 9pt;">
+          <tr>
+            <th style="width: 15%; background-color: #F1F5F9; padding: 6px;">실험지명</th>
+            <td style="width: 35%; padding: 6px;"><b>${site.site_name}</b></td>
+            <th style="width: 15%; background-color: #F1F5F9; padding: 6px;">설치일자</th>
+            <td style="width: 35%; padding: 6px;">${site.install_date} (정상 가동 중)</td>
+          </tr>
+          <tr>
+            <th style="background-color: #F1F5F9; padding: 6px;">지번 소재지</th>
+            <td style="padding: 6px;">${site.address}</td>
+            <th style="background-color: #F1F5F9; padding: 6px;">GPS 실측 좌표</th>
+            <td style="padding: 6px; font-family: monospace;">${site.coordinates}</td>
+          </tr>
+          <tr>
+            <th style="background-color: #F1F5F9; padding: 6px;">무인 관측 장비</th>
+            <td style="padding: 6px;">${site.camera_spec}</td>
+            <th style="background-color: #F1F5F9; padding: 6px;">누적 수집 영상</th>
+            <td style="padding: 6px;"><b>${site.total_scanned_clips}건</b> 수집 완료</td>
+          </tr>
+          <tr>
+            <th style="background-color: #F1F5F9; padding: 6px;">멧돼지 출현 확정</th>
+            <td style="padding: 6px; color: #e11d48; font-weight: bold;">🐗 총 ${site.confirmed_boar_count}건</td>
+            <th style="background-color: #F1F5F9; padding: 6px;">실증 기호도 평가</th>
+            <td style="padding: 6px; font-weight: bold; color: #0284c7;">${site.bait_palatability}</td>
+          </tr>
+          <tr>
+            <th style="background-color: #F1F5F9; padding: 6px;">실증 종합 소견</th>
+            <td colspan="3" style="padding: 6px;">${site.summary_opinion}</td>
+          </tr>
+        </table>
+
+        <!-- Timeline Table -->
+        <h3 style="font-size: 11pt; font-weight: bold; margin: 15px 0 5px 0;">2. 날짜별 작업일지 및 멧돼지 출현/반응 실증 집계표 (시간순 타임라인)</h3>
+        <table border="1" style="border-collapse: collapse; width: 100%; font-size: 8.5pt;">
+          <thead>
+            <tr style="background-color: #E2E8F0; font-weight: bold;">
+              <th style="width: 75px; padding: 6px;">일자</th>
+              <th style="width: 70px; padding: 6px;">시간</th>
+              <th style="width: 100px; padding: 6px;">구분</th>
+              <th style="padding: 6px;">수행 업무 상세 (작업일지 사실 기록)</th>
+              <th style="width: 110px; padding: 6px;">출현동물 / 개체수</th>
+              <th style="width: 130px; padding: 6px;">미끼 반응 / 진행단계</th>
+              <th style="width: 250px; padding: 6px;">현장 증빙 자료 (사진 및 캡처)</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${this.buildSiteTimelineRowsForExcel(site, baseUrl)}
+          </tbody>
+        </table>
+      `;
     }
 
-    const csvContent = "\uFEFF" + rows.map(e => e.join(",")).join("\n");
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const excelTemplate = `
+      <html xmlns:o="urn:schemas-microsoft-com:office:office"
+            xmlns:x="urn:schemas-microsoft-com:office:excel"
+            xmlns="http://www.w3.org/TR/REC-html40">
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!--[if gte mso 9]>
+        <xml>
+          <x:ExcelWorkbook>
+            <x:ExcelWorksheets>
+              <x:ExcelWorksheet>
+                <x:Name>실험지집계표</x:Name>
+                <x:WorksheetOptions>
+                  <x:DisplayGridlines/>
+                  <x:Print>
+                    <x:ValidPrinterInfo/>
+                    <x:PaperSizeIndex>9</x:PaperSizeIndex>
+                    <x:HorizontalResolution>600</x:HorizontalResolution>
+                    <x:VerticalResolution>600</x:VerticalResolution>
+                    <x:Orientation>Landscape</x:Orientation>
+                  </x:Print>
+                </x:WorksheetOptions>
+              </x:ExcelWorksheet>
+            </x:ExcelWorksheets>
+          </x:ExcelWorkbook>
+        </xml>
+        <![endif]-->
+        <style>
+          body { font-family: '맑은 고딕', 'Malgun Gothic', Dotum, sans-serif; font-size: 9pt; }
+          table { border-collapse: collapse; }
+          th { border: 1pt solid #475569; background-color: #f1f5f9; text-align: center; vertical-align: middle; }
+          td { border: 0.5pt solid #64748b; vertical-align: middle; padding: 4px 6px; }
+          .img-cell-box { display: inline-block; margin: 2px 4px; text-align: center; }
+          .img-cell-box img { width: 85px; height: 60px; object-fit: cover; border: 1px solid #64748b; }
+        </style>
+      </head>
+      <body>
+        ${sheetHtml}
+      </body>
+      </html>
+    `;
+
+    const blob = new Blob([excelTemplate], { type: 'application/vnd.ms-excel;charset=utf-8;' });
     const link = document.createElement("a");
-    const filename = `야생멧돼지_미끼백신_실험지집계표_${this.activeSiteTab}_${new Date().toISOString().slice(0,10)}.csv`;
+    const filename = `야생멧돼지_미끼백신_실증집계표_${this.activeSiteTab}_${nowStr}.xls`;
     link.setAttribute("href", URL.createObjectURL(blob));
     link.setAttribute("download", filename);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  }
+
+  buildAllTimelineRowsForExcel(baseUrl) {
+    let allRows = [];
+    this.reports.forEach(r => {
+      r.timeline.forEach(t => {
+        allRows.push({
+          site_num: r.site_num,
+          site_name: r.site_name,
+          ...t
+        });
+      });
+    });
+
+    allRows.sort((a, b) => a.date.localeCompare(b.date));
+
+    return allRows.map(row => {
+      const isBoar = row.category.includes('멧돼지') || row.category.includes('대군락');
+      const rowBg = isBoar ? 'background-color: #fff1f2;' : '';
+      const evHtml = this.formatEvidencesForExcel(row.evidences, baseUrl);
+
+      return `
+        <tr style="${rowBg}">
+          <td style="text-align: center; font-weight: bold; color: #0284c7; padding: 6px;">${row.site_num}</td>
+          <td style="text-align: center; padding: 6px;"><b>${row.date}</b></td>
+          <td style="text-align: center; color: #64748b; padding: 6px;">${row.time}</td>
+          <td style="text-align: center; font-weight: bold; padding: 6px;">${row.category}</td>
+          <td style="padding: 6px; line-height: 1.4;">${row.work_content.replace(/\n/g, '<br>')}</td>
+          <td style="text-align: center; padding: 6px;">${row.animal_appearance}<br><b>${row.boar_count}</b></td>
+          <td style="padding: 6px;">${row.reaction_stage}</td>
+          <td style="padding: 6px; text-align: center;">${evHtml}</td>
+        </tr>
+      `;
+    }).join('');
+  }
+
+  buildSiteTimelineRowsForExcel(site, baseUrl) {
+    return site.timeline.map(row => {
+      const isBoar = row.category.includes('멧돼지') || row.category.includes('대군락');
+      const rowBg = isBoar ? 'background-color: #fff1f2;' : '';
+      const evHtml = this.formatEvidencesForExcel(row.evidences, baseUrl);
+
+      return `
+        <tr style="${rowBg}">
+          <td style="text-align: center; padding: 6px;"><b>${row.date}</b></td>
+          <td style="text-align: center; color: #64748b; padding: 6px;">${row.time}</td>
+          <td style="text-align: center; font-weight: bold; padding: 6px;">${row.category}</td>
+          <td style="padding: 6px; line-height: 1.4;">${row.work_content.replace(/\n/g, '<br>')}</td>
+          <td style="text-align: center; padding: 6px;">${row.animal_appearance}<br><b>${row.boar_count}</b></td>
+          <td style="padding: 6px;">${row.reaction_stage}</td>
+          <td style="padding: 6px; text-align: center;">${evHtml}</td>
+        </tr>
+      `;
+    }).join('');
+  }
+
+  formatEvidencesForExcel(evidences, baseUrl) {
+    if (!evidences || !evidences.length) {
+      return '<span style="color: #94a3b8;">-</span>';
+    }
+
+    return evidences.map(ev => {
+      const fullImgUrl = ev.thumb.startsWith('http') ? ev.thumb : `${baseUrl}/${ev.thumb}`;
+      const typeLabel = ev.type === 'video' ? '🎬 영상캡처' : '📷 현장사진';
+      return `
+        <div class="img-cell-box" style="display: inline-block; margin: 3px; text-align: center;">
+          <img src="${fullImgUrl}" width="85" height="60" alt="${ev.title || ''}" style="border: 1px solid #475569; display: block; margin: 0 auto;" />
+          <span style="font-size: 7pt; color: #475569; display: block; max-width: 85px; overflow: hidden; white-space: nowrap;">${typeLabel}</span>
+        </div>
+      `;
+    }).join('');
   }
 }
 
