@@ -1530,12 +1530,12 @@
       },
       {
         "date": "2026-08-05",
-        "time": "02:00 ~ 04:20",
+        "time": "02:15 ~ 17:45",
         "category": "멧돼지 출현",
-        "work_content": "심야 02시~04시 연속 3회 미끼틀 섭취 녹화 전수 첨부 (0595, 0597, 0599번)",
+        "work_content": "심야 02~03시 야간 적외선 섭취(2건) 및 17시 주간 컬러 섭취(1건) 연속 녹화 (총 3건 전수 첨부)",
         "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
-        "reaction_stage": "야간 섭취 (Ingestion)",
+        "reaction_stage": "주·야간 섭취 (심야 적외선 2건 + 오후 주간 1건)",
         "workers": "무인 자동 촬영",
         "evidences": [
           {
@@ -1594,12 +1594,12 @@
       },
       {
         "date": "2026-08-07",
-        "time": "01:40 ~ 03:20",
+        "time": "02:40 & 16:20",
         "category": "멧돼지 출현",
-        "work_content": "야간 01시~03시 연속 2회 섭취 녹화 전수 첨부 (0613, 0615번)",
+        "work_content": "심야 02:40 야간 적외선 섭취(1건) 및 16:20 주간 컬러 섭취(1건) 녹화 (총 2건 전수 첨부)",
         "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
-        "reaction_stage": "야간 섭취 (Ingestion)",
+        "reaction_stage": "주·야간 섭취 (심야 적외선 1건 + 오후 주간 1건)",
         "workers": "무인 자동 촬영",
         "evidences": [
           {
@@ -1626,12 +1626,12 @@
       },
       {
         "date": "2026-08-09",
-        "time": "02:00 ~ 04:10",
+        "time": "02:10 ~ 15:30",
         "category": "멧돼지 출현",
-        "work_content": "야간 02시~04시 5회 연속 섭취 녹화 전수 첨부 (0619~0623번)",
+        "work_content": "심야 02~03시 야간 적외선 섭취(4건) 및 15시 주간 컬러 섭취(1건) 연속 녹화 (총 5건 전수 첨부)",
         "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1~2마리",
-        "reaction_stage": "야간 집중 섭취 (Ingestion)",
+        "reaction_stage": "주·야간 집중 섭취 (심야 적외선 4건 + 오후 주간 1건)",
         "workers": "무인 자동 촬영",
         "evidences": [
           {
