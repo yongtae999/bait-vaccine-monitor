@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     videoMgr.setCameraFilter(camId);
   };
 
-  // 6. Dynamic KPI Rollup
+  // 6. Dynamic KPI Rollup & Dynamic Date Range Calculation
   const totalClips = camerasData.reduce((acc, c) => acc + (c.total_clips || 0), 0);
   const confirmedBoar = videosData.filter(v => v.category === '멧돼지확정').length;
 
@@ -72,6 +72,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const kpiPhotos = document.getElementById('kpi-photos-count');
   if (kpiPhotos) kpiPhotos.textContent = photosData.length.toString();
+
+  // Calculate Dynamic Data Range (Min Date ~ Max Date from all datasets)
+  const allDates = [];
+  videosData.forEach(v => {
+    const d = v.date || v.recorded_date;
+    if (d && d.match(/^\d{4}-\d{2}-\d{2}$/)) allDates.push(d);
+  });
+  photosData.forEach(p => {
+    if (p.date && p.date.match(/^\d{4}-\d{2}-\d{2}$/)) allDates.push(p.date);
+  });
+  activityLogsData.forEach(l => {
+    if (l.work_date && l.work_date.match(/^\d{4}-\d{2}-\d{2}$/)) allDates.push(l.work_date);
+  });
+
+  if (allDates.length > 0) {
+    allDates.sort();
+    const minDate = allDates[0];
+    const maxDate = allDates[allDates.length - 1];
+    const rangeTextEl = document.getElementById('data-range-text');
+    if (rangeTextEl) {
+      const minStr = minDate.replace(/-/g, '.');
+      const maxStr = maxDate.replace(/-/g, '.');
+      rangeTextEl.textContent = `${minStr} ~ ${maxStr} 데이터 반영`;
+    }
+  }
 
   // 7. Populate Left Sidebar Camera Cards
   const camGrid = document.getElementById('camera-cards-container');
