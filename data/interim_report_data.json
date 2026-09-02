@@ -9,7 +9,7 @@
     "camera_spec": "IP Wildcam 4K TrailCam (동작감지 적외선 야간센서, LTE 모듈)",
     "install_date": "2026-07-01",
     "total_scanned_clips": 50,
-    "confirmed_boar_count": 6,
+    "confirmed_boar_count": 7,
     "ignored_animal_count": 0,
     "bait_palatability": "높음 (주야간 지속 섭취 확인)",
     "summary_opinion": "진입로 능선 이동통로에 위치하여 7월 14일 최초 접근 이후 7월 29일, 8월 5일, 8월 26일, 9월 1일 등 주야간 지속적인 멧돼지 개체 접근 및 고형사료 섭취가 실증됨.",
@@ -323,13 +323,20 @@
       {
         "date": "2026-08-04",
         "time": "08:00 ~ 10:00",
-        "category": "미끼 재살포 & 청소",
-        "work_content": "① IP카메라 설치 지역(3군데) 미끼틀 살포\n② 실험지 주변 풀 제거작업\n[특이사항] 당일 새벽 멧돼지 출현으로 미끼 재 살포 및 렌즈 클리닝",
-        "animal_appearance": "새벽 출현 흔적 확인",
-        "boar_count": "흔적 확인",
-        "reaction_stage": "새벽 섭취 후 긴급 재살포",
+        "category": "멧돼지 출현 및 미끼 재살포",
+        "work_content": "① 당일 새벽 멧돼지 출현으로 소진된 미끼 재살포 (활동일지 특이사항 기록)\n② IP카메라 설치 지역(3군데) 미끼틀 살포 및 주변 풀 제거작업\n③ 카메라 렌즈 클리닝 및 각도 재점검",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
+        "boar_count": "1마리",
+        "reaction_stage": "당일 새벽 출현 및 미끼 섭취 확인 (재살포 조치)",
         "workers": "권용태(사무국장)",
         "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/0560_V20260804_045913000_9DCA3BFB-AA29-4AEF-AE8F-3D2F20F5F88D.jpg",
+            "title": "8월 4일 새벽 멧돼지 출현 포착 캡처",
+            "animal": "야생 멧돼지",
+            "category": "멧돼지확정"
+          },
           {
             "type": "photo",
             "thumb": "assets/photos/2026-08-04_IMG_8740.JPG",
