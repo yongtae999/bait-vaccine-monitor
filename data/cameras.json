@@ -69,8 +69,8 @@
     "install_date": "2026-07-22",
     "model": "IP Wildcam 4K TrailCam",
     "status": "active",
-    "desc": "경산시 하양읍 남하리 산 127 멧돼지미끼틀 및 유인제배합 고형사료 모니터링",
-    "bait_type": "멧돼지미끼틀 + 유인제배합 고형사료",
+    "desc": "경산시 하양읍 남하리 산 127 무인 모니터링 (미끼 제외)",
+    "bait_type": "해당없음 (미끼 제외)",
     "total_clips": 43,
     "wildboar_confirmed": 3,
     "deer_ignored": 0

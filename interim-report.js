@@ -174,11 +174,10 @@ class InterimReportManager {
             <th style="width: 55px;">구분</th>
             <th>실험지명 및 소재지</th>
             <th>정밀 GPS 좌표 (위도, 경도)</th>
-            <th style="width: 85px;">설치일자</th>
-            <th>실험 미끼 제원</th>
-            <th style="width: 75px;">수집 영상</th>
-            <th style="width: 85px;">멧돼지 확정</th>
-            <th style="width: 100px;">미끼 기호도 평가</th>
+            <th style="width: 95px;">설치일자</th>
+            <th style="width: 85px;">수집 영상</th>
+            <th style="width: 95px;">멧돼지 확정</th>
+            <th style="width: 120px;">실증 평가</th>
           </tr>
         </thead>
         <tbody>
@@ -188,10 +187,6 @@ class InterimReportManager {
               <td><b>${r.site_name}</b><br><small style="color: #94a3b8;">${r.address}</small></td>
               <td style="font-family: monospace; font-size: 0.72rem;">${r.coordinates}</td>
               <td class="text-center">${r.install_date}</td>
-              <td>
-                <b>${r.bait_system}</b>
-                ${r.site_id === 'cam-dg-1' ? '<br><small style="color: #fbbf24; font-weight: bold;">(유인제 미배합 조건)</small>' : '<br><small style="color: #34d399;">(유인제 배합 조건)</small>'}
-              </td>
               <td class="text-center font-bold">${r.total_scanned_clips}건</td>
               <td class="text-center font-bold" style="color: #f43f5e; font-size: 0.88rem;">🐗 ${r.confirmed_boar_count}건</td>
               <td class="text-center"><span class="badge-status success">${r.bait_palatability.split('(')[0]}</span></td>
@@ -321,23 +316,20 @@ class InterimReportManager {
             <td style="font-family: monospace; font-size: 0.75rem;">${site.coordinates}</td>
           </tr>
           <tr>
-            <th>실험 미끼 제원</th>
-            <td>
-              <b>${site.bait_system}</b>
-              ${site.site_id === 'cam-dg-1' ? '<br><small style="color: #fbbf24; font-weight: bold;">※ 유인제배합 고형사료는 미설치(미적용), 미끼틀 단독 및 일반 사료 적용</small>' : '<br><small style="color: #34d399;">※ 멧돼지미끼틀 + 유인제배합 고형사료 적용 (7/25, 8/23 살포)</small>'}
-            </td>
             <th>무인 관측 장비</th>
             <td>${site.camera_spec}</td>
-          </tr>
-          <tr>
             <th>누적 수집 영상</th>
             <td><b>${site.total_scanned_clips}건</b> 수집 완료</td>
-            <th>멧돼지 섭취 확정</th>
-            <td><b style="color: #f43f5e; font-size: 0.95rem;">🐗 총 ${site.confirmed_boar_count}건</b> (비대상 고라니 ${site.ignored_animal_count}건)</td>
           </tr>
           <tr>
-            <th>미끼 기호도 종합</th>
-            <td colspan="3"><b style="color: #38bdf8;">${site.bait_palatability}</b> — ${site.summary_opinion}</td>
+            <th>멧돼지 출현 확정</th>
+            <td><b style="color: #f43f5e; font-size: 0.95rem;">🐗 총 ${site.confirmed_boar_count}건</b> (비대상 고라니 ${site.ignored_animal_count}건)</td>
+            <th>실증 기호도 평가</th>
+            <td><b style="color: #38bdf8;">${site.bait_palatability}</b></td>
+          </tr>
+          <tr>
+            <th>실증 종합 소견</th>
+            <td colspan="3">${site.summary_opinion}</td>
           </tr>
         </tbody>
       </table>
