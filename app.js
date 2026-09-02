@@ -50,6 +50,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.photoManager.init();
   }
 
+  // 6. Initialize Interim Evaluation Report Manager (4 Sites Tables)
+  if (window.interimReportManager) {
+    window.interimReportManager.init();
+  }
+
   // Connect Map camera selection with Video filtering
   mapCtrl.onCameraSelect = (camId) => {
     videoMgr.setCameraFilter(camId);

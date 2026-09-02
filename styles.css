@@ -1409,3 +1409,360 @@ body {
   line-height: 1.4;
 }
 
+/* ===================================================================
+   INTERIM EVALUATION REPORT (4 SITES SUMMARY TABLES & TIMELINE)
+   =================================================================== */
+.interim-report-modal-card {
+  width: 1200px;
+  max-width: 96vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.interim-report-modal-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  overflow: hidden;
+  gap: 14px;
+}
+
+.interim-site-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.interim-tab-btn {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.interim-tab-btn:hover {
+  border-color: var(--hud-cyan);
+  color: #fff;
+}
+
+.interim-tab-btn.active {
+  background: #0284c7;
+  border-color: var(--hud-cyan);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.interim-sheet-area {
+  flex: 1;
+  overflow-y: auto;
+  background: #090e17;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+/* Report Sheet Header */
+.report-sheet-header {
+  border-bottom: 2px solid var(--hud-cyan);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+
+.sheet-badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid var(--hud-cyan);
+  color: var(--hud-cyan);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.sheet-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #f8fafc;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.sheet-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.sheet-meta span b {
+  color: #cbd5e1;
+}
+
+/* Summary KPI Card */
+.interim-summary-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 24px;
+}
+
+.summary-kpi-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary-kpi-item.highlight .val {
+  color: #f43f5e;
+}
+
+.summary-kpi-item .lbl {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.summary-kpi-item .val {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #38bdf8;
+  font-family: var(--font-hud);
+}
+
+.summary-kpi-item .val small {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+/* Tables in Report */
+.table-section-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #38bdf8;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  font-size: 0.78rem;
+  background: rgba(6, 9, 14, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.report-table th, .report-table td {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 10px;
+  vertical-align: middle;
+}
+
+.report-table th {
+  background: #0d1527;
+  color: #e2e8f0;
+  font-weight: 700;
+  text-align: center;
+  font-size: 0.76rem;
+}
+
+.report-table td {
+  color: #cbd5e1;
+}
+
+.report-table .text-center {
+  text-align: center;
+}
+
+.report-table .font-bold {
+  font-weight: 700;
+}
+
+.report-table .row-highlight {
+  background: rgba(244, 63, 94, 0.06);
+}
+
+.site-tag {
+  background: rgba(2, 132, 199, 0.25);
+  border: 1px solid #0284c7;
+  color: #38bdf8;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.badge-cat {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.badge-cat.boar {
+  background: rgba(244, 63, 94, 0.2);
+  border: 1px solid #f43f5e;
+  color: #fb7185;
+}
+
+.badge-cat.bait {
+  background: rgba(251, 191, 36, 0.2);
+  border: 1px solid #fbbf24;
+  color: #fbbf24;
+}
+
+.badge-cat.work {
+  background: rgba(56, 189, 248, 0.2);
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.badge-status.success {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid #10b981;
+  color: #34d399;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.event-desc {
+  line-height: 1.45;
+  color: #f1f5f9;
+}
+
+.event-sub {
+  font-size: 0.72rem;
+  color: #38bdf8;
+  margin-top: 3px;
+}
+
+.text-rose {
+  color: #fb7185;
+}
+
+/* Media Thumbnail in Table */
+.table-media-preview {
+  position: relative;
+  width: 60px;
+  height: 42px;
+  margin: 0 auto;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.table-media-preview:hover {
+  transform: scale(1.15);
+  border-color: var(--hud-cyan);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+  z-index: 5;
+}
+
+.table-media-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.table-media-preview .media-icon {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 0.55rem;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+/* Print Optimization for Interim Report */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #interim-report-modal,
+  #interim-report-modal * {
+    visibility: visible;
+  }
+  #interim-report-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background: #fff !important;
+    color: #000 !important;
+    z-index: 99999;
+  }
+  .modal-header,
+  .interim-site-tabs,
+  .modal-close-btn,
+  #btn-print-interim-report,
+  #btn-export-interim-csv {
+    display: none !important;
+  }
+  .interim-report-modal-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    background: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .interim-sheet-area {
+    background: #fff !important;
+    color: #000 !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+  .report-sheet-header {
+    border-bottom: 2px solid #000 !important;
+  }
+  .sheet-title {
+    color: #000 !important;
+  }
+  .sheet-meta, .sheet-badge {
+    color: #333 !important;
+  }
+  .report-table {
+    background: #fff !important;
+    border: 1px solid #000 !important;
+  }
+  .report-table th {
+    background: #f1f5f9 !important;
+    color: #000 !important;
+    border: 1px solid #ccc !important;
+  }
+  .report-table td {
+    color: #000 !important;
+    border: 1px solid #ddd !important;
+  }
+  .table-media-preview {
+    border: 1px solid #999 !important;
+  }
+}
+
+
