@@ -1,0 +1,189 @@
+[
+  {
+    "num": "0411",
+    "filename": "0411_V20260813_131848000_4EBC7E43-5AE4-47B4-B89E-0E3E22FA8E04.mp4",
+    "json_date": "2026-08-09",
+    "json_time": "13:18:48",
+    "json_is_night": false,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0411_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0411_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0404",
+    "filename": "0404_V20260813_131810000_1E3CF046-0C03-438B-974F-51B75F14E74A.mp4",
+    "json_date": "2026-08-08",
+    "json_time": "04:10:00",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0404_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0404_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0359",
+    "filename": "0359_V20260813_131727000_42670D23-9899-4301-8BF5-4330BA35A1C7.mp4",
+    "json_date": "2026-08-07",
+    "json_time": "03:50:40",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0359_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0359_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0357",
+    "filename": "0357_V20260813_131726000_0E48FC1C-A823-48B6-B7FC-3705EE4ADC47.mp4",
+    "json_date": "2026-08-07",
+    "json_time": "02:15:30",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0357_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0357_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0358",
+    "filename": "0358_V20260813_131726000_DC44769D-9D4D-46E7-832C-AE6956946DA9.mp4",
+    "json_date": "2026-08-07",
+    "json_time": "02:48:15",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0358_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0358_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0333",
+    "filename": "0333_V20260813_131655000_5EF6D462-0BA8-42D7-BF57-986A16FE7ADF.mp4",
+    "json_date": "2026-08-06",
+    "json_time": "01:28:14",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0333_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0333_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0121",
+    "filename": "0121_V20260813_131114000_317018ED-BA8C-479C-AD4C-C95F1C9F5FDC.mp4",
+    "json_date": "2026-07-28",
+    "json_time": "02:45:00",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0121_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0121_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0119",
+    "filename": "0119_V20260813_131113000_7C117683-66A6-4D62-A4F6-A2ADE242794A.mp4",
+    "json_date": "2026-07-28",
+    "json_time": "01:48:50",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0119_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0119_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0120",
+    "filename": "0120_V20260813_131113000_D67D17CA-D6A4-42D6-9DC0-D22634001560.mp4",
+    "json_date": "2026-07-28",
+    "json_time": "02:15:20",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0120_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0120_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0116",
+    "filename": "0116_V20260813_131112000_1378D7A0-CE42-4E09-856A-FC0917A2CC51.mp4",
+    "json_date": "2026-07-28",
+    "json_time": "23:50:40",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0116_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0116_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0117",
+    "filename": "0117_V20260813_131112000_73C89671-A765-4465-96B5-CE9B81CCDE06.mp4",
+    "json_date": "2026-07-28",
+    "json_time": "00:25:10",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0117_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0117_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0118",
+    "filename": "0118_V20260813_131112000_F45C030F-5230-4E63-B1E8-80D462615CF7.mp4",
+    "json_date": "2026-07-28",
+    "json_time": "01:10:35",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0118_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0118_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0114",
+    "filename": "0114_V20260813_131111000_7C789644-AEA2-492F-B507-C671A56A4BF1.mp4",
+    "json_date": "2026-07-28",
+    "json_time": "22:45:30",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0114_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0114_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0115",
+    "filename": "0115_V20260813_131111000_E31D4A3B-F1C6-4508-A721-870C317A2450.mp4",
+    "json_date": "2026-07-28",
+    "json_time": "23:12:15",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0115_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0115_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0112",
+    "filename": "0112_V20260813_131110000_7F7D8091-B488-468B-9E09-23B69AFB269A.mp4",
+    "json_date": "2026-07-28",
+    "json_time": "21:38:45",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0112_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0112_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0113",
+    "filename": "0113_V20260813_131110000_C96EC919-2C28-4C1D-828C-80FFC7A2B945.mp4",
+    "json_date": "2026-07-28",
+    "json_time": "22:04:10",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0113_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0113_full.jpg",
+    "width": 640,
+    "height": 360
+  },
+  {
+    "num": "0111",
+    "filename": "0111_V20260813_131109000_AFCBD321-D1A7-4D95-8F54-B6619DD17E14.mp4",
+    "json_date": "2026-07-28",
+    "json_time": "21:15:20",
+    "json_is_night": true,
+    "osd_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0111_osd.jpg",
+    "full_img": "C:\\Users\\Owner\\.gemini\\antigravity\\scratch\\bait-vaccine-monitor\\scratch\\cam2_osd_audit\\0111_full.jpg",
+    "width": 640,
+    "height": 360
+  }
+]
