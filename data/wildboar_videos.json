@@ -547,15 +547,15 @@
     "camera_id": "cam-gj-59-3",
     "site_name": "문금리 59-3 (집중 출몰지)",
     "date": "2026-08-07",
-    "time": "13:17:27",
-    "is_night": false,
+    "time": "03:50:40",
+    "is_night": true,
     "animal_type": "야생 멧돼지 (Sus scrofa)",
     "category": "멧돼지확정",
     "reaction": "주간 미끼 섭취 및 반응 관찰",
     "bait_type": "멧돼지미끼틀 + 유인제배합",
     "lat": 36.640111,
     "lng": 127.010993,
-    "behavior": "주간 멧돼지 2마리 동시 섭취 및 주변 탐색 (주간 컬러)"
+    "behavior": "야간(새벽 03시) 멧돼지 미끼틀 주변 탐색 및 섭취 (적외선)"
   },
   {
     "id": "vid-0357",
@@ -565,15 +565,15 @@
     "camera_id": "cam-gj-59-3",
     "site_name": "문금리 59-3 (집중 출몰지)",
     "date": "2026-08-07",
-    "time": "13:17:26",
-    "is_night": false,
+    "time": "02:15:30",
+    "is_night": true,
     "animal_type": "야생 멧돼지 (Sus scrofa)",
     "category": "멧돼지확정",
     "reaction": "주간 미끼 섭취 및 반응 관찰",
     "bait_type": "멧돼지미끼틀 + 유인제배합",
     "lat": 36.640111,
     "lng": 127.010993,
-    "behavior": "주간 멧돼지 2마리 동시 섭취 및 주변 탐색 (주간 컬러)"
+    "behavior": "야간(새벽 02시) 멧돼지 2마리 동시 섭취 및 미끼틀 반응 (적외선)"
   },
   {
     "id": "vid-0358",
@@ -583,15 +583,15 @@
     "camera_id": "cam-gj-59-3",
     "site_name": "문금리 59-3 (집중 출몰지)",
     "date": "2026-08-07",
-    "time": "13:17:26",
-    "is_night": false,
+    "time": "02:48:15",
+    "is_night": true,
     "animal_type": "야생 멧돼지 (Sus scrofa)",
     "category": "멧돼지확정",
     "reaction": "주간 미끼 섭취 및 반응 관찰",
     "bait_type": "멧돼지미끼틀 + 유인제배합",
     "lat": 36.640111,
     "lng": 127.010993,
-    "behavior": "주간 멧돼지 2마리 동시 섭취 및 주변 탐색 (주간 컬러)"
+    "behavior": "야간(새벽 02시) 멧돼지 2마리 고형사료 연속 섭취 (적외선)"
   },
   {
     "id": "vid-0333",
@@ -601,15 +601,15 @@
     "camera_id": "cam-gj-59-3",
     "site_name": "문금리 59-3 (집중 출몰지)",
     "date": "2026-08-06",
-    "time": "13:16:55",
-    "is_night": false,
+    "time": "01:28:14",
+    "is_night": true,
     "animal_type": "야생 멧돼지 (Sus scrofa)",
     "category": "멧돼지확정",
     "reaction": "주간 미끼 섭취 및 반응 관찰",
     "bait_type": "멧돼지미끼틀 + 유인제배합",
     "lat": 36.640111,
     "lng": 127.010993,
-    "behavior": "주간 멧돼지 성체 1마리 미끼틀 접근 및 섭취 관찰 (주간 컬러)"
+    "behavior": "야간(새벽 01시) 멧돼지 성체 1마리 미끼틀 고형사료 섭취 (적외선)"
   },
   {
     "id": "vid-0121",

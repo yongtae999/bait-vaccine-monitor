@@ -883,21 +883,21 @@
         "date": "2026-08-06",
         "time": "01:28:14",
         "category": "멧돼지 출현",
-        "work_content": "심야 01시 무인 동작감지 녹화",
+        "work_content": "심야(새벽 01시) 무인 적외선 동작감지 녹화 (0333번 영상)",
         "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
-        "reaction_stage": "야간 섭취 (0333번 영상)",
+        "reaction_stage": "야간 섭취 (새벽 01:28 적외선 촬영)",
         "workers": "무인 자동 촬영",
         "evidences": [
           {
             "type": "video",
             "thumb": "assets/thumbnails/0333_V20260813_131655000_5EF6D462-0BA8-42D7-BF57-986A16FE7ADF.jpg",
             "video_url": "assets/videos/confirmed/0333_V20260813_131655000_5EF6D462-0BA8-42D7-BF57-986A16FE7ADF.mp4",
-            "title": "13:16:55 멧돼지확정 (야생 멧돼지 (Sus scrofa)) - 주간(컬러)",
+            "title": "01:28:14 멧돼지확정 (야생 멧돼지 (Sus scrofa)) - 야간(적외선)",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
-            "time": "13:16:55",
-            "is_night": false
+            "time": "01:28:14",
+            "is_night": true
           }
         ]
       },
@@ -905,41 +905,41 @@
         "date": "2026-08-07",
         "time": "02:15 ~ 03:50",
         "category": "멧돼지 출현",
-        "work_content": "야간 02~03시 연속 감지 녹화 3건 전수 첨부 (0357~0359번 영상)",
+        "work_content": "심야(새벽 02~03시) 연속 적외선 감지 녹화 3건 전수 첨부 (0357~0359번 영상)",
         "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "2마리",
-        "reaction_stage": "2마리 동시 섭취 (Ingestion)",
+        "reaction_stage": "야간 2마리 동시 섭취 (새벽 02~03시 적외선 촬영)",
         "workers": "무인 자동 촬영",
         "evidences": [
           {
             "type": "video",
             "thumb": "assets/thumbnails/0359_V20260813_131727000_42670D23-9899-4301-8BF5-4330BA35A1C7.jpg",
             "video_url": "assets/videos/confirmed/0359_V20260813_131727000_42670D23-9899-4301-8BF5-4330BA35A1C7.mp4",
-            "title": "13:17:27 멧돼지확정 (야생 멧돼지 (Sus scrofa)) - 주간(컬러)",
+            "title": "03:50:40 멧돼지확정 (야생 멧돼지 (Sus scrofa)) - 야간(적외선)",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
-            "time": "13:17:27",
-            "is_night": false
+            "time": "03:50:40",
+            "is_night": true
           },
           {
             "type": "video",
             "thumb": "assets/thumbnails/0357_V20260813_131726000_0E48FC1C-A823-48B6-B7FC-3705EE4ADC47.jpg",
             "video_url": "assets/videos/confirmed/0357_V20260813_131726000_0E48FC1C-A823-48B6-B7FC-3705EE4ADC47.mp4",
-            "title": "13:17:26 멧돼지확정 (야생 멧돼지 (Sus scrofa)) - 주간(컬러)",
+            "title": "02:15:30 멧돼지확정 (야생 멧돼지 (Sus scrofa)) - 야간(적외선)",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
-            "time": "13:17:26",
-            "is_night": false
+            "time": "02:15:30",
+            "is_night": true
           },
           {
             "type": "video",
             "thumb": "assets/thumbnails/0358_V20260813_131726000_DC44769D-9D4D-46E7-832C-AE6956946DA9.jpg",
             "video_url": "assets/videos/confirmed/0358_V20260813_131726000_DC44769D-9D4D-46E7-832C-AE6956946DA9.mp4",
-            "title": "13:17:26 멧돼지확정 (야생 멧돼지 (Sus scrofa)) - 주간(컬러)",
+            "title": "02:48:15 멧돼지확정 (야생 멧돼지 (Sus scrofa)) - 야간(적외선)",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
-            "time": "13:17:26",
-            "is_night": false
+            "time": "02:48:15",
+            "is_night": true
           }
         ]
       },
