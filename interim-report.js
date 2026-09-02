@@ -115,11 +115,28 @@ class InterimReportManager {
     container.innerHTML = `
       <!-- Overall Title Header -->
       <div class="report-sheet-header">
-        <div class="sheet-badge">국립야생동물질병관리원 실증 용역 과제</div>
-        <h2 class="sheet-title">야생 멧돼지 미끼백신 섭취 기호도 평가 4대 실험지 종합 집계표</h2>
-        <div class="sheet-meta">
-          <span><b>수행기관:</b> (사)야생생물관리협회 대전ㆍ세종ㆍ충남지부</span>
-          <span><b>작성기준일:</b> 2026년 9월 2일 (중간보고회 발표용)</span>
+        <div class="header-left-group">
+          <div class="sheet-badge">국립야생동물질병관리원 실증 용역 과제</div>
+          <h2 class="sheet-title">야생 멧돼지 미끼백신 섭취 기호도 평가 4대 실험지 종합 집계표</h2>
+          <div class="sheet-meta">
+            <span><b>수행기관:</b> (사)야생생물관리협회 대전ㆍ세종ㆍ충남지부</span>
+            <span><b>작성기준일:</b> 2026년 9월 2일 (중간보고회 발표용)</span>
+          </div>
+        </div>
+        <div class="print-approval-box">
+          <table class="approval-table">
+            <tr>
+              <th rowspan="2" class="appr-title">결<br>재</th>
+              <th>담 당</th>
+              <th>검 토</th>
+              <th>결 재</th>
+            </tr>
+            <tr>
+              <td class="appr-sign"></td>
+              <td class="appr-sign"></td>
+              <td class="appr-sign"></td>
+            </tr>
+          </table>
         </div>
       </div>
 
@@ -154,14 +171,14 @@ class InterimReportManager {
       <table class="report-table">
         <thead>
           <tr>
-            <th>구분</th>
+            <th style="width: 55px;">구분</th>
             <th>실험지명 및 소재지</th>
             <th>정밀 GPS 좌표 (위도, 경도)</th>
-            <th>설치일자</th>
-            <th>실험 미끼 제원 (유인제 배합 여부)</th>
-            <th>수집 영상</th>
-            <th>멧돼지 확정</th>
-            <th>미끼 기호도 평가</th>
+            <th style="width: 85px;">설치일자</th>
+            <th>실험 미끼 제원</th>
+            <th style="width: 75px;">수집 영상</th>
+            <th style="width: 85px;">멧돼지 확정</th>
+            <th style="width: 100px;">미끼 기호도 평가</th>
           </tr>
         </thead>
         <tbody>
@@ -172,8 +189,8 @@ class InterimReportManager {
               <td style="font-family: monospace; font-size: 0.72rem;">${r.coordinates}</td>
               <td class="text-center">${r.install_date}</td>
               <td>
-                <b>${r.bait_system.split('(')[0]}</b>
-                ${r.site_id === 'cam-dg-1' ? '<br><small style="color: #fbbf24;">(유인제배합 고형사료 미설치/미끼틀 단독)</small>' : '<br><small style="color: #34d399;">(유인제배합 고형사료 설치)</small>'}
+                <b>${r.bait_system}</b>
+                ${r.site_id === 'cam-dg-1' ? '<br><small style="color: #fbbf24; font-weight: bold;">(유인제 미배합 조건)</small>' : '<br><small style="color: #34d399;">(유인제 배합 조건)</small>'}
               </td>
               <td class="text-center font-bold">${r.total_scanned_clips}건</td>
               <td class="text-center font-bold" style="color: #f43f5e; font-size: 0.88rem;">🐗 ${r.confirmed_boar_count}건</td>
@@ -260,11 +277,28 @@ class InterimReportManager {
     container.innerHTML = `
       <!-- Single Site Title Header -->
       <div class="report-sheet-header">
-        <div class="sheet-badge">국립야생동물질병관리원 실증 모니터링 실험지 정밀 집계표</div>
-        <h2 class="sheet-title">${site.site_name} 실증 집계 및 시간순 타임라인 보고서</h2>
-        <div class="sheet-meta">
-          <span><b>지번 소재지:</b> ${site.address}</span>
-          <span><b>정밀 GPS 좌표:</b> ${site.coordinates}</span>
+        <div class="header-left-group">
+          <div class="sheet-badge">국립야생동물질병관리원 실증 모니터링 실험지 정밀 집계표</div>
+          <h2 class="sheet-title">${site.site_name} 실증 집계 및 시간순 타임라인 보고서</h2>
+          <div class="sheet-meta">
+            <span><b>지번 소재지:</b> ${site.address}</span>
+            <span><b>정밀 GPS 좌표:</b> ${site.coordinates}</span>
+          </div>
+        </div>
+        <div class="print-approval-box">
+          <table class="approval-table">
+            <tr>
+              <th rowspan="2" class="appr-title">결<br>재</th>
+              <th>담 당</th>
+              <th>검 토</th>
+              <th>결 재</th>
+            </tr>
+            <tr>
+              <td class="appr-sign"></td>
+              <td class="appr-sign"></td>
+              <td class="appr-sign"></td>
+            </tr>
+          </table>
         </div>
       </div>
 
