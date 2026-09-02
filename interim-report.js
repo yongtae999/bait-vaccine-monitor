@@ -74,7 +74,7 @@ class InterimReportManager {
 
     tabsContainer.innerHTML = `
       <button class="interim-tab-btn ${this.activeSiteTab === 'all' ? 'active' : ''}" data-site="all">
-        📊 4대 실험지 전체 종합
+        📊 4대 실험지 전체 종합 집계표
       </button>
       ${this.reports.map(r => `
         <button class="interim-tab-btn ${this.activeSiteTab === r.site_id ? 'active' : ''}" data-site="${r.site_id}">
@@ -118,8 +118,8 @@ class InterimReportManager {
         <div class="sheet-badge">국립야생동물질병관리원 실증 용역 과제</div>
         <h2 class="sheet-title">야생 멧돼지 미끼백신 섭취 기호도 평가 4대 실험지 종합 집계표</h2>
         <div class="sheet-meta">
-          <span><b>주관/수행:</b> (사)야생생물관리협회 대전ㆍ세종ㆍ충남지부</span>
-          <span><b>작성기준일:</b> 2026년 9월 2일 (중간보고용)</span>
+          <span><b>수행기관:</b> (사)야생생물관리협회 대전ㆍ세종ㆍ충남지부</span>
+          <span><b>작성기준일:</b> 2026년 9월 2일 (중간보고회 발표용)</span>
         </div>
       </div>
 
@@ -149,16 +149,16 @@ class InterimReportManager {
 
       <!-- 4 Sites Comparison Matrix Table -->
       <div class="table-section-title">
-        <i class="fa-solid fa-table-list"></i> 1. 4대 실험지별 기본 현황 및 실증 실적 비교 집계표
+        <i class="fa-solid fa-table-list"></i> 1. 4대 실험지별 기본 설치 제원 및 실증 실적 비교 집계표
       </div>
       <table class="report-table">
         <thead>
           <tr>
             <th>구분</th>
-            <th>지점명 및 소재지</th>
+            <th>실험지명 및 소재지</th>
             <th>정밀 GPS 좌표 (위도, 경도)</th>
             <th>설치일자</th>
-            <th>실험 미끼 제원</th>
+            <th>실험 미끼 제원 (유인제 배합 여부)</th>
             <th>수집 영상</th>
             <th>멧돼지 확정</th>
             <th>미끼 기호도 평가</th>
@@ -171,7 +171,10 @@ class InterimReportManager {
               <td><b>${r.site_name}</b><br><small style="color: #94a3b8;">${r.address}</small></td>
               <td style="font-family: monospace; font-size: 0.72rem;">${r.coordinates}</td>
               <td class="text-center">${r.install_date}</td>
-              <td>${r.bait_system}</td>
+              <td>
+                <b>${r.bait_system.split('(')[0]}</b>
+                ${r.site_id === 'cam-dg-1' ? '<br><small style="color: #fbbf24;">(유인제배합 고형사료 미설치/미끼틀 단독)</small>' : '<br><small style="color: #34d399;">(유인제배합 고형사료 설치)</small>'}
+              </td>
               <td class="text-center font-bold">${r.total_scanned_clips}건</td>
               <td class="text-center font-bold" style="color: #f43f5e; font-size: 0.88rem;">🐗 ${r.confirmed_boar_count}건</td>
               <td class="text-center"><span class="badge-status success">${r.bait_palatability.split('(')[0]}</span></td>
@@ -182,7 +185,7 @@ class InterimReportManager {
 
       <!-- Integrated Chronological Master Timeline for all sites -->
       <div class="table-section-title" style="margin-top: 24px;">
-        <i class="fa-solid fa-clock-rotate-left"></i> 2. 4대 실험지 통합 일자별 실증 이력 타임라인 (시간 순서)
+        <i class="fa-solid fa-clock-rotate-left"></i> 2. 4대 실험지 통합 날짜별 작업일지 및 멧돼지 출현 증빙 집계표 (시간 순서)
       </div>
       ${this.renderMasterTimelineTable()}
     `;
@@ -191,7 +194,6 @@ class InterimReportManager {
   }
 
   renderMasterTimelineTable() {
-    // Combine all events across sites and sort chronologically
     let allEvents = [];
     this.reports.forEach(r => {
       r.timeline.forEach(t => {
@@ -210,14 +212,14 @@ class InterimReportManager {
       <table class="report-table timeline-table">
         <thead>
           <tr>
-            <th style="width: 50px;">No</th>
-            <th style="width: 90px;">일자</th>
-            <th style="width: 80px;">실험지</th>
-            <th style="width: 100px;">작업/사건 구분</th>
-            <th>상세 내용 (어떻게, 무엇을)</th>
-            <th style="width: 100px;">개체수 / 반응</th>
+            <th style="width: 45px;">No</th>
+            <th style="width: 90px;">날짜 / 시간</th>
+            <th style="width: 75px;">실험지</th>
+            <th style="width: 105px;">구분</th>
+            <th>수행 업무 상세 (작업일지 참조)</th>
+            <th style="width: 160px;">출현 동물 / 개체수 / 반응단계</th>
             <th style="width: 110px;">참여 / 촬영</th>
-            <th style="width: 85px;">증빙 자료</th>
+            <th style="width: 150px;">📷 현장 사진 & 캡처 영상</th>
           </tr>
         </thead>
         <tbody>
@@ -228,20 +230,24 @@ class InterimReportManager {
               <td class="text-center"><span class="site-tag">${e.site_num}</span></td>
               <td class="text-center"><span class="badge-cat ${e.category.includes('멧돼지') ? 'boar' : (e.category.includes('유인제') ? 'bait' : 'work')}">${e.category}</span></td>
               <td>
-                <div class="event-desc">${e.details}</div>
-                ${e.reaction_stage && e.reaction_stage !== '-' ? `<div class="event-sub"><i class="fa-solid fa-paw text-rose"></i> <b>반응단계:</b> ${e.reaction_stage}</div>` : ''}
+                <div class="event-desc" style="white-space: pre-line;">${e.work_content}</div>
               </td>
-              <td class="text-center font-bold" style="color: ${e.boar_count !== '-' ? '#f43f5e' : '#94a3b8'};">
-                ${e.boar_count}
+              <td>
+                ${e.animal_appearance !== '-' ? `
+                  <div style="font-weight: 700; color: ${e.category.includes('멧돼지') ? '#f43f5e' : '#fbbf24'}; font-size: 0.76rem;">
+                    ${e.category.includes('멧돼지') ? '🐗 ' : '🦌 '}${e.animal_appearance}
+                  </div>
+                  <div style="font-size: 0.72rem; color: #cbd5e1; margin-top: 2px;">
+                    <b>개체수:</b> ${e.boar_count}
+                  </div>
+                ` : '<div style="color: #94a3b8; text-align: center;">-</div>'}
+                ${e.reaction_stage && e.reaction_stage !== '-' ? `
+                  <div class="event-sub"><i class="fa-solid fa-paw text-rose"></i> <b>반응:</b> ${e.reaction_stage}</div>
+                ` : ''}
               </td>
               <td class="text-center" style="font-size: 0.72rem; color: #cbd5e1;">${e.workers}</td>
-              <td class="text-center">
-                ${e.media_thumb ? `
-                  <div class="table-media-preview" data-type="${e.evidence_type}" data-thumb="${e.media_thumb}" data-title="${e.media_title || e.details}" title="클릭하여 증빙 자료 확대">
-                    <img src="${e.media_thumb}" alt="증빙 자료">
-                    <i class="fa-solid ${e.evidence_type === 'video' ? 'fa-play' : 'fa-magnifying-glass'} media-icon"></i>
-                  </div>
-                ` : '-'}
+              <td>
+                ${this.renderEvidenceGallery(e.evidences)}
               </td>
             </tr>
           `).join('')}
@@ -255,10 +261,10 @@ class InterimReportManager {
       <!-- Single Site Title Header -->
       <div class="report-sheet-header">
         <div class="sheet-badge">국립야생동물질병관리원 실증 모니터링 실험지 정밀 집계표</div>
-        <h2 class="sheet-title">${site.site_name} 실증 집계 및 타임라인 보고서</h2>
+        <h2 class="sheet-title">${site.site_name} 실증 집계 및 시간순 타임라인 보고서</h2>
         <div class="sheet-meta">
-          <span><b>소재지:</b> ${site.address}</span>
-          <span><b>정밀 좌표:</b> ${site.coordinates}</span>
+          <span><b>지번 소재지:</b> ${site.address}</span>
+          <span><b>정밀 GPS 좌표:</b> ${site.coordinates}</span>
         </div>
       </div>
 
@@ -282,7 +288,10 @@ class InterimReportManager {
           </tr>
           <tr>
             <th>실험 미끼 제원</th>
-            <td><b>${site.bait_system}</b></td>
+            <td>
+              <b>${site.bait_system}</b>
+              ${site.site_id === 'cam-dg-1' ? '<br><small style="color: #fbbf24; font-weight: bold;">※ 유인제배합 고형사료는 미설치(미적용), 미끼틀 단독 및 일반 사료 적용</small>' : '<br><small style="color: #34d399;">※ 멧돼지미끼틀 + 유인제배합 고형사료 적용 (7/25, 8/23 살포)</small>'}
+            </td>
             <th>무인 관측 장비</th>
             <td>${site.camera_spec}</td>
           </tr>
@@ -290,7 +299,7 @@ class InterimReportManager {
             <th>누적 수집 영상</th>
             <td><b>${site.total_scanned_clips}건</b> 수집 완료</td>
             <th>멧돼지 섭취 확정</th>
-            <td><b style="color: #f43f5e; font-size: 0.95rem;">🐗 총 ${site.confirmed_boar_count}건</b> (비대상 통과 ${site.ignored_animal_count}건)</td>
+            <td><b style="color: #f43f5e; font-size: 0.95rem;">🐗 총 ${site.confirmed_boar_count}건</b> (비대상 고라니 ${site.ignored_animal_count}건)</td>
           </tr>
           <tr>
             <th>미끼 기호도 종합</th>
@@ -301,19 +310,19 @@ class InterimReportManager {
 
       <!-- Chronological Site Timeline Table -->
       <div class="table-section-title">
-        <i class="fa-solid fa-list-check"></i> 2. ${site.site_num} 시간순 전체 실증 이력 및 멧돼지 반응 집계표
+        <i class="fa-solid fa-list-check"></i> 2. ${site.site_num} 날짜별 작업일지 및 멧돼지 출현/반응 실증 집계표 (시간 순서)
       </div>
       <table class="report-table timeline-table">
         <thead>
           <tr>
-            <th style="width: 50px;">No</th>
-            <th style="width: 95px;">일자</th>
-            <th style="width: 90px;">시간</th>
-            <th style="width: 120px;">구분</th>
-            <th>상세 실증 내용 (어떻게, 무엇을)</th>
-            <th style="width: 90px;">개체수</th>
-            <th style="width: 140px;">미끼 반응 단계</th>
-            <th style="width: 110px;">수행자 / 증빙</th>
+            <th style="width: 45px;">No</th>
+            <th style="width: 95px;">날짜</th>
+            <th style="width: 85px;">시간</th>
+            <th style="width: 110px;">구분</th>
+            <th>수행 업무 상세 (작업일지 참조)</th>
+            <th style="width: 165px;">출현 동물 / 개체수 / 반응단계</th>
+            <th style="width: 110px;">참여 / 촬영</th>
+            <th style="width: 170px;">📷 현장 사진 & 캡처 영상</th>
           </tr>
         </thead>
         <tbody>
@@ -324,22 +333,24 @@ class InterimReportManager {
               <td class="text-center font-mono" style="font-size: 0.72rem;">${t.time}</td>
               <td class="text-center"><span class="badge-cat ${t.category.includes('멧돼지') ? 'boar' : (t.category.includes('유인제') ? 'bait' : 'work')}">${t.category}</span></td>
               <td>
-                <div class="event-desc">${t.details}</div>
+                <div class="event-desc" style="white-space: pre-line;">${t.work_content}</div>
               </td>
-              <td class="text-center font-bold" style="color: ${t.boar_count !== '-' ? '#f43f5e' : '#94a3b8'};">
-                ${t.boar_count}
-              </td>
-              <td class="text-center" style="font-size: 0.75rem; color: #38bdf8; font-weight: 600;">
-                ${t.reaction_stage}
-              </td>
-              <td class="text-center">
-                <div style="font-size: 0.68rem; color: #cbd5e1; margin-bottom: 4px;">${t.workers}</div>
-                ${t.media_thumb ? `
-                  <div class="table-media-preview" data-type="${t.evidence_type}" data-thumb="${t.media_thumb}" data-title="${t.media_title || t.details}" title="클릭하여 증빙 자료 확대">
-                    <img src="${t.media_thumb}" alt="증빙">
-                    <i class="fa-solid ${t.evidence_type === 'video' ? 'fa-play' : 'fa-magnifying-glass'} media-icon"></i>
+              <td>
+                ${t.animal_appearance !== '-' ? `
+                  <div style="font-weight: 700; color: ${t.category.includes('멧돼지') ? '#f43f5e' : '#fbbf24'}; font-size: 0.76rem;">
+                    ${t.category.includes('멧돼지') ? '🐗 ' : '🦌 '}${t.animal_appearance}
                   </div>
-                ` : '-'}
+                  <div style="font-size: 0.72rem; color: #cbd5e1; margin-top: 2px;">
+                    <b>개체수:</b> ${t.boar_count}
+                  </div>
+                ` : '<div style="color: #94a3b8; text-align: center;">-</div>'}
+                ${t.reaction_stage && t.reaction_stage !== '-' ? `
+                  <div class="event-sub"><i class="fa-solid fa-paw text-rose"></i> <b>반응:</b> ${t.reaction_stage}</div>
+                ` : ''}
+              </td>
+              <td class="text-center" style="font-size: 0.72rem; color: #cbd5e1;">${t.workers}</td>
+              <td>
+                ${this.renderEvidenceGallery(t.evidences)}
               </td>
             </tr>
           `).join('')}
@@ -350,6 +361,23 @@ class InterimReportManager {
     this.bindMediaClicks(container);
   }
 
+  renderEvidenceGallery(evidences) {
+    if (!evidences || evidences.length === 0) {
+      return '<div style="color: #94a3b8; text-align: center; font-size: 0.7rem;">-</div>';
+    }
+
+    return `
+      <div class="evidence-grid-wrap">
+        ${evidences.map((ev, i) => `
+          <div class="table-media-preview" data-type="${ev.type}" data-thumb="${ev.thumb}" data-title="${ev.title || '현장 실증 증빙'}" title="${ev.title || '클릭하여 확대'}">
+            <img src="${ev.thumb}" alt="증빙">
+            <i class="fa-solid ${ev.type === 'video' ? 'fa-play' : 'fa-camera'} media-icon"></i>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
   bindMediaClicks(container) {
     container.querySelectorAll('.table-media-preview').forEach(el => {
       el.addEventListener('click', () => {
@@ -358,7 +386,6 @@ class InterimReportManager {
         const title = el.dataset.title;
 
         if (type === 'photo' && window.photoManager) {
-          // Open photo lightbox
           const photoObj = window.photoManager.photos.find(p => thumb.includes(p.filename));
           if (photoObj) {
             const idx = window.photoManager.photos.indexOf(photoObj);
@@ -367,7 +394,6 @@ class InterimReportManager {
             this.showDirectMediaModal(thumb, title);
           }
         } else if (type === 'video' && window.videoManager) {
-          // Find video in videoManager
           const vidFilename = thumb.replace('assets/thumbnails/', '').replace('.jpg', '.mp4');
           const vidObj = window.videoManager.videos.find(v => v.filename.includes(vidFilename) || vidFilename.includes(v.filename.replace('.mp4', '')));
           if (vidObj) {
@@ -399,7 +425,7 @@ class InterimReportManager {
 
   exportCurrentReportToCSV() {
     let rows = [];
-    rows.push(["실험지구분", "일자", "시간", "구분", "상세실증내용", "멧돼지개체수", "미끼반응단계", "참여인원/촬영근거"]);
+    rows.push(["실험지구분", "일자", "시간", "구분", "수행업무상세(작업일지)", "출현동물/개체수", "미끼반응단계", "참여인원/촬영근거"]);
 
     if (this.activeSiteTab === 'all') {
       this.reports.forEach(r => {
@@ -409,8 +435,8 @@ class InterimReportManager {
             `"${t.date}"`,
             `"${t.time}"`,
             `"${t.category}"`,
-            `"${t.details.replace(/"/g, '""')}"`,
-            `"${t.boar_count}"`,
+            `"${t.work_content.replace(/"/g, '""')}"`,
+            `"${t.animal_appearance} (${t.boar_count})"`,
             `"${t.reaction_stage}"`,
             `"${t.workers}"`
           ]);
@@ -425,8 +451,8 @@ class InterimReportManager {
             `"${t.date}"`,
             `"${t.time}"`,
             `"${t.category}"`,
-            `"${t.details.replace(/"/g, '""')}"`,
-            `"${t.boar_count}"`,
+            `"${t.work_content.replace(/"/g, '""')}"`,
+            `"${t.animal_appearance} (${t.boar_count})"`,
             `"${t.reaction_stage}"`,
             `"${t.workers}"`
           ]);

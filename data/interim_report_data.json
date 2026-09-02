@@ -2,7 +2,7 @@
   {
     "site_id": "cam-gj-142-5",
     "site_num": "1호기",
-    "site_name": "공주 1호기 (문금리 142-5)",
+    "site_name": "공주 1호기 (문금리 142-5 진입로 능선)",
     "region": "충남 공주시",
     "address": "충청남도 공주시 유구읍 문금리 142-5",
     "coordinates": "36.639449° N, 127.010684° E (고도 343.8m, 방위 285°)",
@@ -19,164 +19,420 @@
         "date": "2026-07-01",
         "time": "14:00 ~ 17:00",
         "category": "사이트 조성 & 설치",
-        "event_type": "최초 설치",
-        "details": "미끼틀 매몰지 주변 멧돼지 유도 울타리 설치, IP카메라 마운팅, 1차 미끼틀 살포 및 제초 작업",
-        "workers": "최진호(전무), 유은준(본부장), 권용태(사무국장), 김현구(감시단원)",
+        "work_content": "① 미끼틀 매몰지 주변 울타리 작업\n② IP카메라 설치 지역 미끼틀 살포\n③ 실험지 주변 풀 제거작업\n[특이사항] 울타리 외부 안내문 게시",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "-",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-07-01_P20260701_144607372_63375DAE-1011-468C-8768-6892E402B8B4.JPG",
-        "media_title": "7월 1일 울타리 및 미끼틀 최초 설치"
+        "reaction_stage": "사이트 조성 완료",
+        "workers": "최진호(전무), 유은준(본부장), 권용태(사무국장), 김현구(감시단원)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_144607372_63375DAE-1011-468C-8768-6892E402B8B4.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_144615682_F26DA59A-FE56-4C67-B8DE-B8D90910000D.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_144624158_5B3602DC-E96C-4A0B-A16D-8BAEC4B15AE8.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_145205438_7E59BD46-F564-4CF2-8B42-2D220C227B89.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_145435874_AA39B2F7-DB8B-446B-A65B-10C81C4EF6FE.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_145526404_26455BE5-D46C-4653-A6E8-509472B3A7B9.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          }
+        ]
       },
       {
         "date": "2026-07-14",
         "time": "15:00 ~ 17:00",
         "category": "현장 점검 & 미끼 살포",
-        "event_type": "정기 점검",
-        "details": "1차 수집 영상 SD카드 회수, 배터리 전압 체크, 미끼틀 살포 및 주변 풀 제거",
-        "workers": "최진호(전무), 권용태(사무국장)",
+        "work_content": "① IP카메라 설치 지역(3군데) 미끼틀 살포\n② 실험지 주변 풀 제거작업\n③ 1차 SD카드 영상 수거 및 배터리 점검",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "-",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-07-14_IMG_8579.JPG",
-        "media_title": "7월 14일 미끼 잔여량 점검"
+        "reaction_stage": "정기 점검 및 미끼 살포",
+        "workers": "최진호(전무), 권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8579.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8580.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8581.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8582.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8583.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8585.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8586.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          }
+        ]
       },
       {
         "date": "2026-07-14",
         "time": "14:38:00",
         "category": "멧돼지 출현",
-        "event_type": "개체 관찰",
-        "details": "능선 진입로 주변 멧돼지 1차 접근 및 미끼틀 탐색",
-        "workers": "-",
+        "work_content": "능선 진입로 주변 주간 무인카메라 동작감지 녹화",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
-        "reaction_stage": "접근 및 탐색 (주간)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0001_V20260813_125519000_1D41AE69-B095-46D9-B5FD-90B00C6F516F.jpg",
-        "media_title": "0001번 주간 진입로 멧돼지 접근 영상"
+        "reaction_stage": "주간 접근 및 미끼 탐색 (0001번 영상)",
+        "workers": "무인 자동 촬영",
+        "evidences": []
+      },
+      {
+        "date": "2026-07-15",
+        "time": "09:00 ~ 11:00",
+        "category": "현장 점검",
+        "work_content": "주변 풀 제거작업 및 전일 설치 미끼틀 상태 점검",
+        "animal_appearance": "-",
+        "boar_count": "-",
+        "reaction_stage": "미끼틀 상태 이상무",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-15_IMG_8587.JPG",
+            "title": "문금리 카메라 각도 및 섭취 흔적 점검",
+            "location": "공주시 유구읍 문금리 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-15_IMG_8588.JPG",
+            "title": "문금리 카메라 각도 및 섭취 흔적 점검",
+            "location": "공주시 유구읍 문금리 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-15_IMG_8589.JPG",
+            "title": "문금리 카메라 각도 및 섭취 흔적 점검",
+            "location": "공주시 유구읍 문금리 59-3, 산135"
+          }
+        ]
       },
       {
         "date": "2026-07-19",
         "time": "14:00 ~ 17:00",
-        "category": "현장 점검 & 족적 실측",
-        "event_type": "정기 점검",
-        "details": "미끼틀 주변 야생 멧돼지 족적 확인, 울타리 고정 보강 및 주변 풀 제거작업",
+        "category": "현장 점검 & 족적 확인",
+        "work_content": "실험지 주변 풀 제거작업 및 미끼틀, 울타리 상태 점검, 멧돼지 족적 다수 확인",
+        "animal_appearance": "멧돼지 족적 다수 확인",
+        "boar_count": "족적 확인",
+        "reaction_stage": "유인틀 주변 족적 계측",
         "workers": "권용태(사무국장)",
-        "boar_count": "-",
-        "reaction_stage": "족적 다수 확인",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-07-19_IMG_8605.JPG",
-        "media_title": "7월 19일 멧돼지 족적 및 울타리 점검"
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8605.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8606.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8607.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8608.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8609.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8610.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          }
+        ]
       },
       {
         "date": "2026-07-25",
         "time": "13:00 ~ 16:00",
         "category": "유인제 살포 & 점검",
-        "event_type": "유인제 살포",
-        "details": "미끼틀 및 울타리 상태 점검, 멧돼지 유인제 배합 살포 (3곳 총 6통 중 2통 배정)",
-        "workers": "권용태(사무국장)",
+        "work_content": "① 실험지 주변 풀 제거작업 및 미끼틀, 울타리 상태 점검\n② 멧돼지 유인제 살포 (3곳, 총 6통 중 본 사이트 2통 배정)",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "유인제 살포 완료",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-07-25_캡쳐01_미끼문금리59-3_20260725_093030.jpg",
-        "media_title": "7월 25일 유인제 살포 현장"
+        "reaction_stage": "유인제 집중 살포 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐01_미끼문금리59-3_20260725_093030.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐02_미끼문금리59-3_20260725_092802.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐03_미끼문금리59-3_20260725_092426.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐04_미끼문금리산135_공주먹이_20260725.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐05_미끼문금리산135_공주먹이_20260725.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐05_미끼문금리산135_공주먹이_20260725_1.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          }
+        ]
       },
       {
         "date": "2026-07-29",
         "time": "02:20:15",
         "category": "멧돼지 출현",
-        "event_type": "야간 섭취",
-        "details": "유인제 살포 후 야간 멧돼지 성체 출현하여 미끼틀 접근 및 섭취 반응",
-        "workers": "-",
+        "work_content": "야간 무인카메라 적외선 감지 녹화",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
-        "reaction_stage": "야간 섭취 (Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0024_V20260813_125544000_A3D0C696-8563-46C5-A041-C6E18CE4B4A5.jpg",
-        "media_title": "0024번 야간 멧돼지 섭취 포착"
+        "reaction_stage": "야간 섭취 및 미끼틀 반응 (0024번 영상)",
+        "workers": "무인 자동 촬영",
+        "evidences": []
       },
       {
         "date": "2026-08-03",
         "time": "09:30 ~ 11:00",
         "category": "2차 미끼 보충",
-        "event_type": "사료 보충",
-        "details": "미끼틀 고형사료 2차 추가 살포, 센서 차단 수풀 예초 정비",
-        "workers": "권용태(사무국장)",
+        "work_content": "① IP카메라 설치 지역(3군데) 미끼틀 살포 (2차 고형사료 대량 보충)\n② 실험지 주변 풀 제거작업",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "-",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-08-03_IMG_8726.JPG",
-        "media_title": "8월 3일 미끼틀 2차 보충 살포"
+        "reaction_stage": "고형사료 2차 보충 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8726.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8727.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8728.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8729.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          }
+        ]
       },
       {
         "date": "2026-08-04",
         "time": "08:00 ~ 10:00",
-        "category": "미끼 재살포 & 센서 청소",
-        "event_type": "긴급 살포",
-        "details": "당일 새벽 멧돼지 출현 확인 후 미끼틀 재살포, 카메라 렌즈 클리닝 및 각도 보정",
+        "category": "미끼 재살포 & 청소",
+        "work_content": "① IP카메라 설치 지역(3군데) 미끼틀 살포\n② 실험지 주변 풀 제거작업\n[특이사항] 당일 새벽 멧돼지 출현으로 미끼 재 살포 및 렌즈 클리닝",
+        "animal_appearance": "새벽 출현 흔적 확인",
+        "boar_count": "흔적 확인",
+        "reaction_stage": "새벽 섭취 후 긴급 재살포",
         "workers": "권용태(사무국장)",
-        "boar_count": "-",
-        "reaction_stage": "새벽 출현 후 재살포",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-08-04_IMG_8740.JPG",
-        "media_title": "8월 4일 카메라 렌즈 클리닝"
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8740.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8741.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8742.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8743.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          }
+        ]
       },
       {
         "date": "2026-08-05",
         "time": "21:12:52",
         "category": "멧돼지 출현",
-        "event_type": "야간 섭취",
-        "details": "미끼 재살포 후 야간 21시 멧돼지 성체 재방문 및 집중 섭취",
-        "workers": "-",
+        "work_content": "야간 21시 무인카메라 동작감지 녹화",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
-        "reaction_stage": "야간 집중 섭취 (Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0034_V20260805_211252000_2E678F2C-6315-4AD8-9732-F4EFF59F752D.jpg",
-        "media_title": "0034번 야간 멧돼지 집중 섭취"
+        "reaction_stage": "야간 미끼틀 고형사료 섭취 (0034번 영상)",
+        "workers": "무인 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/0034_V20260805_211252000_2E678F2C-6315-4AD8-9732-F4EFF59F752D.jpg",
+            "video_url": "assets/videos/confirmed/0034_V20260805_211252000_2E678F2C-6315-4AD8-9732-F4EFF59F752D.mp4",
+            "title": "21:12:52 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
+            "animal": "야생 멧돼지 (Sus scrofa)",
+            "category": "멧돼지확정",
+            "time": "21:12:52"
+          }
+        ]
       },
       {
         "date": "2026-08-23",
         "time": "14:00 ~ 17:00",
         "category": "유인제 살포 & 안전 점검",
-        "event_type": "유인제 살포",
-        "details": "집중 호우 후 사면 안정성 및 미끼틀 방수 상태 점검, 멧돼지 유인제 추가 살포 (3곳 총 6통)",
-        "workers": "권용태(사무국장)",
+        "work_content": "① 실험지 주변 풀 제거작업\n② 멧돼지 유인제 살포 (3곳, 총 6통)\n③ 집중 호우 후 실험구 안전 및 미끼틀 상태 점검",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "-",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-08-23_IMG_1410.JPG",
-        "media_title": "8월 23일 강우 후 안전 점검"
+        "reaction_stage": "안전 점검 및 유인제 살포 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-23_IMG_1410.JPG",
+            "title": "집중 호우 후 실험구 안전 및 미끼틀 점검",
+            "location": "공주시 유구읍 문금리 일원"
+          }
+        ]
       },
       {
         "date": "2026-08-26",
         "time": "02:08:51",
         "category": "멧돼지 출현",
-        "event_type": "야간 섭취",
-        "details": "심야 02시 멧돼지 1마리 명확 확인 및 미끼틀 고형사료 섭취",
-        "workers": "-",
+        "work_content": "심야 02시 적외선 무인감지 녹화 (SHA-256 검증)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
-        "reaction_stage": "야간 섭취 확정 (SHA-256 검증)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0624_20260826_020851_000_10_P.jpg",
-        "media_title": "0624번 8/26 야간 멧돼지 확정 영상"
+        "reaction_stage": "야간 섭취 확정 (0624번 영상)",
+        "workers": "무인 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/0624_20260826_020851_000_10_P.jpg",
+            "video_url": "assets/videos/confirmed/0624_20260826_020851_000_10_P.mp4",
+            "title": "02:08:51 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
+            "animal": "야생 멧돼지 (Sus scrofa)",
+            "category": "멧돼지확정",
+            "time": "02:08:51"
+          }
+        ]
       },
       {
         "date": "2026-09-01",
         "time": "09:26:26 & 09:29:02",
         "category": "멧돼지 출현",
-        "event_type": "주간 섭취",
-        "details": "오전 09시 주간 멧돼지 접근 및 섭취 연속 관찰 2건",
-        "workers": "-",
+        "work_content": "주간 09시 연속 동작감지 녹화 2건",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
-        "reaction_stage": "주간 연속 섭취 (Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/20260901_092902_000_10_P.jpg",
-        "media_title": "9/1 신규 주간 멧돼지 섭취 포착"
+        "reaction_stage": "주간 연속 섭취 (20260901_092626 & 092902)",
+        "workers": "무인 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260901_092902_000_10_P.jpg",
+            "video_url": "assets/videos/confirmed/20260901_092902_000_10_P.mp4",
+            "title": "09:29:02 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
+            "animal": "야생 멧돼지 (Sus scrofa)",
+            "category": "멧돼지확정",
+            "time": "09:29:02"
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260901_092626_000_10_P.jpg",
+            "video_url": "assets/videos/confirmed/20260901_092626_000_10_P.mp4",
+            "title": "09:26:26 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
+            "animal": "야생 멧돼지 (Sus scrofa)",
+            "category": "멧돼지확정",
+            "time": "09:26:26"
+          }
+        ]
       }
     ]
   },
   {
     "site_id": "cam-gj-59-3",
     "site_num": "2호기",
-    "site_name": "공주 2호기 (문금리 59-3)",
+    "site_name": "공주 2호기 (문금리 59-3 집중 출몰지)",
     "region": "충남 공주시",
     "address": "충청남도 공주시 유구읍 문금리 59-3",
     "coordinates": "36.640111° N, 127.010993° E (고도 348.5m, 방위 328°)",
@@ -193,157 +449,371 @@
         "date": "2026-07-01",
         "time": "14:00 ~ 17:00",
         "category": "사이트 조성 & 설치",
-        "event_type": "최초 설치",
-        "details": "문금리 59-3 집중 출몰구역에 미끼틀 매몰지 조성, 카메라 마운팅, 1차 사료 살포",
-        "workers": "최진호, 유은준, 권용태, 김현구",
+        "work_content": "문금리 59-3 집중 출몰구역에 미끼틀 매몰지 조성, 카메라 마운팅, 1차 사료 살포 및 풀 제거작업",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "-",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-07-01_P20260701_144615682_F26DA59A-FE56-4C67-B8DE-B8D90910000D.JPG",
-        "media_title": "7월 1일 59-3번지 최초 설치"
+        "reaction_stage": "사이트 조성 완료",
+        "workers": "최진호, 유은준, 권용태, 김현구",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_145542514_DB12933E-FC2D-44D2-B4B2-3E9907DBC20B.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_150004762_08CAF87A-00C7-4684-85E4-1D06CD3B4B11.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_151534040_61B51E2F-59E5-46D4-9608-C508EC4C58BE.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_151559520_3F308043-138A-4F1A-BFBB-CEF03FAD0DE3.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_151601448_84F8F4E9-E28D-466A-84EF-5967682AE6AC.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_152207438_6F5F3F8F-4573-4ADD-839F-E12ACD1416B8.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          }
+        ]
       },
       {
         "date": "2026-07-14",
         "time": "15:00 ~ 17:00",
-        "category": "현장 점검",
-        "event_type": "정기 점검",
-        "details": "카메라 동작감지 상태 점검, SD카드 수거, 미끼틀 살포 및 풀 제거작업",
-        "workers": "최진호, 권용태",
+        "category": "현장 점검 & 미끼 살포",
+        "work_content": "① IP카메라 설치 지역 미끼틀 살포\n② 실험지 주변 풀 제거작업 및 배터리 점검",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "-",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-07-14_IMG_8580.JPG",
-        "media_title": "7월 14일 59-3 미끼 점검"
+        "reaction_stage": "정기 점검 완료",
+        "workers": "최진호, 권용태",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8579.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8580.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8581.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8582.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8583.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8585.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8586.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          }
+        ]
       },
       {
         "date": "2026-07-15",
         "time": "09:00 ~ 11:00",
         "category": "앵글 보정 & 점검",
-        "event_type": "카메라 보정",
-        "details": "주변 풀 제거 및 전일 설치 미끼틀 상태 점검, 야간 화각 최적화 수직 각도 보정",
-        "workers": "권용태(사무국장)",
+        "work_content": "주변 풀 제거작업 및 전일 설치 미끼틀 상태 점검, 야간 화각 최적화 수직 각도 보정",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "섭취 흔적 실측",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-07-15_IMG_8587.JPG",
-        "media_title": "7월 15일 앵글 미세 보정"
+        "reaction_stage": "섭취 흔적 실측 및 앵글 보정",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-15_IMG_8587.JPG",
+            "title": "문금리 카메라 각도 및 섭취 흔적 점검",
+            "location": "공주시 유구읍 문금리 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-15_IMG_8588.JPG",
+            "title": "문금리 카메라 각도 및 섭취 흔적 점검",
+            "location": "공주시 유구읍 문금리 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-15_IMG_8589.JPG",
+            "title": "문금리 카메라 각도 및 섭취 흔적 점검",
+            "location": "공주시 유구읍 문금리 59-3, 산135"
+          }
+        ]
       },
       {
         "date": "2026-07-19",
         "time": "14:00 ~ 17:00",
         "category": "족적 확인 & 정비",
-        "event_type": "정기 점검",
-        "details": "실험지 주변 풀 제거작업 및 미끼틀, 울타리 상태 점검, 대형 족적 확인",
+        "work_content": "실험지 주변 풀 제거작업 및 미끼틀, 울타리 상태 점검, 대형 성체 족적 확인",
+        "animal_appearance": "대형 성체 족적 확인",
+        "boar_count": "대형 족적",
+        "reaction_stage": "대형 성체 족적 실측",
         "workers": "권용태(사무국장)",
-        "boar_count": "-",
-        "reaction_stage": "대형 성체 족적 확인",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-07-19_IMG_8606.JPG",
-        "media_title": "7월 19일 족적 실측"
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8611.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8612.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8613.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8614.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8615.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8616.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          }
+        ]
       },
       {
         "date": "2026-07-25",
         "time": "13:00 ~ 16:00",
         "category": "유인제 살포 & 점검",
-        "event_type": "유인제 살포",
-        "details": "실험지 주변 풀 제거작업 및 미끼틀 상태 점검, 멧돼지 유인제 집중 살포 (2통)",
-        "workers": "권용태(사무국장)",
+        "work_content": "① 실험지 주변 풀 제거작업 및 미끼틀, 울타리 상태 점검\n② 멧돼지 유인제 살포 (2통 배정)",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "유인제 집중 살포",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-07-25_캡쳐02_미끼문금리59-3_20260725_092802.jpg",
-        "media_title": "7월 25일 유인제 살포"
+        "reaction_stage": "유인제 살포 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐01_미끼문금리59-3_20260725_093030.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐02_미끼문금리59-3_20260725_092802.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐03_미끼문금리59-3_20260725_092426.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐04_미끼문금리산135_공주먹이_20260725.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐05_미끼문금리산135_공주먹이_20260725.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐05_미끼문금리산135_공주먹이_20260725_1.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          }
+        ]
       },
       {
         "date": "2026-07-28",
         "time": "20:30 ~ 03:40",
         "category": "멧돼지 대군락 출현",
-        "event_type": "대군락 집중 섭취",
-        "details": "야간 시간대 성체 및 유체 2~4마리 대군락 출현하여 미끼틀 고형사료 11회 연속 집중 섭취 (0111~0121번 영상)",
-        "workers": "-",
+        "work_content": "야간 집중 출현 및 미끼틀 섭취 연속 녹화 (0111~0121번 총 11건)",
+        "animal_appearance": "야생 멧돼지 군락 (Sus scrofa)",
         "boar_count": "2~4마리 군락",
-        "reaction_stage": "군락 집중 섭식 (Frenzy Feeding)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0111_V20260813_131109000_AFCBD321-D1A7-4D95-8F54-B6619DD17E14.jpg",
-        "media_title": "0111번 대군락 멧돼지 야간 섭취"
+        "reaction_stage": "군락 집중 섭식 (Frenzy Feeding, 11회 연속 섭취)",
+        "workers": "무인 자동 촬영",
+        "evidences": []
       },
       {
         "date": "2026-08-03",
         "time": "09:30 ~ 11:00",
         "category": "2차 미끼 대량 살포",
-        "event_type": "사료 보충",
-        "details": "전량 소모된 미끼틀에 고형사료 2차 대량 살포, 주변 예초 작업 실시",
-        "workers": "권용태(사무국장)",
+        "work_content": "전량 소모된 미끼틀에 고형사료 2차 대량 살포 및 주변 수풀 예초 정비",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "-",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-08-03_IMG_8727.JPG",
-        "media_title": "8월 3일 사료 대량 보충"
+        "reaction_stage": "사료 대량 보충 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8729.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8730.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8731.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8732.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          }
+        ]
       },
       {
         "date": "2026-08-04",
         "time": "08:00 ~ 10:00",
         "category": "미끼 재살포",
-        "event_type": "긴급 보충",
-        "details": "당일 새벽 멧돼지 출현으로 소진된 미끼 재살포 및 센서 점검",
+        "work_content": "당일 새벽 멧돼지 출현으로 소진된 미끼 재살포 및 센서 점검",
+        "animal_appearance": "새벽 출현 흔적",
+        "boar_count": "흔적 확인",
+        "reaction_stage": "긴급 미끼 보충 완료",
         "workers": "권용태(사무국장)",
-        "boar_count": "-",
-        "reaction_stage": "새벽 출현 후 재살포",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-08-04_IMG_8741.JPG",
-        "media_title": "8월 4일 긴급 미끼 보충"
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8743.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8745.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8746.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8747.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          }
+        ]
       },
       {
         "date": "2026-08-06",
         "time": "01:28:14",
         "category": "멧돼지 출현",
-        "event_type": "야간 섭취",
-        "details": "심야 01시 멧돼지 성체 1마리 재방문 및 미끼틀 섭취",
-        "workers": "-",
+        "work_content": "심야 01시 무인 동작감지 녹화",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
-        "reaction_stage": "야간 섭취 (Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0333_V20260813_131655000_5EF6D462-0BA8-42D7-BF57-986A16FE7ADF.jpg",
-        "media_title": "0333번 심야 멧돼지 섭취"
+        "reaction_stage": "야간 섭취 (0333번 영상)",
+        "workers": "무인 자동 촬영",
+        "evidences": []
       },
       {
         "date": "2026-08-07",
         "time": "02:15 ~ 03:50",
         "category": "멧돼지 출현",
-        "event_type": "야간 섭취",
-        "details": "야간 02시~03시 멧돼지 2마리 출현하여 미끼틀 주변 탐색 및 3회 연속 섭취 (0357~0359번 영상)",
-        "workers": "-",
+        "work_content": "야간 02~03시 연속 감지 녹화 3건 (0357~0359번 영상)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "2마리",
-        "reaction_stage": "연속 섭취 (Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0357_V20260813_131726000_0E48FC1C-A823-48B6-B7FC-3705EE4ADC47.jpg",
-        "media_title": "0357번 멧돼지 2마리 섭취"
+        "reaction_stage": "2마리 동시 섭취 (Ingestion)",
+        "workers": "무인 자동 촬영",
+        "evidences": []
       },
       {
         "date": "2026-08-08 & 08-09",
         "time": "04:10 ~ 05:20",
         "category": "비대상 동물 (고라니)",
-        "event_type": "단순 통과",
-        "details": "고라니 1마리 미끼틀 주변 접근하였으나 미끼에 관심 없이 단순 통과 (0404, 0411번 영상)",
-        "workers": "-",
+        "work_content": "비대상 동물 접근 녹화 2건 (0404, 0411번 영상)",
+        "animal_appearance": "고라니 (Hydropotes inermis)",
         "boar_count": "0 (고라니 1마리)",
-        "reaction_stage": "미끼 무반응 / 통과 (Ignored)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0404_V20260813_131810000_1E3CF046-0C03-438B-974F-51B75F14E74A.jpg",
-        "media_title": "0404번 고라니 단순 통과"
+        "reaction_stage": "미끼 무반응 / 단순 통과 (Ignored)",
+        "workers": "무인 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/0404_V20260813_131810000_1E3CF046-0C03-438B-974F-51B75F14E74A.jpg",
+            "title": "0404번 고라니 단순 통과",
+            "animal": "고라니",
+            "category": "제외"
+          }
+        ]
       },
       {
         "date": "2026-08-23",
         "time": "14:00 ~ 17:00",
         "category": "유인제 살포 & 점검",
-        "event_type": "유인제 살포",
-        "details": "실험지 주변 풀 제거작업 및 멧돼지 유인제 살포 (3곳 총 6통)",
-        "workers": "권용태(사무국장)",
+        "work_content": "실험지 주변 풀 제거작업 및 멧돼지 유인제 살포 (2통 배정)",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "-",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-08-23_IMG_1410.JPG",
-        "media_title": "8월 23일 유인제 살포"
+        "reaction_stage": "유인제 살포 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-23_IMG_1410.JPG",
+            "title": "집중 호우 후 실험구 안전 및 미끼틀 점검",
+            "location": "공주시 유구읍 문금리 일원"
+          }
+        ]
       }
     ]
   },
@@ -367,170 +837,358 @@
         "date": "2026-07-01",
         "time": "14:00 ~ 17:00",
         "category": "사이트 조성 & 설치",
-        "event_type": "최초 설치",
-        "details": "산135 능선 산림 구역에 미끼틀 매몰지 조성, IP카메라 마운팅, 1차 사료 살포 및 울타리 설치",
-        "workers": "최진호, 유은준, 권용태, 김현구",
+        "work_content": "산135 능선 산림 구역에 미끼틀 매몰지 조성, IP카메라 마운팅, 1차 사료 살포 및 울타리 설치",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "-",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-07-01_P20260701_144624158_5B3602DC-E96C-4A0B-A16D-8BAEC4B15AE8.JPG",
-        "media_title": "7월 1일 산135 최초 설치"
+        "reaction_stage": "사이트 조성 완료",
+        "workers": "최진호, 유은준, 권용태, 김현구",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_152237414_B9E22110-C80D-4A43-B788-C3AAA3A9C4A7.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_154030966_21F75A01-C29C-4E98-955C-4978F52A3F4B.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_155952431_8D6EF55B-98E6-4321-B9E3-ECF83D115A54.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_155958612_6DEA35DE-0230-41B1-91BF-7C6E130467DC.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_160132020_C40C95A3-A0C1-4218-BC29-9A7D9D263C5F.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-01_P20260701_160134821_05E4E928-EDCE-4903-865A-5E803B2F1456.JPG",
+            "title": "미끼틀 매몰지 및 울타리 설치 현장",
+            "location": "공주시 유구읍 문금리 일원"
+          }
+        ]
       },
       {
         "date": "2026-07-06",
         "time": "21:29:42",
         "category": "멧돼지 첫 출현",
-        "event_type": "야간 섭취",
-        "details": "설치 5일 만에 멧돼지 성체 1마리 최초 방문하여 미끼틀 고형사료 섭취 확인",
-        "workers": "-",
+        "work_content": "설치 5일 만에 멧돼지 성체 최초 방문 녹화",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
-        "reaction_stage": "최초 야간 섭취 (First Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0444_V20260706_212942000_FDCE6659-79C0-4072-8B54-4F06578CDF28.jpg",
-        "media_title": "0444번 산135 첫 멧돼지 섭취 포착"
+        "reaction_stage": "최초 야간 섭취 (0444번 영상)",
+        "workers": "무인 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/0444_V20260706_212942000_FDCE6659-79C0-4072-8B54-4F06578CDF28.jpg",
+            "video_url": "assets/videos/confirmed/0444_V20260706_212942000_FDCE6659-79C0-4072-8B54-4F06578CDF28.mp4",
+            "title": "21:29:42 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
+            "animal": "야생 멧돼지 (Sus scrofa)",
+            "category": "멧돼지확정",
+            "time": "21:29:42"
+          }
+        ]
       },
       {
         "date": "2026-07-14 & 07-15",
         "time": "15:00 & 09:00",
         "category": "현장 점검 & 제초",
-        "event_type": "정기 점검",
-        "details": "미끼틀 살포 지역 점검 및 주변 풀 제거작업, 섭취 후 미끼 잔여량 확인",
-        "workers": "최진호, 권용태",
+        "work_content": "미끼틀 살포 지역 점검 및 주변 풀 제거작업, 섭취 후 미끼 잔여량 확인",
+        "animal_appearance": "-",
         "boar_count": "-",
         "reaction_stage": "섭취 후 사료 잔량 계측",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-07-14_IMG_8581.JPG",
-        "media_title": "7월 14일 산135 점검"
+        "workers": "최진호, 권용태",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8579.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8580.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8581.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8582.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8583.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8585.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-14_IMG_8586.JPG",
+            "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-15_IMG_8587.JPG",
+            "title": "문금리 카메라 각도 및 섭취 흔적 점검",
+            "location": "공주시 유구읍 문금리 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-15_IMG_8588.JPG",
+            "title": "문금리 카메라 각도 및 섭취 흔적 점검",
+            "location": "공주시 유구읍 문금리 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-15_IMG_8589.JPG",
+            "title": "문금리 카메라 각도 및 섭취 흔적 점검",
+            "location": "공주시 유구읍 문금리 59-3, 산135"
+          }
+        ]
       },
       {
         "date": "2026-07-19 & 07-25",
         "time": "14:00 & 13:00",
         "category": "유인제 살포 & 점검",
-        "event_type": "유인제 살포",
-        "details": "미끼틀·울타리 점검 및 멧돼지 유인제 살포 (3곳 총 6통 중 2통 배정)",
-        "workers": "권용태(사무국장)",
+        "work_content": "미끼틀·울타리 점검 및 멧돼지 유인제 살포 (2통 배정)",
+        "animal_appearance": "-",
         "boar_count": "-",
         "reaction_stage": "유인제 살포 완료",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-07-25_캡쳐04_미끼문금리산135_공주먹이_20260725.jpg",
-        "media_title": "7월 25일 산135 유인제 살포"
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐01_미끼문금리59-3_20260725_093030.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐02_미끼문금리59-3_20260725_092802.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐03_미끼문금리59-3_20260725_092426.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐04_미끼문금리산135_공주먹이_20260725.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐05_미끼문금리산135_공주먹이_20260725.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-25_캡쳐05_미끼문금리산135_공주먹이_20260725_1.jpg",
+            "title": "캡처 영상 분석 및 카메라 센서 감도 점검",
+            "location": "공주시 문금리 59-3 & 경산 남하리"
+          }
+        ]
       },
       {
         "date": "2026-07-28",
         "time": "22:10 ~ 02:45",
         "category": "멧돼지 출현",
-        "event_type": "야간 섭취",
-        "details": "야간 시간대 멧돼지 성체 3회 연속 방문하여 미끼틀 섭취 (0491, 0492, 0495번 영상)",
-        "workers": "-",
+        "work_content": "야간 연속 출현 녹화 3건 (0491, 0492, 0495번 영상)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1~2마리",
         "reaction_stage": "야간 섭취 (Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0491_V20260813_132839000_0C65E65C-D22D-48DA-B085-E53B1E4B2DFC.jpg",
-        "media_title": "0491번 야간 멧돼지 섭취"
+        "workers": "무인 자동 촬영",
+        "evidences": []
       },
       {
         "date": "2026-07-30",
         "time": "01:15 ~ 04:30",
         "category": "멧돼지 출현",
-        "event_type": "야간 섭취",
-        "details": "심야 01시부터 04시까지 멧돼지 2마리 지속 섭취 5건 (0514~0520번 영상)",
-        "workers": "-",
+        "work_content": "심야 01시부터 04시까지 연속 섭취 5건 녹화 (0514~0520번 영상)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "2마리",
-        "reaction_stage": "지속적 야간 섭식",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0514_V20260813_132942000_625F757D-324C-43EA-AAE8-9580D81EE77B.jpg",
-        "media_title": "0514번 멧돼지 연속 섭취"
+        "reaction_stage": "지속적 야간 섭식 (Ingestion)",
+        "workers": "무인 자동 촬영",
+        "evidences": []
       },
       {
         "date": "2026-08-03 & 08-04",
         "time": "09:30 & 08:00",
-        "category": "미끼 대량 보충 & 렌즈 청소",
-        "event_type": "사료 보충",
-        "details": "미끼틀에 고형사료 2차 대량 살포 및 센서 전면 렌즈 클리닝, 와이어 브래킷 보강",
-        "workers": "권용태(사무국장)",
+        "category": "미끼 보충 & 렌즈 청소",
+        "work_content": "미끼틀에 고형사료 2차 대량 살포 및 센서 전면 렌즈 클리닝, 와이어 브래킷 보강",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "-",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-08-04_IMG_8742.JPG",
-        "media_title": "8월 4일 산135 렌즈 클리닝"
+        "reaction_stage": "미끼 보충 및 장비 정비 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8740.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8741.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8742.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8743.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8745.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8746.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-04_IMG_8747.JPG",
+            "title": "카메라 렌즈 클리닝 및 각도 재조정",
+            "location": "공주시 문금리 산135 및 59-3"
+          }
+        ]
       },
       {
         "date": "2026-08-04",
         "time": "04:59 ~ 19:18",
         "category": "멧돼지 출현",
-        "event_type": "주·야간 집중 출현",
-        "details": "새벽 04:59부터 저녁 19:18까지 주야간 5회 연속 멧돼지 출현 및 섭취 (0560~0565번 영상)",
-        "workers": "-",
+        "work_content": "새벽 04:59부터 저녁 19:18까지 주야간 5회 연속 출현 녹화 (0560~0565번 영상)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1~2마리",
-        "reaction_stage": "주·야간 전방위 섭취",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0560_V20260804_045913000_9DCA3BFB-AA29-4AEF-AE8F-3D2F20F5F88D.jpg",
-        "media_title": "0560번 새벽 멧돼지 섭취 포착"
+        "reaction_stage": "주·야간 전방위 섭취 (Ingestion)",
+        "workers": "무인 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/0561_V20260804_191823000_86045B17-D4E0-479D-9F37-BB7807E0B59E.jpg",
+            "video_url": "assets/videos/confirmed/0561_V20260804_191823000_86045B17-D4E0-479D-9F37-BB7807E0B59E.mp4",
+            "title": "19:18:23 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
+            "animal": "야생 멧돼지 (Sus scrofa)",
+            "category": "멧돼지확정",
+            "time": "19:18:23"
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/0560_V20260804_045913000_9DCA3BFB-AA29-4AEF-AE8F-3D2F20F5F88D.jpg",
+            "video_url": "assets/videos/confirmed/0560_V20260804_045913000_9DCA3BFB-AA29-4AEF-AE8F-3D2F20F5F88D.mp4",
+            "title": "04:59:13 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
+            "animal": "야생 멧돼지 (Sus scrofa)",
+            "category": "멧돼지확정",
+            "time": "04:59:13"
+          }
+        ]
       },
       {
         "date": "2026-08-05",
         "time": "02:00 ~ 04:20",
         "category": "멧돼지 출현",
-        "event_type": "야간 섭취",
-        "details": "심야 02시~04시 멧돼지 3회 연속 미끼틀 섭취 (0595, 0597, 0599번 영상)",
-        "workers": "-",
+        "work_content": "심야 02시~04시 연속 3회 미끼틀 섭취 녹화 (0595, 0597, 0599번)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
         "reaction_stage": "야간 섭취 (Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0595_V20260813_133213000_88C0DE3D-7D2D-4BB0-9762-402C706B1AC0.jpg",
-        "media_title": "0595번 야간 섭취"
+        "workers": "무인 자동 촬영",
+        "evidences": []
       },
       {
         "date": "2026-08-06",
         "time": "03:10:00",
         "category": "멧돼지 출현",
-        "event_type": "야간 섭취",
-        "details": "야간 03시 멧돼지 1마리 섭취 (0600번 영상)",
-        "workers": "-",
+        "work_content": "야간 03시 멧돼지 1마리 섭취 녹화 (0600번)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
         "reaction_stage": "야간 섭취 (Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0600_V20260813_133232000_21478853-DED8-4945-940F-5639686A4D9A.jpg",
-        "media_title": "0600번 야간 섭취"
+        "workers": "무인 자동 촬영",
+        "evidences": []
       },
       {
         "date": "2026-08-07",
         "time": "01:40 ~ 03:20",
         "category": "멧돼지 출현",
-        "event_type": "야간 섭취",
-        "details": "야간 01시~03시 멧돼지 2회 연속 섭취 (0613, 0615번 영상)",
-        "workers": "-",
+        "work_content": "야간 01시~03시 연속 2회 섭취 녹화 (0613, 0615번)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
         "reaction_stage": "야간 섭취 (Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0613_V20260813_133253000_4A0B9F8D-4ADB-4622-96A4-91FC5987AFB6.jpg",
-        "media_title": "0613번 야간 섭취"
+        "workers": "무인 자동 촬영",
+        "evidences": []
       },
       {
         "date": "2026-08-09",
         "time": "02:00 ~ 04:10",
         "category": "멧돼지 출현",
-        "event_type": "야간 섭취",
-        "details": "야간 02시~04시 멧돼지 5회 연속 섭취 (0619~0623번 영상)",
-        "workers": "-",
+        "work_content": "야간 02시~04시 5회 연속 섭취 녹화 (0619~0623번)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1~2마리",
         "reaction_stage": "야간 집중 섭취 (Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0619_V20260813_133349000_A79DB18E-FCF6-408F-A11F-757726F01016.jpg",
-        "media_title": "0619번 야간 섭취"
+        "workers": "무인 자동 촬영",
+        "evidences": []
       },
       {
         "date": "2026-08-23",
         "time": "14:00 ~ 17:00",
         "category": "유인제 살포 & 점검",
-        "event_type": "유인제 살포",
-        "details": "실험지 주변 풀 제거작업 및 멧돼지 유인제 살포 (3곳 총 6통)",
-        "workers": "권용태(사무국장)",
+        "work_content": "실험지 주변 풀 제거작업 및 멧돼지 유인제 살포 (2통 배정)",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "-",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/2026-08-23_IMG_1410.JPG",
-        "media_title": "8월 23일 유인제 살포"
+        "reaction_stage": "유인제 살포 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-23_IMG_1410.JPG",
+            "title": "집중 호우 후 실험구 안전 및 미끼틀 점검",
+            "location": "공주시 유구읍 문금리 일원"
+          }
+        ]
       }
     ]
   },
@@ -541,66 +1199,75 @@
     "region": "경북 경산시",
     "address": "경상북도 경산시 하양읍 남하리 산 127",
     "coordinates": "35.891449° N, 128.760951° E (고도 210.0m, 방위 135°)",
-    "bait_system": "멧돼지미끼틀 + 유인제배합 고형사료",
+    "bait_system": "멧돼지미끼틀 (유인제배합 고형사료 미설치 / 미끼틀 단독 및 일반 고형사료)",
     "camera_spec": "IP Wildcam 4K TrailCam (동작감지 적외선 야간센서, LTE 모듈)",
     "install_date": "2026-07-22",
     "total_scanned_clips": 43,
     "confirmed_boar_count": 3,
     "ignored_animal_count": 0,
-    "bait_palatability": "높음 (영남권 야생 멧돼지 섭취 실증)",
-    "summary_opinion": "경북 경산 지역의 야생 멧돼지 ASF 방역 실증을 위해 7월 22일 신규 설치된 이후 7월 25일 성체 2마리 첫 출현, 8월 14일 및 8월 19일 심야 섭취가 입증되어 충남 공주 권역 외 영남권에서도 동일한 미끼틀 유인 및 섭취 효과가 검증됨.",
+    "bait_palatability": "높음 (유인제 미배합 조건에서도 미끼틀 단독 섭취 실증)",
+    "summary_opinion": "경북 경산 지역의 야생 멧돼지 ASF 방역 실증을 위해 7월 22일 신규 설치되었으며, 유인제배합 고형사료를 설치하지 않은 미끼틀 단독 조건에서도 7월 25일 2마리 첫 출현 및 8월 14일, 8월 19일 심야 섭취가 입증되어 기본 미끼틀 장치 자체의 섭취 유도성이 검증됨.",
     "timeline": [
       {
         "date": "2026-07-22",
         "time": "10:00 ~ 15:00",
         "category": "사이트 조성 & 설치",
-        "event_type": "최초 설치",
-        "details": "경산 하양 남하리 산 127 지점에 멧돼지미끼틀 매몰지 조성, IP카메라 설치 및 각도 점검 (설치 영상 10건)",
-        "workers": "최진호, 유은준, 권용태, 민경태(대구경북)",
+        "work_content": "① 경산 하양 남하리 산 127 지점에 멧돼지미끼틀 매몰지 조성\n② IP카메라 설치, 각도 보정 및 통신 점검 (설치 영상 10건)\n[설정] 유인제배합 고형사료는 미설치(미적용)하고 기본 미끼틀 단독 설치",
+        "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "카메라 앵글 및 통신 점검",
-        "evidence_type": "photo",
-        "media_thumb": "assets/photos/미끼틀_실물사진.jpg",
-        "media_title": "7월 22일 경산 4호기 신규 설치"
+        "reaction_stage": "카메라 앵글 및 미끼틀 설치 완료",
+        "workers": "최진호, 유은준, 권용태, 민경태(대구경북)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/미끼틀_실물사진.jpg",
+            "title": "7월 22일 경산 4호기 미끼틀 설치 현장",
+            "location": "경북 경산 남하리 산 127"
+          }
+        ]
       },
       {
         "date": "2026-07-25",
         "time": "19:39:02",
         "category": "멧돼지 첫 출현",
-        "event_type": "야간 섭취",
-        "details": "설치 3일 만에 멧돼지 성체 2마리 명확 확인 및 미끼틀 접근 섭취 (0021번 영상, SHA-256 검증)",
-        "workers": "-",
+        "work_content": "일몰 후 19시 39분 적외선 무인감지 녹화 (SHA-256: 577845b1...)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "2마리",
-        "reaction_stage": "2마리 동시 접근 및 섭취",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0021_V20260818_153001000_C8BC22F8-6FB4-4C41-9DF9-A8BC5487C83A.jpg",
-        "media_title": "0021번 7/25 멧돼지 2마리 섭취 포착"
+        "reaction_stage": "멧돼지 2마리 명확 확인 및 미끼틀 접근 섭취 (0021번 영상)",
+        "workers": "무인 자동 촬영",
+        "evidences": []
       },
       {
         "date": "2026-08-14",
         "time": "18:48:37",
         "category": "멧돼지 출현",
-        "event_type": "야간 섭취",
-        "details": "일몰 직후 멧돼지 1마리 출현하여 미끼틀 고형사료 섭취 확인 (0034번 영상, SHA-256 검증)",
-        "workers": "-",
+        "work_content": "일몰 직후 18시 48분 무인감지 녹화 (SHA-256: 98ebe5ec...)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
-        "reaction_stage": "일몰 후 섭취 (Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0034_V20260818_153112000_680926AA-6F4A-4014-85CB-8764989B9F44.jpg",
-        "media_title": "0034번 8/14 멧돼지 1마리 섭취 포착"
+        "reaction_stage": "멧돼지 1마리 명확 확인 및 미끼틀 섭취 (0034번 영상)",
+        "workers": "무인 자동 촬영",
+        "evidences": []
       },
       {
         "date": "2026-08-19",
         "time": "03:52:28",
         "category": "멧돼지 출현",
-        "event_type": "심야 섭취",
-        "details": "심야 03:52 멧돼지 1마리 출현하여 미끼틀 주변 정밀 섭취 (0035번 영상, SHA-256 검증)",
-        "workers": "-",
+        "work_content": "심야 03시 52분 적외선 무인감지 녹화 (SHA-256: e4889507...)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
         "boar_count": "1마리",
-        "reaction_stage": "심야 섭취 확정 (Ingestion)",
-        "evidence_type": "video",
-        "media_thumb": "assets/thumbnails/0035_20260819_035228_000_20_P.jpg",
-        "media_title": "0035번 8/19 멧돼지 심야 섭취 포착"
+        "reaction_stage": "심야 섭취 확정 (0035번 영상)",
+        "workers": "무인 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/0035_20260819_035228_000_20_P.jpg",
+            "video_url": "assets/videos/confirmed/0035_20260819_035228_000_20_P.mp4",
+            "title": "03:52:28 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
+            "animal": "야생 멧돼지 (Sus scrofa)",
+            "category": "멧돼지확정",
+            "time": "03:52:28"
+          }
+        ]
       }
     ]
   }
