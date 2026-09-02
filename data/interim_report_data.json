@@ -1010,7 +1010,7 @@
         "animal_appearance": "-",
         "boar_count": "-",
         "reaction_stage": "사이트 조성 완료",
-        "workers": "최진호, 유은준, 권용태, 김현구",
+        "workers": "최진호(전무), 유은준(본부장), 권용태(사무국장), 김현구(감시단원)",
         "evidences": [
           {
             "type": "photo",
@@ -1064,7 +1064,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0444_V20260706_212942000_FDCE6659-79C0-4072-8B54-4F06578CDF28.jpg",
             "video_url": "assets/videos/confirmed/0444_V20260706_212942000_FDCE6659-79C0-4072-8B54-4F06578CDF28.mp4",
-            "title": "21:29:42 멧돼지확정",
+            "title": "21:29:42 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "21:29:42"
@@ -1072,14 +1072,14 @@
         ]
       },
       {
-        "date": "2026-07-14 & 07-15",
-        "time": "15:00 & 09:00",
-        "category": "현장 점검 & 제초",
-        "work_content": "미끼틀 살포 지역 점검 및 주변 풀 제거작업, 섭취 후 미끼 잔여량 확인",
+        "date": "2026-07-14",
+        "time": "15:00 ~ 17:00",
+        "category": "현장 점검 & 미끼 살포",
+        "work_content": "① IP카메라 설치 지역(3군데) 미끼틀 살포\n② 실험지 주변 풀 제거작업\n③ 1차 SD카드 영상 수거 및 배터리 점검",
         "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "섭취 후 사료 잔량 계측",
-        "workers": "최진호, 권용태",
+        "reaction_stage": "정기 점검 완료",
+        "workers": "최진호(전무), 권용태(사무국장)",
         "evidences": [
           {
             "type": "photo",
@@ -1122,7 +1122,19 @@
             "thumb": "assets/photos/2026-07-14_IMG_8586.JPG",
             "title": "1차 현장 점검 및 배터리·미끼 상태 확인",
             "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
-          },
+          }
+        ]
+      },
+      {
+        "date": "2026-07-15",
+        "time": "09:00 ~ 11:00",
+        "category": "현장 점검",
+        "work_content": "주변 풀 제거작업 및 전일 설치 미끼틀 상태 점검, 섭취 흔적 계측",
+        "animal_appearance": "-",
+        "boar_count": "-",
+        "reaction_stage": "섭취 후 사료 잔량 계측",
+        "workers": "권용태(사무국장)",
+        "evidences": [
           {
             "type": "photo",
             "thumb": "assets/photos/2026-07-15_IMG_8587.JPG",
@@ -1144,13 +1156,61 @@
         ]
       },
       {
-        "date": "2026-07-19 & 07-25",
-        "time": "14:00 & 13:00",
+        "date": "2026-07-19",
+        "time": "14:00 ~ 17:00",
+        "category": "현장 점검 & 족적 확인",
+        "work_content": "실험지 주변 풀 제거작업 및 미끼틀, 울타리 상태 점검, 멧돼지 족적 확인",
+        "animal_appearance": "멧돼지 족적 확인",
+        "boar_count": "족적 확인",
+        "reaction_stage": "산림 능선 이동로 족적 확인",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8605.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8606.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8607.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8608.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8609.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-07-19_IMG_8610.JPG",
+            "title": "유인틀 주변 멧돼지 족적 확인 및 현장 정비",
+            "location": "공주시 유구읍 문금리 일원"
+          }
+        ]
+      },
+      {
+        "date": "2026-07-25",
+        "time": "13:00 ~ 16:00",
         "category": "유인제 살포 & 점검",
-        "work_content": "미끼틀·울타리 점검 및 멧돼지 유인제 살포 (2통 배정)",
+        "work_content": "① 실험지 주변 풀 제거작업 및 미끼틀, 울타리 상태 점검\n② 멧돼지 유인제 살포 (3곳 총 6통 중 본 사이트 2통 배정)",
         "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "유인제 살포 완료",
+        "reaction_stage": "유인제 집중 살포 완료",
         "workers": "권용태(사무국장)",
         "evidences": [
           {
@@ -1205,7 +1265,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0495_V20260813_132841000_C8EC0216-298C-4F32-8BD4-B2E674EB1CAC.jpg",
             "video_url": "assets/videos/confirmed/0495_V20260813_132841000_C8EC0216-298C-4F32-8BD4-B2E674EB1CAC.mp4",
-            "title": "13:28:41 멧돼지확정",
+            "title": "13:28:41 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:28:41"
@@ -1214,7 +1274,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0491_V20260813_132839000_0C65E65C-D22D-48DA-B085-E53B1E4B2DFC.jpg",
             "video_url": "assets/videos/confirmed/0491_V20260813_132839000_0C65E65C-D22D-48DA-B085-E53B1E4B2DFC.mp4",
-            "title": "13:28:39 멧돼지확정",
+            "title": "13:28:39 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:28:39"
@@ -1223,7 +1283,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0492_V20260813_132839000_5A1508E6-978B-482A-93C4-1D2447AB31F8.jpg",
             "video_url": "assets/videos/confirmed/0492_V20260813_132839000_5A1508E6-978B-482A-93C4-1D2447AB31F8.mp4",
-            "title": "13:28:39 멧돼지확정",
+            "title": "13:28:39 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:28:39"
@@ -1244,7 +1304,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0529_V20260813_132953000_06CF151A-21A6-4438-BE60-C1A84F7F9EAE.jpg",
             "video_url": "assets/videos/confirmed/0529_V20260813_132953000_06CF151A-21A6-4438-BE60-C1A84F7F9EAE.mp4",
-            "title": "13:29:53 멧돼지확정",
+            "title": "13:29:53 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:29:53"
@@ -1253,7 +1313,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0530_V20260813_132953000_FE222A69-27BE-46F6-98B0-D94F99A43A21.jpg",
             "video_url": "assets/videos/confirmed/0530_V20260813_132953000_FE222A69-27BE-46F6-98B0-D94F99A43A21.mp4",
-            "title": "13:29:53 멧돼지확정",
+            "title": "13:29:53 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:29:53"
@@ -1262,7 +1322,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0518_V20260813_132946000_23D48C31-E29D-4926-BCF1-66C0E35BC982.jpg",
             "video_url": "assets/videos/confirmed/0518_V20260813_132946000_23D48C31-E29D-4926-BCF1-66C0E35BC982.mp4",
-            "title": "13:29:46 멧돼지확정",
+            "title": "13:29:46 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:29:46"
@@ -1271,7 +1331,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0516_V20260813_132944000_3E124AEE-90C9-401A-9363-96728454BF68.jpg",
             "video_url": "assets/videos/confirmed/0516_V20260813_132944000_3E124AEE-90C9-401A-9363-96728454BF68.mp4",
-            "title": "13:29:44 멧돼지확정",
+            "title": "13:29:44 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:29:44"
@@ -1280,7 +1340,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0514_V20260813_132942000_625F757D-324C-43EA-AAE8-9580D81EE77B.jpg",
             "video_url": "assets/videos/confirmed/0514_V20260813_132942000_625F757D-324C-43EA-AAE8-9580D81EE77B.mp4",
-            "title": "13:29:42 멧돼지확정",
+            "title": "13:29:42 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:29:42"
@@ -1288,13 +1348,67 @@
         ]
       },
       {
-        "date": "2026-08-03 & 08-04",
-        "time": "09:30 & 08:00",
-        "category": "미끼 보충 & 렌즈 청소",
-        "work_content": "미끼틀에 고형사료 2차 대량 살포 및 센서 전면 렌즈 클리닝, 와이어 브래킷 보강",
+        "date": "2026-08-03",
+        "time": "09:30 ~ 11:00",
+        "category": "2차 미끼 대량 살포",
+        "work_content": "① IP카메라 설치 지역(3군데) 미끼틀 살포 (2차 고형사료 대량 보충)\n② 실험지 주변 풀 제거작업",
         "animal_appearance": "-",
         "boar_count": "-",
-        "reaction_stage": "미끼 보충 및 장비 정비 완료",
+        "reaction_stage": "사료 대량 보충 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8726.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8727.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8728.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8729.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8730.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8731.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-08-03_IMG_8732.JPG",
+            "title": "2차 미끼틀 고형사료 보충 및 주변 예초",
+            "location": "공주시 유구읍 문금리 142-5, 59-3, 산135"
+          }
+        ]
+      },
+      {
+        "date": "2026-08-04",
+        "time": "08:00 ~ 10:00",
+        "category": "미끼 재살포 & 센서 청소",
+        "work_content": "① IP카메라 설치 지역(3군데) 미끼틀 살포\n② 실험지 주변 풀 제거작업 및 센서 전면 렌즈 클리닝, 와이어 브래킷 보강\n[특이사항] 당일 새벽 멧돼지 출현으로 미끼 재 살포",
+        "animal_appearance": "새벽 출현 흔적",
+        "boar_count": "흔적 확인",
+        "reaction_stage": "새벽 섭취 후 긴급 재살포",
         "workers": "권용태(사무국장)",
         "evidences": [
           {
@@ -1355,7 +1469,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0578_V20260813_133144000_88EB7ECF-26AE-4F35-A552-19149496A3EF.jpg",
             "video_url": "assets/videos/confirmed/0578_V20260813_133144000_88EB7ECF-26AE-4F35-A552-19149496A3EF.mp4",
-            "title": "13:31:44 멧돼지확정",
+            "title": "13:31:44 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:31:44"
@@ -1364,7 +1478,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0564_V20260813_133132000_F2CCABFC-8C74-4290-A5FA-C759A5EC9E0A.jpg",
             "video_url": "assets/videos/confirmed/0564_V20260813_133132000_F2CCABFC-8C74-4290-A5FA-C759A5EC9E0A.mp4",
-            "title": "13:31:32 멧돼지확정",
+            "title": "13:31:32 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:31:32"
@@ -1373,7 +1487,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0562_V20260813_133131000_5E81B8DC-E5C9-4C58-AF8E-F7F95DCF6491.jpg",
             "video_url": "assets/videos/confirmed/0562_V20260813_133131000_5E81B8DC-E5C9-4C58-AF8E-F7F95DCF6491.mp4",
-            "title": "13:31:31 멧돼지확정",
+            "title": "13:31:31 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:31:31"
@@ -1382,7 +1496,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0561_V20260804_191823000_86045B17-D4E0-479D-9F37-BB7807E0B59E.jpg",
             "video_url": "assets/videos/confirmed/0561_V20260804_191823000_86045B17-D4E0-479D-9F37-BB7807E0B59E.mp4",
-            "title": "19:18:23 멧돼지확정",
+            "title": "19:18:23 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "19:18:23"
@@ -1391,7 +1505,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0560_V20260804_045913000_9DCA3BFB-AA29-4AEF-AE8F-3D2F20F5F88D.jpg",
             "video_url": "assets/videos/confirmed/0560_V20260804_045913000_9DCA3BFB-AA29-4AEF-AE8F-3D2F20F5F88D.mp4",
-            "title": "04:59:13 멧돼지확정",
+            "title": "04:59:13 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "04:59:13"
@@ -1412,7 +1526,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0599_V20260813_133215000_77C796D2-ED2D-493F-AB9F-DB454D8597E4.jpg",
             "video_url": "assets/videos/confirmed/0599_V20260813_133215000_77C796D2-ED2D-493F-AB9F-DB454D8597E4.mp4",
-            "title": "13:32:15 멧돼지확정",
+            "title": "13:32:15 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:32:15"
@@ -1421,7 +1535,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0597_V20260813_133214000_577C940D-39D6-4E7C-B10F-220E810D1F7F.jpg",
             "video_url": "assets/videos/confirmed/0597_V20260813_133214000_577C940D-39D6-4E7C-B10F-220E810D1F7F.mp4",
-            "title": "13:32:14 멧돼지확정",
+            "title": "13:32:14 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:32:14"
@@ -1430,7 +1544,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0595_V20260813_133213000_88C0DE3D-7D2D-4BB0-9762-402C706B1AC0.jpg",
             "video_url": "assets/videos/confirmed/0595_V20260813_133213000_88C0DE3D-7D2D-4BB0-9762-402C706B1AC0.mp4",
-            "title": "13:32:13 멧돼지확정",
+            "title": "13:32:13 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:32:13"
@@ -1451,7 +1565,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0600_V20260813_133232000_21478853-DED8-4945-940F-5639686A4D9A.jpg",
             "video_url": "assets/videos/confirmed/0600_V20260813_133232000_21478853-DED8-4945-940F-5639686A4D9A.mp4",
-            "title": "13:32:32 멧돼지확정",
+            "title": "13:32:32 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:32:32"
@@ -1472,7 +1586,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0615_V20260813_133255000_A25799B8-2494-41E0-905B-7B30E56FAD7B.jpg",
             "video_url": "assets/videos/confirmed/0615_V20260813_133255000_A25799B8-2494-41E0-905B-7B30E56FAD7B.mp4",
-            "title": "13:32:55 멧돼지확정",
+            "title": "13:32:55 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:32:55"
@@ -1481,7 +1595,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0613_V20260813_133253000_4A0B9F8D-4ADB-4622-96A4-91FC5987AFB6.jpg",
             "video_url": "assets/videos/confirmed/0613_V20260813_133253000_4A0B9F8D-4ADB-4622-96A4-91FC5987AFB6.mp4",
-            "title": "13:32:53 멧돼지확정",
+            "title": "13:32:53 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:32:53"
@@ -1502,7 +1616,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0623_V20260813_133353000_00621EFF-A7AC-4AF9-A934-55374EE1F31D.jpg",
             "video_url": "assets/videos/confirmed/0623_V20260813_133353000_00621EFF-A7AC-4AF9-A934-55374EE1F31D.mp4",
-            "title": "13:33:53 멧돼지확정",
+            "title": "13:33:53 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:33:53"
@@ -1511,7 +1625,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0622_V20260813_133352000_56BDC663-CA23-44A6-B987-875A5CC2E2C5.jpg",
             "video_url": "assets/videos/confirmed/0622_V20260813_133352000_56BDC663-CA23-44A6-B987-875A5CC2E2C5.mp4",
-            "title": "13:33:52 멧돼지확정",
+            "title": "13:33:52 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:33:52"
@@ -1520,7 +1634,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0621_V20260813_133351000_29254742-4B37-47CB-B689-2DEB38EA9C60.jpg",
             "video_url": "assets/videos/confirmed/0621_V20260813_133351000_29254742-4B37-47CB-B689-2DEB38EA9C60.mp4",
-            "title": "13:33:51 멧돼지확정",
+            "title": "13:33:51 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:33:51"
@@ -1529,7 +1643,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0620_V20260813_133350000_8CB2CA1B-A5EF-4BF4-9075-A96186911DFC.jpg",
             "video_url": "assets/videos/confirmed/0620_V20260813_133350000_8CB2CA1B-A5EF-4BF4-9075-A96186911DFC.mp4",
-            "title": "13:33:50 멧돼지확정",
+            "title": "13:33:50 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:33:50"
@@ -1538,7 +1652,7 @@
             "type": "video",
             "thumb": "assets/thumbnails/0619_V20260813_133349000_A79DB18E-FCF6-408F-A11F-757726F01016.jpg",
             "video_url": "assets/videos/confirmed/0619_V20260813_133349000_A79DB18E-FCF6-408F-A11F-757726F01016.mp4",
-            "title": "13:33:49 멧돼지확정",
+            "title": "13:33:49 멧돼지확정 (야생 멧돼지 (Sus scrofa))",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
             "time": "13:33:49"
@@ -1549,7 +1663,7 @@
         "date": "2026-08-23",
         "time": "14:00 ~ 17:00",
         "category": "유인제 살포 & 점검",
-        "work_content": "실험지 주변 풀 제거작업 및 멧돼지 유인제 살포 (2통 배정)",
+        "work_content": "실험지 주변 풀 제거작업 및 멧돼지 유인제 살포 (3곳 총 6통 중 본 사이트 2통 배정)",
         "animal_appearance": "-",
         "boar_count": "-",
         "reaction_stage": "유인제 살포 완료",
