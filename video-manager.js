@@ -195,28 +195,38 @@ class VideoManager {
 
       const isIgnored = vid.category && vid.category.includes('제외');
       const isInstall = vid.category && vid.category.includes('설치');
-      const isNight = vid.is_night;
+      const isNight = !!vid.is_night;
       const vDate = vid.date || vid.recorded_date || '';
       const vTime = vid.time || vid.recorded_time || '';
       
-      let tagClass = isNight ? 'eat' : 'approach';
-      let iconClass = 'fa-play';
+      let tagClass = isNight ? 'night' : 'day';
+      let tagIcon = isNight ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
+      let tagText = isNight ? '야간 섭취 관찰' : '주간 섭취 관찰';
+      let thumbIcon = isNight ? 'fa-moon' : 'fa-sun';
+      let thumbColor = isNight ? '#f87171' : '#fbbf24';
+
       if (isIgnored) {
         tagClass = 'pass';
-        iconClass = 'fa-paw';
+        tagIcon = '<i class="fa-solid fa-paw"></i>';
+        tagText = `비대상 (${vid.animal_type ? vid.animal_type.split(' ')[0] : '고라니'})`;
+        thumbIcon = 'fa-paw';
+        thumbColor = '#94a3b8';
       } else if (isInstall) {
-        tagClass = 'approach';
-        iconClass = 'fa-wrench';
+        tagClass = 'install';
+        tagIcon = '<i class="fa-solid fa-wrench"></i>';
+        tagText = '현장 설치 점검';
+        thumbIcon = 'fa-wrench';
+        thumbColor = '#34d399';
       }
 
       card.innerHTML = `
-        <div class="video-thumb-wrap" style="${isInstall ? 'color: var(--accent-emerald);' : (isNight ? 'color: var(--hud-cyan);' : 'color: var(--hud-amber);')}">
-          <i class="fa-solid ${iconClass}"></i>
+        <div class="video-thumb-wrap" style="color: ${thumbColor};">
+          <i class="fa-solid ${thumbIcon}"></i>
         </div>
         <div class="video-info">
           <div class="video-title">${vid.site_name}</div>
           <div class="video-sub">${vDate} ${vTime} · ${vid.animal_type ? vid.animal_type.split(' ')[0] : '영상'}</div>
-          <span class="reaction-tag ${tagClass}">${vid.reaction}</span>
+          <span class="reaction-tag ${tagClass}">${tagIcon} ${tagText}</span>
         </div>
       `;
 
@@ -236,12 +246,19 @@ class VideoManager {
     const vDate = vid.date || vid.recorded_date || '';
     const vTime = vid.time || vid.recorded_time || '';
 
+    const isNight = !!vid.is_night;
+
     // Populate metadata
     document.getElementById('modal-video-title').textContent = `${vid.site_name} 멧돼지 선별 영상`;
     document.getElementById('modal-meta-site').textContent = vid.site_name;
-    document.getElementById('modal-meta-time').textContent = `${vDate} ${vTime} (${vid.is_night ? '야간' : '주간'})`;
+    document.getElementById('modal-meta-time').textContent = `${vDate} ${vTime} (${isNight ? '🌙 야간 적외선 모니터링' : '☀️ 주간 컬러 모니터링'})`;
     document.getElementById('modal-meta-animal').textContent = vid.animal_type || "야생 멧돼지 (Sus scrofa)";
-    document.getElementById('modal-meta-reaction').textContent = vid.reaction;
+    
+    const reactionEl = document.getElementById('modal-meta-reaction');
+    if (reactionEl) {
+      reactionEl.textContent = isNight ? '🌙 야간 미끼 섭취 (적외선)' : '☀️ 주간 미끼 섭취 (주간 컬러)';
+      reactionEl.style.color = isNight ? '#f87171' : '#fbbf24';
+    }
     document.getElementById('modal-meta-file').textContent = vid.filename;
 
     // Set video source

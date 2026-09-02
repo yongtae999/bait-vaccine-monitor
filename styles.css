@@ -457,21 +457,33 @@ body {
 .reaction-tag {
   font-size: 0.65rem;
   padding: 2px 5px;
-  border-radius: 3px;
+  border-radius: 4px;
   font-weight: 700;
   align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
+.reaction-tag.night,
 .reaction-tag.eat {
   background: rgba(239, 68, 68, 0.2);
   color: #f87171;
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  border: 1px solid rgba(239, 68, 68, 0.35);
 }
 
+.reaction-tag.day,
 .reaction-tag.approach {
   background: rgba(245, 158, 11, 0.2);
   color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.3);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.reaction-tag.install,
+.reaction-tag.setup {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
 }
 
 .reaction-tag.human {
@@ -483,6 +495,7 @@ body {
 .reaction-tag.pass {
   background: rgba(148, 163, 184, 0.2);
   color: #94a3b8;
+  border: 1px solid rgba(148, 163, 184, 0.3);
 }
 
 /* =========================================================
