@@ -1,0 +1,4 @@
+=== Checking '주간' in wildboar_videos.json ===
+
+=== Checking '주간' in interim_report_data.json ===
+1호기 | 2026-09-01 | Reaction: 주간 연속 섭취 (20260901_092626 & 092902) | Work: 주간 09시 연속 동작감지 녹화 2건 전수 첨부
