@@ -14,7 +14,7 @@
     "status": "active",
     "desc": "문금리 능선 진입로 멧돼지미끼틀 및 유인제배합 고형사료 실험구",
     "bait_type": "멧돼지미끼틀 + 유인제배합 고형사료",
-    "total_clips": 50,
+    "total_clips": 114,
     "wildboar_confirmed": 6,
     "deer_ignored": 0
   },
@@ -33,7 +33,7 @@
     "status": "active",
     "desc": "문금리 집중 출몰구역 멧돼지미끼틀 및 유인제배합 고형사료 실험구",
     "bait_type": "멧돼지미끼틀 + 유인제배합 고형사료",
-    "total_clips": 406,
+    "total_clips": 413,
     "wildboar_confirmed": 15,
     "deer_ignored": 2
   },
@@ -52,7 +52,7 @@
     "status": "active",
     "desc": "문금리 산135 멧돼지미끼틀 및 유인제배합 고형사료 실험구",
     "bait_type": "멧돼지미끼틀 + 유인제배합 고형사료",
-    "total_clips": 185,
+    "total_clips": 207,
     "wildboar_confirmed": 25,
     "deer_ignored": 0
   },
@@ -71,7 +71,7 @@
     "status": "active",
     "desc": "경산시 하양읍 남하리 산 127 무인 모니터링 (미끼 제외)",
     "bait_type": "해당없음 (미끼 제외)",
-    "total_clips": 43,
+    "total_clips": 47,
     "wildboar_confirmed": 3,
     "deer_ignored": 0
   }

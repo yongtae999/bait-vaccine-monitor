@@ -8,7 +8,7 @@
     "coordinates": "36.639449° N, 127.010684° E (고도 343.8m, 방위 285°)",
     "camera_spec": "IP Wildcam 4K TrailCam (동작감지 적외선 야간센서, LTE 모듈)",
     "install_date": "2026-07-01",
-    "total_scanned_clips": 50,
+    "total_scanned_clips": 114,
     "confirmed_boar_count": 6,
     "ignored_animal_count": 0,
     "bait_palatability": "높음 (주야간 지속 섭취 확인)",
@@ -439,6 +439,30 @@
             "is_night": false
           }
         ]
+      },
+      {
+        "date": "2026-09-05",
+        "time": "08:50 ~ 09:05",
+        "category": "예초 및 미끼 보충",
+        "work_content": "① 센서 전면 수풀 제초 (오작동 방지 시야 확보)\n② 멧돼지 유인제 살포 (1통)\n③ 고형사료 2차 추가 살포",
+        "animal_appearance": "-",
+        "boar_count": "-",
+        "reaction_stage": "센서 시야 정비 및 2차 미끼 살포",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-09-05_IMG_1615(2).JPG",
+            "title": "문금리 142-5 카메라 센서 시야 정비 및 미끼 보충",
+            "location": "공주시 문금리 142-5 (진입로 능선)"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-09-05_IMG_1617(2).JPG",
+            "title": "문금리 142-5 카메라 센서 시야 정비 및 미끼 보충",
+            "location": "공주시 문금리 142-5 (진입로 능선)"
+          }
+        ]
       }
     ]
   },
@@ -451,7 +475,7 @@
     "coordinates": "36.640111° N, 127.010993° E (고도 348.5m, 방위 328°)",
     "camera_spec": "IP Wildcam 4K TrailCam (동작감지 적외선 야간센서, LTE 모듈)",
     "install_date": "2026-07-01",
-    "total_scanned_clips": 406,
+    "total_scanned_clips": 413,
     "confirmed_boar_count": 15,
     "ignored_animal_count": 2,
     "bait_palatability": "매우 높음 (대군락 야간 집중 섭취 실증)",
@@ -986,6 +1010,30 @@
             "location": "공주시 유구읍 문금리 일원"
           }
         ]
+      },
+      {
+        "date": "2026-09-05",
+        "time": "09:12 ~ 09:20",
+        "category": "예초 및 미끼 보충",
+        "work_content": "① 실험지 주변 풀 제거작업\n② 멧돼지 유인제 살포 (1통)\n③ 고형사료 2차 추가 살포",
+        "animal_appearance": "-",
+        "boar_count": "-",
+        "reaction_stage": "정기 점검 및 2차 미끼 보충",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-09-05_IMG_1620(2).JPG",
+            "title": "문금리 59-3 미끼틀 점검 및 사료 보충",
+            "location": "공주시 문금리 59-3 (집중 출몰지)"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-09-05_IMG_1621(1).JPG",
+            "title": "문금리 59-3 미끼틀 점검 및 사료 보충",
+            "location": "공주시 문금리 59-3 (집중 출몰지)"
+          }
+        ]
       }
     ]
   },
@@ -998,7 +1046,7 @@
     "coordinates": "36.642760° N, 127.012234° E (고도 352.0m, 방위 45°)",
     "camera_spec": "IP Wildcam 4K TrailCam (동작감지 적외선 야간센서, LTE 모듈)",
     "install_date": "2026-07-01",
-    "total_scanned_clips": 185,
+    "total_scanned_clips": 207,
     "confirmed_boar_count": 25,
     "ignored_animal_count": 0,
     "bait_palatability": "최상 (전 기간 최다 25건 섭취 확정)",
@@ -1703,6 +1751,41 @@
             "location": "공주시 유구읍 문금리 일원"
           }
         ]
+      },
+      {
+        "date": "2026-09-02",
+        "time": "11:39 ~ 12:05",
+        "category": "현장 순찰 & 중간 점검",
+        "work_content": "① 실험지 3호기 현장 상태 및 미끼 섭취 상황 점검\n② 중간보고회 대비 현장 시찰",
+        "animal_appearance": "-",
+        "boar_count": "-",
+        "reaction_stage": "현장 점검 순찰",
+        "workers": "권용태(사무국장) 외 1명",
+        "evidences": []
+      },
+      {
+        "date": "2026-09-05",
+        "time": "08:10 ~ 08:30",
+        "category": "예초 및 미끼 보충",
+        "work_content": "① 미끼틀 주변 풀 제거 및 정비\n② 멧돼지 유인제 살포 (1통)\n③ 고형사료 2차 추가 살포",
+        "animal_appearance": "-",
+        "boar_count": "-",
+        "reaction_stage": "정기 점검 및 2차 미끼 보충",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-09-05_IMG_1607(2).JPG",
+            "title": "문금리 산135 미끼틀 상태 점검 및 예초 작업",
+            "location": "공주시 문금리 산135 (공주먹이)"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-09-05_IMG_1614(1).JPG",
+            "title": "문금리 산135 미끼틀 상태 점검 및 예초 작업",
+            "location": "공주시 문금리 산135 (공주먹이)"
+          }
+        ]
       }
     ]
   },
@@ -1715,7 +1798,7 @@
     "coordinates": "35.891449° N, 128.760951° E (고도 210.0m, 방위 135°)",
     "camera_spec": "IP Wildcam 4K TrailCam (동작감지 적외선 야간센서, LTE 모듈)",
     "install_date": "2026-07-22",
-    "total_scanned_clips": 43,
+    "total_scanned_clips": 47,
     "confirmed_boar_count": 3,
     "ignored_animal_count": 0,
     "bait_palatability": "높음 (영남권 야생 멧돼지 출현 실증)",
@@ -1822,6 +1905,17 @@
             "is_night": true
           }
         ]
+      },
+      {
+        "date": "2026-09-04",
+        "time": "11:51 ~ 13:18",
+        "category": "무인 센서 모니터링",
+        "work_content": "경산 4호기 무인 센서카메라 4건 수집 (주간 수풀 흔들림 감지, 미끼 제외)",
+        "animal_appearance": "-",
+        "boar_count": "-",
+        "reaction_stage": "대조군 무인 모니터링",
+        "workers": "-",
+        "evidences": []
       }
     ]
   }
