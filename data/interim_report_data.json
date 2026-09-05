@@ -8,11 +8,11 @@
     "coordinates": "36.639449° N, 127.010684° E (고도 343.8m, 방위 285°)",
     "camera_spec": "IP Wildcam 4K TrailCam (동작감지 적외선 야간센서, LTE 모듈)",
     "install_date": "2026-07-01",
-    "total_scanned_clips": 114,
+    "total_scanned_clips": 116,
     "confirmed_boar_count": 6,
-    "ignored_animal_count": 0,
+    "ignored_animal_count": 2,
     "bait_palatability": "높음 (주야간 지속 섭취 확인)",
-    "summary_opinion": "진입로 능선 이동통로에 위치하여 7월 14일 최초 접근 이후 7월 29일, 8월 5일, 8월 26일, 9월 1일 등 주야간 지속적인 멧돼지 개체 접근 및 고형사료 섭취가 실증됨.",
+    "summary_opinion": "진입로 능선 이동통로에 위치하여 7월~9월 주야간 지속적인 멧돼지 개체 접근 및 고형사료 섭취가 실증되었으며, 9월 6일 심야 비대상 동물(오소리)의 고형사료 섭취 및 접근 반응 2건이 추가 관찰됨.",
     "timeline": [
       {
         "date": "2026-07-01",
@@ -461,6 +461,38 @@
             "thumb": "assets/photos/2026-09-05_IMG_1617(2).JPG",
             "title": "문금리 142-5 카메라 센서 시야 정비 및 미끼 보충",
             "location": "공주시 문금리 142-5 (진입로 능선)"
+          }
+        ]
+      },
+      {
+        "date": "2026-09-06",
+        "time": "00:40 ~ 00:59",
+        "category": "비대상 동물(오소리) 출현 & 미끼 섭취",
+        "work_content": "142-5 미끼틀 살포지 야간 무인 적외선 모니터링 (오소리 1마리 출현 및 고형사료 섭취 관찰 2건)",
+        "animal_appearance": "오소리 (Meles leucurus) 1마리",
+        "boar_count": "비대상 (오소리)",
+        "reaction_stage": "미끼 탐색 및 고형사료 섭취 (비대상 반응 실증)",
+        "workers": "무인 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260906_004008_000_10_P.jpg",
+            "video_url": "assets/videos/ignored/20260906_004008_000_10_P.mp4",
+            "title": "00:40:08 오소리 미끼 접근 탐색 (야간 적외선)",
+            "animal": "오소리 (Meles leucurus)",
+            "category": "오소리 (비대상)",
+            "time": "00:40:08",
+            "is_night": true
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260906_005937_000_10_P.jpg",
+            "video_url": "assets/videos/ignored/20260906_005937_000_10_P.mp4",
+            "title": "00:59:37 오소리 미끼틀 접근 및 고형사료 섭취 관찰 (야간 적외선)",
+            "animal": "오소리 (Meles leucurus)",
+            "category": "오소리 (비대상)",
+            "time": "00:59:37",
+            "is_night": true
           }
         ]
       }

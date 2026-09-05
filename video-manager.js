@@ -83,10 +83,14 @@ class VideoManager {
       return list;
     } else if (this.activeFilter === 'boar') {
       return list.filter(v => v.category === '멧돼지확정' || v.category === '멧돼지 선별영상');
+    } else if (this.activeFilter === 'badger') {
+      return list.filter(v => (v.animal_type && v.animal_type.includes('오소리')) || (v.category && v.category.includes('오소리')));
+    } else if (this.activeFilter === 'deer') {
+      return list.filter(v => (v.animal_type && v.animal_type.includes('고라니')) || (v.category && v.category.includes('고라니')));
     } else if (this.activeFilter === 'install') {
       return list.filter(v => v.category && v.category.includes('설치'));
     } else if (this.activeFilter === 'ignored') {
-      return list.filter(v => v.category && v.category.includes('제외'));
+      return list.filter(v => v.category && (v.category.includes('제외') || v.category.includes('비대상')));
     } else {
       return list.filter(v => (v.date || v.recorded_date) === this.activeFilter);
     }
@@ -114,8 +118,9 @@ class VideoManager {
 
     const dates = Array.from(new Set(baseList.map(v => (v.date || v.recorded_date)))).filter(Boolean).sort().reverse();
     const boarCount = baseList.filter(v => v.category === '멧돼지확정' || v.category === '멧돼지 선별영상').length;
+    const badgerCount = baseList.filter(v => (v.animal_type && v.animal_type.includes('오소리')) || (v.category && v.category.includes('오소리'))).length;
+    const deerCount = baseList.filter(v => (v.animal_type && v.animal_type.includes('고라니')) || (v.category && v.category.includes('고라니'))).length;
     const installCount = baseList.filter(v => v.category && v.category.includes('설치')).length;
-    const deerCount = baseList.filter(v => v.category && v.category.includes('제외')).length;
 
     let filterChipsHtml = '';
     if (this.activeCameraId) {
@@ -131,8 +136,9 @@ class VideoManager {
       ${filterChipsHtml}
       <button class="tab-pill ${this.activeFilter === 'all' && !this.activeCameraId ? 'active' : ''}" data-filter="all">전체 (${baseList.length})</button>
       ${boarCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'boar' ? 'active' : ''}" data-filter="boar">🐗 멧돼지 (${boarCount})</button>` : ''}
+      ${badgerCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'badger' ? 'active' : ''}" data-filter="badger">🦡 오소리 (${badgerCount})</button>` : ''}
+      ${deerCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'deer' ? 'active' : ''}" data-filter="deer">🦌 고라니 (${deerCount})</button>` : ''}
       ${installCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'install' ? 'active' : ''}" data-filter="install">🛠️ 설치점검 (${installCount})</button>` : ''}
-      ${deerCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'ignored' ? 'active' : ''}" data-filter="ignored">🦌 고라니 (${deerCount})</button>` : ''}
     `;
 
     dates.forEach(d => {
@@ -205,7 +211,13 @@ class VideoManager {
       let thumbIcon = isNight ? 'fa-moon' : 'fa-sun';
       let thumbColor = isNight ? '#f87171' : '#fbbf24';
 
-      if (isIgnored) {
+      if (vid.animal_type && vid.animal_type.includes('오소리')) {
+        tagClass = 'pass';
+        tagIcon = '<i class="fa-solid fa-paw text-amber"></i>';
+        tagText = '비대상 (오소리)';
+        thumbIcon = 'fa-paw';
+        thumbColor = '#f59e0b';
+      } else if (isIgnored) {
         tagClass = 'pass';
         tagIcon = '<i class="fa-solid fa-paw"></i>';
         tagText = `비대상 (${vid.animal_type ? vid.animal_type.split(' ')[0] : '고라니'})`;
@@ -247,17 +259,20 @@ class VideoManager {
     const vTime = vid.time || vid.recorded_time || '';
 
     const isNight = !!vid.is_night;
+    const isBadger = vid.animal_type && vid.animal_type.includes('오소리');
+    const isDeer = vid.animal_type && vid.animal_type.includes('고라니');
+    const animalLabel = isBadger ? '오소리(비대상)' : (isDeer ? '고라니(비대상)' : '멧돼지');
 
     // Populate metadata
-    document.getElementById('modal-video-title').textContent = `${vid.site_name} 멧돼지 선별 영상`;
+    document.getElementById('modal-video-title').textContent = `${vid.site_name} ${animalLabel} 선별 영상`;
     document.getElementById('modal-meta-site').textContent = vid.site_name;
     document.getElementById('modal-meta-time').textContent = `${vDate} ${vTime} (${isNight ? '🌙 야간 적외선 모니터링' : '☀️ 주간 컬러 모니터링'})`;
     document.getElementById('modal-meta-animal').textContent = vid.animal_type || "야생 멧돼지 (Sus scrofa)";
     
     const reactionEl = document.getElementById('modal-meta-reaction');
     if (reactionEl) {
-      reactionEl.textContent = isNight ? '🌙 야간 미끼 섭취 (적외선)' : '☀️ 주간 미끼 섭취 (주간 컬러)';
-      reactionEl.style.color = isNight ? '#f87171' : '#fbbf24';
+      reactionEl.textContent = vid.reaction || (isNight ? '🌙 야간 미끼 섭취 (적외선)' : '☀️ 주간 미끼 섭취 (주간 컬러)');
+      reactionEl.style.color = isBadger ? '#f59e0b' : (isNight ? '#f87171' : '#fbbf24');
     }
     document.getElementById('modal-meta-file').textContent = vid.filename;
 
