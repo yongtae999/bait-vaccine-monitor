@@ -1,5 +1,23 @@
 [
   {
+    "id": "vid-dg-0902",
+    "filename": "20260902_035228_000_20_P.mp4",
+    "video_url": "assets/videos/confirmed/20260902_035228_000_20_P.mp4",
+    "thumbnail_url": "assets/thumbnails/20260902_035228_000_20_P.jpg",
+    "camera_id": "cam-dg-1",
+    "site_name": "경산 하양 남하리 산 127",
+    "date": "2026-09-02",
+    "time": "03:52:28",
+    "is_night": true,
+    "animal_type": "야생 멧돼지 (Sus scrofa)",
+    "category": "멧돼지확정",
+    "reaction": "야간 단독 관찰 (미끼 제외 대조군)",
+    "bait_type": "해당없음 (미끼 제외)",
+    "lat": 35.891449,
+    "lng": 128.760951,
+    "behavior": "야간 적외선 모니터링 멧돼지 1마리 출현 및 이동 관찰 (9월 2일 수집)"
+  },
+  {
     "id": "vid-2026",
     "filename": "20260901_092902_000_10_P.mp4",
     "video_url": "assets/videos/confirmed/20260901_092902_000_10_P.mp4",

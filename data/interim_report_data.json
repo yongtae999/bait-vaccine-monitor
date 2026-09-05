@@ -1799,7 +1799,7 @@
     "camera_spec": "IP Wildcam 4K TrailCam (동작감지 적외선 야간센서, LTE 모듈)",
     "install_date": "2026-07-22",
     "total_scanned_clips": 47,
-    "confirmed_boar_count": 3,
+    "confirmed_boar_count": 4,
     "ignored_animal_count": 0,
     "bait_palatability": "높음 (영남권 야생 멧돼지 출현 실증)",
     "summary_opinion": "경북 경산 지역의 야생 멧돼지 ASF 방역 실증을 위해 7월 22일 신규 설치된 이후 7월 25일 2마리 첫 출현, 8월 14일 및 8월 19일 심야 출현이 입증되어 야생 멧돼지 서식 및 이동 경로가 성공적으로 확인됨.",
@@ -1898,6 +1898,28 @@
             "type": "video",
             "thumb": "assets/thumbnails/0035_20260819_035228_000_20_P.jpg",
             "video_url": "assets/videos/confirmed/0035_20260819_035228_000_20_P.mp4",
+            "title": "03:52:28 멧돼지확정 (야생 멧돼지 (Sus scrofa)) - 야간(적외선)",
+            "animal": "야생 멧돼지 (Sus scrofa)",
+            "category": "멧돼지확정",
+            "time": "03:52:28",
+            "is_night": true
+          }
+        ]
+      },
+      {
+        "date": "2026-09-02",
+        "time": "03:52:28",
+        "category": "멧돼지 출현",
+        "work_content": "경산 4호기(남하리 산 127) 심야 03시 52분 적외선 무인감지 멧돼지 성체 출현",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa)",
+        "boar_count": "1마리",
+        "reaction_stage": "야간 이동 및 서식 관찰",
+        "workers": "무인 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260902_035228_000_20_P.jpg",
+            "video_url": "assets/videos/confirmed/20260902_035228_000_20_P.mp4",
             "title": "03:52:28 멧돼지확정 (야생 멧돼지 (Sus scrofa)) - 야간(적외선)",
             "animal": "야생 멧돼지 (Sus scrofa)",
             "category": "멧돼지확정",
