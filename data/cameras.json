@@ -70,8 +70,8 @@
     "install_date": "2026-07-22",
     "model": "IP Wildcam 4K TrailCam",
     "status": "active",
-    "desc": "경산시 하양읍 남하리 산 127 무인 모니터링 (미끼 제외)",
-    "bait_type": "해당없음 (미끼 제외)",
+    "desc": "영남권 ASF 방역 실증 시험구 (밤모양 젤리형 미끼(옥수수 효소 배합) 및 멧돼지 미끼틀 살포 시험구)",
+    "bait_type": "밤모양 젤리형 미끼(옥수수 효소 배합) + 멧돼지 미끼틀",
     "total_clips": 47,
     "wildboar_confirmed": 4,
     "deer_ignored": 0
