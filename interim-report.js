@@ -218,7 +218,7 @@ class InterimReportManager {
       });
     });
 
-    allEvents.sort((a, b) => a.date.localeCompare(b.date));
+    allEvents.sort((a, b) => (a.date + ' ' + (a.time || '')).localeCompare(b.date + ' ' + (b.time || '')));
 
     return `
       <table class="report-table timeline-table">
@@ -681,7 +681,7 @@ class InterimReportManager {
       });
     });
 
-    allRows.sort((a, b) => a.date.localeCompare(b.date));
+    allRows.sort((a, b) => (a.date + ' ' + (a.time || '')).localeCompare(b.date + ' ' + (b.time || '')));
 
     return allRows.map(row => {
       const isBoar = row.category.includes('멧돼지') || row.category.includes('대군락');
