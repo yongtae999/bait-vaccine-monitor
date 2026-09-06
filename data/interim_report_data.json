@@ -12,7 +12,7 @@
     "confirmed_boar_count": 7,
     "ignored_animal_count": 2,
     "bait_palatability": "높음 (주야간 지속 섭취 확인)",
-    "summary_opinion": "진입로 능선 이동통로에 위치하여 7월~9월 주야간 지속적인 멧돼지 개체 접근 및 고형사료 섭취가 실증되었으며, 9월 6일 심야 비대상 동물(오소리) 2건에 이어 당일 주간(17:06) 멧돼지 새끼 3마리의 집중 섭식 반응 1건이 추가 실증됨.",
+    "summary_opinion": "진입로 능선 이동통로에 위치하여 7월~9월 주야간 지속적인 멧돼지 개체 접근 및 고형사료 섭취가 실증되었으며, 9월 6일 심야 비대상 동물(오소리) 2건에 이어 당일 주간(17:06) 멧돼지 새끼 4마리의 집중 섭식 반응 1건이 추가 실증됨.",
     "timeline": [
       {
         "date": "2026-07-01",
@@ -499,10 +499,10 @@
       {
         "date": "2026-09-06",
         "time": "17:06 ~ 17:07",
-        "category": "주간 멧돼지(새끼 3마리) 출현 & 미끼 섭취",
-        "work_content": "142-5 미끼틀 살포지 주간 무인 컬러 모니터링 (멧돼지 새끼 3마리 집중 섭식 및 유인제 흡입 관찰)",
-        "animal_appearance": "야생 멧돼지 (Sus scrofa) 3마리 (새끼/아성체)",
-        "boar_count": "3마리 (새끼)",
+        "category": "주간 멧돼지(새끼 4마리) 출현 & 미끼 섭취",
+        "work_content": "142-5 미끼틀 살포지 주간 무인 컬러 모니터링 (멧돼지 새끼 4마리 집중 섭식 및 유인제 흡입 관찰)",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa) 4마리 (새끼/아성체)",
+        "boar_count": "4마리 (새끼)",
         "reaction_stage": "미끼 흡입 및 집중 채식 완료 (섭취 반응 실증)",
         "workers": "무인 자동 촬영",
         "evidences": [
@@ -510,8 +510,8 @@
             "type": "video",
             "thumb": "assets/thumbnails/20260906_170644_000_10_P.jpg",
             "video_url": "assets/videos/confirmed/20260906_170644_000_10_P.mp4",
-            "title": "17:06:44 멧돼지 새끼 3마리 미끼틀 집중 섭식 (주간 컬러)",
-            "animal": "야생 멧돼지 (Sus scrofa) 3마리",
+            "title": "17:06:44 멧돼지 새끼 4마리 미끼틀 집중 섭식 (주간 컬러)",
+            "animal": "야생 멧돼지 (Sus scrofa) 4마리",
             "category": "멧돼지확정",
             "time": "17:06:44",
             "is_night": false
