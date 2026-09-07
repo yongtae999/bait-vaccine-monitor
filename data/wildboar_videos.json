@@ -1,5 +1,23 @@
 [
   {
+    "id": "vid-badger-0907-1945",
+    "filename": "20260907_194527_000_10_P.mp4",
+    "video_url": "assets/videos/ignored/20260907_194527_000_10_P.mp4",
+    "thumbnail_url": "assets/thumbnails/20260907_194527_000_10_P.jpg",
+    "camera_id": "cam-gj-142-5",
+    "site_name": "문금리 142-5 (진입로 능선)",
+    "date": "2026-09-07",
+    "time": "19:45:27",
+    "is_night": true,
+    "animal_type": "오소리 (Meles leucurus)",
+    "category": "오소리 (비대상 동물)",
+    "reaction": "야간 미끼 접근 및 고형사료 섭취",
+    "bait_type": "멧돼지미끼틀 + 유인제배합 고형사료",
+    "lat": 36.639449,
+    "lng": 127.010684,
+    "behavior": "야간(19:45) 오소리 1마리 142-5 미끼틀 살포지 재출현 및 고형사료 집중 섭취·탐색 관찰 (4번째 출현)"
+  },
+  {
     "id": "vid-badger-0906-2207",
     "filename": "20260906_220748_000_10_P.mp4",
     "video_url": "assets/videos/ignored/20260906_220748_000_10_P.mp4",
