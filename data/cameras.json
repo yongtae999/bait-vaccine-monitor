@@ -14,9 +14,9 @@
     "status": "active",
     "desc": "문금리 능선 진입로 멧돼지미끼틀 및 유인제배합 고형사료 실험구",
     "bait_type": "멧돼지미끼틀 + 유인제배합 고형사료",
-    "total_clips": 129,
+    "total_clips": 143,
     "wildboar_confirmed": 13,
-    "deer_ignored": 1,
+    "deer_ignored": 2,
     "badger_ignored": 4
   },
   {
@@ -34,7 +34,7 @@
     "status": "active",
     "desc": "문금리 집중 출몰구역 멧돼지미끼틀 및 유인제배합 고형사료 실험구",
     "bait_type": "멧돼지미끼틀 + 유인제배합 고형사료",
-    "total_clips": 413,
+    "total_clips": 416,
     "wildboar_confirmed": 15,
     "deer_ignored": 2
   },
@@ -53,7 +53,7 @@
     "status": "active",
     "desc": "문금리 산135 멧돼지미끼틀 및 유인제배합 고형사료 실험구",
     "bait_type": "멧돼지미끼틀 + 유인제배합 고형사료",
-    "total_clips": 207,
+    "total_clips": 219,
     "wildboar_confirmed": 25,
     "deer_ignored": 0
   },

@@ -1,5 +1,23 @@
 [
   {
+    "id": "vid-deer-0908-2020",
+    "filename": "20260908T202044_facefront_hardware148.mp4",
+    "video_url": "assets/videos/ignored/20260908T202044_facefront_hardware148.mp4",
+    "thumbnail_url": "assets/thumbnails/20260908T202044_facefront_hardware148.jpg",
+    "camera_id": "cam-gj-142-5",
+    "site_name": "공주 1호기 (문금리 142-5)",
+    "date": "2026-09-08",
+    "time": "20:20:44",
+    "is_night": true,
+    "animal_type": "고라니 (Hydropotes inermis)",
+    "category": "제외 (비대상 동물)",
+    "reaction": "야간 미끼 섭취 흔적 주변 단순 통과 (섭취 없음)",
+    "bait_type": "큐브 미끼 12개 (주간 기 섭취 소진 상태)",
+    "lat": 36.639449,
+    "lng": 127.010684,
+    "behavior": "야간(20:20) 비대상 동물(고라니 1마리) 142-5 살포지 우측 단순 출현 및 통과 (미끼 전량 소진 상태 확인)"
+  },
+  {
     "id": "vid-badger-0907-1945",
     "filename": "20260907_194527_000_10_P.mp4",
     "video_url": "assets/videos/ignored/20260907_194527_000_10_P.mp4",
