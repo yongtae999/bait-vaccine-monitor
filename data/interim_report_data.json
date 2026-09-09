@@ -15,124 +15,6 @@
     "summary_opinion": "진입로 능선 이동통로에 위치하여 7월~9월 주야간 지속적인 멧돼지 개체 접근 및 고형사료 섭취가 실증되었으며, 9월 6일~7일 주간(새끼 4마리)에 이어 9월 9일 새벽(03:56) 멧돼지 새끼 8마리(추정) 대규모 군집이 방문하여 전일 살포된 미끼 잔여 분말을 20초 이상 집중 완식하는 실증 영상 2건이 확보됨. 아울러 9월 9일 야간(19:14) 및 9월 10일 심야(03:32) 비대상 동물인 오소리(1마리)가 미끼 살포지를 연이어 방문하여 바닥 잔여물을 굴착·탐색하는 생태 반응도 연속 확인됨.",
     "timeline": [
       {
-        "date": "2026-09-10",
-        "time": "03:31:57",
-        "category": "심야 비대상 동물(오소리) 출현 및 살포지 바닥 굴착·탐색",
-        "work_content": "심야 03:31경 비대상 동물인 오소리(Meles leucurus) 1마리가 살포지 중앙에 출현하여 28초 동안 미끼 살포지 바닥을 집중 굴착하며 잔여물을 탐색하는 모습이 선명하게 자동 녹화됨.",
-        "animal_appearance": "오소리 (Meles leucurus) 1마리",
-        "boar_count": "0마리 (오소리)",
-        "reaction_stage": "살포지 바닥 굴착 및 잔여물 탐색 (미끼 섭취 없음)",
-        "workers": "무인 센서 카메라 자동 촬영",
-        "evidences": [
-          {
-            "type": "video",
-            "thumb": "assets/thumbnails/20260910T033157_facefront_hardware148.jpg",
-            "video_url": "assets/videos/ignored/20260910T033157_facefront_hardware148.mp4",
-            "title": "03:31:57 오소리 1마리 살포지 바닥 집중 굴착 및 탐색 (28초 영상)",
-            "animal": "오소리 (Meles leucurus)",
-            "category": "오소리 (비대상)",
-            "time": "03:31:57",
-            "is_night": true
-          }
-        ]
-      },
-      {
-        "date": "2026-09-09",
-        "time": "19:14:30",
-        "category": "야간 비대상 동물(오소리) 출현 및 살포지 냄새 탐색",
-        "work_content": "야간 19:14경 오소리(Meles leucurus) 1마리가 142-5 미끼 살포지에 재진입하여 멧돼지 8마리가 완식하고 지나간 살포지 바닥의 냄새를 10초간 탐색한 후 이동함.",
-        "animal_appearance": "오소리 (Meles leucurus) 1마리",
-        "boar_count": "0마리 (오소리)",
-        "reaction_stage": "살포지 바닥 냄새 탐색 (단순 탐색 후 이동)",
-        "workers": "무인 센서 카메라 자동 촬영",
-        "evidences": [
-          {
-            "type": "video",
-            "thumb": "assets/thumbnails/20260909_191430_000_10_P.jpg",
-            "video_url": "assets/videos/ignored/20260909_191430_000_10_P.mp4",
-            "title": "19:14:30 오소리 1마리 살포지 진입 및 냄새 탐색",
-            "animal": "오소리 (Meles leucurus)",
-            "category": "오소리 (비대상)",
-            "time": "19:14:30",
-            "is_night": true
-          }
-        ]
-      },
-      {
-        "date": "2026-09-09",
-        "time": "03:56 (03:56:19 ~ 03:56:49)",
-        "category": "야간 멧돼지 새끼 군집(8마리 추정) 출현 및 미끼 전량 완식",
-        "work_content": "새벽 03:56경 멧돼지 새끼(아성체) 8마리(추정) 군집이 142-5 살포지에 동시 진입하여, 9월 8일 살포 후 잔여한 미끼 분말 흔적을 남김없이 핥아먹는 집중 채식 행동이 2건 연속 촬영됨 (03:56:19, 03:56:39). 9/6~9/7 관찰된 4마리 외에 추가 개체까지 합류하여 8마리 대가족이 정기 섭식지로 확정 인지하였음을 실증함.",
-        "animal_appearance": "야생 멧돼지 (Sus scrofa) 새끼/아성체 8마리(추정)",
-        "boar_count": "8마리 (추정)",
-        "reaction_stage": "미끼 잔여 분말 전량 핥아먹기 (완식 및 높은 기호성 확증)",
-        "workers": "무인 센서 카메라 자동 촬영",
-        "evidences": [
-          {
-            "type": "video",
-            "thumb": "assets/thumbnails/20260909_035619_000_10_P.jpg",
-            "video_url": "assets/videos/confirmed/20260909_035619_000_10_P.mp4",
-            "title": "03:56:19 멧돼지 새끼 8마리(추정) 살포지 진입 및 집중 섭식",
-            "animal": "야생 멧돼지 (Sus scrofa) 8마리(추정)",
-            "category": "멧돼지확인",
-            "time": "03:56:19",
-            "is_night": true
-          },
-          {
-            "type": "video",
-            "thumb": "assets/thumbnails/20260909_035639_000_10_P.jpg",
-            "video_url": "assets/videos/confirmed/20260909_035639_000_10_P.mp4",
-            "title": "03:56:39 멧돼지 새끼 8마리(추정) 살포지 전역 잔여 분말 완식 (연속 영상)",
-            "animal": "야생 멧돼지 (Sus scrofa) 8마리(추정)",
-            "category": "멧돼지확인",
-            "time": "03:56:39",
-            "is_night": true
-          }
-        ]
-      },
-      {
-        "date": "2026-09-08",
-        "time": "08:13 ~ 20:20",
-        "category": "미끼 살포 & 주간 멧돼지 섭취 추정 (흔적 실증) & 야간 고라니 출현",
-        "work_content": "오전 08:13 미끼 12개 살포 완료. 당일 저녁(20:03) 확인 시 살포된 미끼가 전량 소진되고 분말 섭취 흔적만 잔여 확인됨. 주간 중 멧돼지 개체군이 진입하여 섭취한 것으로 강력 추정되나 카메라 미촬영으로 공식 통계는 '추정'으로 기록. 야간(20:20) 비대상 동물인 고라니 1마리가 섭취 흔적지 주변을 통과함.",
-        "animal_appearance": "고라니 1마리 (야간 확인) / 멧돼지 (주간 미끼 전량 섭취 실증 흔적으로 '추정' 기록)",
-        "boar_count": "추정 (카메라 미촬영, 미끼 전량 소진 및 분말 흔적 실증)",
-        "reaction_stage": "미끼 전량 섭취 소진 (카메라 미촬영으로 멧돼지 섭취 추정 기록)",
-        "workers": "권용태 사무국장 (미끼 살포)",
-        "evidences": [
-          {
-            "type": "video",
-            "thumb": "assets/thumbnails/20260908T202044_facefront_hardware148.jpg",
-            "video_url": "assets/videos/ignored/20260908T202044_facefront_hardware148.mp4",
-            "title": "20:20:44 고라니 1마리 출현 및 살포지 통과 (미끼 전량 소진 상태)",
-            "animal": "고라니 (Hydropotes inermis)",
-            "category": "제외 (비대상 동물)",
-            "time": "20:20:44",
-            "is_night": true
-          },
-          {
-            "type": "video",
-            "thumb": "assets/thumbnails/20260908_200314_000_10_P.jpg",
-            "video_url": "assets/videos/ignored/20260908_200314_000_10_P.mp4",
-            "title": "20:03:14 미끼 전량 소진 및 섭취 분말 흔적 확인 (주간 멧돼지 섭취 추정)",
-            "animal": "섭식 흔적 (멧돼지 섭취 추정)",
-            "category": "추정 (섭식흔적)",
-            "time": "20:03:14",
-            "is_night": true
-          },
-          {
-            "type": "video",
-            "thumb": "assets/thumbnails/20260908_081823_000_10_P.jpg",
-            "video_url": "assets/videos/ignored/20260908_081823_000_10_P.mp4",
-            "title": "08:18:23 오전 큐브 미끼 12개 격자 살포 완료",
-            "animal": "작업자 (권용태 사무국장)",
-            "category": "미끼 살포",
-            "time": "08:18:23",
-            "is_night": false
-          }
-        ]
-      },
-      {
         "date": "2026-07-01",
         "time": "14:00 ~ 17:00",
         "category": "사이트 조성 & 설치",
@@ -702,28 +584,6 @@
       },
       {
         "date": "2026-09-07",
-        "time": "19:45:27",
-        "category": "비대상 동물(오소리) 출현 & 미끼 섭취",
-        "work_content": "142-5 미끼틀 살포지 야간 무인 적외선 모니터링 (오소리 1마리 출현하여 미끼틀 고형사료 4차 집중 섭취 관찰)",
-        "animal_appearance": "오소리 (Meles leucurus) 1마리",
-        "boar_count": "비대상 (오소리)",
-        "reaction_stage": "미끼 탐색 및 고형사료 섭취 (비대상 반응 실증)",
-        "workers": "무인 자동 촬영",
-        "evidences": [
-          {
-            "type": "video",
-            "thumb": "assets/thumbnails/20260907_194527_000_10_P.jpg",
-            "video_url": "assets/videos/ignored/20260907_194527_000_10_P.mp4",
-            "title": "19:45:27 오소리 미끼틀 접근 및 고형사료 섭취 (야간 적외선)",
-            "animal": "오소리 (Meles leucurus)",
-            "category": "오소리 (비대상)",
-            "time": "19:45:27",
-            "is_night": true
-          }
-        ]
-      },
-      {
-        "date": "2026-09-07",
         "time": "09:30 ~ 09:52",
         "category": "주간 멧돼지(새끼 4마리) 재방문 & 집중 섭취",
         "work_content": "142-5 미끼틀 살포지 주간 무인 컬러 모니터링 (9/6 출현했던 멧돼지 새끼 4마리가 익일 오전 재방문하여 20분 이상 나란히 집중 채식·흡입하는 연속 장면 포착, 총 6건의 확정 영상 확보)",
@@ -803,6 +663,146 @@
             "is_night": false
           }
         ]
+      },
+      {
+        "date": "2026-09-07",
+        "time": "19:45:27",
+        "category": "비대상 동물(오소리) 출현 & 미끼 섭취",
+        "work_content": "142-5 미끼틀 살포지 야간 무인 적외선 모니터링 (오소리 1마리 출현하여 미끼틀 고형사료 4차 집중 섭취 관찰)",
+        "animal_appearance": "오소리 (Meles leucurus) 1마리",
+        "boar_count": "비대상 (오소리)",
+        "reaction_stage": "미끼 탐색 및 고형사료 섭취 (비대상 반응 실증)",
+        "workers": "무인 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260907_194527_000_10_P.jpg",
+            "video_url": "assets/videos/ignored/20260907_194527_000_10_P.mp4",
+            "title": "19:45:27 오소리 미끼틀 접근 및 고형사료 섭취 (야간 적외선)",
+            "animal": "오소리 (Meles leucurus)",
+            "category": "오소리 (비대상)",
+            "time": "19:45:27",
+            "is_night": true
+          }
+        ]
+      },
+      {
+        "date": "2026-09-08",
+        "time": "08:13 ~ 20:20",
+        "category": "미끼 살포 & 주간 멧돼지 섭취 추정 (흔적 실증) & 야간 고라니 출현",
+        "work_content": "오전 08:13 미끼 12개 살포 완료. 당일 저녁(20:03) 확인 시 살포된 미끼가 전량 소진되고 분말 섭취 흔적만 잔여 확인됨. 주간 중 멧돼지 개체군이 진입하여 섭취한 것으로 강력 추정되나 카메라 미촬영으로 공식 통계는 '추정'으로 기록. 야간(20:20) 비대상 동물인 고라니 1마리가 섭취 흔적지 주변을 통과함.",
+        "animal_appearance": "고라니 1마리 (야간 확인) / 멧돼지 (주간 미끼 전량 섭취 실증 흔적으로 '추정' 기록)",
+        "boar_count": "추정 (카메라 미촬영, 미끼 전량 소진 및 분말 흔적 실증)",
+        "reaction_stage": "미끼 전량 섭취 소진 (카메라 미촬영으로 멧돼지 섭취 추정 기록)",
+        "workers": "권용태 사무국장 (미끼 살포)",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260908T202044_facefront_hardware148.jpg",
+            "video_url": "assets/videos/ignored/20260908T202044_facefront_hardware148.mp4",
+            "title": "20:20:44 고라니 1마리 출현 및 살포지 통과 (미끼 전량 소진 상태)",
+            "animal": "고라니 (Hydropotes inermis)",
+            "category": "제외 (비대상 동물)",
+            "time": "20:20:44",
+            "is_night": true
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260908_200314_000_10_P.jpg",
+            "video_url": "assets/videos/ignored/20260908_200314_000_10_P.mp4",
+            "title": "20:03:14 미끼 전량 소진 및 섭취 분말 흔적 확인 (주간 멧돼지 섭취 추정)",
+            "animal": "섭식 흔적 (멧돼지 섭취 추정)",
+            "category": "추정 (섭식흔적)",
+            "time": "20:03:14",
+            "is_night": true
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260908_081823_000_10_P.jpg",
+            "video_url": "assets/videos/ignored/20260908_081823_000_10_P.mp4",
+            "title": "08:18:23 오전 큐브 미끼 12개 격자 살포 완료",
+            "animal": "작업자 (권용태 사무국장)",
+            "category": "미끼 살포",
+            "time": "08:18:23",
+            "is_night": false
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "time": "03:56 (03:56:19 ~ 03:56:49)",
+        "category": "야간 멧돼지 새끼 군집(8마리 추정) 출현 및 미끼 전량 완식",
+        "work_content": "새벽 03:56경 멧돼지 새끼(아성체) 8마리(추정) 군집이 142-5 살포지에 동시 진입하여, 9월 8일 살포 후 잔여한 미끼 분말 흔적을 남김없이 핥아먹는 집중 채식 행동이 2건 연속 촬영됨 (03:56:19, 03:56:39). 9/6~9/7 관찰된 4마리 외에 추가 개체까지 합류하여 8마리 대가족이 정기 섭식지로 확정 인지하였음을 실증함.",
+        "animal_appearance": "야생 멧돼지 (Sus scrofa) 새끼/아성체 8마리(추정)",
+        "boar_count": "8마리 (추정)",
+        "reaction_stage": "미끼 잔여 분말 전량 핥아먹기 (완식 및 높은 기호성 확증)",
+        "workers": "무인 센서 카메라 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260909_035619_000_10_P.jpg",
+            "video_url": "assets/videos/confirmed/20260909_035619_000_10_P.mp4",
+            "title": "03:56:19 멧돼지 새끼 8마리(추정) 살포지 진입 및 집중 섭식",
+            "animal": "야생 멧돼지 (Sus scrofa) 8마리(추정)",
+            "category": "멧돼지확인",
+            "time": "03:56:19",
+            "is_night": true
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260909_035639_000_10_P.jpg",
+            "video_url": "assets/videos/confirmed/20260909_035639_000_10_P.mp4",
+            "title": "03:56:39 멧돼지 새끼 8마리(추정) 살포지 전역 잔여 분말 완식 (연속 영상)",
+            "animal": "야생 멧돼지 (Sus scrofa) 8마리(추정)",
+            "category": "멧돼지확인",
+            "time": "03:56:39",
+            "is_night": true
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "time": "19:14:30",
+        "category": "야간 비대상 동물(오소리) 출현 및 살포지 냄새 탐색",
+        "work_content": "야간 19:14경 오소리(Meles leucurus) 1마리가 142-5 미끼 살포지에 재진입하여 멧돼지 8마리가 완식하고 지나간 살포지 바닥의 냄새를 10초간 탐색한 후 이동함.",
+        "animal_appearance": "오소리 (Meles leucurus) 1마리",
+        "boar_count": "0마리 (오소리)",
+        "reaction_stage": "살포지 바닥 냄새 탐색 (단순 탐색 후 이동)",
+        "workers": "무인 센서 카메라 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260909_191430_000_10_P.jpg",
+            "video_url": "assets/videos/ignored/20260909_191430_000_10_P.mp4",
+            "title": "19:14:30 오소리 1마리 살포지 진입 및 냄새 탐색",
+            "animal": "오소리 (Meles leucurus)",
+            "category": "오소리 (비대상)",
+            "time": "19:14:30",
+            "is_night": true
+          }
+        ]
+      },
+      {
+        "date": "2026-09-10",
+        "time": "03:31:57",
+        "category": "심야 비대상 동물(오소리) 출현 및 살포지 바닥 굴착·탐색",
+        "work_content": "심야 03:31경 비대상 동물인 오소리(Meles leucurus) 1마리가 살포지 중앙에 출현하여 28초 동안 미끼 살포지 바닥을 집중 굴착하며 잔여물을 탐색하는 모습이 선명하게 자동 녹화됨.",
+        "animal_appearance": "오소리 (Meles leucurus) 1마리",
+        "boar_count": "0마리 (오소리)",
+        "reaction_stage": "살포지 바닥 굴착 및 잔여물 탐색 (미끼 섭취 없음)",
+        "workers": "무인 센서 카메라 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260910T033157_facefront_hardware148.jpg",
+            "video_url": "assets/videos/ignored/20260910T033157_facefront_hardware148.mp4",
+            "title": "03:31:57 오소리 1마리 살포지 바닥 집중 굴착 및 탐색 (28초 영상)",
+            "animal": "오소리 (Meles leucurus)",
+            "category": "오소리 (비대상)",
+            "time": "03:31:57",
+            "is_night": true
+          }
+        ]
       }
     ],
     "total_clips": 148
@@ -822,28 +822,6 @@
     "bait_palatability": "매우 높음 (대군락 야간 집중 섭취 실증)",
     "summary_opinion": "전체 실험지 중 멧돼지 개체군 밀도가 가장 높은 핵심 출몰지로, 7월 28일 야간 11건의 군락(성체+유체 2~4마리) 집중 섭취를 비롯해 8월 6일, 8월 7일 등 총 15건의 확정 섭취가 입증되어 유인 효과가 가장 극대화됨.",
     "timeline": [
-      {
-        "date": "2026-09-08",
-        "time": "08:22 ~ 08:24",
-        "category": "미끼 살포 및 현장 점검",
-        "work_content": "수풀 경계부 미끼 살포 및 카메라 동작 점검 (동영상 3건 촬영)",
-        "animal_appearance": "해당 없음 (작업자 영상)",
-        "boar_count": "0마리",
-        "reaction_stage": "미끼 살포 완료",
-        "workers": "권용태 사무국장",
-        "evidences": [
-          {
-            "type": "video",
-            "thumb": "assets/thumbnails/20260908_082211_000_20_P.jpg",
-            "video_url": "assets/videos/ignored/20260908_082211_000_20_P.mp4",
-            "title": "08:22:11 수풀 경계부 미끼 살포 및 점검",
-            "animal": "작업자 (권용태 사무국장)",
-            "category": "미끼 살포",
-            "time": "08:22:11",
-            "is_night": false
-          }
-        ]
-      },
       {
         "date": "2026-07-01",
         "time": "14:00 ~ 17:00",
@@ -1397,6 +1375,28 @@
             "location": "공주시 문금리 59-3 (집중 출몰지)"
           }
         ]
+      },
+      {
+        "date": "2026-09-08",
+        "time": "08:22 ~ 08:24",
+        "category": "미끼 살포 및 현장 점검",
+        "work_content": "수풀 경계부 미끼 살포 및 카메라 동작 점검 (동영상 3건 촬영)",
+        "animal_appearance": "해당 없음 (작업자 영상)",
+        "boar_count": "0마리",
+        "reaction_stage": "미끼 살포 완료",
+        "workers": "권용태 사무국장",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260908_082211_000_20_P.jpg",
+            "video_url": "assets/videos/ignored/20260908_082211_000_20_P.mp4",
+            "title": "08:22:11 수풀 경계부 미끼 살포 및 점검",
+            "animal": "작업자 (권용태 사무국장)",
+            "category": "미끼 살포",
+            "time": "08:22:11",
+            "is_night": false
+          }
+        ]
       }
     ],
     "total_clips": 416
@@ -1416,28 +1416,6 @@
     "bait_palatability": "최상 (전 기간 최다 25건 섭취 확정)",
     "summary_opinion": "산림 능선 내부의 자연 먹이활동 길목에 위치하여 7월 6일 첫 출현 이후 7월 28일, 7월 30일, 8월 4일, 8월 5일, 8월 6일, 8월 7일, 8월 9일 등 전 기간에 걸쳐 총 25건의 멧돼지 출현 및 섭취가 입증되어 가장 안정적인 표본지로 평가됨.",
     "timeline": [
-      {
-        "date": "2026-09-08",
-        "time": "07:52 ~ 08:02",
-        "category": "미끼 살포 (큐브 미끼 16개 4x4 격자 배치)",
-        "work_content": "공주 3호기 먹이지역에 큐브 미끼 16개를 4x4 정방형 격자 형태로 정밀 살포 완료 (동영상 12건 촬영)",
-        "animal_appearance": "해당 없음 (작업자 영상)",
-        "boar_count": "0마리",
-        "reaction_stage": "미끼 16개 격자 살포 완료",
-        "workers": "권용태 사무국장",
-        "evidences": [
-          {
-            "type": "video",
-            "thumb": "assets/thumbnails/20260908_080238_000_20_P.jpg",
-            "video_url": "assets/videos/ignored/20260908_080238_000_20_P.mp4",
-            "title": "08:02:38 큐브 미끼 16개 격자 살포 완료 상태",
-            "animal": "작업자 (권용태 사무국장)",
-            "category": "미끼 살포",
-            "time": "08:02:38",
-            "is_night": false
-          }
-        ]
-      },
       {
         "date": "2026-07-01",
         "time": "14:00 ~ 17:00",
@@ -2170,6 +2148,28 @@
             "thumb": "assets/photos/2026-09-05_IMG_1614(1).JPG",
             "title": "문금리 산135 미끼틀 상태 점검 및 예초 작업",
             "location": "공주시 문금리 산135 (공주먹이)"
+          }
+        ]
+      },
+      {
+        "date": "2026-09-08",
+        "time": "07:52 ~ 08:02",
+        "category": "미끼 살포 (큐브 미끼 16개 4x4 격자 배치)",
+        "work_content": "공주 3호기 먹이지역에 큐브 미끼 16개를 4x4 정방형 격자 형태로 정밀 살포 완료 (동영상 12건 촬영)",
+        "animal_appearance": "해당 없음 (작업자 영상)",
+        "boar_count": "0마리",
+        "reaction_stage": "미끼 16개 격자 살포 완료",
+        "workers": "권용태 사무국장",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260908_080238_000_20_P.jpg",
+            "video_url": "assets/videos/ignored/20260908_080238_000_20_P.mp4",
+            "title": "08:02:38 큐브 미끼 16개 격자 살포 완료 상태",
+            "animal": "작업자 (권용태 사무국장)",
+            "category": "미끼 살포",
+            "time": "08:02:38",
+            "is_night": false
           }
         ]
       }

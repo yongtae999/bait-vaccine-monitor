@@ -15,10 +15,30 @@ class InterimReportManager {
     try {
       const res = await fetch(`data/interim_report_data.json?t=${t}`);
       this.reports = await res.json();
+      this.reports.forEach(r => {
+        if (r.timeline) {
+          r.timeline = this.sortTimeline(r.timeline);
+        }
+      });
       this.bindEvents();
     } catch (err) {
       console.error("Error loading interim_report_data.json:", err);
     }
+  }
+
+  sortTimeline(timeline) {
+    if (!timeline || !Array.isArray(timeline)) return [];
+    return [...timeline].sort((a, b) => {
+      const getK = (e) => {
+        const dMatch = (e.date || '').match(/\d{4}-\d{2}-\d{2}/);
+        const d = dMatch ? dMatch[0] : (e.date || '');
+        const tMatch = (e.time || '').match(/\d{1,2}:\d{2}(?::\d{2})?/);
+        let t = tMatch ? tMatch[0] : '00:00';
+        if (t.indexOf(':') === 1) t = '0' + t;
+        return `${d} ${t}`;
+      };
+      return getK(a).localeCompare(getK(b));
+    });
   }
 
   bindEvents() {
@@ -218,7 +238,7 @@ class InterimReportManager {
       });
     });
 
-    allEvents.sort((a, b) => (a.date + ' ' + (a.time || '')).localeCompare(b.date + ' ' + (b.time || '')));
+    allEvents = this.sortTimeline(allEvents);
 
     return `
       <table class="report-table timeline-table">
@@ -352,7 +372,7 @@ class InterimReportManager {
           </tr>
         </thead>
         <tbody>
-          ${site.timeline.map((t, idx) => `
+          ${this.sortTimeline(site.timeline).map((t, idx) => `
             <tr class="${t.category.includes('멧돼지') ? 'row-highlight' : ''}">
               <td class="text-center">${idx + 1}</td>
               <td class="text-center font-bold">${t.date}</td>
@@ -681,7 +701,7 @@ class InterimReportManager {
       });
     });
 
-    allRows.sort((a, b) => (a.date + ' ' + (a.time || '')).localeCompare(b.date + ' ' + (b.time || '')));
+    allRows = this.sortTimeline(allRows);
 
     return allRows.map(row => {
       const isBoar = row.category.includes('멧돼지') || row.category.includes('대군락');
@@ -704,7 +724,7 @@ class InterimReportManager {
   }
 
   buildSiteTimelineRowsForExcel(site, baseUrl) {
-    return site.timeline.map(row => {
+    return this.sortTimeline(site.timeline).map(row => {
       const isBoar = row.category.includes('멧돼지') || row.category.includes('대군락');
       const rowBg = isBoar ? 'background-color: #fff1f2;' : '';
       const evHtml = this.formatEvidencesForExcel(row.evidences, baseUrl);
