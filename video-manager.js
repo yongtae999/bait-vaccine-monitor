@@ -10,13 +10,37 @@ class VideoManager {
     this.activeFilter = 'all'; // 'all', 'boar', 'install', 'ignored', or date
     this.activeRegion = 'gongju'; // 'gongju' or 'gyeongsan'
     this.activeCameraId = null; // null or specific camera id (e.g. 'cam-dg-1')
+    this.sortOrder = 'desc'; // 'desc' (최신순) or 'asc' (과거순)
   }
 
   init(videosData) {
     this.videos = videosData || [];
+    this.bindSortButton();
     this.renderFilterTabs();
     this.renderVideoCards();
     this.bindModalEvents();
+  }
+
+  bindSortButton() {
+    const btn = document.getElementById('btn-video-sort-order');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      this.sortOrder = this.sortOrder === 'desc' ? 'asc' : 'desc';
+      this.updateSortButtonUI();
+      this.renderVideoCards();
+    });
+    this.updateSortButtonUI();
+  }
+
+  updateSortButtonUI() {
+    const label = document.getElementById('sort-order-label');
+    const icon = document.getElementById('sort-order-icon');
+    if (label) {
+      label.textContent = this.sortOrder === 'desc' ? '최신순' : '과거순';
+    }
+    if (icon) {
+      icon.className = this.sortOrder === 'desc' ? 'fa-solid fa-arrow-down-wide-short' : 'fa-solid fa-arrow-up-short-wide';
+    }
   }
 
   setRegionFilter(regionKey) {
@@ -79,21 +103,30 @@ class VideoManager {
     }
 
     // 3. Filter by Category or Date Tab
+    let filtered = [];
     if (this.activeFilter === 'all') {
-      return list;
+      filtered = list;
     } else if (this.activeFilter === 'boar') {
-      return list.filter(v => v.category === '멧돼지확정' || v.category === '멧돼지 선별영상');
+      filtered = list.filter(v => v.category === '멧돼지확정' || v.category === '멧돼지 선별영상');
     } else if (this.activeFilter === 'badger') {
-      return list.filter(v => (v.animal_type && v.animal_type.includes('오소리')) || (v.category && v.category.includes('오소리')));
+      filtered = list.filter(v => (v.animal_type && v.animal_type.includes('오소리')) || (v.category && v.category.includes('오소리')));
     } else if (this.activeFilter === 'deer') {
-      return list.filter(v => (v.animal_type && v.animal_type.includes('고라니')) || (v.category && v.category.includes('고라니')));
+      filtered = list.filter(v => (v.animal_type && v.animal_type.includes('고라니')) || (v.category && v.category.includes('고라니')));
     } else if (this.activeFilter === 'install') {
-      return list.filter(v => v.category && v.category.includes('설치'));
+      filtered = list.filter(v => v.category && v.category.includes('설치'));
     } else if (this.activeFilter === 'ignored') {
-      return list.filter(v => v.category && (v.category.includes('제외') || v.category.includes('비대상')));
+      filtered = list.filter(v => v.category && (v.category.includes('제외') || v.category.includes('비대상')));
     } else {
-      return list.filter(v => (v.date || v.recorded_date) === this.activeFilter);
+      filtered = list.filter(v => (v.date || v.recorded_date) === this.activeFilter);
     }
+
+    // 4. Strictly sort by date and time
+    const sortOrder = this.sortOrder || 'desc';
+    return [...filtered].sort((a, b) => {
+      const dtA = (a.date || a.recorded_date || '') + ' ' + (a.time || a.recorded_time || '00:00:00');
+      const dtB = (b.date || b.recorded_date || '') + ' ' + (b.time || b.recorded_time || '00:00:00');
+      return sortOrder === 'desc' ? dtB.localeCompare(dtA) : dtA.localeCompare(dtB);
+    });
   }
 
   renderFilterTabs() {
