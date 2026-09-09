@@ -10,10 +10,54 @@
     "install_date": "2026-07-01",
     "total_scanned_clips": 129,
     "confirmed_boar_count": 13,
-    "ignored_animal_count": 5,
+    "ignored_animal_count": 7,
     "bait_palatability": "높음 (주야간 지속 섭취 확인)",
-    "summary_opinion": "진입로 능선 이동통로에 위치하여 7월~9월 주야간 지속적인 멧돼지 개체 접근 및 고형사료 섭취가 실증되었으며, 9월 6일~7일 주간(새끼 4마리)에 이어 9월 9일 새벽(03:56) 멧돼지 새끼 8마리(추정) 대규모 군집이 방문하여 전일 살포된 미끼 잔여 분말을 20초 이상 집중 완식하는 실증 영상 2건이 연속 확보됨.",
+    "summary_opinion": "진입로 능선 이동통로에 위치하여 7월~9월 주야간 지속적인 멧돼지 개체 접근 및 고형사료 섭취가 실증되었으며, 9월 6일~7일 주간(새끼 4마리)에 이어 9월 9일 새벽(03:56) 멧돼지 새끼 8마리(추정) 대규모 군집이 방문하여 전일 살포된 미끼 잔여 분말을 20초 이상 집중 완식하는 실증 영상 2건이 확보됨. 아울러 9월 9일 야간(19:14) 및 9월 10일 심야(03:32) 비대상 동물인 오소리(1마리)가 미끼 살포지를 연이어 방문하여 바닥 잔여물을 굴착·탐색하는 생태 반응도 연속 확인됨.",
     "timeline": [
+      {
+        "date": "2026-09-10",
+        "time": "03:31:57",
+        "category": "심야 비대상 동물(오소리) 출현 및 살포지 바닥 굴착·탐색",
+        "work_content": "심야 03:31경 비대상 동물인 오소리(Meles leucurus) 1마리가 살포지 중앙에 출현하여 28초 동안 미끼 살포지 바닥을 집중 굴착하며 잔여물을 탐색하는 모습이 선명하게 자동 녹화됨.",
+        "animal_appearance": "오소리 (Meles leucurus) 1마리",
+        "boar_count": "0마리 (오소리)",
+        "reaction_stage": "살포지 바닥 굴착 및 잔여물 탐색 (미끼 섭취 없음)",
+        "workers": "무인 센서 카메라 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260910T033157_facefront_hardware148.jpg",
+            "video_url": "assets/videos/ignored/20260910T033157_facefront_hardware148.mp4",
+            "title": "03:31:57 오소리 1마리 살포지 바닥 집중 굴착 및 탐색 (28초 영상)",
+            "animal": "오소리 (Meles leucurus)",
+            "category": "오소리 (비대상)",
+            "time": "03:31:57",
+            "is_night": true
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "time": "19:14:30",
+        "category": "야간 비대상 동물(오소리) 출현 및 살포지 냄새 탐색",
+        "work_content": "야간 19:14경 오소리(Meles leucurus) 1마리가 142-5 미끼 살포지에 재진입하여 멧돼지 8마리가 완식하고 지나간 살포지 바닥의 냄새를 10초간 탐색한 후 이동함.",
+        "animal_appearance": "오소리 (Meles leucurus) 1마리",
+        "boar_count": "0마리 (오소리)",
+        "reaction_stage": "살포지 바닥 냄새 탐색 (단순 탐색 후 이동)",
+        "workers": "무인 센서 카메라 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260909_191430_000_10_P.jpg",
+            "video_url": "assets/videos/ignored/20260909_191430_000_10_P.mp4",
+            "title": "19:14:30 오소리 1마리 살포지 진입 및 냄새 탐색",
+            "animal": "오소리 (Meles leucurus)",
+            "category": "오소리 (비대상)",
+            "time": "19:14:30",
+            "is_night": true
+          }
+        ]
+      },
       {
         "date": "2026-09-09",
         "time": "03:56 (03:56:19 ~ 03:56:49)",
@@ -761,7 +805,7 @@
         ]
       }
     ],
-    "total_clips": 146
+    "total_clips": 148
   },
   {
     "site_id": "cam-gj-59-3",
