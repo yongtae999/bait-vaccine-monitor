@@ -7,7 +7,9 @@ class VideoManager {
   constructor(mapController) {
     this.mapCtrl = mapController;
     this.videos = [];
-    this.activeFilter = 'all'; // 'all', 'boar', 'install', 'ignored', or date
+    this.activeFilter = 'all'; // legacy
+    this.activeCategory = 'all'; // 'all', 'boar', 'badger', 'deer', 'install'
+    this.activeDate = 'all'; // 'all' or 'YYYY-MM-DD'
     this.activeRegion = 'gongju'; // 'gongju' or 'gyeongsan'
     this.activeCameraId = null; // null or specific camera id (e.g. 'cam-dg-1')
     this.sortOrder = 'desc'; // 'desc' (최신순) or 'asc' (과거순)
@@ -46,13 +48,17 @@ class VideoManager {
   setRegionFilter(regionKey) {
     this.activeRegion = (regionKey === 'gyeongsan' || regionKey === 'daegu') ? 'gyeongsan' : 'gongju';
     this.activeCameraId = null; // reset specific camera filter
-    this.activeFilter = 'all'; // reset date/type filter
+    this.activeCategory = 'all';
+    this.activeDate = 'all';
+    this.activeFilter = 'all';
     this.renderFilterTabs();
     this.renderVideoCards();
   }
 
   setCameraFilter(cameraId) {
     this.activeCameraId = cameraId;
+    this.activeCategory = 'all';
+    this.activeDate = 'all';
     this.activeFilter = 'all';
 
     // Auto synchronize region with camera
@@ -78,6 +84,8 @@ class VideoManager {
 
   resetLocationFilter() {
     this.activeCameraId = null;
+    this.activeCategory = 'all';
+    this.activeDate = 'all';
     this.activeFilter = 'all';
     this.renderFilterTabs();
     this.renderVideoCards();
@@ -102,27 +110,25 @@ class VideoManager {
       }
     }
 
-    // 3. Filter by Category or Date Tab
-    let filtered = [];
-    if (this.activeFilter === 'all') {
-      filtered = list;
-    } else if (this.activeFilter === 'boar') {
-      filtered = list.filter(v => v.category === '멧돼지확정' || v.category === '멧돼지 선별영상');
-    } else if (this.activeFilter === 'badger') {
-      filtered = list.filter(v => (v.animal_type && v.animal_type.includes('오소리')) || (v.category && v.category.includes('오소리')));
-    } else if (this.activeFilter === 'deer') {
-      filtered = list.filter(v => (v.animal_type && v.animal_type.includes('고라니')) || (v.category && v.category.includes('고라니')));
-    } else if (this.activeFilter === 'install') {
-      filtered = list.filter(v => v.category && v.category.includes('설치'));
-    } else if (this.activeFilter === 'ignored') {
-      filtered = list.filter(v => v.category && (v.category.includes('제외') || v.category.includes('비대상')));
-    } else {
-      filtered = list.filter(v => (v.date || v.recorded_date) === this.activeFilter);
+    // 3. Filter by Category
+    if (this.activeCategory === 'boar') {
+      list = list.filter(v => v.category === '멧돼지확정' || v.category === '멧돼지 선별영상');
+    } else if (this.activeCategory === 'badger') {
+      list = list.filter(v => (v.animal_type && v.animal_type.includes('오소리')) || (v.category && v.category.includes('오소리')));
+    } else if (this.activeCategory === 'deer') {
+      list = list.filter(v => (v.animal_type && v.animal_type.includes('고라니')) || (v.category && v.category.includes('고라니')));
+    } else if (this.activeCategory === 'install') {
+      list = list.filter(v => v.category && v.category.includes('설치'));
     }
 
-    // 4. Strictly sort by date and time
+    // 4. Filter by Date
+    if (this.activeDate && this.activeDate !== 'all') {
+      list = list.filter(v => (v.date || v.recorded_date) === this.activeDate);
+    }
+
+    // 5. Strictly sort by date and time
     const sortOrder = this.sortOrder || 'desc';
-    return [...filtered].sort((a, b) => {
+    return [...list].sort((a, b) => {
       const dtA = (a.date || a.recorded_date || '') + ' ' + (a.time || a.recorded_time || '00:00:00');
       const dtB = (b.date || b.recorded_date || '') + ' ' + (b.time || b.recorded_time || '00:00:00');
       return sortOrder === 'desc' ? dtB.localeCompare(dtA) : dtA.localeCompare(dtB);
@@ -149,65 +155,94 @@ class VideoManager {
       }
     }
 
-    const dates = Array.from(new Set(baseList.map(v => (v.date || v.recorded_date)))).filter(Boolean).sort().reverse();
     const boarCount = baseList.filter(v => v.category === '멧돼지확정' || v.category === '멧돼지 선별영상').length;
     const badgerCount = baseList.filter(v => (v.animal_type && v.animal_type.includes('오소리')) || (v.category && v.category.includes('오소리'))).length;
     const deerCount = baseList.filter(v => (v.animal_type && v.animal_type.includes('고라니')) || (v.category && v.category.includes('고라니'))).length;
     const installCount = baseList.filter(v => v.category && v.category.includes('설치')).length;
 
-    let filterChipsHtml = '';
+    const dates = Array.from(new Set(baseList.map(v => (v.date || v.recorded_date)))).filter(Boolean).sort().reverse();
+
+    let camBannerHtml = '';
     if (this.activeCameraId) {
       const camName = this.getCameraName(this.activeCameraId);
-      filterChipsHtml = `
-        <button class="tab-pill active" id="btn-reset-cam-filter" style="background: #0284c7; color: #fff; border-color: #38bdf8;" title="클릭 시 해당 권역 전체 영상 보기">
-          📍 ${camName} <i class="fa-solid fa-xmark" style="margin-left: 4px;"></i>
-        </button>
+      camBannerHtml = `
+        <div class="filter-active-cam-banner">
+          <span class="active-cam-text"><i class="fa-solid fa-location-dot"></i> ${camName}</span>
+          <button class="btn-clear-cam" id="btn-reset-cam-filter" title="지점 필터 해제"><i class="fa-solid fa-xmark"></i> 지점 해제</button>
+        </div>
       `;
     }
 
-    container.innerHTML = `
-      ${filterChipsHtml}
-      <button class="tab-pill ${this.activeFilter === 'all' && !this.activeCameraId ? 'active' : ''}" data-filter="all">전체 (${baseList.length})</button>
-      ${boarCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'boar' ? 'active' : ''}" data-filter="boar">🐗 멧돼지 (${boarCount})</button>` : ''}
-      ${badgerCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'badger' ? 'active' : ''}" data-filter="badger">🦡 오소리 (${badgerCount})</button>` : ''}
-      ${deerCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'deer' ? 'active' : ''}" data-filter="deer">🦌 고라니 (${deerCount})</button>` : ''}
-      ${installCount > 0 ? `<button class="tab-pill ${this.activeFilter === 'install' ? 'active' : ''}" data-filter="install">🛠️ 설치점검 (${installCount})</button>` : ''}
+    const categoriesHtml = `
+      <div class="filter-category-row">
+        <button class="tab-pill ${this.activeCategory === 'all' ? 'active' : ''}" data-category="all">전체 (${baseList.length})</button>
+        ${boarCount > 0 ? `<button class="tab-pill ${this.activeCategory === 'boar' ? 'active' : ''}" data-category="boar">🐗 멧돼지 (${boarCount})</button>` : ''}
+        ${badgerCount > 0 ? `<button class="tab-pill ${this.activeCategory === 'badger' ? 'active' : ''}" data-category="badger">🦡 오소리 (${badgerCount})</button>` : ''}
+        ${deerCount > 0 ? `<button class="tab-pill ${this.activeCategory === 'deer' ? 'active' : ''}" data-category="deer">🦌 고라니 (${deerCount})</button>` : ''}
+        ${installCount > 0 ? `<button class="tab-pill ${this.activeCategory === 'install' ? 'active' : ''}" data-category="install">🛠️ 점검 (${installCount})</button>` : ''}
+      </div>
     `;
 
-    dates.forEach(d => {
-      const btn = document.createElement('button');
-      btn.className = `tab-pill ${this.activeFilter === d ? 'active' : ''}`;
-      btn.dataset.filter = d;
-      btn.textContent = `📅 ${d.slice(5)}`;
-      container.appendChild(btn);
+    const dateButtonsHtml = dates.map(d => {
+      const isDateActive = this.activeDate === d;
+      return `<button class="date-pill ${isDateActive ? 'active' : ''}" data-date="${d}">📅 ${d.slice(5)}</button>`;
+    }).join('');
+
+    const dateRowHtml = `
+      <div class="filter-date-row">
+        <span class="date-row-label" title="일자별 필터"><i class="fa-regular fa-calendar"></i></span>
+        <button class="date-pill ${this.activeDate === 'all' ? 'active' : ''}" data-date="all">전체</button>
+        <div class="date-pills-scroll">
+          ${dateButtonsHtml}
+        </div>
+      </div>
+    `;
+
+    container.innerHTML = `
+      ${camBannerHtml}
+      ${categoriesHtml}
+      ${dateRowHtml}
+    `;
+
+    // Bind camera reset
+    const btnResetCam = container.querySelector('#btn-reset-cam-filter');
+    if (btnResetCam) {
+      btnResetCam.addEventListener('click', () => {
+        this.resetLocationFilter();
+      });
+    }
+
+    // Bind category clicks
+    container.querySelectorAll('.tab-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.activeCategory = btn.dataset.category;
+        this.renderFilterTabs();
+        this.renderVideoCards();
+      });
     });
 
-    // Bind pill click events
-    container.querySelectorAll('.tab-pill').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        if (btn.id === 'btn-reset-cam-filter') {
-          this.resetLocationFilter();
-          return;
+    // Bind date clicks
+    container.querySelectorAll('.date-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const selectedDate = btn.dataset.date;
+        if (this.activeDate === selectedDate && selectedDate !== 'all') {
+          this.activeDate = 'all'; // toggle off if clicked again
+        } else {
+          this.activeDate = selectedDate;
         }
-        container.querySelectorAll('.tab-pill').forEach(p => p.classList.remove('active'));
-        btn.classList.add('active');
-        this.applyFilter(btn.dataset.filter);
+        this.renderFilterTabs();
+        this.renderVideoCards();
       });
     });
   }
 
-  getCameraName(camId) {
-    const names = {
-      'cam-gj-142-5': '공주 1호기 (142-5)',
-      'cam-gj-59-3': '공주 2호기 (59-3)',
-      'cam-gj-san135': '공주 3호기 (산135)',
-      'cam-dg-1': '경산 4호기 (남하리)'
-    };
-    return names[camId] || camId;
-  }
-
   applyFilter(filterKey) {
-    this.activeFilter = filterKey;
+    if (['all', 'boar', 'badger', 'deer', 'install'].includes(filterKey)) {
+      this.activeCategory = filterKey;
+    } else {
+      this.activeDate = filterKey;
+    }
+    this.renderFilterTabs();
     this.renderVideoCards();
   }
 
