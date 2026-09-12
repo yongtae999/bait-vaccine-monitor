@@ -246,6 +246,16 @@ class VideoManager {
     this.renderVideoCards();
   }
 
+  getCameraName(camId) {
+    const names = {
+      'cam-gj-san135': 'A지점 (문금리 산135)',
+      'cam-gj-59-3': 'B지점 (문금리 59-3)',
+      'cam-gj-142-5': 'C지점 (문금리 142-5)',
+      'cam-dg-1': 'D지점 (남하리 산 127)'
+    };
+    return names[camId] || camId;
+  }
+
   renderVideoCards() {
     const list = document.getElementById('video-cards-container');
     const badge = document.getElementById('video-count-badge');

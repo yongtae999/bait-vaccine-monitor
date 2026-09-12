@@ -78,7 +78,7 @@ class AnalyticsManager {
     if (ctx2 && cameras && cameras.length) {
       if (this.cameraChart) this.cameraChart.destroy();
 
-      const labels = cameras.map(c => c.name.replace(' (문금리 142-5)', '').replace(' (문금리 59-3)', '').replace(' (문금리 산135 공주먹이)', '').replace(' (남하리 산 127)', ''));
+      const labels = cameras.map(c => c.site_num || c.name.split(' (')[0]);
       const dataVals = cameras.map(c => c.wildboar_confirmed);
       const colors = ['#fbbf24', '#38bdf8', '#10b981', '#a855f7'];
 

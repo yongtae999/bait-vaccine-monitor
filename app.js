@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           🌿 ${cam.desc}
         </div>
         <div class="cam-stats-row">
-          ${cam.id === 'cam-dg-1' ? '<span style="color: #94a3b8;">미끼: <b>제외 (단독 모니터링)</b></span>' : '<span>미끼: <b>미끼틀+유인제배합</b></span>'}
+          <span>미끼: <b>${cam.bait_type ? cam.bait_type.split(' + ')[0] : '미끼틀+유인사료'}</b></span>
           <span style="color: ${isStandby ? '#94a3b8' : '#f43f5e'}; font-weight: bold;">
             🐗 멧돼지 ${cam.wildboar_confirmed}건
           </span>
