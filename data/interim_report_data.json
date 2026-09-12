@@ -772,7 +772,8 @@
         ]
       }
     ],
-    "total_clips": 219
+    "total_clips": 219,
+    "bait_name": "멧돼지 미끼틀과 유인제배합 고형사료"
   },
   {
     "site_id": "cam-gj-59-3",
@@ -1366,7 +1367,8 @@
         ]
       }
     ],
-    "total_clips": 416
+    "total_clips": 416,
+    "bait_name": "멧돼지 미끼틀과 유인제배합 고형사료"
   },
   {
     "site_id": "cam-gj-142-5",
@@ -2174,7 +2176,8 @@
         ]
       }
     ],
-    "total_clips": 148
+    "total_clips": 148,
+    "bait_name": "멧돼지 미끼틀과 유인제배합 고형사료"
   },
   {
     "site_id": "cam-dg-1",
@@ -2374,6 +2377,7 @@
           }
         ]
       }
-    ]
+    ],
+    "bait_name": "젤리형 미끼"
   }
 ]
