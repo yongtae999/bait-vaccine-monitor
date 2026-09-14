@@ -1,5 +1,26 @@
 [
   {
+    "id": "vid-boar-0915-064318",
+    "filename": "20260915_064318_000_10_P.mp4",
+    "video_url": "assets/videos/confirmed/20260915_064318_000_10_P.mp4",
+    "thumbnail_url": "assets/thumbnails/20260915_064318_000_10_P.jpg",
+    "camera_id": "cam-gj-142-5",
+    "site_name": "C지점 (문금리 142-5)",
+    "date": "2026-09-15",
+    "time": "06:43:18",
+    "is_night": false,
+    "animal_type": "야생 멧돼지 (Sus scrofa) 8마리",
+    "category": "멧돼지확정",
+    "reaction": "🌅 아침 주간 컬러 영상, 멧돼지 새끼 8마리 군집 살포지 이동 및 채식",
+    "bait_type": "멧돼지 미끼틀과 유인제배합 고형사료",
+    "lat": 36.639449,
+    "lng": 127.010684,
+    "confidence": 0.99,
+    "behavior": "아침(06:43) 주간 선명한 컬러 영상, 멧돼지 새끼 8마리 대군집이 142-5 살포지 길목에 출현하여 활발한 지면 채식 및 이동 지속 (9/9에 이은 8두 대군집 2차 방문 실증)",
+    "recorded_date": "2026-09-15",
+    "recorded_time": "06:43:18"
+  },
+  {
     "id": "vid-badger-0915-022325",
     "filename": "20260915T022325_facefront_hardware148.mp4",
     "video_url": "assets/videos/ignored/20260915T022325_facefront_hardware148.mp4",
