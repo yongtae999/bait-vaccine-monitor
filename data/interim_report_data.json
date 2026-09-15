@@ -1379,11 +1379,11 @@
     "coordinates": "36.639449° N, 127.010684° E (고도 343.8m, 방위 285°)",
     "camera_spec": "IP Wildcam 4K TrailCam (동작감지 적외선 야간센서, LTE 모듈)",
     "install_date": "2026-07-01",
-    "total_scanned_clips": 133,
+    "total_scanned_clips": 134,
     "confirmed_boar_count": 14,
-    "ignored_animal_count": 10,
+    "ignored_animal_count": 11,
     "bait_palatability": "높음 (주야간 지속 섭취 확인)",
-    "summary_opinion": "진입로 능선 이동통로에 위치하여 7월~9월 주야간 지속적인 멧돼지 개체 접근 및 고형사료 섭취가 실증되었으며, 9월 6일~7일 주간(새끼 4마리)에 이어 9월 9일 새벽(03:56) 멧돼지 새끼 8마리(추정) 대규모 군집이 방문하여 전일 살포된 미끼 잔여 분말을 20초 이상 집중 완식함. 특히 9월 15일 아침(06:43)에는 동일 새끼 8마리 군집이 선명한 주간 컬러 4K 영상으로 살포지 길목에 다시 출현하여 주간 채식 및 이동 행태를 뚜렷하게 실증함. 아울러 9월 9일, 10일, 13일, 15일 심야 비대상 동물인 오소리가 방문하여 지면을 탐색·통과하는 생태 안전성도 연속 확인됨.",
+    "summary_opinion": "진입로 능선 이동통로에 위치하여 7월~9월 주야간 지속적인 멧돼지 개체 접근 및 고형사료 섭취가 실증되었으며, 9월 6일~7일 주간(새끼 4마리)에 이어 9월 9일 새벽(03:56) 멧돼지 새끼 8마리(추정) 대규모 군집이 방문하여 전일 살포된 미끼 잔여 분말을 20초 이상 집중 완식함. 9월 15일 아침(06:43) 동일 새끼 8마리 군집의 주간 컬러 재출현에 이어, 9월 16일 심야(01:00)에는 비대상 동물인 고라니 1마리가 살포지 길목을 지나갔으나 미끼에 전혀 관심을 두지 않고 단순 통과하여 비대상 야생동물의 백신 오섭취 리스크 배제 및 타깃팅 안전성을 재차 입증함.",
     "timeline": [
       {
         "date": "2026-07-01",
@@ -2250,9 +2250,31 @@
             "is_night": false
           }
         ]
+      },
+      {
+        "date": "2026-09-16",
+        "time": "01:00:26",
+        "category": "심야 비대상 동물(고라니) 출현 및 단순 이동 통과",
+        "work_content": "심야 01:00경 비대상 동물인 고라니(Hydropotes inermis) 1마리가 142-5 살포지 길목에 출현하여 20초 동안 지면을 탐색한 후 미끼를 섭취하지 않고 단순 이동 통과함.",
+        "animal_appearance": "고라니 (Hydropotes inermis) 1마리",
+        "boar_count": "0마리 (고라니)",
+        "reaction_stage": "살포지 지면 탐색 및 단순 통과 (미끼 섭취 없음)",
+        "workers": "무인 센서 카메라 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260916T010026_facefront_hardware148.jpg",
+            "video_url": "assets/videos/ignored/20260916T010026_facefront_hardware148.mp4",
+            "title": "01:00:26 고라니 1마리 살포지 길목 출현 및 단순 통과 (20초 영상)",
+            "animal": "고라니 (Hydropotes inermis)",
+            "category": "고라니 (비대상)",
+            "time": "01:00:26",
+            "is_night": true
+          }
+        ]
       }
     ],
-    "total_clips": 152,
+    "total_clips": 153,
     "bait_name": "멧돼지 미끼틀과 유인제배합 고형사료"
   },
   {
