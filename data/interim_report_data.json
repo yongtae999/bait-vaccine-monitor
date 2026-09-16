@@ -784,11 +784,11 @@
     "coordinates": "36.640111° N, 127.010993° E (고도 348.5m, 방위 328°)",
     "camera_spec": "IP Wildcam 4K TrailCam (동작감지 적외선 야간센서, LTE 모듈)",
     "install_date": "2026-07-01",
-    "total_scanned_clips": 413,
+    "total_scanned_clips": 414,
     "confirmed_boar_count": 15,
-    "ignored_animal_count": 2,
+    "ignored_animal_count": 3,
     "bait_palatability": "매우 높음 (대군락 야간 집중 섭취 실증)",
-    "summary_opinion": "전체 실험지 중 멧돼지 개체군 밀도가 가장 높은 핵심 출몰지로, 7월 28일 야간 11건의 군락(성체+유체 2~4마리) 집중 섭취를 비롯해 8월 6일, 8월 7일 등 총 15건의 확정 섭취가 입증되어 유인 효과가 가장 극대화됨.",
+    "summary_opinion": "농경지 인접 완충사면에 위치하여 7월 28일 심야(01:28~03:11) 1시간 40분 동안 11차례 연속 집중 완식을 기록하고, 8월 6일~7일 오전 06시대 선명한 주간 컬러 영상으로 멧돼지 섭취 행동을 명확히 입증함. 비대상 동물인 고라니가 8월 8일에 이어 9월 16일 주간(17:14)에도 2마리가 하단 사면 풀숲을 통과했으나 미끼틀에 일체 접근하지 않고 통과하여 초식동물에 대한 백신 안전성을 뚜렷하게 확인시켜 줌.",
     "timeline": [
       {
         "date": "2026-07-01",
@@ -1365,9 +1365,31 @@
             "is_night": false
           }
         ]
+      },
+      {
+        "date": "2026-09-16",
+        "time": "17:14:57",
+        "category": "주간 비대상 동물(고라니 2마리) 출현 및 풀숲 이동 통과",
+        "work_content": "주간 17:14경 비대상 동물인 고라니(Hydropotes inermis) 2마리가 59-3 살포지 하단 완충사면 풀숲을 나란히 이동 통과하는 모습이 20초간 선명한 컬러 영상으로 자동 녹화됨. 미끼틀에 접근하거나 섭취하지 않고 주변 풀숲을 단순 이동함.",
+        "animal_appearance": "고라니 (Hydropotes inermis) 2마리",
+        "boar_count": "0마리 (고라니)",
+        "reaction_stage": "살포지 하단 풀숲 이동 및 단순 통과 (미끼 섭취 없음)",
+        "workers": "무인 센서 카메라 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20260916_171457_000_20_P.jpg",
+            "video_url": "assets/videos/ignored/20260916_171457_000_20_P.mp4",
+            "title": "17:14:57 고라니 2마리 주간 컬러 출현 및 풀숲 이동 통과 (20초 영상)",
+            "animal": "고라니 (Hydropotes inermis) 2마리",
+            "category": "고라니 (비대상)",
+            "time": "17:14:57",
+            "is_night": false
+          }
+        ]
       }
     ],
-    "total_clips": 416,
+    "total_clips": 417,
     "bait_name": "멧돼지 미끼틀과 유인제배합 고형사료"
   },
   {

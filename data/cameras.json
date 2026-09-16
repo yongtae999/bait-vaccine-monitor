@@ -35,11 +35,12 @@
     "status": "active",
     "desc": "문금리 59-3 사면 멧돼지 미끼틀과 유인제배합 고형사료 실험구",
     "bait_type": "멧돼지 미끼틀과 유인제배합 고형사료",
-    "total_clips": 416,
+    "total_clips": 417,
     "wildboar_confirmed": 15,
-    "deer_ignored": 2,
+    "deer_ignored": 3,
     "site_num": "B지점",
-    "short_name": "B지점 (문금리 59-3)"
+    "short_name": "B지점 (문금리 59-3)",
+    "last_active": "2026-09-16 17:14:57"
   },
   {
     "id": "cam-gj-142-5",

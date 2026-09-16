@@ -1,5 +1,25 @@
 [
   {
+    "id": "vid-deer-0916-171457",
+    "filename": "20260916_171457_000_20_P.mp4",
+    "video_url": "assets/videos/ignored/20260916_171457_000_20_P.mp4",
+    "thumbnail_url": "assets/thumbnails/20260916_171457_000_20_P.jpg",
+    "camera_id": "cam-gj-59-3",
+    "site_name": "B지점 (문금리 59-3)",
+    "date": "2026-09-16",
+    "time": "17:14:57",
+    "is_night": false,
+    "animal_type": "고라니 (Hydropotes inermis) 2마리",
+    "category": "고라니 (비대상 동물)",
+    "reaction": "주간(17:14) 살포지 하단 사면 풀숲 이동 및 단순 통과 (미끼 섭취 없음)",
+    "bait_type": "멧돼지 미끼틀과 유인제배합 고형사료",
+    "lat": 36.640111,
+    "lng": 127.010993,
+    "behavior": "주간(17:14) 비대상 동물(고라니 2마리) 59-3 살포지 하단 완충사면 풀숲을 나란히 이동 통과, 미끼틀에 접근하거나 섭취하지 않고 주변 풀숲을 단순 이동함",
+    "recorded_date": "2026-09-16",
+    "recorded_time": "17:14:57"
+  },
+  {
     "id": "vid-deer-0916-010026",
     "filename": "20260916T010026_facefront_hardware148.mp4",
     "video_url": "assets/videos/ignored/20260916T010026_facefront_hardware148.mp4",
