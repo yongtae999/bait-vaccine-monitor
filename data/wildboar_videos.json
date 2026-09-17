@@ -1,5 +1,25 @@
 [
   {
+    "id": "vid-badger-0917-043617",
+    "filename": "20260917_043617_000_10_P.mp4",
+    "video_url": "assets/videos/ignored/20260917_043617_000_10_P.mp4",
+    "thumbnail_url": "assets/thumbnails/20260917_043617_000_10_P.jpg",
+    "camera_id": "cam-gj-142-5",
+    "site_name": "C지점 (문금리 142-5)",
+    "date": "2026-09-17",
+    "time": "04:36:17",
+    "is_night": true,
+    "animal_type": "오소리 (Meles leucurus)",
+    "category": "오소리 (비대상 동물)",
+    "reaction": "새벽(04:36) 살포지 하단 통로 진입 및 지면 탐색 (섭취 없음)",
+    "bait_type": "멧돼지 미끼틀과 유인제배합 고형사료",
+    "lat": 36.639449,
+    "lng": 127.010684,
+    "behavior": "새벽(04:36) 비대상 동물(오소리 1마리) 142-5 살포지 하단 통로로 진입하여 지면 냄새 탐색 후 통과 (미끼 섭취 없음)",
+    "recorded_date": "2026-09-17",
+    "recorded_time": "04:36:17"
+  },
+  {
     "id": "vid-deer-0916-171457",
     "filename": "20260916_171457_000_20_P.mp4",
     "video_url": "assets/videos/ignored/20260916_171457_000_20_P.mp4",
