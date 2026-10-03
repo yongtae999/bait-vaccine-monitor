@@ -41,6 +41,35 @@ class InterimReportManager {
     });
   }
 
+  getLatestReportDateText() {
+    let maxDate = '';
+    if (this.reports && Array.isArray(this.reports)) {
+      this.reports.forEach(r => {
+        if (r.timeline && Array.isArray(r.timeline)) {
+          r.timeline.forEach(t => {
+            const dMatch = (t.date || '').match(/\d{4}-\d{2}-\d{2}/);
+            const d = dMatch ? dMatch[0] : (t.date || '');
+            if (d && d > maxDate) {
+              maxDate = d;
+            }
+          });
+        }
+      });
+    }
+    if (!maxDate) {
+      const today = new Date();
+      const y = today.getFullYear();
+      const m = String(today.getMonth() + 1).padStart(2, '0');
+      const d = String(today.getDate()).padStart(2, '0');
+      maxDate = `${y}-${m}-${d}`;
+    }
+    const parts = maxDate.split('-');
+    if (parts.length === 3) {
+      return `${parts[0]}년 ${parseInt(parts[1], 10)}월 ${parseInt(parts[2], 10)}일 기준`;
+    }
+    return maxDate;
+  }
+
   bindEvents() {
     // Header Open Button
     const btnOpen = document.getElementById('btn-open-interim-report');
@@ -140,7 +169,7 @@ class InterimReportManager {
           <h2 class="sheet-title">야생 멧돼지 미끼백신 섭취 기호도 평가 4대 실험지 종합 집계표</h2>
           <div class="sheet-meta">
             <span><b>수행기관:</b> (사)야생생물관리협회 대전ㆍ세종ㆍ충남지부</span>
-            <span><b>작성기준일:</b> 2026년 9월 2일 (중간보고회 발표용)</span>
+            <span><b>작성기준일:</b> ${this.getLatestReportDateText()}</span>
           </div>
         </div>
         <div class="print-approval-box">
@@ -298,6 +327,7 @@ class InterimReportManager {
           <div class="sheet-meta">
             <span><b>지번 소재지:</b> ${site.address}</span>
             <span><b>정밀 GPS 좌표:</b> ${site.coordinates}</span>
+            <span><b>작성기준일:</b> ${this.getLatestReportDateText()}</span>
           </div>
         </div>
         <div class="print-approval-box">
@@ -487,6 +517,9 @@ class InterimReportManager {
           <tr>
             <td colspan="6" style="border: none; font-size: 16pt; font-weight: bold; text-align: left; padding: 10px 0;">
               야생 멧돼지 미끼백신 섭취 기호도 평가 4대 실험지 종합 집계표
+              <div style="font-size: 9pt; font-weight: normal; color: #475569; margin-top: 5px;">
+                <b>수행기관:</b> (사)야생생물관리협회 대전ㆍ세종ㆍ충남지부 &nbsp;|&nbsp; <b>작성기준일:</b> ${this.getLatestReportDateText()}
+              </div>
             </td>
             <td colspan="2" style="border: none; text-align: right;">
               <table style="border-collapse: collapse; display: inline-table; width: 220px; text-align: center; border: 1.5pt solid #000;">
@@ -564,6 +597,9 @@ class InterimReportManager {
           <tr>
             <td colspan="5" style="border: none; font-size: 16pt; font-weight: bold; text-align: left; padding: 10px 0;">
               ${site.site_name} 실증 집계 및 시간순 타임라인 보고서
+              <div style="font-size: 9pt; font-weight: normal; color: #475569; margin-top: 5px;">
+                <b>지번 소재지:</b> ${site.address} &nbsp;|&nbsp; <b>작성기준일:</b> ${this.getLatestReportDateText()}
+              </div>
             </td>
             <td colspan="2" style="border: none; text-align: right;">
               <table style="border-collapse: collapse; display: inline-table; width: 220px; text-align: center; border: 1.5pt solid #000;">
