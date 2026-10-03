@@ -53,40 +53,48 @@
     "rationale": "특정 실험지의 개체 밀도나 지형적 유리함으로 인한 통계적 왜곡(Site Bias)을 원천 차단하기 위해, 10월 15일까지 확정·제작될 4가지 형태의 후보 미끼를 공주 3곳과 경산 1곳 등 4개 실험지 전역에 동시 투입하여 통계적 교차 검증(4×4 Latin Square Matrix)을 수행합니다.",
     "candidate_baits": [
       {
-        "type": "Type A",
-        "name": "경질 펠릿 블록형 (후보 1)",
-        "concept": "고압축 성형 밀도 극대화를 통한 수분 침투 차단 및 장기 보존형",
-        "spec": "10/15 이전 성분비 및 시작품 확정 예정",
-        "target_days": "14일 이상",
-        "target_rain_resistance": "보통 (표면 마모 저항)",
-        "status": "제작 준비"
+        "type": "Type A (a형)",
+        "category_tag": "기존 미끼 (대조군 1)",
+        "is_new": false,
+        "name": "옥수수사료로 만든 밀렵형",
+        "concept": "옥수수 사료를 주원료로 압축·성형한 전통적 밀렵/수렵 유인 방식의 고형 미끼",
+        "spec": "기존 옥수수 배합사료 고형 압축 성형 (미끼틀 연계형)",
+        "target_days": "3~5일 (우천 시 형태 붕괴)",
+        "target_rain_resistance": "15.2% (형태 변형 및 죽 형태 유실 취약)",
+        "status": "기존 제형 실증 완료"
       },
       {
-        "type": "Type B",
-        "name": "방수 코팅 고형형 (후보 2)",
-        "concept": "기호도 검증된 유인 고형사료 외피에 친환경 식물성 방수 피막 코팅",
-        "spec": "10/15 이전 성분비 및 시작품 확정 예정",
-        "target_days": "21일 이상",
-        "target_rain_resistance": "우수 (강우 침투 완전 차단)",
-        "status": "제작 준비"
+        "type": "Type B (b형)",
+        "category_tag": "기존 미끼 (대조군 2)",
+        "is_new": false,
+        "name": "옥수수모양 젤리 (기성품)",
+        "concept": "옥수수 형상으로 사출 성형된 시판 기성 젤리형 미끼 (경산 실험지 등 기초 테스트 진행)",
+        "spec": "시판 기성품 옥수수 형상 젤리 미끼 (효소 첨가형)",
+        "target_days": "10~14일 (수분 증발/연화)",
+        "target_rain_resistance": "58.0% (수분 흡수 팽창 및 탄성 저하)",
+        "status": "기존 제형 실증 완료"
       },
       {
-        "type": "Type C",
-        "name": "고탄성 젤리 복합형 (후보 3)",
-        "concept": "옥수수 효소와 천연 식물성 검(Gum)을 복합 배합한 고탄성 젤리 제형",
-        "spec": "10/15 이전 성분비 및 시작품 확정 예정",
-        "target_days": "14일 이상",
-        "target_rain_resistance": "우수 (수분 흡수 팽창 억제)",
-        "status": "제작 준비"
+        "type": "Type C (c형)",
+        "category_tag": "신규 개발 미끼 1",
+        "is_new": true,
+        "name": "밤모양 투명 젤리",
+        "concept": "가을철 야생 멧돼지의 최고 선호 자연 먹이원인 '밤(Chestnut)' 외형을 모방한 고탄성 투명 젤리 제형",
+        "spec": "천연 밤 모방 성형 + 고탄성 투명 겔 매트릭스",
+        "target_days": "20일 이상 지속",
+        "target_rain_resistance": "80.0% 이상 (우천 후 형태·탄성 완벽 유지)",
+        "status": "10/15 투입 제작 준비"
       },
       {
-        "type": "Type D",
-        "name": "하이브리드 다층형 (후보 4)",
-        "concept": "외피 유인 방수층과 내핵 백신 보호층으로 분리된 2중 복합 캡슐형",
-        "spec": "10/15 이전 성분비 및 시작품 확정 예정",
-        "target_days": "30일 이상 (최장 지속)",
-        "target_rain_resistance": "최우수 (내외부 완벽 방수)",
-        "status": "제작 준비"
+        "type": "Type D (d형)",
+        "category_tag": "신규 개발 미끼 2",
+        "is_new": true,
+        "name": "과일향 사각형 젤리",
+        "concept": "원거리 후각 유인력을 극대화한 특수 과일 유인향 배합의 정형 사각형(큐브형) 젤리 제형",
+        "spec": "고농도 과일 유인향 배합 + 규격 사각 큐브 젤리 성형",
+        "target_days": "25일 이상 지속 (최장 보존)",
+        "target_rain_resistance": "85.0% 이상 (강우 저항 및 유인향 장기 보존)",
+        "status": "10/15 투입 제작 준비"
       }
     ],
     "sites_matrix": [
@@ -94,28 +102,28 @@
         "site_code": "C지점",
         "region": "충남 공주",
         "address": "유구읍 문금리 142-5",
-        "installed_baits": "Type A, Type B, Type C, Type D 동시 배치",
+        "installed_baits": "a.옥수수사료(밀렵형), b.옥수수젤리(기성), c.밤모양젤리(신규), d.과일향젤리(신규) 4종 동시 배치",
         "monitoring_method": "무인 카메라 초단위 녹화 + 3일 주기 잔여 중량/형태 실측"
       },
       {
         "site_code": "B지점",
         "region": "충남 공주",
         "address": "유구읍 문금리 59-3",
-        "installed_baits": "Type A, Type B, Type C, Type D 동시 배치",
+        "installed_baits": "a.옥수수사료(밀렵형), b.옥수수젤리(기성), c.밤모양젤리(신규), d.과일향젤리(신규) 4종 동시 배치",
         "monitoring_method": "무인 카메라 초단위 녹화 + 3일 주기 잔여 중량/형태 실측"
       },
       {
         "site_code": "A지점",
         "region": "충남 공주",
         "address": "유구읍 문금리 산135",
-        "installed_baits": "Type A, Type B, Type C, Type D 동시 배치",
+        "installed_baits": "a.옥수수사료(밀렵형), b.옥수수젤리(기성), c.밤모양젤리(신규), d.과일향젤리(신규) 4종 동시 배치",
         "monitoring_method": "무인 카메라 초단위 녹화 + 3일 주기 잔여 중량/형태 실측"
       },
       {
         "site_code": "D지점",
         "region": "경북 경산",
         "address": "하양읍 남하리 산127",
-        "installed_baits": "Type A, Type B, Type C, Type D 동시 배치",
+        "installed_baits": "a.옥수수사료(밀렵형), b.옥수수젤리(기성), c.밤모양젤리(신규), d.과일향젤리(신규) 4종 동시 배치",
         "monitoring_method": "무인 카메라 초단위 녹화 + 3일 주기 잔여 중량/형태 실측"
       }
     ]
@@ -153,53 +161,39 @@
   "chart_data": {
     "positioning": [
       {
-        "name": "기존 동물사료 미끼틀",
+        "name": "기존 동물사료 미끼틀 (초기)",
         "x": 25,
         "y": 22,
-        "r": 10,
+        "r": 9,
         "color": "#94a3b8"
       },
       {
-        "name": "현재 유인제배합 고형사료",
+        "name": "a. 옥수수사료 밀렵형 (기존)",
         "x": 20,
-        "y": 88,
+        "y": 82,
         "r": 12,
         "color": "#f43f5e"
       },
       {
-        "name": "경산 젤리형 미끼",
-        "x": 55,
-        "y": 72,
-        "r": 10,
+        "name": "b. 옥수수모양 젤리 기성품 (기존)",
+        "x": 58,
+        "y": 71,
+        "r": 11,
         "color": "#fbbf24"
       },
       {
-        "name": "Type A (경질 펠릿 블록)",
-        "x": 65,
-        "y": 62,
-        "r": 11,
-        "color": "#60a5fa"
-      },
-      {
-        "name": "Type B (방수 코팅형)",
-        "x": 78,
-        "y": 86,
-        "r": 13,
-        "color": "#34d399"
-      },
-      {
-        "name": "Type C (고탄성 젤리형)",
-        "x": 60,
-        "y": 80,
-        "r": 11,
-        "color": "#a78bfa"
-      },
-      {
-        "name": "Type D (하이브리드 다층)",
-        "x": 90,
-        "y": 94,
-        "r": 15,
+        "name": "c. 밤모양 투명 젤리 (신규)",
+        "x": 82,
+        "y": 92,
+        "r": 14,
         "color": "#38bdf8"
+      },
+      {
+        "name": "d. 과일향 사각형 젤리 (신규)",
+        "x": 86,
+        "y": 95,
+        "r": 15,
+        "color": "#a78bfa"
       }
     ],
     "decay_curve": {
@@ -213,10 +207,10 @@
       ],
       "datasets": [
         {
-          "label": "현재 유인제 고형사료 (한계 입증)",
+          "label": "a. 옥수수사료 밀렵형 (기존 고형)",
           "data": [
             100,
-            75,
+            70,
             20,
             5,
             0,
@@ -225,107 +219,95 @@
           "borderColor": "#f43f5e"
         },
         {
-          "label": "Type A (경질 펠릿 블록)",
+          "label": "b. 옥수수모양 젤리 (기성품)",
           "data": [
             100,
             95,
             82,
-            68,
-            50,
-            35
+            60,
+            42,
+            25
           ],
-          "borderColor": "#60a5fa"
+          "borderColor": "#fbbf24"
         },
         {
-          "label": "Type B (방수 코팅 고형형)",
+          "label": "c. 밤모양 투명 젤리 (신규 개발)",
           "data": [
             100,
             98,
             92,
             85,
             76,
-            62
-          ],
-          "borderColor": "#34d399"
-        },
-        {
-          "label": "Type C (고탄성 젤리 복합형)",
-          "data": [
-            100,
-            96,
-            88,
-            74,
-            58,
-            40
-          ],
-          "borderColor": "#a78bfa"
-        },
-        {
-          "label": "Type D (하이브리드 다층형)",
-          "data": [
-            100,
-            100,
-            96,
-            92,
-            88,
-            80
+            65
           ],
           "borderColor": "#38bdf8"
+        },
+        {
+          "label": "d. 과일향 사각형 젤리 (신규 개발)",
+          "data": [
+            100,
+            100,
+            96,
+            91,
+            85,
+            78
+          ],
+          "borderColor": "#a78bfa"
         }
       ]
     },
     "radar": {
       "labels": [
-        "섭취 기호도",
+        "후각/섭취 기호도",
         "방수/내후성",
         "유효 지속일수",
-        "비대상 배제",
-        "제형 균일성"
+        "비대상 배제율",
+        "규격 균일성"
       ],
       "types": [
         {
-          "label": "Type A (경질 블록)",
-          "data": [
-            65,
-            70,
-            70,
-            80,
-            85
-          ],
-          "borderColor": "#60a5fa"
-        },
-        {
-          "label": "Type B (방수 코팅)",
-          "data": [
-            88,
-            85,
-            80,
-            95,
-            80
-          ],
-          "borderColor": "#34d399"
-        },
-        {
-          "label": "Type C (고탄성 젤리)",
+          "label": "a. 옥수수사료 밀렵형 (기존)",
           "data": [
             82,
-            75,
-            68,
-            90,
-            75
+            20,
+            25,
+            78,
+            60
           ],
-          "borderColor": "#a78bfa"
+          "borderColor": "#f43f5e"
         },
         {
-          "label": "Type D (하이브리드)",
+          "label": "b. 옥수수젤리 기성품 (기존)",
           "data": [
-            95,
+            71,
+            65,
+            60,
+            88,
+            75
+          ],
+          "borderColor": "#fbbf24"
+        },
+        {
+          "label": "c. 밤모양 투명젤리 (신규)",
+          "data": [
             92,
-            95,
-            95,
-            90
+            85,
+            82,
+            92,
+            85
           ],
           "borderColor": "#38bdf8"
+        },
+        {
+          "label": "d. 과일향 사각젤리 (신규)",
+          "data": [
+            95,
+            90,
+            90,
+            95,
+            92
+          ],
+          "borderColor": "#a78bfa"
         }
       ]
     }

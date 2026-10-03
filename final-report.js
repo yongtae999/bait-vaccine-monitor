@@ -228,17 +228,20 @@ class FinalReportManager {
       </h4>
       <div class="final-baits-grid">
         ${s2.candidate_baits.map((b, idx) => `
-          <div class="final-bait-card">
+          <div class="final-bait-card ${b.is_new ? 'is-new-bait' : 'is-existing-bait'}" style="${b.is_new ? 'border-color: rgba(56, 189, 248, 0.35); background: rgba(14, 30, 55, 0.85);' : 'border-color: rgba(255, 255, 255, 0.08);'}">
             <div class="bait-card-header">
-              <span class="badge-type">${b.type}</span>
-              <span class="badge-status">${b.status}</span>
+              <span class="badge-type" style="${b.is_new ? 'background: rgba(56, 189, 248, 0.25); border-color: #38bdf8; color: #38bdf8;' : ''}">${b.type}</span>
+              <span class="badge-status" style="${b.is_new ? 'background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: #34d399;' : 'background: rgba(148, 163, 184, 0.15); color: #cbd5e1; border-color: #64748b;'}">
+                ${b.is_new ? '✨ ' + b.category_tag : '🔄 ' + b.category_tag}
+              </span>
             </div>
-            <h5 class="bait-title">${b.name}</h5>
+            <h5 class="bait-title" style="color: ${b.is_new ? '#38bdf8' : '#f8fafc'}; font-size: 0.92rem;">${b.name}</h5>
             <div class="bait-concept">${b.concept}</div>
             <div class="bait-specs">
-              <div class="spec-row"><span>상세 배합:</span> <b>${b.spec}</b></div>
+              <div class="spec-row"><span>상세 형태:</span> <b>${b.spec}</b></div>
               <div class="spec-row"><span>목표 잔존:</span> <b style="color: #38bdf8;">${b.target_days}</b></div>
               <div class="spec-row"><span>강우 저항:</span> <b style="color: #34d399;">${b.target_rain_resistance}</b></div>
+              <div class="spec-row"><span>구분/상태:</span> <b style="color: ${b.is_new ? '#a78bfa' : '#94a3b8'};">${b.status}</b></div>
             </div>
           </div>
         `).join('')}
@@ -333,7 +336,7 @@ class FinalReportManager {
             <canvas id="chart-positioning"></canvas>
           </div>
           <div class="chart-caption">
-            * 붉은점(현재 고형사료): 선호도는 높으나 내구성이 20%대로 취약 ➔ <b>Type D / Type B</b>로 도약하여 우상향(★최적 제형 영역) 진입 실증
+            * 붉은점(a. 옥수수사료 밀렵형): 기호도는 있으나 내구성(20%) 취약 ➔ 신규 제형인 <b>c. 밤모양 투명 젤리 & d. 과일향 사각형 젤리</b>가 내구성과 기호도를 모두 충족하는 우상향(★최적 영역)으로 도약
           </div>
         </div>
 
@@ -350,7 +353,7 @@ class FinalReportManager {
             <canvas id="chart-decay"></canvas>
           </div>
           <div class="chart-caption">
-            * 현재 고형사료는 3~5일 차 강우 시 급격히 형태 붕괴(0%) 발생 ➔ 신규 후보 제형은 30일 경과 후에도 60~80% 이상 형태 유지
+            * a. 옥수수사료 밀렵형은 3~5일 차 우천 시 급격한 형태 붕괴(0%) 발생 ➔ 신규 c. 밤모양 젤리 및 d. 과일향 사각 젤리는 30일 후에도 65~78% 이상 원형 유지
           </div>
         </div>
 
@@ -367,7 +370,7 @@ class FinalReportManager {
             <canvas id="chart-radar"></canvas>
           </div>
           <div class="chart-caption" style="text-align: center;">
-            * 5대 평가 축(기호도, 방수성, 유효일수, 비대상 배제, 균일성) 종합 평가 시 Type D(하이브리드) 및 Type B(코팅형)가 종합 최우수 후보로 도출
+            * 5대 평가 축(기호도, 방수성, 유효일수, 비대상 배제, 균일성) 종합 평가 시 기존 2종(a, b)의 한계를 극복하고 신규 2종(c. 밤모양 젤리, d. 과일향 사각 젤리)이 종합 최우수 후보로 도출
           </div>
         </div>
       </div>
