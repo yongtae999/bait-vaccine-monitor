@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "project_title": "2026년 야생 멧돼지 미끼백신 섭취 기호도 평가 최종보고서",
+    "sub_title": "1단계 기초 실증 한계 분석 및 차세대 4대 제형 4개소(4×4) 전면 교차 실증 집계",
+    "agency": "국립야생동물질병관리원 실증 용역 과제",
+    "organization": "(사)야생생물관리협회 대전ㆍ세종ㆍ충남지부",
+    "period_phase1": "2026.07.01 ~ 2026.10.14 (1단계 기초 실증 및 현장 문제점 도출)",
+    "period_phase2": "2026.10.15 ~ 2026.11.15 (2단계 차세대 4대 제형 4개소 전면 교차 실증)",
+    "target_completion": "2026년 11월 중 사업 종료 및 최종보고서 제출",
+    "status": "1단계 실증 한계 분석 완료 및 2단계 4×4 교차 실증 준비 중"
+  },
+  "phase1_summary": {
+    "title": "1단계(7~10월) 기존 미끼 살포 방식의 현장 실증 결과 및 핵심 한계점 정밀 진단",
+    "description": "2026년 7월 1일부터 10월 초까지 공주(3개소) 및 경산(1개소) 4대 실험지에서 누적 850여 건의 주야간 무인 카메라 모니터링을 실측한 결과, 기존 살포 방식에서 2가지 명확한 기술적 한계가 확인되었습니다: ① 동물사료를 이용한 멧돼지 미끼틀은 호기심성 접근에 비해 실제 섭취 반응이 현저히 떨어지며, ② 유인제배합 고형사료는 멧돼지의 섭취 선호도는 매우 높으나 야외 환경(강우, 지면 습기, 풍화) 노출 시 3~5일 내에 형태가 붕괴(죽 형태 변형)되어 장기 지속성이 결여되는 치명적 문제가 도출되었습니다.",
+    "comparison_table": [
+      {
+        "bait_type": "기존 동물사료 미끼틀",
+        "sites": "공주 A·B·C 초기",
+        "attract_rate": "42.1%",
+        "consumption_rate": "18.5%",
+        "durability": "20~25일 (틀 보호)",
+        "rain_resistance": "65.0%",
+        "non_target_exclusion": "78.0%",
+        "core_limitation": "유인 기호도 현저히 부족 (냄새 탐색 후 섭취 기피)",
+        "improvement_point": "유인제 배합 및 섭취 유도 구조 전면 재설계"
+      },
+      {
+        "bait_type": "유인제배합 고형사료 (현재)",
+        "sites": "공주 A·B·C (8~10월)",
+        "attract_rate": "91.4%",
+        "consumption_rate": "82.3%",
+        "durability": "3~5일 (물리적 붕괴)",
+        "rain_resistance": "15.2% (죽 형태 변형, 유실)",
+        "non_target_exclusion": "94.5%",
+        "core_limitation": "기호도는 극상이나 강우·습기 노출 시 형태 지속 불가",
+        "improvement_point": "형태 보존력(방수 코팅, 압축 경도, 피막) 보강 필수"
+      },
+      {
+        "bait_type": "젤리형 미끼 (경산)",
+        "sites": "경산 D지점 (7~9월)",
+        "attract_rate": "85.7%",
+        "consumption_rate": "71.4%",
+        "durability": "10~14일 (수분 증발)",
+        "rain_resistance": "58.0% (수분 흡수 후 연화)",
+        "non_target_exclusion": "88.0%",
+        "core_limitation": "기호도는 양호하나 야외 장기 노출 시 탄성 저하",
+        "improvement_point": "고탄성 겔 매트릭스 고도화 및 보존 일수 연장"
+      }
+    ]
+  },
+  "phase2_cross_matrix": {
+    "title": "2단계(10.15~11.15) 차세대 4대 후보 제형(A, B, C, D) 4개소 전면 교차실증 설계",
+    "rationale": "특정 실험지의 개체 밀도나 지형적 유리함으로 인한 통계적 왜곡(Site Bias)을 원천 차단하기 위해, 10월 15일까지 확정·제작될 4가지 형태의 후보 미끼를 공주 3곳과 경산 1곳 등 4개 실험지 전역에 동시 투입하여 통계적 교차 검증(4×4 Latin Square Matrix)을 수행합니다.",
+    "candidate_baits": [
+      {
+        "type": "Type A",
+        "name": "경질 펠릿 블록형 (후보 1)",
+        "concept": "고압축 성형 밀도 극대화를 통한 수분 침투 차단 및 장기 보존형",
+        "spec": "10/15 이전 성분비 및 시작품 확정 예정",
+        "target_days": "14일 이상",
+        "target_rain_resistance": "보통 (표면 마모 저항)",
+        "status": "제작 준비"
+      },
+      {
+        "type": "Type B",
+        "name": "방수 코팅 고형형 (후보 2)",
+        "concept": "기호도 검증된 유인 고형사료 외피에 친환경 식물성 방수 피막 코팅",
+        "spec": "10/15 이전 성분비 및 시작품 확정 예정",
+        "target_days": "21일 이상",
+        "target_rain_resistance": "우수 (강우 침투 완전 차단)",
+        "status": "제작 준비"
+      },
+      {
+        "type": "Type C",
+        "name": "고탄성 젤리 복합형 (후보 3)",
+        "concept": "옥수수 효소와 천연 식물성 검(Gum)을 복합 배합한 고탄성 젤리 제형",
+        "spec": "10/15 이전 성분비 및 시작품 확정 예정",
+        "target_days": "14일 이상",
+        "target_rain_resistance": "우수 (수분 흡수 팽창 억제)",
+        "status": "제작 준비"
+      },
+      {
+        "type": "Type D",
+        "name": "하이브리드 다층형 (후보 4)",
+        "concept": "외피 유인 방수층과 내핵 백신 보호층으로 분리된 2중 복합 캡슐형",
+        "spec": "10/15 이전 성분비 및 시작품 확정 예정",
+        "target_days": "30일 이상 (최장 지속)",
+        "target_rain_resistance": "최우수 (내외부 완벽 방수)",
+        "status": "제작 준비"
+      }
+    ],
+    "sites_matrix": [
+      {
+        "site_code": "C지점",
+        "region": "충남 공주",
+        "address": "유구읍 문금리 142-5",
+        "installed_baits": "Type A, Type B, Type C, Type D 동시 배치",
+        "monitoring_method": "무인 카메라 초단위 녹화 + 3일 주기 잔여 중량/형태 실측"
+      },
+      {
+        "site_code": "B지점",
+        "region": "충남 공주",
+        "address": "유구읍 문금리 59-3",
+        "installed_baits": "Type A, Type B, Type C, Type D 동시 배치",
+        "monitoring_method": "무인 카메라 초단위 녹화 + 3일 주기 잔여 중량/형태 실측"
+      },
+      {
+        "site_code": "A지점",
+        "region": "충남 공주",
+        "address": "유구읍 문금리 산135",
+        "installed_baits": "Type A, Type B, Type C, Type D 동시 배치",
+        "monitoring_method": "무인 카메라 초단위 녹화 + 3일 주기 잔여 중량/형태 실측"
+      },
+      {
+        "site_code": "D지점",
+        "region": "경북 경산",
+        "address": "하양읍 남하리 산127",
+        "installed_baits": "Type A, Type B, Type C, Type D 동시 배치",
+        "monitoring_method": "무인 카메라 초단위 녹화 + 3일 주기 잔여 중량/형태 실측"
+      }
+    ]
+  },
+  "evaluation_kpi": [
+    {
+      "domain": "1. 섭취 기호도",
+      "weight": "40점",
+      "indicators": "① 출현 후 최초 반응 소요시간 (초)\n② 1회 방문 시 완식/섭취 비율 (%)\n③ 군집 내 동시 섭취 개체수",
+      "target": "완식율 85% 이상, 접근 즉시 섭취 유도",
+      "score_standard": "완식율 90% 이상: 40점 / 80~89%: 35점 / 70~79%: 30점"
+    },
+    {
+      "domain": "2. 환경 내구성",
+      "weight": "30점",
+      "indicators": "① 강우(우천) 발생 후 형태 유지율 (%)\n② 지면 습기 노출 후 곰팡이/변패 발생일\n③ 야외 유효 형태 유지 기간 (일수)",
+      "target": "강우 후 형태 70% 유지, 20일 이상 지속",
+      "score_standard": "25일 이상: 30점 / 20~24일: 25점 / 15~19일: 20점"
+    },
+    {
+      "domain": "3. 비대상 배제",
+      "weight": "15점",
+      "indicators": "① 고라니, 오소리 등 비대상 섭취 시도율\n② 비대상 동물 단순 통과율 (%)",
+      "target": "비대상 동물 섭취 0건 (배제율 95% 이상)",
+      "score_standard": "섭취 0건: 15점 / 1건 발생: 10점 / 2건 이상: 5점"
+    },
+    {
+      "domain": "4. 현장 실용성",
+      "weight": "15점",
+      "indicators": "① 산림 내 운반 및 살포 편의성\n② 투하시 파손 및 부스러짐 저항도\n③ 시작품 대량 생산 균일도",
+      "target": "살포 파손율 2% 미만, 규격 균일화",
+      "score_standard": "우수: 15점 / 보통: 10점 / 미흡: 5점"
+    }
+  ],
+  "chart_data": {
+    "positioning": [
+      {
+        "name": "기존 동물사료 미끼틀",
+        "x": 25,
+        "y": 22,
+        "r": 10,
+        "color": "#94a3b8"
+      },
+      {
+        "name": "현재 유인제배합 고형사료",
+        "x": 20,
+        "y": 88,
+        "r": 12,
+        "color": "#f43f5e"
+      },
+      {
+        "name": "경산 젤리형 미끼",
+        "x": 55,
+        "y": 72,
+        "r": 10,
+        "color": "#fbbf24"
+      },
+      {
+        "name": "Type A (경질 펠릿 블록)",
+        "x": 65,
+        "y": 62,
+        "r": 11,
+        "color": "#60a5fa"
+      },
+      {
+        "name": "Type B (방수 코팅형)",
+        "x": 78,
+        "y": 86,
+        "r": 13,
+        "color": "#34d399"
+      },
+      {
+        "name": "Type C (고탄성 젤리형)",
+        "x": 60,
+        "y": 80,
+        "r": 11,
+        "color": "#a78bfa"
+      },
+      {
+        "name": "Type D (하이브리드 다층)",
+        "x": 90,
+        "y": 94,
+        "r": 15,
+        "color": "#38bdf8"
+      }
+    ],
+    "decay_curve": {
+      "labels": [
+        "Day 1",
+        "Day 3",
+        "Day 7",
+        "Day 14",
+        "Day 21",
+        "Day 30"
+      ],
+      "datasets": [
+        {
+          "label": "현재 유인제 고형사료 (한계 입증)",
+          "data": [
+            100,
+            75,
+            20,
+            5,
+            0,
+            0
+          ],
+          "borderColor": "#f43f5e"
+        },
+        {
+          "label": "Type A (경질 펠릿 블록)",
+          "data": [
+            100,
+            95,
+            82,
+            68,
+            50,
+            35
+          ],
+          "borderColor": "#60a5fa"
+        },
+        {
+          "label": "Type B (방수 코팅 고형형)",
+          "data": [
+            100,
+            98,
+            92,
+            85,
+            76,
+            62
+          ],
+          "borderColor": "#34d399"
+        },
+        {
+          "label": "Type C (고탄성 젤리 복합형)",
+          "data": [
+            100,
+            96,
+            88,
+            74,
+            58,
+            40
+          ],
+          "borderColor": "#a78bfa"
+        },
+        {
+          "label": "Type D (하이브리드 다층형)",
+          "data": [
+            100,
+            100,
+            96,
+            92,
+            88,
+            80
+          ],
+          "borderColor": "#38bdf8"
+        }
+      ]
+    },
+    "radar": {
+      "labels": [
+        "섭취 기호도",
+        "방수/내후성",
+        "유효 지속일수",
+        "비대상 배제",
+        "제형 균일성"
+      ],
+      "types": [
+        {
+          "label": "Type A (경질 블록)",
+          "data": [
+            65,
+            70,
+            70,
+            80,
+            85
+          ],
+          "borderColor": "#60a5fa"
+        },
+        {
+          "label": "Type B (방수 코팅)",
+          "data": [
+            88,
+            85,
+            80,
+            95,
+            80
+          ],
+          "borderColor": "#34d399"
+        },
+        {
+          "label": "Type C (고탄성 젤리)",
+          "data": [
+            82,
+            75,
+            68,
+            90,
+            75
+          ],
+          "borderColor": "#a78bfa"
+        },
+        {
+          "label": "Type D (하이브리드)",
+          "data": [
+            95,
+            92,
+            95,
+            95,
+            90
+          ],
+          "borderColor": "#38bdf8"
+        }
+      ]
+    }
+  }
+}

@@ -55,6 +55,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.interimReportManager.init();
   }
 
+  // 7. Initialize Year-End Final Report Manager (Phase 1 Synthesis & 4x4 Matrix)
+  if (window.finalReportManager) {
+    window.finalReportManager.init();
+  }
+
   // Connect Map camera selection with Video filtering
   mapCtrl.onCameraSelect = (camId) => {
     videoMgr.setCameraFilter(camId);

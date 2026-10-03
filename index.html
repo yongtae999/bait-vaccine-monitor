@@ -62,6 +62,10 @@
         <i class="fa-solid fa-table-list text-cyan"></i> <span>실증 종합 집계표</span>
       </button>
 
+      <button id="btn-open-final-report" class="btn-action primary" style="background: linear-gradient(135deg, #4f46e5, #4338ca); border-color: #818cf8; box-shadow: 0 0 10px rgba(129,140,248,0.35);" title="2026년도 사업 종료 최종보고서 양식 및 차세대 4대 제형 4×4 교차실증 집계">
+        <i class="fa-solid fa-file-contract text-cyan"></i> <span>최종보고서 양식</span>
+      </button>
+
       <button id="btn-open-photo-gallery" class="btn-action secondary" title="날짜별 현장 점검 사진 갤러리 열기">
         <i class="fa-solid fa-images text-cyan"></i> <span>현장 사진</span>
       </button>
@@ -491,11 +495,46 @@
     </div>
   </div>
 
+  <!-- ===================================================================
+       MODAL 7: 2026 Year-End Final Evaluation Report (Phase 1 Synthesis & 4x4 Bait Test Matrix)
+       =================================================================== -->
+  <div id="final-report-modal" class="modal-overlay hidden" style="z-index: 9999;">
+    <div class="modal-card final-report-modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-file-contract text-cyan"></i>
+          <h3>2026년 야생 멧돼지 미끼백신 섭취 기호도 평가 최종보고서 (차세대 미끼제형 4×4 실증)</h3>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button id="btn-export-final-report-excel" class="btn-action secondary"><i class="fa-solid fa-file-excel text-emerald"></i> 보고서 표 엑셀(.xls) 다운로드</button>
+          <button id="btn-print-final-report" class="btn-action primary"><i class="fa-solid fa-print"></i> 인쇄 / A4 PDF 출력</button>
+          <button class="modal-close-btn" id="btn-close-final-modal"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+
+      <div class="modal-body final-report-modal-body">
+        <!-- Section Navigation Tabs -->
+        <div class="final-report-tabs" id="final-report-tabs">
+          <button class="final-tab-btn active" data-section="all"><i class="fa-solid fa-book-open"></i> 전체 보고서 통합 보기</button>
+          <button class="final-tab-btn" data-section="summary"><i class="fa-solid fa-triangle-exclamation"></i> 1. 기존 미끼 한계 및 실증 총괄</button>
+          <button class="final-tab-btn" data-section="cross-matrix"><i class="fa-solid fa-flask-vial"></i> 2. 4대 제형 4×4 교차실증 설계</button>
+          <button class="final-tab-btn" data-section="charts"><i class="fa-solid fa-chart-pie"></i> 3. 수치화 평가표 & PPT 시각화 차트</button>
+        </div>
+
+        <!-- Report Sheet Display Area -->
+        <div class="final-sheet-area printable-report" id="final-report-content-area">
+          <!-- Populated by final-report.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- App Modules (Cache-busted) -->
   <script src="map-controller.js?v=20260902_1730"></script>
   <script src="video-manager.js?v=20260902_1730"></script>
   <script src="photo-manager.js?v=20260902_1730"></script>
   <script src="interim-report.js?v=20260902_1730"></script>
+  <script src="final-report.js?v=20261003_1100"></script>
   <script src="analytics.js?v=20260902_1730"></script>
   <script src="activity-report.js?v=20260902_1730"></script>
   <script src="app.js?v=20260902_1730"></script>
