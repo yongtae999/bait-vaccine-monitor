@@ -1,5 +1,26 @@
 [
   {
+    "id": "vid-boar-1008-061939",
+    "filename": "20261008_061939_000_10_P.mp4",
+    "video_url": "assets/videos/confirmed/20261008_061939_000_10_P.mp4",
+    "thumbnail_url": "assets/thumbnails/20261008_061939_000_10_P.jpg",
+    "camera_id": "cam-gj-142-5",
+    "site_name": "C지점 (문금리 142-5)",
+    "date": "2026-10-08",
+    "time": "06:19:39",
+    "is_night": true,
+    "animal_type": "야생 멧돼지 (Sus scrofa) 4마리 군집",
+    "category": "멧돼지확정",
+    "reaction": "아침(06:19) 멧돼지 4마리 군집 살포지 통로 출현 및 신속 이동 통과",
+    "bait_type": "멧돼지 미끼틀과 유인제배합 고형사료",
+    "lat": 36.639449,
+    "lng": 127.010684,
+    "confidence": 0.99,
+    "behavior": "아침(06:19) 야생 멧돼지 4개체 군집이 142-5 살포지 통로를 따라 빠르게 이동 통과 (선두 개체 렌즈 정면 응시 및 후속 개체군 동시 이동)",
+    "recorded_date": "2026-10-08",
+    "recorded_time": "06:19:39"
+  },
+  {
     "id": "vid-boar-1008-055150",
     "filename": "20261008_055150_000_10_P.mp4",
     "video_url": "assets/videos/confirmed/20261008_055150_000_10_P.mp4",
