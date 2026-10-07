@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.warn("Falling back to embedded data:", err);
   }
 
+  window.camerasData = camerasData;
+  window.wildboarVideosData = videosData;
+
   // 1. Initialize Map Controller
   const mapCtrl = new MapController('map-viewport');
   mapCtrl.init(camerasData);

@@ -85,6 +85,15 @@ class FinalReportManager {
     // Destroy existing charts before re-rendering
     this.destroyCharts();
 
+    let totalScanned = 858;
+    let totalConfirmed = 69;
+    if (window.camerasData && Array.isArray(window.camerasData)) {
+      totalScanned = window.camerasData.reduce((acc, c) => acc + (c.total_clips || 0), 0);
+    }
+    if (window.wildboarVideosData && Array.isArray(window.wildboarVideosData)) {
+      totalConfirmed = window.wildboarVideosData.filter(v => v.category === '멧돼지확정').length;
+    }
+
     let html = `
       <!-- Overall Title Header -->
       <div class="report-sheet-header">
@@ -126,11 +135,11 @@ class FinalReportManager {
         </div>
         <div class="summary-kpi-item">
           <span class="lbl">1단계 누적 수집</span>
-          <span class="val">856 <small>건 (초단위 녹화)</small></span>
+          <span class="val">${totalScanned.toLocaleString()} <small>건 (초단위 녹화)</small></span>
         </div>
         <div class="summary-kpi-item highlight">
           <span class="lbl">멧돼지 선별 확정</span>
-          <span class="val">68 <small>건 (행동 분석 완료)</small></span>
+          <span class="val">${totalConfirmed.toLocaleString()} <small>건 (행동 분석 완료)</small></span>
         </div>
         <div class="summary-kpi-item">
           <span class="lbl">2단계 교차 실증</span>
