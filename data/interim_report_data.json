@@ -770,6 +770,24 @@
             "is_night": false
           }
         ]
+      },
+      {
+        "date": "2026-10-11",
+        "time": "08:30 ~ 09:30",
+        "category": "유인제 살포 & 현장 점검",
+        "work_content": "① 공주 문금리 산135 실험구 멧돼지 유인제 추가 살포\n② 무인 센서 카메라 감도 및 미끼틀 주변 상태 점검",
+        "animal_appearance": "-",
+        "boar_count": "-",
+        "reaction_stage": "10월 멧돼지 유인제 추가 살포 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-11_IMG_2291.JPG",
+            "title": "공주 사이트 멧돼지 유인제 살포 및 현장 점검",
+            "location": "공주시 유구읍 문금리 일원"
+          }
+        ]
       }
     ],
     "total_clips": 219,
@@ -1385,6 +1403,42 @@
             "category": "고라니 (비대상)",
             "time": "17:14:57",
             "is_night": false
+          }
+        ]
+      },
+      {
+        "date": "2026-10-11",
+        "time": "08:30 ~ 09:30",
+        "category": "유인제 살포 & 현장 점검",
+        "work_content": "① 문금리 59-3 사면 멧돼지 유인선 살포 및 유인제 통 거치\n② 무인 센서 카메라 화각 및 감도 점검",
+        "animal_appearance": "-",
+        "boar_count": "-",
+        "reaction_stage": "유인선 살포 및 유인제 통 거치 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-11_IMG_2290.JPG",
+            "title": "문금리 59-3 사면 멧돼지 유인선 살포 현장",
+            "location": "공주시 문금리 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-11_IMG_2291.JPG",
+            "title": "문금리 59-3 멧돼지 유인제 통 거치 및 살포 점검",
+            "location": "공주시 문금리 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-11_IMG_2292.JPG",
+            "title": "문금리 59-3 유인선 살포 구역 전경",
+            "location": "공주시 문금리 59-3"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-11_IMG_2294.JPG",
+            "title": "문금리 59-3 무인 센서 카메라 및 유인선 화각 점검",
+            "location": "공주시 문금리 59-3"
           }
         ]
       }
@@ -2632,6 +2686,30 @@
             "category": "멧돼지확정",
             "time": "06:19:39",
             "is_night": true
+          }
+        ]
+      },
+      {
+        "date": "2026-10-11",
+        "time": "08:30 ~ 09:30",
+        "category": "유인제 살포 & 현장 점검",
+        "work_content": "① 문금리 142-5 능선 통로 멧돼지 유인선 집중 살포\n② 무인 센서 카메라 동작 상태 및 센서 감도 점검",
+        "animal_appearance": "-",
+        "boar_count": "-",
+        "reaction_stage": "능선 이동로 유인선 집중 살포 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-11_IMG_2295.JPG",
+            "title": "문금리 142-5 능선 통로 멧돼지 유인선 살포 현장",
+            "location": "공주시 문금리 142-5"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-11_IMG_2296.JPG",
+            "title": "문금리 142-5 무인 센서 카메라 및 능선 통로 화각 점검",
+            "location": "공주시 문금리 142-5"
           }
         ]
       }
