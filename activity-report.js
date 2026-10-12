@@ -111,7 +111,7 @@ class ActivityReportManager {
 
     if (printBtn) {
       printBtn.addEventListener('click', () => {
-        window.print();
+        this.print();
       });
     }
 
@@ -123,6 +123,32 @@ class ActivityReportManager {
         modal.classList.add('hidden');
       });
     }
+  }
+
+  print() {
+    document.body.classList.remove('print-interim-active', 'print-final-active', 'print-briefing-mode');
+    document.body.classList.add('print-activity-active');
+
+    let styleEl = document.getElementById('dynamic-print-page-style');
+    if (!styleEl) {
+      styleEl = document.createElement('style');
+      styleEl.id = 'dynamic-print-page-style';
+      document.head.appendChild(styleEl);
+    }
+    styleEl.textContent = '@page { size: A4 portrait; margin: 10mm; }';
+
+    const cleanup = () => {
+      document.body.classList.remove('print-activity-active');
+      if (styleEl && styleEl.parentNode) {
+        styleEl.parentNode.removeChild(styleEl);
+      }
+      window.removeEventListener('afterprint', cleanup);
+    };
+    window.addEventListener('afterprint', cleanup);
+
+    setTimeout(() => {
+      window.print();
+    }, 50);
   }
 }
 

@@ -1087,38 +1087,47 @@ body {
   font-size: 0.82rem;
 }
 
-/* Print Styles */
+/* Print Styles for Activity Report Form */
 @media print {
-  body * {
-    visibility: hidden;
+  body.print-activity-active > *:not(#report-modal) {
+    display: none !important;
   }
-  #printable-activity-area, #printable-activity-area * {
-    visibility: visible;
+  body.print-activity-active #report-modal {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    background: #fff !important;
+    visibility: visible !important;
   }
-  #printable-activity-area {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  body.print-activity-active #report-modal * {
+    visibility: visible !important;
+  }
+  body.print-activity-active #printable-activity-area {
+    position: static !important;
+    width: 100% !important;
     background: #fff !important;
     color: #000 !important;
   }
-  .gov-form-sheet {
+  body.print-activity-active .gov-form-sheet {
     background: #fff !important;
     border: 1px solid #000 !important;
     color: #000 !important;
   }
-  .gov-table th, .gov-table td {
+  body.print-activity-active .gov-table th,
+  body.print-activity-active .gov-table td {
     border: 1px solid #000 !important;
     background: #fff !important;
     color: #000 !important;
   }
-  .gov-table input, .gov-table textarea {
+  body.print-activity-active .gov-table input,
+  body.print-activity-active .gov-table textarea {
     border: none !important;
     background: transparent !important;
     color: #000 !important;
   }
-  .modal-header, .form-submit-footer {
+  body.print-activity-active .modal-header,
+  body.print-activity-active .form-submit-footer {
     display: none !important;
   }
 }
@@ -1925,10 +1934,9 @@ body {
 }
 
 /* ===================================================================
-   PRINT OPTIMIZATION FOR INTERIM REPORT (A4 Landscape Official Form)
+   UNIFIED PRINT OPTIMIZATION (Common & Interim Report)
    =================================================================== */
 @page {
-  size: A4 landscape;
   margin: 8mm 10mm 8mm 10mm;
 }
 
@@ -1944,6 +1952,8 @@ body {
     color: #000 !important;
     overflow: visible !important;
     font-size: 8pt !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
   /* 2. Completely remove main application container & background elements from layout */
@@ -1963,13 +1973,13 @@ body {
     display: none !important;
   }
 
-  /* 3. Hide all direct children of body except the interim report modal */
-  body > *:not(#interim-report-modal) {
+  /* 3. Hide other elements when Interim Report is being printed */
+  body.print-interim-active > *:not(#interim-report-modal) {
     display: none !important;
   }
 
   /* 4. Display the Interim Report Modal as the root flow document from page 1 */
-  #interim-report-modal {
+  body.print-interim-active #interim-report-modal {
     display: block !important;
     position: static !important;
     top: 0 !important;
@@ -1987,11 +1997,11 @@ body {
     visibility: visible !important;
   }
 
-  #interim-report-modal * {
+  body.print-interim-active #interim-report-modal * {
     visibility: visible !important;
   }
 
-  .modal-card.interim-report-modal-card {
+  body.print-interim-active .modal-card.interim-report-modal-card {
     position: static !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -2005,21 +2015,21 @@ body {
     overflow: visible !important;
   }
 
-  .interim-report-modal-body {
+  body.print-interim-active .interim-report-modal-body {
     padding: 0 !important;
     margin: 0 !important;
     overflow: visible !important;
   }
 
-  .modal-header,
-  .interim-site-tabs,
-  .modal-close-btn,
-  #btn-print-interim-report,
-  #btn-export-interim-csv {
+  body.print-interim-active .modal-header,
+  body.print-interim-active .interim-site-tabs,
+  body.print-interim-active .modal-close-btn,
+  body.print-interim-active #btn-print-interim-report,
+  body.print-interim-active #btn-export-interim-csv {
     display: none !important;
   }
 
-  .interim-sheet-area {
+  body.print-interim-active .interim-sheet-area {
     background: #fff !important;
     color: #000 !important;
     border: none !important;
@@ -2457,70 +2467,264 @@ body {
   }
 }
 
+/* Briefing Sheet Screen Styles */
+.briefing-action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  margin-bottom: 14px;
+}
+
+.briefing-action-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #e0f2fe;
+}
+
+.btn-briefing-print {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  color: #fff;
+  border: 1px solid #38bdf8;
+  border-radius: var(--radius-sm);
+  padding: 8px 18px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(14, 165, 233, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-briefing-print:hover {
+  background: linear-gradient(135deg, #0369a1, #075985);
+  border-color: #7dd3fc;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.5);
+  transform: translateY(-1px);
+}
+
+.briefing-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.briefing-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 900px) {
+  .briefing-grid-3, .briefing-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Print Styles for Final Report */
 @media print {
-  body > *:not(#final-report-modal):not(#interim-report-modal) {
+  body.print-final-active > *:not(#final-report-modal) {
     display: none !important;
   }
 
-  #final-report-modal {
+  body.print-final-active #final-report-modal {
     display: block !important;
     position: static !important;
+    top: 0 !important;
+    left: 0 !important;
     width: 100% !important;
     height: auto !important;
+    min-height: 0 !important;
     background: #fff !important;
     color: #000 !important;
+    box-shadow: none !important;
+    border: none !important;
+    overflow: visible !important;
+    visibility: visible !important;
     padding: 0 !important;
     margin: 0 !important;
   }
 
-  .modal-card.final-report-modal-card {
+  body.print-final-active #final-report-modal * {
+    visibility: visible !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  body.print-final-active .modal-card.final-report-modal-card {
+    position: static !important;
     border: none !important;
     box-shadow: none !important;
     background: #fff !important;
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
   }
 
-  .final-report-tabs,
-  #btn-print-final-report,
-  #btn-export-final-report-excel,
-  #btn-close-final-modal {
+  body.print-final-active .final-report-modal-body {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  body.print-final-active .modal-header,
+  body.print-final-active .final-report-tabs,
+  body.print-final-active #btn-print-final-report,
+  body.print-final-active #btn-export-final-report-excel,
+  body.print-final-active #btn-close-final-modal,
+  body.print-final-active .briefing-action-bar,
+  body.print-final-active .btn-chart-copy {
     display: none !important;
   }
 
-  .final-sheet-area {
+  body.print-final-active .final-sheet-area {
     background: #fff !important;
     color: #000 !important;
     border: none !important;
     padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
   }
 
-  .final-sheet-area * {
-    color: #000 !important;
-    text-shadow: none !important;
-  }
-
-  .final-narrative-box {
+  body.print-final-active .final-narrative-box {
     background: #f8fafc !important;
     border: 1pt solid #cbd5e1 !important;
     border-left: 4pt solid #0284c7 !important;
+    padding: 6px 10px !important;
+    margin-bottom: 8px !important;
   }
 
-  .final-bait-card {
+  body.print-final-active .final-bait-card {
     background: #f8fafc !important;
     border: 1pt solid #cbd5e1 !important;
+    padding: 6px 8px !important;
   }
 
-  .final-chart-card {
+  body.print-final-active .final-chart-card {
     background: #fff !important;
     border: 1pt solid #cbd5e1 !important;
     page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
-  .btn-chart-copy {
-    display: none !important;
+  /* -------------------------------------------------------------
+     A4 1-Page Summary Briefing Specific Print Compact Styling
+     ------------------------------------------------------------- */
+  body.print-briefing-mode {
+    font-size: 7.2pt !important;
+  }
+
+  body.print-briefing-mode .briefing-sheet-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  body.print-briefing-mode .report-sheet-header {
+    margin-bottom: 5px !important;
+    padding-bottom: 4px !important;
+    border-bottom: 1.5pt solid #000 !important;
+  }
+
+  body.print-briefing-mode .sheet-title {
+    font-size: 11pt !important;
+    margin-bottom: 2px !important;
+    line-height: 1.25 !important;
+  }
+
+  body.print-briefing-mode .sheet-subtitle {
+    font-size: 7.5pt !important;
+    color: #334155 !important;
+  }
+
+  body.print-briefing-mode .sheet-meta {
+    font-size: 6.8pt !important;
+    gap: 8px !important;
+    margin-top: 3px !important;
+  }
+
+  body.print-briefing-mode .approval-table th {
+    font-size: 6.8pt !important;
+    padding: 1px 3px !important;
+  }
+
+  body.print-briefing-mode .approval-table td.appr-sign {
+    height: 24px !important;
+    font-size: 7pt !important;
+  }
+
+  body.print-briefing-mode .briefing-kpi-card {
+    margin-bottom: 5px !important;
+    padding: 3px 6px !important;
+    gap: 4px !important;
+  }
+
+  body.print-briefing-mode .summary-kpi-item .lbl {
+    font-size: 6.2pt !important;
+  }
+
+  body.print-briefing-mode .summary-kpi-item .val {
+    font-size: 8.5pt !important;
+  }
+
+  body.print-briefing-mode .table-section-title {
+    font-size: 7.8pt !important;
+    margin-top: 5px !important;
+    margin-bottom: 3px !important;
+    padding-bottom: 1px !important;
+    border-bottom: 1px solid #cbd5e1 !important;
+  }
+
+  body.print-briefing-mode .briefing-grid-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+  body.print-briefing-mode .briefing-grid-4 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+  body.print-briefing-mode .final-bait-card {
+    padding: 3px 5px !important;
+    margin-bottom: 0 !important;
+    font-size: 6.8pt !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  body.print-briefing-mode .briefing-roadmap-table,
+  body.print-briefing-mode .briefing-kpi-table {
+    font-size: 6.7pt !important;
+    margin-bottom: 5px !important;
+  }
+
+  body.print-briefing-mode .briefing-roadmap-table th,
+  body.print-briefing-mode .briefing-roadmap-table td,
+  body.print-briefing-mode .briefing-kpi-table th,
+  body.print-briefing-mode .briefing-kpi-table td {
+    padding: 2px 4px !important;
+    line-height: 1.15 !important;
   }
 }
 

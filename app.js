@@ -181,5 +181,47 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
+  // 11. Global Print & Shortcut (Ctrl+P) Handlers
+  window.addEventListener('beforeprint', () => {
+    const finalModal = document.getElementById('final-report-modal');
+    const interimModal = document.getElementById('interim-report-modal');
+    const activityModal = document.getElementById('report-modal');
+
+    let styleEl = document.getElementById('dynamic-print-page-style');
+    if (!styleEl) {
+      styleEl = document.createElement('style');
+      styleEl.id = 'dynamic-print-page-style';
+      document.head.appendChild(styleEl);
+    }
+
+    if (finalModal && !finalModal.classList.contains('hidden')) {
+      document.body.classList.remove('print-activity-active', 'print-interim-active');
+      document.body.classList.add('print-final-active');
+      if (window.finalReportManager && window.finalReportManager.activeSection === 'briefing') {
+        document.body.classList.add('print-briefing-mode');
+        styleEl.textContent = '@page { size: A4 portrait; margin: 6mm 8mm 6mm 8mm; }';
+      } else {
+        document.body.classList.remove('print-briefing-mode');
+        styleEl.textContent = '@page { size: A4 portrait; margin: 8mm 10mm 8mm 10mm; }';
+      }
+    } else if (interimModal && !interimModal.classList.contains('hidden')) {
+      document.body.classList.remove('print-activity-active', 'print-final-active', 'print-briefing-mode');
+      document.body.classList.add('print-interim-active');
+      styleEl.textContent = '@page { size: A4 landscape; margin: 8mm 10mm 8mm 10mm; }';
+    } else if (activityModal && !activityModal.classList.contains('hidden')) {
+      document.body.classList.remove('print-interim-active', 'print-final-active', 'print-briefing-mode');
+      document.body.classList.add('print-activity-active');
+      styleEl.textContent = '@page { size: A4 portrait; margin: 10mm; }';
+    }
+  });
+
+  window.addEventListener('afterprint', () => {
+    document.body.classList.remove('print-final-active', 'print-briefing-mode', 'print-interim-active', 'print-activity-active');
+    const styleEl = document.getElementById('dynamic-print-page-style');
+    if (styleEl && styleEl.parentNode) {
+      styleEl.parentNode.removeChild(styleEl);
+    }
+  });
+
   console.log(`✅ Platform Ready: 4 IP Cameras, ${totalClips} Analyzed Clips, ${confirmedBoar} Confirmed Boar Videos & ${photosData.length} Photos Synchronized!`);
 });

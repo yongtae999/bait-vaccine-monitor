@@ -49,7 +49,7 @@ class FinalReportManager {
 
     const btnPrint = document.getElementById('btn-print-final-report');
     if (btnPrint) {
-      btnPrint.addEventListener('click', () => window.print());
+      btnPrint.addEventListener('click', () => this.print());
     }
 
     const btnExcel = document.getElementById('btn-export-final-report-excel');
@@ -69,6 +69,45 @@ class FinalReportManager {
         this.render();
       });
     }
+  }
+
+  print() {
+    // 1. Clean previous print state
+    document.body.classList.remove('print-activity-active', 'print-interim-active');
+    document.body.classList.add('print-final-active');
+
+    const isBriefing = (this.activeSection === 'briefing');
+    if (isBriefing) {
+      document.body.classList.add('print-briefing-mode');
+    } else {
+      document.body.classList.remove('print-briefing-mode');
+    }
+
+    // 2. Set dynamic @page styling
+    let styleEl = document.getElementById('dynamic-print-page-style');
+    if (!styleEl) {
+      styleEl = document.createElement('style');
+      styleEl.id = 'dynamic-print-page-style';
+      document.head.appendChild(styleEl);
+    }
+    styleEl.textContent = isBriefing
+      ? '@page { size: A4 portrait; margin: 6mm 8mm 6mm 8mm; }'
+      : '@page { size: A4 portrait; margin: 8mm 10mm 8mm 10mm; }';
+
+    // 3. Register cleanup callback on afterprint
+    const cleanup = () => {
+      document.body.classList.remove('print-final-active', 'print-briefing-mode');
+      if (styleEl && styleEl.parentNode) {
+        styleEl.parentNode.removeChild(styleEl);
+      }
+      window.removeEventListener('afterprint', cleanup);
+    };
+    window.addEventListener('afterprint', cleanup);
+
+    // 4. Trigger browser print dialog
+    setTimeout(() => {
+      window.print();
+    }, 50);
   }
 
   openModal() {
@@ -94,63 +133,65 @@ class FinalReportManager {
       totalConfirmed = window.wildboarVideosData.filter(v => v.category === '멧돼지확정').length;
     }
 
-    let html = `
-      <!-- Overall Title Header -->
-      <div class="report-sheet-header">
-        <div class="header-left-group">
-          <div class="sheet-badge">${this.data.meta.agency}</div>
-          <h2 class="sheet-title">${this.data.meta.project_title}</h2>
-          <div class="sheet-subtitle" style="font-size: 0.95rem; color: #94a3b8; margin-top: 4px;">
-            ${this.data.meta.sub_title}
-          </div>
-          <div class="sheet-meta" style="margin-top: 8px;">
-            <span><b>수행기관:</b> ${this.data.meta.organization}</span>
-            <span><b>1단계 실증:</b> ${this.data.meta.period_phase1}</span>
-            <span><b>2단계 실증:</b> ${this.data.meta.period_phase2}</span>
-            <span><b>종료 일정:</b> ${this.data.meta.target_completion}</span>
-          </div>
-        </div>
-        <div class="print-approval-box">
-          <table class="approval-table">
-            <tr>
-              <th rowspan="2" class="appr-title">결<br>재</th>
-              <th>담 당</th>
-              <th>검 토</th>
-              <th>결 재</th>
-            </tr>
-            <tr>
-              <td class="appr-sign"></td>
-              <td class="appr-sign"></td>
-              <td class="appr-sign"></td>
-            </tr>
-          </table>
-        </div>
-      </div>
-
-      <!-- Quick KPI Stat Highlights -->
-      <div class="interim-summary-card" style="margin-bottom: 24px;">
-        <div class="summary-kpi-item">
-          <span class="lbl">현장 실증 거점</span>
-          <span class="val">4 <small>개소 (공주3 + 경산1)</small></span>
-        </div>
-        <div class="summary-kpi-item">
-          <span class="lbl">1단계 누적 수집</span>
-          <span class="val">${totalScanned.toLocaleString()} <small>건 (초단위 녹화)</small></span>
-        </div>
-        <div class="summary-kpi-item highlight">
-          <span class="lbl">멧돼지 선별 확정</span>
-          <span class="val">${totalConfirmed.toLocaleString()} <small>건 (행동 분석 완료)</small></span>
-        </div>
-        <div class="summary-kpi-item">
-          <span class="lbl">2단계 교차 실증</span>
-          <span class="val" style="color: #a78bfa;">4×4 <small>Matrix (10.15~11.15)</small></span>
-        </div>
-      </div>
-    `;
+    let html = '';
 
     if (this.activeSection === 'briefing') {
-      html += this.renderBriefingSheet(totalScanned, totalConfirmed);
+      html = this.renderBriefingSheet(totalScanned, totalConfirmed);
     } else {
+      html = `
+        <!-- Overall Title Header -->
+        <div class="report-sheet-header">
+          <div class="header-left-group">
+            <div class="sheet-badge">${this.data.meta.agency}</div>
+            <h2 class="sheet-title">${this.data.meta.project_title}</h2>
+            <div class="sheet-subtitle" style="font-size: 0.95rem; color: #94a3b8; margin-top: 4px;">
+              ${this.data.meta.sub_title}
+            </div>
+            <div class="sheet-meta" style="margin-top: 8px;">
+              <span><b>수행기관:</b> ${this.data.meta.organization}</span>
+              <span><b>1단계 실증:</b> ${this.data.meta.period_phase1}</span>
+              <span><b>2단계 실증:</b> ${this.data.meta.period_phase2}</span>
+              <span><b>종료 일정:</b> ${this.data.meta.target_completion}</span>
+            </div>
+          </div>
+          <div class="print-approval-box">
+            <table class="approval-table">
+              <tr>
+                <th rowspan="2" class="appr-title">결<br>재</th>
+                <th>담 당</th>
+                <th>검 토</th>
+                <th>결 재</th>
+              </tr>
+              <tr>
+                <td class="appr-sign">권용태</td>
+                <td class="appr-sign"></td>
+                <td class="appr-sign"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Quick KPI Stat Highlights -->
+        <div class="interim-summary-card" style="margin-bottom: 24px;">
+          <div class="summary-kpi-item">
+            <span class="lbl">현장 실증 거점</span>
+            <span class="val">4 <small>개소 (공주3 + 경산1)</small></span>
+          </div>
+          <div class="summary-kpi-item">
+            <span class="lbl">1단계 누적 수집</span>
+            <span class="val">${totalScanned.toLocaleString()} <small>건 (초단위 녹화)</small></span>
+          </div>
+          <div class="summary-kpi-item highlight">
+            <span class="lbl">멧돼지 선별 확정</span>
+            <span class="val">${totalConfirmed.toLocaleString()} <small>건 (행동 분석 완료)</small></span>
+          </div>
+          <div class="summary-kpi-item">
+            <span class="lbl">2단계 교차 실증</span>
+            <span class="val" style="color: #a78bfa;">4×4 <small>Matrix (10.15~11.15)</small></span>
+          </div>
+        </div>
+      `;
+
       if (this.activeSection === 'all' || this.activeSection === 'summary') {
         html += this.renderSection1();
       }
@@ -166,6 +207,15 @@ class FinalReportManager {
 
     container.innerHTML = html;
 
+    // Attach click event to briefing print button if rendered
+    const briefingPrintBtn = document.getElementById('btn-print-briefing-sheet');
+    if (briefingPrintBtn) {
+      briefingPrintBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.print();
+      });
+    }
+
     // After DOM update, initialize charts if Section 3 is visible
     if (this.activeSection === 'all' || this.activeSection === 'charts') {
       setTimeout(() => this.initCharts(), 50);
@@ -174,72 +224,115 @@ class FinalReportManager {
 
   renderBriefingSheet(totalScanned, totalConfirmed) {
     return `
-      <!-- Briefing Header & Meta -->
-      <div class="final-narrative-box" style="margin-top: 10px; border-left: 4px solid #38bdf8; background: rgba(56, 189, 248, 0.08);">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-          <div>
-            <span style="display: inline-block; padding: 2px 8px; border-radius: 4px; background: rgba(56, 189, 248, 0.2); color: #38bdf8; font-size: 0.75rem; font-weight: 700; margin-bottom: 4px;">
-              📄 국립야생동물질병관리원 실증 사업 원페이지 요약 브리핑
-            </span>
-            <h3 style="font-size: 1.15rem; color: #f8fafc; font-weight: 800; margin: 0;">
+      <!-- Briefing Screen Action Bar (Hidden in Print) -->
+      <div class="briefing-action-bar">
+        <div class="briefing-action-title">
+          <i class="fa-solid fa-file-invoice text-cyan" style="font-size: 1.15rem;"></i>
+          <span><b>A4 1장 규격 요약 보고서</b> (국립야생동물질병관리원 제출 및 현장 보고용)</span>
+        </div>
+        <button id="btn-print-briefing-sheet" class="btn-briefing-print">
+          <i class="fa-solid fa-print"></i> 1장 요약 보고서 인쇄 / A4 미리보기
+        </button>
+      </div>
+
+      <div class="briefing-sheet-wrap">
+        <!-- Briefing Header with Approval Box -->
+        <div class="report-sheet-header briefing-header">
+          <div class="header-left-group">
+            <div class="sheet-badge">국립야생동물질병관리원 실증 사업 원페이지 요약 브리핑</div>
+            <h2 class="sheet-title" style="margin-top: 4px;">
               2026년 야생 멧돼지 미끼백신 향후 실험 일정 및 실증 계획 (1장 요약 보고서)
-            </h3>
-            <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 4px;">
-              10/11 유인제 살포부터 10/15 미끼 4종 제작, 1개월간 4대 실험지 전면 교차 실증 로드맵 요약
+            </h2>
+            <div class="sheet-subtitle">
+              10/11 유인제 살포 완료 • 10/15 미끼 4종 제작 • 4대 실험지 전면 교차 실증(4×4 Matrix) 로드맵
+            </div>
+            <div class="sheet-meta">
+              <span><b>보고일자:</b> 2026년 10월 12일</span>
+              <span><b>보고자:</b> 야생생물관리협회 사무국장 권용태</span>
+              <span><b>실증거점:</b> 공주 3개 사이트(산135, 59-3, 142-5) 및 경산 1개소</span>
             </div>
           </div>
-          <div style="text-align: right; font-size: 0.8rem; color: #cbd5e1;">
-            <div><b>보고일자:</b> 2026년 10월 12일</div>
-            <div><b>작성자:</b> 권용태 사무국장 (야생생물관리협회)</div>
+          <div class="print-approval-box">
+            <table class="approval-table">
+              <tr>
+                <th rowspan="2" class="appr-title">결<br>재</th>
+                <th>담 당</th>
+                <th>검 토</th>
+                <th>결 재</th>
+              </tr>
+              <tr>
+                <td class="appr-sign">권용태</td>
+                <td class="appr-sign"></td>
+                <td class="appr-sign"></td>
+              </tr>
+            </table>
           </div>
         </div>
-      </div>
 
-      <!-- 1. 1단계 실증 성과 및 한계 -->
-      <div class="table-section-title" style="margin-top: 20px;">
-        <i class="fa-solid fa-triangle-exclamation text-amber"></i> 1. 1단계 기초 실증 성과 결산 및 핵심 한계점 정밀 진단
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-bottom: 16px;">
-        <div class="final-bait-card" style="border-left: 3px solid #f43f5e;">
-          <div style="font-weight: 700; color: #fca5a5; font-size: 0.88rem; margin-bottom: 4px;">
-            ⚠️ 기술 한계 1: 기존 동물사료 미끼틀
+        <!-- KPI Strip -->
+        <div class="interim-summary-card briefing-kpi-card" style="margin-bottom: 10px; padding: 6px 12px;">
+          <div class="summary-kpi-item">
+            <span class="lbl">현장 실증 거점</span>
+            <span class="val">4 <small>개소 (공주3 + 경산1)</small></span>
           </div>
-          <p style="font-size: 0.78rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
-            <b>완식율 18.5% (유인반응 42.1%)</b><br>
-            틀 주변 냄새 탐색 등 호기심성 접근은 관찰되나, 실제 섭취 반응이 현저히 떨어져 백신 전달률 확보 불가
-          </p>
-        </div>
-        <div class="final-bait-card" style="border-left: 3px solid #f59e0b;">
-          <div style="font-weight: 700; color: #fcd34d; font-size: 0.88rem; margin-bottom: 4px;">
-            ⚠️ 기술 한계 2: 유인제배합 고형사료
+          <div class="summary-kpi-item">
+            <span class="lbl">1단계 영상 감시</span>
+            <span class="val">${totalScanned.toLocaleString()} <small>건 (초단위 분석)</small></span>
           </div>
-          <p style="font-size: 0.78rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
-            <b>완식율 82.3% (유인반응 91.4%)</b><br>
-            선호도는 극상이나, 강우 및 지면 습기 노출 시 <b>3~5일 내 물리적 붕괴(죽 형태 변형, 유실율 84.8%)</b>로 야외 지속성 결여
-          </p>
-        </div>
-        <div class="final-bait-card" style="border-left: 3px solid #10b981;">
-          <div style="font-weight: 700; color: #6ee7b7; font-size: 0.88rem; margin-bottom: 4px;">
-            ✅ 성과 검증: 비대상 동물 안전성 입증
+          <div class="summary-kpi-item highlight">
+            <span class="lbl">멧돼지 출현 확정</span>
+            <span class="val">${totalConfirmed.toLocaleString()} <small>건 (행동 분석 완료)</small></span>
           </div>
-          <p style="font-size: 0.78rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
-            <b>비대상 배제율 95% 이상 (누적 27건)</b><br>
-            고라니 19건, 오소리 10건 출현 시 미끼 무관심 및 자연 채식·단순 통과만 확인되어 표적 외 안전성 입증
-          </p>
+          <div class="summary-kpi-item">
+            <span class="lbl">차세대 실증 제형</span>
+            <span class="val" style="color: #a78bfa;">4 <small>종 (대조2 + 신규2)</small></span>
+          </div>
         </div>
-      </div>
 
-      <!-- 2. 향후 핵심 실험 일정 로드맵 -->
-      <div class="table-section-title" style="margin-top: 20px;">
-        <i class="fa-solid fa-calendar-check text-cyan"></i> 2. 향후 핵심 실험 일정 로드맵 (2026.10.11 ~ 11.15)
-      </div>
-      <div class="table-responsive" style="margin-bottom: 20px;">
-        <table class="report-table">
+        <!-- 1. 1단계 실증 성과 및 한계 -->
+        <div class="table-section-title">
+          <i class="fa-solid fa-triangle-exclamation text-amber"></i> 1. 1단계 기초 실증 성과 결산 및 기술 한계점 정밀 진단
+        </div>
+        <div class="briefing-grid-3">
+          <div class="final-bait-card" style="border-left: 3px solid #f43f5e;">
+            <div style="font-weight: 700; color: #fca5a5; font-size: 0.82rem; margin-bottom: 2px;">
+              ⚠️ 기존 동물사료 미끼틀
+            </div>
+            <p style="font-size: 0.74rem; color: #cbd5e1; margin: 0; line-height: 1.35;">
+              <b>완식율 18.5% (유인 42.1%)</b><br>
+              틀 주변 냄새 탐색 등 호기심성 접근은 관찰되나, 실제 섭취 반응이 현저히 떨어져 백신 전달률 확보 불가
+            </p>
+          </div>
+          <div class="final-bait-card" style="border-left: 3px solid #f59e0b;">
+            <div style="font-weight: 700; color: #fcd34d; font-size: 0.82rem; margin-bottom: 2px;">
+              ⚠️ 유인제배합 고형사료
+            </div>
+            <p style="font-size: 0.74rem; color: #cbd5e1; margin: 0; line-height: 1.35;">
+              <b>완식율 82.3% (유인 91.4%)</b><br>
+              선호도는 극상이나 강우·습기 노출 시 <b>3~5일 내 물리적 붕괴(죽 형태 변형, 유실율 84.8%)</b>로 지속성 결여
+            </p>
+          </div>
+          <div class="final-bait-card" style="border-left: 3px solid #10b981;">
+            <div style="font-weight: 700; color: #6ee7b7; font-size: 0.82rem; margin-bottom: 2px;">
+              ✅ 비대상 동물 안전성 입증
+            </div>
+            <p style="font-size: 0.74rem; color: #cbd5e1; margin: 0; line-height: 1.35;">
+              <b>비대상 배제율 95% 이상 (누적 27건)</b><br>
+              고라니 19건, 오소리 10건 출현 시 미끼 무관심 및 단순 통과만 확인되어 표적 외 안전성 입증 완료
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. 향후 핵심 실험 일정 로드맵 -->
+        <div class="table-section-title">
+          <i class="fa-solid fa-calendar-check text-cyan"></i> 2. 향후 핵심 실험 일정 로드맵 (2026.10.11 ~ 11.15)
+        </div>
+        <table class="report-table briefing-roadmap-table">
           <thead>
             <tr>
               <th style="width: 14%;">단계</th>
-              <th style="width: 16%;">일정 / 기간</th>
-              <th style="width: 44%;">주요 업무 및 실험 실행 내용</th>
+              <th style="width: 15%;">일정 / 기간</th>
+              <th style="width: 45%;">주요 업무 및 실험 실행 내용</th>
               <th style="width: 26%;">주요 성과 / 세부 지표</th>
             </tr>
           </thead>
@@ -254,7 +347,7 @@ class FinalReportManager {
               </td>
               <td>
                 • 작업자: 권용태(사무국장)<br>
-                • 10/11 심야~10/12 새벽 고라니 3건 통과 시 미끼 무관심(안전성 재입증)
+                • 10/11 심야~10/12 고라니 3건 통과 시 미끼 무관심(안전성 재입증)
               </td>
             </tr>
             <tr>
@@ -313,69 +406,67 @@ class FinalReportManager {
             </tr>
           </tbody>
         </table>
-      </div>
 
-      <!-- 3. 차세대 미끼 4종 비교 및 4x4 실험지 배치 계획 -->
-      <div class="table-section-title" style="margin-top: 20px;">
-        <i class="fa-solid fa-flask-vial text-purple"></i> 3. 차세대 미끼 4종 스펙 및 4개 실험지 전면 배치 계획
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-bottom: 20px;">
-        <div class="final-bait-card" style="border-top: 3px solid #f43f5e;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-            <span class="category-tag existing">기존 대조군 1</span>
-            <span style="font-size: 0.72rem; color: #f43f5e; font-weight: 700;">지속 3~5일</span>
-          </div>
-          <div style="font-weight: 800; color: #f8fafc; font-size: 0.9rem;">Type A: 옥수수사료 밀렵형</div>
-          <p style="font-size: 0.76rem; color: #94a3b8; margin: 4px 0 0 0;">
-            옥수수 배합사료 고형 압축 성형<br>
-            • 기호도는 우수하나 우천 시 붕괴(기준점)<br>
-            • 강우 저항성: 15.2% (취약)
-          </p>
+        <!-- 3. 차세대 미끼 4종 비교 및 4x4 실험지 배치 계획 -->
+        <div class="table-section-title">
+          <i class="fa-solid fa-flask-vial text-purple"></i> 3. 차세대 미끼 4종 스펙 및 4대 실험지 전면 배치 계획
         </div>
-        <div class="final-bait-card" style="border-top: 3px solid #fbbf24;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-            <span class="category-tag existing">기존 대조군 2</span>
-            <span style="font-size: 0.72rem; color: #fbbf24; font-weight: 700;">지속 10~14일</span>
+        <div class="briefing-grid-4">
+          <div class="final-bait-card" style="border-top: 3px solid #f43f5e;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+              <span class="category-tag existing" style="font-size: 0.65rem; padding: 1px 4px;">기존 대조군 1</span>
+              <span style="font-size: 0.68rem; color: #f43f5e; font-weight: 700;">지속 3~5일</span>
+            </div>
+            <div style="font-weight: 800; color: #f8fafc; font-size: 0.82rem;">Type A: 옥수수사료 밀렵형</div>
+            <p style="font-size: 0.72rem; color: #94a3b8; margin: 2px 0 0 0; line-height: 1.3;">
+              옥수수 배합사료 고형 압축<br>
+              • 기호도 우수, 우천 시 붕괴<br>
+              • 강우 저항성: 15.2% (취약)
+            </p>
           </div>
-          <div style="font-weight: 800; color: #f8fafc; font-size: 0.9rem;">Type B: 옥수수모양 젤리 (기성품)</div>
-          <p style="font-size: 0.76rem; color: #94a3b8; margin: 4px 0 0 0;">
-            시판 사출 성형 젤리 미끼 (효소 배합)<br>
-            • 탄성은 양호하나 장기 노출 시 수분 증발<br>
-            • 강우 저항성: 58.0% (보통)
-          </p>
-        </div>
-        <div class="final-bait-card" style="border-top: 3px solid #38bdf8;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-            <span class="category-tag new">신규 개발 1</span>
-            <span style="font-size: 0.72rem; color: #38bdf8; font-weight: 700;">지속 20일 이상</span>
+          <div class="final-bait-card" style="border-top: 3px solid #fbbf24;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+              <span class="category-tag existing" style="font-size: 0.65rem; padding: 1px 4px;">기존 대조군 2</span>
+              <span style="font-size: 0.68rem; color: #fbbf24; font-weight: 700;">지속 10~14일</span>
+            </div>
+            <div style="font-weight: 800; color: #f8fafc; font-size: 0.82rem;">Type B: 옥수수모양 젤리 (기성품)</div>
+            <p style="font-size: 0.72rem; color: #94a3b8; margin: 2px 0 0 0; line-height: 1.3;">
+              시판 사출 젤리 (효소 배합)<br>
+              • 탄성 양호, 장기 노출 시 수분증발<br>
+              • 강우 저항성: 58.0% (보통)
+            </p>
           </div>
-          <div style="font-weight: 800; color: #f8fafc; font-size: 0.9rem;">Type C: 밤모양 투명 젤리</div>
-          <p style="font-size: 0.76rem; color: #94a3b8; margin: 4px 0 0 0;">
-            천연 밤 외형 모방 + 고탄성 투명 겔 매트릭스<br>
-            • 멧돼지 최고 선호 자연 먹이원(밤) 모방<br>
-            • 강우 저항성: 80.0% 이상 (우수)
-          </p>
-        </div>
-        <div class="final-bait-card" style="border-top: 3px solid #a78bfa;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-            <span class="category-tag new">신규 개발 2</span>
-            <span style="font-size: 0.72rem; color: #a78bfa; font-weight: 700;">지속 25일 이상</span>
+          <div class="final-bait-card" style="border-top: 3px solid #38bdf8;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+              <span class="category-tag new" style="font-size: 0.65rem; padding: 1px 4px;">신규 개발 1</span>
+              <span style="font-size: 0.68rem; color: #38bdf8; font-weight: 700;">지속 20일 이상</span>
+            </div>
+            <div style="font-weight: 800; color: #f8fafc; font-size: 0.82rem;">Type C: 밤모양 투명 젤리</div>
+            <p style="font-size: 0.72rem; color: #94a3b8; margin: 2px 0 0 0; line-height: 1.3;">
+              천연 밤 외형 + 고탄성 겔 매트릭스<br>
+              • 최고 선호 자연 먹이원 모방<br>
+              • 강우 저항성: 80.0% 이상 (우수)
+            </p>
           </div>
-          <div style="font-weight: 800; color: #f8fafc; font-size: 0.9rem;">Type D: 과일향 사각형 젤리</div>
-          <p style="font-size: 0.76rem; color: #94a3b8; margin: 4px 0 0 0;">
-            고농도 과일 유인향 + 규격 사각 큐브 젤리<br>
-            • 원거리 후각 유인력 극대화, 최장 보존<br>
-            • 강우 저항성: 85.0% 이상 (최상)
-          </p>
+          <div class="final-bait-card" style="border-top: 3px solid #a78bfa;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+              <span class="category-tag new" style="font-size: 0.65rem; padding: 1px 4px;">신규 개발 2</span>
+              <span style="font-size: 0.68rem; color: #a78bfa; font-weight: 700;">지속 25일 이상</span>
+            </div>
+            <div style="font-weight: 800; color: #f8fafc; font-size: 0.82rem;">Type D: 과일향 사각형 젤리</div>
+            <p style="font-size: 0.72rem; color: #94a3b8; margin: 2px 0 0 0; line-height: 1.3;">
+              고농도 과일향 + 사각 큐브 젤리<br>
+              • 원거리 후각 유인 극대화, 최장 보존<br>
+              • 강우 저항성: 85.0% 이상 (최상)
+            </p>
+          </div>
         </div>
-      </div>
 
-      <!-- 4. 최종보고서 평가 집계 기준 (KPI 100점) -->
-      <div class="table-section-title" style="margin-top: 20px;">
-        <i class="fa-solid fa-award text-emerald"></i> 4. 최종보고서 수치화 평가 기준 (100점 만점 KPI 배점 체계)
-      </div>
-      <div class="table-responsive" style="margin-bottom: 24px;">
-        <table class="report-table">
+        <!-- 4. 최종보고서 평가 집계 기준 (KPI 100점) -->
+        <div class="table-section-title">
+          <i class="fa-solid fa-award text-emerald"></i> 4. 최종보고서 수치화 평가 기준 (100점 만점 KPI 배점 체계)
+        </div>
+        <table class="report-table briefing-kpi-table">
           <thead>
             <tr>
               <th style="width: 18%;">평가 영역</th>
@@ -389,34 +480,34 @@ class FinalReportManager {
             <tr>
               <td class="font-bold">1. 섭취 기호도</td>
               <td class="text-center font-bold" style="color: #38bdf8;">40점</td>
-              <td>• 최초 반응 소요시간(초)<br>• 방문 시 완식 비율(%)<br>• 군집 내 동시 섭취 개체수</td>
-              <td class="text-center font-bold" style="color: #34d399;">완식율 85% 이상,<br>접근 즉시 섭취 유도</td>
-              <td class="text-center">90%↑: 40점<br>80~89%: 35점<br>70~79%: 30점</td>
+              <td>• 최초 반응 시간 • 완식 비율(%) • 동시 섭취수</td>
+              <td class="text-center font-bold" style="color: #34d399;">완식율 85% 이상</td>
+              <td class="text-center">90%↑: 40점 / 80%↑: 35점</td>
             </tr>
             <tr>
               <td class="font-bold">2. 환경 내구성</td>
               <td class="text-center font-bold" style="color: #38bdf8;">30점</td>
-              <td>• 강우 후 형태 유지율(%)<br>• 지면 습기 변패 발생일<br>• 야외 유효 형태 지속일수</td>
-              <td class="text-center font-bold" style="color: #34d399;">강우 후 형태 70% 유지,<br>20일 이상 지속</td>
-              <td class="text-center">25일↑: 30점<br>20~24일: 25점<br>15~19일: 20점</td>
+              <td>• 강우 후 형태 유지율(%) • 변패 발생일 • 유효 지속일</td>
+              <td class="text-center font-bold" style="color: #34d399;">강우 형태 70% 유지, 20일+</td>
+              <td class="text-center">25일↑: 30점 / 20일↑: 25점</td>
             </tr>
             <tr>
               <td class="font-bold">3. 비대상 배제</td>
               <td class="text-center font-bold" style="color: #38bdf8;">15점</td>
-              <td>• 고라니·오소리 섭취 시도 건수<br>• 비대상 동물 단순 통과율(%)</td>
-              <td class="text-center font-bold" style="color: #34d399;">비대상 섭취 0건<br>(배제율 95% 이상)</td>
-              <td class="text-center">섭취 0건: 15점<br>1건: 10점<br>2건↑: 5점</td>
+              <td>• 고라니·오소리 섭취 건수 • 단순 통과율(%)</td>
+              <td class="text-center font-bold" style="color: #34d399;">비대상 섭취 0건 (배제 95%↑)</td>
+              <td class="text-center">섭취 0건: 15점 / 1건: 10점</td>
             </tr>
             <tr>
               <td class="font-bold">4. 현장 실용성</td>
               <td class="text-center font-bold" style="color: #38bdf8;">15점</td>
-              <td>• 산림 운반/살포 편의성<br>• 투하 시 파손 저항도<br>• 규격 균일도 및 제작 용이성</td>
-              <td class="text-center font-bold" style="color: #34d399;">살포 파손율 2% 미만,<br>규격 균일화</td>
-              <td class="text-center">우수: 15점<br>보통: 10점<br>미흡: 5점</td>
+              <td>• 산림 운반/살포 편의성 • 투하 시 파손 저항도</td>
+              <td class="text-center font-bold" style="color: #34d399;">살포 파손율 2% 미만</td>
+              <td class="text-center">우수: 15점 / 보통: 10점</td>
             </tr>
             <tr style="background: rgba(56, 189, 248, 0.1); font-weight: 800;">
               <td class="text-center" style="color: #f8fafc;">합 계</td>
-              <td class="text-center" style="color: #38bdf8; font-size: 1.05rem;">100점</td>
+              <td class="text-center" style="color: #38bdf8; font-size: 0.95rem;">100점</td>
               <td colspan="3" style="color: #38bdf8;">
                 ★ 100점 만점 정량 평가 1위 제형 1종을 차기 연도(2027년) 시제품 제작 및 특허 출원 우선 대상으로 최종 선정
               </td>
