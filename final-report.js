@@ -299,8 +299,8 @@ class FinalReportManager {
               ⚠️ 기존 동물사료 미끼틀
             </div>
             <p style="font-size: 0.74rem; color: #cbd5e1; margin: 0; line-height: 1.35;">
-              <b>완식율 18.5% (유인 42.1%)</b><br>
-              틀 주변 냄새 탐색 등 호기심성 접근은 관찰되나, 실제 섭취 반응이 현저히 떨어져 백신 전달률 확보 불가
+              <b>섭취 기피 및 반응 미흡</b><br>
+              틀 주변 냄새 탐색 등 접근은 관찰되나, 실제 적극적인 섭취 반응이 미흡하여 백신 전달 효율 한계
             </p>
           </div>
           <div class="final-bait-card" style="border-left: 3px solid #f59e0b;">
@@ -308,17 +308,17 @@ class FinalReportManager {
               ⚠️ 유인제배합 고형사료
             </div>
             <p style="font-size: 0.74rem; color: #cbd5e1; margin: 0; line-height: 1.35;">
-              <b>완식율 82.3% (유인 91.4%)</b><br>
-              선호도는 극상이나 강우·습기 노출 시 <b>3~5일 내 물리적 붕괴(죽 형태 변형, 유실율 84.8%)</b>로 지속성 결여
+              <b>환경 내구성 취약 (형태 붕괴)</b><br>
+              유인 효과와 섭취 반응은 우수하나, 강우·지면 습기 노출 시 수일 내 형태가 쉽게 붕괴(물러짐 현상)되어 장기 지속성 결여
             </p>
           </div>
           <div class="final-bait-card" style="border-left: 3px solid #10b981;">
             <div style="font-weight: 700; color: #6ee7b7; font-size: 0.82rem; margin-bottom: 2px;">
-              ✅ 비대상 동물 안전성 입증
+              🔍 비대상 동물 관찰
             </div>
             <p style="font-size: 0.74rem; color: #cbd5e1; margin: 0; line-height: 1.35;">
-              <b>비대상 배제율 95% 이상 (누적 33건)</b><br>
-              고라니 23건, 오소리 12건 출현 시 미끼 무관심 및 단순 통과만 확인되어 표적 외 안전성 입증 완료
+              <b>단순 통과 및 자연 채식 (누적 35건)</b><br>
+              고라니 23건, 오소리 12건 출현 시 미끼틀 주변 단순 통과 및 자연 초생 채식만 관찰됨 (미끼 섭취 시도 미확인)
             </p>
           </div>
         </div>
@@ -347,7 +347,7 @@ class FinalReportManager {
               </td>
               <td>
                 • 작업자: 권용태(사무국장)<br>
-                • 10/11~14 고라니/오소리 비대상 입증 후, 10/15 심야 멧돼지 4마리 10건 연속 출현(유인 효과 극대화 확인)
+                • 10/11 살포 후 10/15 심야 멧돼지 4마리 10건 연속 출현 (유인 효과 확인)
               </td>
             </tr>
             <tr>
@@ -375,33 +375,20 @@ class FinalReportManager {
               </td>
               <td>
                 • 총 5종 동시 비교 실증<br>
-                • 섭취 기호도, 환경 내구성, 비대상 배제율 정량 데이터 확보
-              </td>
-            </tr>
-            <tr>
-              <td class="text-center font-bold" style="color: #a78bfa;">Step 4 (확대)</td>
-              <td class="text-center font-bold">11.01 ~ 11.15<br><small style="color: #94a3b8;">15일간</small></td>
-              <td>
-                <b>4대 실험지 전면 확대 실증(4×4 Matrix) 및 100점 만점 KPI 종합 평가</b><br>
-                • 공주 3곳(A·B·C) 및 경산 1곳(D) 확대 투입, 사이트 편향 차단 교차 검증<br>
-                • 100점 만점 정량 평가(기호도 40점, 내구성 30점, 배제 15점, 실용성 15점) 집계
-              </td>
-              <td>
-                • 4개 사이트 교차 종합 검증<br>
-                • 최종 최적 제형 1종 도출
+                • 섭취 반응, 형태 내구성, 환경 변화 실측 데이터 확보
               </td>
             </tr>
             <tr style="background: rgba(148, 163, 184, 0.05);">
-              <td class="text-center font-bold" style="color: #94a3b8;">Step 5 (종료/연계)</td>
+              <td class="text-center font-bold" style="color: #94a3b8;">Step 4 (종료/보고)</td>
               <td class="text-center font-bold">11월 중순<br><small style="color: #94a3b8;">사업 종료</small></td>
               <td>
-                <b>2026년도 사업 종료 및 최종보고서 제출 / 2027년 여름 시제품·특허 연계</b><br>
-                • 11월 중 사업 종료 및 실증 최종보고서 납품 / 평가회 발표<br>
-                • 도출된 최우수 제형 기반으로 2027년 여름 사업 재개 시 시제품 제작 및 특허 출원 추진
+                <b>2026년도 사업 종료 및 최종보고서 제출 / 2027년 연계 검토</b><br>
+                • C지점 2주간 비교 실증 데이터 분석 및 최종 결과보고서 납품<br>
+                • 도출된 최우수 제형 기반으로 향후 시제품 제작 및 특허 출원 연계 검토
               </td>
               <td>
                 • 2026년 실증 용역 과제 완료<br>
-                • 차기 사업 시제품/특허 근거 확립
+                • 최종 실증 결과 보고서 제출
               </td>
             </tr>
           </tbody>
@@ -499,29 +486,29 @@ class FinalReportManager {
             <tr>
               <td class="font-bold">1. 섭취 기호도</td>
               <td class="text-center font-bold" style="color: #38bdf8;">40점</td>
-              <td>• 최초 반응 시간 • 완식 비율(%) • 동시 섭취수</td>
-              <td class="text-center font-bold" style="color: #34d399;">완식율 85% 이상</td>
-              <td class="text-center">90%↑: 40점 / 80%↑: 35점</td>
+              <td>• 최초 반응 시간 • 섭취 반응도 • 동시 섭취수</td>
+              <td class="text-center font-bold" style="color: #34d399;">적극적인 섭취 유도</td>
+              <td class="text-center">우수: 40점 / 보통: 35점 / 미흡: 30점</td>
             </tr>
             <tr>
               <td class="font-bold">2. 환경 내구성</td>
               <td class="text-center font-bold" style="color: #38bdf8;">30점</td>
-              <td>• 강우 후 형태 유지율(%) • 변패 발생일 • 유효 지속일</td>
-              <td class="text-center font-bold" style="color: #34d399;">강우 형태 70% 유지, 20일+</td>
+              <td>• 강우 후 형태 유지 • 변패 발생일 • 유효 지속일</td>
+              <td class="text-center font-bold" style="color: #34d399;">강우 후 형태 유지, 20일+</td>
               <td class="text-center">25일↑: 30점 / 20일↑: 25점</td>
             </tr>
             <tr>
               <td class="font-bold">3. 비대상 배제</td>
               <td class="text-center font-bold" style="color: #38bdf8;">15점</td>
-              <td>• 고라니·오소리 섭취 건수 • 단순 통과율(%)</td>
-              <td class="text-center font-bold" style="color: #34d399;">비대상 섭취 0건 (배제 95%↑)</td>
+              <td>• 고라니·오소리 섭취 여부 • 단순 통과율(%)</td>
+              <td class="text-center font-bold" style="color: #34d399;">비대상 섭취 0건 (미끼 무관심)</td>
               <td class="text-center">섭취 0건: 15점 / 1건: 10점</td>
             </tr>
             <tr>
               <td class="font-bold">4. 현장 실용성</td>
               <td class="text-center font-bold" style="color: #38bdf8;">15점</td>
               <td>• 산림 운반/살포 편의성 • 투하 시 파손 저항도</td>
-              <td class="text-center font-bold" style="color: #34d399;">살포 파손율 2% 미만</td>
+              <td class="text-center font-bold" style="color: #34d399;">취급/운반 시 형태 유지</td>
               <td class="text-center">우수: 15점 / 보통: 10점</td>
             </tr>
             <tr style="background: rgba(56, 189, 248, 0.1); font-weight: 800;">
