@@ -53,80 +53,26 @@ def build_docx(filename):
     doc.styles['Normal'].font.size = Pt(8.5)
     doc.styles['Normal'].font.color.rgb = RGBColor(0x1F, 0x29, 0x37)
 
-    # Header Layout: Top Title & Metadata (Left) + Approval Box (Right)
-    top_table = doc.add_table(rows=1, cols=2)
-    top_table.alignment = WD_TABLE_ALIGNMENT.CENTER
-    top_table.autofit = False
-    
-    col_widths = [Mm(130), Mm(52)]
-    for row in top_table.rows:
-        for idx, width in enumerate(col_widths):
-            row.cells[idx].width = width
-
-    # Left Cell: Title & Meta
-    left_cell = top_table.rows[0].cells[0]
-    set_cell_margins(left_cell, top=0, bottom=40, left=0, right=80)
-    
-    p_badge = left_cell.paragraphs[0]
-    p_badge.paragraph_format.space_before = Pt(0)
-    p_badge.paragraph_format.space_after = Pt(2)
-    run_badge = p_badge.add_run("국립야생동물질병관리원 실증 용역 과제 | 1장 요약 브리핑 보고서")
-    run_badge.font.size = Pt(8)
-    run_badge.font.bold = True
-    run_badge.font.color.rgb = RGBColor(0x02, 0x84, 0xC7)
-
-    p_title = left_cell.add_paragraph()
+    # Clean Full-Width Header (No approval box, no badge)
+    p_title = doc.add_paragraph()
     p_title.paragraph_format.space_before = Pt(0)
     p_title.paragraph_format.space_after = Pt(4)
     run_title = p_title.add_run("2026년 야생 멧돼지 미끼백신 향후 실험 일정 및 실증 계획")
-    run_title.font.size = Pt(13)
+    run_title.font.size = Pt(14)
     run_title.font.bold = True
     run_title.font.color.rgb = RGBColor(0x0F, 0x17, 0x2A)
 
-    p_sub = left_cell.add_paragraph()
+    p_sub = doc.add_paragraph()
     p_sub.paragraph_format.space_before = Pt(0)
-    p_sub.paragraph_format.space_after = Pt(2)
+    p_sub.paragraph_format.space_after = Pt(6)
     p_sub.paragraph_format.line_spacing = 1.15
-    run_sub = p_sub.add_run("• 과제명: 2026년 야생 멧돼지 미끼백신 섭취 기호도 평가 및 차세대 제형 현장 실증\n• 보고일자: 2026년 10월 16일  |  보고자: 권용태 사무국장 (야생생물관리협회)\n• 실증거점: 공주 C지점(문금리 142-5, 최근 멧돼지 4마리 집중 출현지) 및 공주 A·B, 경산 D")
-    run_sub.font.size = Pt(7.5)
+    run_sub = p_sub.add_run(
+        "• 과제명: 2026년 야생 멧돼지 미끼백신 섭취 기호도 평가 및 차세대 제형 현장 실증\n"
+        "• 보고일자: 2026년 10월 16일  |  보고자: 권용태 사무국장 (야생생물관리협회)\n"
+        "• 실증거점: 공주 C지점(문금리 142-5, 최근 멧돼지 4마리 집중 출현지) 및 공주 A·B, 경산 D"
+    )
+    run_sub.font.size = Pt(7.8)
     run_sub.font.color.rgb = RGBColor(0x47, 0x55, 0x69)
-
-    # Right Cell: Approval Box (결재란)
-    right_cell = top_table.rows[0].cells[1]
-    set_cell_margins(right_cell, top=0, bottom=40, left=40, right=0)
-    
-    appr_tbl = right_cell.add_table(rows=2, cols=4)
-    appr_tbl.alignment = WD_TABLE_ALIGNMENT.RIGHT
-    set_table_borders(appr_tbl, color="94A3B8", sz="4")
-    
-    appr_widths = [Mm(8), Mm(14), Mm(14), Mm(14)]
-    for row in appr_tbl.rows:
-        for idx, width in enumerate(appr_widths):
-            row.cells[idx].width = width
-
-    # Row 0: Headers
-    headers = ["결\n재", "담 당", "검 토", "결 재"]
-    for idx, text in enumerate(headers):
-        cell = appr_tbl.cell(0, idx)
-        set_cell_background(cell, "F1F5F9")
-        set_cell_margins(cell, top=40, bottom=40, left=20, right=20)
-        p = cell.paragraphs[0]
-        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        run = p.add_run(text)
-        run.font.size = Pt(7.5)
-        run.font.bold = True
-        run.font.color.rgb = RGBColor(0x33, 0x41, 0x55)
-
-    # Row 1: Signatures
-    for idx in range(4):
-        cell = appr_tbl.cell(1, idx)
-        set_cell_margins(cell, top=120, bottom=120, left=20, right=20)
-        p = cell.paragraphs[0]
-        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        if idx == 1:
-            run = p.add_run("권용태")
-            run.font.size = Pt(8)
-            run.font.bold = True
 
     # KPI Strip Table
     kpi_tbl = doc.add_table(rows=1, cols=4)
@@ -362,7 +308,7 @@ def build_hwpx(filename):
     doc = hwpx.HwpxDocument.new()
     
     # 1. Title Paragraph
-    doc.add_paragraph("[1장 요약 보고서] 2026년 야생 멧돼지 미끼백신 향후 실험 일정 및 실증 계획")
+    doc.add_paragraph("2026년 야생 멧돼지 미끼백신 향후 실험 일정 및 실증 계획")
     doc.add_paragraph("• 과제명: 2026년 야생 멧돼지 미끼백신 섭취 기호도 평가 및 차세대 제형 현장 실증")
     doc.add_paragraph("• 발주/수행: 국립야생동물질병관리원 / (사)야생생물관리협회 대전ㆍ세종ㆍ충남지부")
     doc.add_paragraph("• 보고일자: 2026년 10월 16일  |  보고자: 권용태 사무국장")

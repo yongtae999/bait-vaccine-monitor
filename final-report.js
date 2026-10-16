@@ -247,9 +247,8 @@ class FinalReportManager {
         <!-- Briefing Header with Approval Box -->
         <div class="report-sheet-header briefing-header">
           <div class="header-left-group">
-            <div class="sheet-badge">국립야생동물질병관리원 실증 사업 원페이지 요약 브리핑</div>
-            <h2 class="sheet-title" style="margin-top: 4px;">
-              2026년 야생 멧돼지 미끼백신 향후 실험 일정 및 실증 계획 (1장 요약 보고서)
+            <h2 class="sheet-title" style="margin-top: 0;">
+              2026년 야생 멧돼지 미끼백신 향후 실험 일정 및 실증 계획
             </h2>
             <div class="sheet-subtitle">
               10/11 유인제 살포 완료 • 10/15 야간 멧돼지 4마리 집중 출현(테스트 최적 조건 충족) • 10/16 미끼 4종 제작완료 • 10/17 공주 C지점 5종 비교 2주간 집중 실증 로드맵
@@ -259,21 +258,6 @@ class FinalReportManager {
               <span><b>보고자:</b> 야생생물관리협회 사무국장 권용태</span>
               <span><b>실증거점:</b> 공주 C지점(문금리 142-5, 최근 멧돼지 4개체 출몰지 집중) 및 공주 A·B, 경산 D</span>
             </div>
-          </div>
-          <div class="print-approval-box">
-            <table class="approval-table">
-              <tr>
-                <th rowspan="2" class="appr-title">결<br>재</th>
-                <th>담 당</th>
-                <th>검 토</th>
-                <th>결 재</th>
-              </tr>
-              <tr>
-                <td class="appr-sign">권용태</td>
-                <td class="appr-sign"></td>
-                <td class="appr-sign"></td>
-              </tr>
-            </table>
           </div>
         </div>
 
