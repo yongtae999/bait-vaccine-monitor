@@ -230,9 +230,17 @@ class FinalReportManager {
           <i class="fa-solid fa-file-invoice text-cyan" style="font-size: 1.15rem;"></i>
           <span><b>A4 1장 규격 요약 보고서</b> (국립야생동물질병관리원 제출 및 현장 보고용)</span>
         </div>
-        <button id="btn-print-briefing-sheet" class="btn-briefing-print">
-          <i class="fa-solid fa-print"></i> 1장 요약 보고서 인쇄 / A4 미리보기
-        </button>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <a href="assets/documents/2026_미끼백신_향후실험일정_1장요약보고서.hwpx" download="2026_미끼백신_향후실험일정_1장요약보고서.hwpx" class="btn-briefing-print" style="background: linear-gradient(135deg, #0284c7, #0369a1); border-color: #38bdf8; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-file-lines"></i> 한글(HWPX) 다운로드
+          </a>
+          <a href="assets/documents/2026_미끼백신_향후실험일정_1장요약보고서.docx" download="2026_미끼백신_향후실험일정_1장요약보고서.docx" class="btn-briefing-print" style="background: linear-gradient(135deg, #2563eb, #1d4ed8); border-color: #60a5fa; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-file-word"></i> 워드(DOCX) 다운로드
+          </a>
+          <button id="btn-print-briefing-sheet" class="btn-briefing-print">
+            <i class="fa-solid fa-print"></i> 1장 요약 보고서 인쇄 / A4 미리보기
+          </button>
+        </div>
       </div>
 
       <div class="briefing-sheet-wrap">
@@ -468,18 +476,21 @@ class FinalReportManager {
           <span style="background: #0284c7; color: #fff; font-weight: 700; font-size: 0.65rem; padding: 1px 6px; border-radius: 4px; white-space: nowrap;">C지점 2주 실증</span>
         </div>
 
-        <!-- 4. 최종보고서 평가 집계 기준 (KPI 100점) -->
+        <!-- 4. [참고용 예시안] 최종보고서 수치화 평가 기준 -->
         <div class="table-section-title">
-          <i class="fa-solid fa-award text-emerald"></i> 4. 최종보고서 수치화 평가 기준 (100점 만점 KPI 배점 체계)
+          <i class="fa-solid fa-award text-emerald"></i> 4. [참고용 예시안] 최종보고서 수치화 평가 기준 (KPI 배점 체계)
+        </div>
+        <div style="font-size: 0.68rem; color: #94a3b8; margin: -4px 0 6px 0; background: rgba(148, 163, 184, 0.08); padding: 4px 8px; border-radius: 4px; line-height: 1.35;">
+          ℹ️ <b>[참고용 안내]</b> 본 수치화 평가 기준 및 배점 항목은 향후 최종보고서 작성을 위한 <b>단순 예시(안)</b>이며, 과제 수행기관이 결정하는 사안이 아닙니다. 발주기관(국립야생동물질병관리원) 협의 및 평가 심의를 위한 사전 참고 자료로만 제시합니다.
         </div>
         <table class="report-table briefing-kpi-table">
           <thead>
             <tr>
               <th style="width: 18%;">평가 영역</th>
-              <th style="width: 12%;">배점</th>
+              <th style="width: 12%;">배점(예시)</th>
               <th style="width: 32%;">핵심 실측 지표</th>
-              <th style="width: 20%;">목표 기준치</th>
-              <th style="width: 18%;">배점 구간 기준</th>
+              <th style="width: 20%;">목표 기준치(예시)</th>
+              <th style="width: 18%;">배점 구간 기준(예시안)</th>
             </tr>
           </thead>
           <tbody>
@@ -515,7 +526,7 @@ class FinalReportManager {
               <td class="text-center" style="color: #f8fafc;">합 계</td>
               <td class="text-center" style="color: #38bdf8; font-size: 0.95rem;">100점</td>
               <td colspan="3" style="color: #38bdf8;">
-                ★ 100점 만점 정량 평가 1위 제형 1종을 차기 연도(2027년) 시제품 제작 및 특허 출원 우선 대상으로 최종 선정
+                ※ 본 수치화 배점표는 향후 종합 평가 시 검토하기 위한 단순 참고용 예시(안)입니다.
               </td>
             </tr>
           </tbody>
