@@ -281,7 +281,7 @@ class FinalReportManager {
           </div>
           <div class="summary-kpi-item highlight">
             <span class="lbl">멧돼지 출현 확정</span>
-            <span class="val">${totalConfirmed.toLocaleString()} <small>건 (최근 4마리 포착)</small></span>
+            <span class="val">${totalConfirmed.toLocaleString()} <small>건 (최근 10/15 4마리 10건 포착)</small></span>
           </div>
           <div class="summary-kpi-item">
             <span class="lbl">10/17 실증 제형</span>
@@ -347,7 +347,7 @@ class FinalReportManager {
               </td>
               <td>
                 • 작업자: 권용태(사무국장)<br>
-                • 10/11 심야~10/14 고라니 7건·오소리 2건 통과 시 미끼 무관심(안전성 재입증)
+                • 10/11~14 고라니/오소리 비대상 입증 후, 10/15 심야 멧돼지 4마리 10건 연속 출현(유인 효과 극대화 확인)
               </td>
             </tr>
             <tr>
@@ -370,7 +370,7 @@ class FinalReportManager {
               <td class="text-center font-bold">10.17 ~ 10.31<br><small style="color: #94a3b8;">2주간 집중</small></td>
               <td>
                 <b>공주 C지점(문금리 142-5) 미끼 4종 + 미끼틀 1종(총 5종) 2주간 비교 실증</b><br>
-                • 최근(10/6, 10/8) 멧돼지 4개체 이동 집중 확인 및 10/11 유인제 2통 살포지인 C지점에 5종 동시 비교 설치<br>
+                • 최근(10/6, 10/8, 10/15 10건 연속) 멧돼지 4개체 이동 집중 확인 및 10/11 유인제 2통 살포지인 C지점에 5종 동시 비교 설치<br>
                 • 무인 센서 카메라 24시간 초단위 감시 + 2~3일 주기 잔여 중량/형태/경도 정밀 실측
               </td>
               <td>
@@ -476,7 +476,7 @@ class FinalReportManager {
         <div style="background: rgba(56, 189, 248, 0.08); border: 1px dashed rgba(56, 189, 248, 0.35); border-radius: 6px; padding: 4px 8px; margin-bottom: 10px; font-size: 0.7rem; color: #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
           <div>
             <b style="color: #38bdf8;">★ 10/17 공주 C지점(문금리 142-5) 5종 비교 실증:</b>
-            테스트 미끼 4종(A·B·C·D)과 <span style="color: #fca5a5; font-weight: 700;">기존 동물사료 미끼틀 1종(대조군)</span>을 동일 지점에 동시 설치하여 2주간(10.17~10.31) 직접 비교 검증을 수행합니다.
+            최근 10/15 심야 멧돼지 4마리 10건 연속 출현이 입증된 C지점에 테스트 미끼 4종(A·B·C·D)과 <span style="color: #fca5a5; font-weight: 700;">기존 동물사료 미끼틀 1종(대조군)</span>을 동일 지점에 동시 설치하여 2주간(10.17~10.31) 직접 비교 검증을 수행합니다.
           </div>
           <span style="background: #0284c7; color: #fff; font-weight: 700; font-size: 0.65rem; padding: 1px 6px; border-radius: 4px; white-space: nowrap;">C지점 2주 실증</span>
         </div>
