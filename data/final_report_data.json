@@ -4,10 +4,10 @@
     "sub_title": "1단계 기초 실증 한계 분석 및 차세대 4대 제형 4개소(4×4) 전면 교차 실증 집계",
     "agency": "국립야생동물질병관리원 실증 용역 과제",
     "organization": "(사)야생생물관리협회 대전ㆍ세종ㆍ충남지부",
-    "period_phase1": "2026.07.01 ~ 2026.10.14 (1단계 기초 실증 및 현장 문제점 도출)",
-    "period_phase2": "2026.10.15 ~ 2026.11.15 (2단계 차세대 4대 제형 4개소 전면 교차 실증)",
+    "period_phase1": "2026.07.01 ~ 2026.10.16 (1단계 기초 실증 및 차세대 미끼 4종 제작)",
+    "period_phase2": "2026.10.17 ~ 2026.10.31 (공주 C지점 5종 비교 2주간 집중 실증) / 11.01 ~ 11.15 (전 지점 확대)",
     "target_completion": "2026년 11월 중 사업 종료 및 최종보고서 제출",
-    "status": "1단계 실증 한계 분석 완료 및 2단계 4×4 교차 실증 준비 중"
+    "status": "차세대 미끼 4종 실물 제작 및 성분 분석 완료, 10/17 공주 C지점 5종 비교 설치 예정"
   },
   "phase1_summary": {
     "title": "1단계(7~10월) 기존 미끼 살포 방식의 현장 실증 결과 및 핵심 한계점 정밀 진단",
@@ -49,82 +49,113 @@
     ]
   },
   "phase2_cross_matrix": {
-    "title": "2단계(10.15~11.15) 차세대 4대 후보 제형(A, B, C, D) 4개소 전면 교차실증 설계",
-    "rationale": "특정 실험지의 개체 밀도나 지형적 유리함으로 인한 통계적 왜곡(Site Bias)을 원천 차단하기 위해, 10월 15일까지 확정·제작될 4가지 형태의 후보 미끼를 공주 3곳과 경산 1곳 등 4개 실험지 전역에 동시 투입하여 통계적 교차 검증(4×4 Latin Square Matrix)을 수행합니다.",
+    "title": "2단계(10.17~10.31) 공주 C지점 차세대 미끼 4종 + 미끼틀 1종(총 5종) 2주간 집중 비교 실증 계획",
+    "rationale": "최근 멧돼지 출현 빈도가 가장 높은 공주 C지점(문금리 142-5, 10/8 4개체 확인 및 10/11 유인제 살포지)을 최우선 실증 거점으로 선정하여, 신규/개선 미끼 4종과 기존 미끼틀 1종 등 총 5종을 10월 17일 동시 비교 설치하고 2주간(10.17~10.31) 집중 모니터링을 진행합니다.",
+    "field_test_plan": {
+      "install_date": "2026.10.17 (토)",
+      "period": "2026.10.17 ~ 2026.10.31 (2주간 집중 실증)",
+      "target_site": "공주 C지점 (유구읍 문금리 142-5)",
+      "target_site_reason": "10월 6일/8일 멧돼지 다수(2~4개체) 이동 집중 포착 및 10월 11일 유인제 2통 살포 완료 구역",
+      "installed_baits_count": "총 5종 (테스트 미끼 4종 + 기존 미끼틀 대조군 1종)",
+      "monitoring_mode": "무인 센서 카메라 24시간 초단위 녹화 + 2~3일 주기 잔여 중량/형태 정밀 실측"
+    },
     "candidate_baits": [
       {
-        "type": "Type A (a형)",
-        "category_tag": "기존 미끼 (대조군 1)",
-        "is_new": false,
-        "name": "옥수수사료로 만든 밀렵형",
-        "concept": "옥수수 사료를 주원료로 압축·성형한 전통적 밀렵/수렵 유인 방식의 고형 미끼",
-        "spec": "기존 옥수수 배합사료 고형 압축 성형 (미끼틀 연계형)",
-        "target_days": "3~5일 (우천 시 형태 붕괴)",
-        "target_rain_resistance": "15.2% (형태 변형 및 죽 형태 유실 취약)",
-        "status": "기존 제형 실증 완료"
-      },
-      {
-        "type": "Type B (b형)",
-        "category_tag": "기존 미끼 (대조군 2)",
-        "is_new": false,
-        "name": "옥수수모양 젤리 (기성품)",
-        "concept": "옥수수 형상으로 사출 성형된 시판 기성 젤리형 미끼 (경산 실험지 등 기초 테스트 진행)",
-        "spec": "시판 기성품 옥수수 형상 젤리 미끼 (효소 첨가형)",
-        "target_days": "10~14일 (수분 증발/연화)",
-        "target_rain_resistance": "58.0% (수분 흡수 팽창 및 탄성 저하)",
-        "status": "기존 제형 실증 완료"
-      },
-      {
-        "type": "Type C (c형)",
-        "category_tag": "신규 개발 미끼 1",
+        "type": "Type A",
+        "category_tag": "개선 개발 제형 1",
         "is_new": true,
-        "name": "밤모양 투명 젤리",
-        "concept": "가을철 야생 멧돼지의 최고 선호 자연 먹이원인 '밤(Chestnut)' 외형을 모방한 고탄성 투명 젤리 제형",
-        "spec": "천연 밤 모방 성형 + 고탄성 투명 겔 매트릭스",
+        "name": "멧돼지 유인제 밀랍 성형형 (옥수수사료+밀랍)",
+        "concept": "멧돼지 전용 유인제와 옥수수 사료 분말을 천연 밀랍(Beeswax)과 함께 가열 용융하여 굳힌 방수 고형 미끼",
+        "spec": "천연 밀랍 고형 성형 (외형 둥근 환형, 옥수수 입자 노출)",
+        "ingredients": "천연 밀랍, 멧돼지 전용 액상/분말 유인제, 옥수수 배합사료",
+        "photo": "assets/images/baits/bait_type_a.jpg",
+        "target_days": "20일 이상 지속 (우천 시 붕괴 완전 차단)",
+        "target_rain_resistance": "85.0% 이상 (강우 방수 피막 유지)",
+        "status": "10/16 제작 완료 (10/17 투입)"
+      },
+      {
+        "type": "Type B",
+        "category_tag": "기존 기성품 대조군",
+        "is_new": false,
+        "name": "옥수수모양 젤리 (시판 기성품)",
+        "concept": "옥수수 이삭 형상으로 사출 성형된 시판 기성 젤리 미끼 (수입 캔디류, 카라기난 베이스)",
+        "spec": "시판 사출 옥수수 젤리 (낱개 OPP 밀봉 포장, 옥수수 퓌레 25% 함유)",
+        "ingredients": "옥수수퓌레 25%, 맥아당시럽, 백설탕, 카라기난, 천연 옥수수향 0.04%, D-소비톨 (100g당 319kcal)",
+        "photo": "assets/images/baits/bait_type_b.jpg",
+        "spec_photo": "assets/images/baits/bait_spec_b.png",
+        "target_days": "10~14일 지속",
+        "target_rain_resistance": "58.0% (수분 흡수 후 탄성 연화)",
+        "status": "성분표 분석 완료 (10/17 투입)"
+      },
+      {
+        "type": "Type C",
+        "category_tag": "신규 개발 제형 1",
+        "is_new": true,
+        "name": "밤모양 옥수수 젤라틴 젤리 (옥수수 1:1 배합)",
+        "concept": "가을철 멧돼지 최고 선호 먹이인 밤 외형을 모방하고, 젤라틴 젤리에 천연 옥수수 알곡 원물을 1:1 비율로 풍부하게 혼합한 수제 젤리",
+        "spec": "천연 밤 외형 반구 성형 + 젤라틴 & 옥수수 알곡 원물 1:1 혼합 매트릭스",
+        "ingredients": "식용 젤라틴, 옥수수 알곡 원물(1:1 비율 정밀 혼합), 정제수",
+        "photo": "assets/images/baits/bait_type_c.jpg",
         "target_days": "20일 이상 지속",
-        "target_rain_resistance": "80.0% 이상 (우천 후 형태·탄성 완벽 유지)",
-        "status": "10/15 투입 제작 준비"
+        "target_rain_resistance": "80.0% 이상 (고탄성 겔 지속)",
+        "status": "10/16 제작 완료 (10/17 투입)"
       },
       {
-        "type": "Type D (d형)",
-        "category_tag": "신규 개발 미끼 2",
+        "type": "Type D",
+        "category_tag": "신규 개발 제형 2",
         "is_new": true,
-        "name": "과일향 사각형 젤리",
-        "concept": "원거리 후각 유인력을 극대화한 특수 과일 유인향 배합의 정형 사각형(큐브형) 젤리 제형",
-        "spec": "고농도 과일 유인향 배합 + 규격 사각 큐브 젤리 성형",
+        "name": "자두복숭아 수제 젤리바 (과일향 사각 큐브)",
+        "concept": "국내산 동물성 젤라틴 36%와 천연 자두·복숭아청 50%를 고농도 배합하여 원거리 후각 유인력을 극대화한 정형 사각 젤리바",
+        "spec": "수제젤리 GOCHE 제작 정형 사각 바 (중량 약 60g, 돼지고기 유래 젤라틴 36% 고함유)",
+        "ingredients": "국내산 젤라틴 36%, 자두청 50% [영천 자두 50%, 경산 천도복숭아 25%, 설탕 40%, 레몬즙 10%], 물엿 11%, 펙틴, 구연산",
+        "photo": "assets/images/baits/bait_type_d.jpg",
+        "spec_photo": "assets/images/baits/bait_spec_d.jpg",
         "target_days": "25일 이상 지속 (최장 보존)",
-        "target_rain_resistance": "85.0% 이상 (강우 저항 및 유인향 장기 보존)",
-        "status": "10/15 투입 제작 준비"
+        "target_rain_resistance": "85.0% 이상 (강우 저항 및 지속 후각 발산)",
+        "status": "성분표 분석 완료 (10/17 투입)"
+      },
+      {
+        "type": "Control",
+        "category_tag": "기존 미끼틀 대조군",
+        "is_new": false,
+        "name": "기존 동물사료 미끼틀 (1종)",
+        "concept": "기존 동물 배합사료를 미끼틀 내에 거치하여, 노출형 신규 미끼 4종과의 접근 및 실제 섭취 선호도를 직접 비교 검증",
+        "spec": "동물 배합사료 거치형 미끼틀 (틀 보호형)",
+        "ingredients": "동물 배합사료 (옥수수·소맥 등)",
+        "photo": "assets/images/photos/img_gongju_activity_03.jpg",
+        "target_days": "20~25일 (틀 보호)",
+        "target_rain_resistance": "65.0%",
+        "status": "10/17 C지점 동시 설치"
       }
     ],
     "sites_matrix": [
       {
-        "site_code": "C지점",
+        "site_code": "C지점 (집중실증)",
         "region": "충남 공주",
         "address": "유구읍 문금리 142-5",
-        "installed_baits": "a.옥수수사료(밀렵형), b.옥수수젤리(기성), c.밤모양젤리(신규), d.과일향젤리(신규) 4종 동시 배치",
-        "monitoring_method": "무인 카메라 초단위 녹화 + 3일 주기 잔여 중량/형태 실측"
+        "installed_baits": "★ 10/17 설치: 미끼 4종(A·B·C·D) + 기존 미끼틀 1종 = 총 5종 2주간(10.17~10.31) 비교 실증",
+        "monitoring_method": "최근 멧돼지 4개체 출현지 24시간 무인카메라 녹화 + 2~3일 주기 잔여량 실측"
       },
       {
         "site_code": "B지점",
         "region": "충남 공주",
         "address": "유구읍 문금리 59-3",
-        "installed_baits": "a.옥수수사료(밀렵형), b.옥수수젤리(기성), c.밤모양젤리(신규), d.과일향젤리(신규) 4종 동시 배치",
-        "monitoring_method": "무인 카메라 초단위 녹화 + 3일 주기 잔여 중량/형태 실측"
+        "installed_baits": "10/11 유인제 2통 살포 완료 구역 (11월 초 4종 확대 투입 예정)",
+        "monitoring_method": "무인 카메라 상시 감시"
       },
       {
         "site_code": "A지점",
         "region": "충남 공주",
         "address": "유구읍 문금리 산135",
-        "installed_baits": "a.옥수수사료(밀렵형), b.옥수수젤리(기성), c.밤모양젤리(신규), d.과일향젤리(신규) 4종 동시 배치",
-        "monitoring_method": "무인 카메라 초단위 녹화 + 3일 주기 잔여 중량/형태 실측"
+        "installed_baits": "10/11 유인제 2통 살포 완료 구역 (11월 초 4종 확대 투입 예정)",
+        "monitoring_method": "무인 카메라 상시 감시"
       },
       {
         "site_code": "D지점",
         "region": "경북 경산",
         "address": "하양읍 남하리 산127",
-        "installed_baits": "a.옥수수사료(밀렵형), b.옥수수젤리(기성), c.밤모양젤리(신규), d.과일향젤리(신규) 4종 동시 배치",
-        "monitoring_method": "무인 카메라 초단위 녹화 + 3일 주기 잔여 중량/형태 실측"
+        "installed_baits": "경북 산악형 대조 실험지 (11월 초 4종 확대 투입 예정)",
+        "monitoring_method": "무인 카메라 상시 감시"
       }
     ]
   },

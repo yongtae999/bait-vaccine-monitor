@@ -183,11 +183,11 @@ class FinalReportManager {
           </div>
           <div class="summary-kpi-item highlight">
             <span class="lbl">멧돼지 선별 확정</span>
-            <span class="val">${totalConfirmed.toLocaleString()} <small>건 (행동 분석 완료)</small></span>
+            <span class="val">${totalConfirmed.toLocaleString()} <small>건 (최근 4마리 포착)</small></span>
           </div>
           <div class="summary-kpi-item">
             <span class="lbl">2단계 교차 실증</span>
-            <span class="val" style="color: #a78bfa;">4×4 <small>Matrix (10.15~11.15)</small></span>
+            <span class="val" style="color: #a78bfa;">5종 <small>비교 (10.17~10.31 C지점)</small></span>
           </div>
         </div>
       `;
@@ -244,12 +244,12 @@ class FinalReportManager {
               2026년 야생 멧돼지 미끼백신 향후 실험 일정 및 실증 계획 (1장 요약 보고서)
             </h2>
             <div class="sheet-subtitle">
-              10/11 유인제 살포 완료 • 10/15 미끼 4종 제작 • 4대 실험지 전면 교차 실증(4×4 Matrix) 로드맵
+              10/11 유인제 살포 완료 • 10/16 미끼 4종 제작완료 • 10/17 공주 C지점(문금리 142-5) 5종 비교 2주간 집중 실증 로드맵
             </div>
             <div class="sheet-meta">
-              <span><b>보고일자:</b> 2026년 10월 12일</span>
+              <span><b>보고일자:</b> 2026년 10월 16일</span>
               <span><b>보고자:</b> 야생생물관리협회 사무국장 권용태</span>
-              <span><b>실증거점:</b> 공주 3개 사이트(산135, 59-3, 142-5) 및 경산 1개소</span>
+              <span><b>실증거점:</b> 공주 C지점(문금리 142-5, 최근 멧돼지 4개체 출몰지 집중) 및 공주 A·B, 경산 D</span>
             </div>
           </div>
           <div class="print-approval-box">
@@ -281,11 +281,11 @@ class FinalReportManager {
           </div>
           <div class="summary-kpi-item highlight">
             <span class="lbl">멧돼지 출현 확정</span>
-            <span class="val">${totalConfirmed.toLocaleString()} <small>건 (행동 분석 완료)</small></span>
+            <span class="val">${totalConfirmed.toLocaleString()} <small>건 (최근 4마리 포착)</small></span>
           </div>
           <div class="summary-kpi-item">
-            <span class="lbl">차세대 실증 제형</span>
-            <span class="val" style="color: #a78bfa;">4 <small>종 (대조2 + 신규2)</small></span>
+            <span class="lbl">10/17 실증 제형</span>
+            <span class="val" style="color: #a78bfa;">5 <small>종 (미끼4 + 틀1)</small></span>
           </div>
         </div>
 
@@ -330,9 +330,9 @@ class FinalReportManager {
         <table class="report-table briefing-roadmap-table">
           <thead>
             <tr>
-              <th style="width: 14%;">단계</th>
+              <th style="width: 13%;">단계</th>
               <th style="width: 15%;">일정 / 기간</th>
-              <th style="width: 45%;">주요 업무 및 실험 실행 내용</th>
+              <th style="width: 46%;">주요 업무 및 실험 실행 내용</th>
               <th style="width: 26%;">주요 성과 / 세부 지표</th>
             </tr>
           </thead>
@@ -351,115 +351,134 @@ class FinalReportManager {
               </td>
             </tr>
             <tr>
-              <td class="text-center font-bold" style="color: #fbbf24;">Step 2 (진행중)</td>
-              <td class="text-center font-bold">10.11 ~ 10.15<br><small style="color: #94a3b8;">5일간</small></td>
+              <td class="text-center font-bold" style="color: #34d399;">Step 2 (완료)</td>
+              <td class="text-center font-bold">10.11 ~ 10.16<br><small style="color: #94a3b8;">6일간</small></td>
               <td>
-                <b>테스트용 차세대 미끼 4종(Type A, B, C, D) 최종 제작 완료</b><br>
-                • <b>Type A</b>: 옥수수사료로 만든 밀렵형 (기존 고형사료 대조군)<br>
-                • <b>Type B</b>: 옥수수모양 젤리 (시판 기성품 효소 첨가형 대조군)<br>
-                • <b>Type C</b>: 밤모양 투명 젤리 (신규 개발: 천연 밤 외형 모방, 20일 이상 지속)<br>
-                • <b>Type D</b>: 과일향 사각형 젤리 (신규 개발: 고농도 과일 유인향, 25일 이상 지속)
+                <b>테스트용 차세대 미끼 4종(Type A, B, C, D) 최종 제작 및 성분 분석 완료</b><br>
+                • <b>Type A</b>: 멧돼지 유인제 밀랍 성형형 (옥수수사료+밀랍 용융 방수 굳힘)<br>
+                • <b>Type B</b>: 옥수수모양 젤리 (시판 기성품, 옥수수퓌레 25%, 카라기난)<br>
+                • <b>Type C</b>: 밤모양 옥수수 젤라틴 젤리 (식용 젤라틴 + 옥수수 알곡 1:1 배합)<br>
+                • <b>Type D</b>: 자두복숭아 수제 젤리바 (국내산 젤라틴 36% + 자두복숭아청 50%)
               </td>
               <td>
-                • 10/15까지 현장 투입용 테스트 미끼 전량 제작 및 패키징 완료
+                • 미끼 4종 전량 제작 완료<br>
+                • 공인 성분표 분석 및 패키징 완료
               </td>
             </tr>
             <tr>
-              <td class="text-center font-bold" style="color: #a78bfa;">Step 3 (실행)</td>
-              <td class="text-center font-bold">10.15 ~ 11.15<br><small style="color: #94a3b8;">약 1개월간</small></td>
+              <td class="text-center font-bold" style="color: #fbbf24;">Step 3 (실행예정)</td>
+              <td class="text-center font-bold">10.17 ~ 10.31<br><small style="color: #94a3b8;">2주간 집중</small></td>
               <td>
-                <b>4대 실험지 전면 교차 실증 (4×4 Latin Square Matrix)</b><br>
-                • 공주 3곳(A·B·C) 및 경산 1곳(D) 전역에 4종 미끼 동시 비교 배치<br>
-                • 사이트 편향(Site Bias)을 원천 차단하는 위치 교차 실증 수행<br>
-                • 무인 카메라 24시간 초단위 감시 + 3일 주기 잔여 중량/형태/경도 정밀 실측
+                <b>공주 C지점(문금리 142-5) 미끼 4종 + 미끼틀 1종(총 5종) 2주간 비교 실증</b><br>
+                • 최근(10/6, 10/8) 멧돼지 4개체 이동 집중 확인 및 10/11 유인제 2통 살포지인 C지점에 5종 동시 비교 설치<br>
+                • 무인 센서 카메라 24시간 초단위 감시 + 2~3일 주기 잔여 중량/형태/경도 정밀 실측
               </td>
               <td>
-                • 4개 사이트 동시 검증<br>
+                • 총 5종 동시 비교 실증<br>
                 • 섭취 기호도, 환경 내구성, 비대상 배제율 정량 데이터 확보
               </td>
             </tr>
             <tr>
-              <td class="text-center font-bold" style="color: #34d399;">Step 4 (종료)</td>
-              <td class="text-center font-bold">11월 중순<br><small style="color: #94a3b8;">사업 종료</small></td>
+              <td class="text-center font-bold" style="color: #a78bfa;">Step 4 (확대)</td>
+              <td class="text-center font-bold">11.01 ~ 11.15<br><small style="color: #94a3b8;">15일간</small></td>
               <td>
-                <b>2026년도 사업 종료 및 최종보고서 제출 / 보고회 PPT 발표</b><br>
-                • 100점 만점 정량 평가(KPI) 집계 및 최적 제형 1종 최종 도출<br>
-                • 최종 실증 수치화 표/그래프 PPT 탑재 및 최종 완료 보고서 납품
+                <b>4대 실험지 전면 확대 실증(4×4 Matrix) 및 100점 만점 KPI 종합 평가</b><br>
+                • 공주 3곳(A·B·C) 및 경산 1곳(D) 확대 투입, 사이트 편향 차단 교차 검증<br>
+                • 100점 만점 정량 평가(기호도 40점, 내구성 30점, 배제 15점, 실용성 15점) 집계
               </td>
               <td>
-                • 2026년 실증 용역 과제 완료<br>
-                • 차기 사업 연계 기술 근거 확립
+                • 4개 사이트 교차 종합 검증<br>
+                • 최종 최적 제형 1종 도출
               </td>
             </tr>
             <tr style="background: rgba(148, 163, 184, 0.05);">
-              <td class="text-center font-bold" style="color: #94a3b8;">Step 5 (차기연계)</td>
-              <td class="text-center font-bold">2027년 여름<br><small style="color: #94a3b8;">차기 사업</small></td>
+              <td class="text-center font-bold" style="color: #94a3b8;">Step 5 (종료/연계)</td>
+              <td class="text-center font-bold">11월 중순<br><small style="color: #94a3b8;">사업 종료</small></td>
               <td>
-                <b>시제품화 및 특허 출원 추진 (내년도 본사업 연계)</b><br>
-                • 11월 사업 종료 후 겨울철 휴지기 거쳐 2027년 여름 사업 재개 시 추진<br>
-                • 선정된 최적 미끼 제형 기반 시제품 제작 및 기술 특허 출원
+                <b>2026년도 사업 종료 및 최종보고서 제출 / 2027년 여름 시제품·특허 연계</b><br>
+                • 11월 중 사업 종료 및 실증 최종보고서 납품 / 평가회 발표<br>
+                • 도출된 최우수 제형 기반으로 2027년 여름 사업 재개 시 시제품 제작 및 특허 출원 추진
               </td>
               <td>
-                • 내년 사업 계획서 연계 반영<br>
-                • 올해 최종보고서에는 로드맵으로 수록
+                • 2026년 실증 용역 과제 완료<br>
+                • 차기 사업 시제품/특허 근거 확립
               </td>
             </tr>
           </tbody>
         </table>
 
-        <!-- 3. 차세대 미끼 4종 비교 및 4x4 실험지 배치 계획 -->
+        <!-- 3. 차세대 미끼 4종 비교 및 공주 C지점 5종 비교 설치 계획 -->
         <div class="table-section-title">
-          <i class="fa-solid fa-flask-vial text-purple"></i> 3. 차세대 미끼 4종 스펙 및 4대 실험지 전면 배치 계획
+          <i class="fa-solid fa-flask-vial text-purple"></i> 3. 차세대 미끼 4종 실물 스펙 및 공주 C지점(10/17) 5종 비교 실증 계획
         </div>
         <div class="briefing-grid-4">
-          <div class="final-bait-card" style="border-top: 3px solid #f43f5e;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-              <span class="category-tag existing" style="font-size: 0.65rem; padding: 1px 4px;">기존 대조군 1</span>
-              <span style="font-size: 0.68rem; color: #f43f5e; font-weight: 700;">지속 3~5일</span>
+          <div class="final-bait-card" style="border-top: 3px solid #f59e0b;">
+            <div class="bait-img-wrap">
+              <img src="assets/images/baits/bait_type_a.jpg" alt="Type A" onerror="this.src='assets/images/photos/img_gongju_activity_03.jpg'">
             </div>
-            <div style="font-weight: 800; color: #f8fafc; font-size: 0.82rem;">Type A: 옥수수사료 밀렵형</div>
-            <p style="font-size: 0.72rem; color: #94a3b8; margin: 2px 0 0 0; line-height: 1.3;">
-              옥수수 배합사료 고형 압축<br>
-              • 기호도 우수, 우천 시 붕괴<br>
-              • 강우 저항성: 15.2% (취약)
-            </p>
-          </div>
-          <div class="final-bait-card" style="border-top: 3px solid #fbbf24;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-              <span class="category-tag existing" style="font-size: 0.65rem; padding: 1px 4px;">기존 대조군 2</span>
-              <span style="font-size: 0.68rem; color: #fbbf24; font-weight: 700;">지속 10~14일</span>
+              <span class="category-tag existing" style="font-size: 0.65rem; padding: 1px 4px; background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: #f59e0b;">개선 개발 1</span>
+              <span style="font-size: 0.68rem; color: #fbbf24; font-weight: 700;">지속 20일 이상</span>
             </div>
-            <div style="font-weight: 800; color: #f8fafc; font-size: 0.82rem;">Type B: 옥수수모양 젤리 (기성품)</div>
-            <p style="font-size: 0.72rem; color: #94a3b8; margin: 2px 0 0 0; line-height: 1.3;">
-              시판 사출 젤리 (효소 배합)<br>
-              • 탄성 양호, 장기 노출 시 수분증발<br>
-              • 강우 저항성: 58.0% (보통)
+            <div style="font-weight: 800; color: #f8fafc; font-size: 0.8rem;">Type A: 유인제 밀랍 성형형</div>
+            <p style="font-size: 0.68rem; color: #94a3b8; margin: 2px 0 0 0; line-height: 1.25;">
+              유인제 + 옥수수사료 천연 밀랍 용융<br>
+              • 방수 피막으로 비·습기 붕괴 완전 차단<br>
+              • 성분: 천연 밀랍, 멧돼지 전용 유인제, 옥수수사료
             </p>
           </div>
           <div class="final-bait-card" style="border-top: 3px solid #38bdf8;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-              <span class="category-tag new" style="font-size: 0.65rem; padding: 1px 4px;">신규 개발 1</span>
-              <span style="font-size: 0.68rem; color: #38bdf8; font-weight: 700;">지속 20일 이상</span>
+            <div class="bait-img-wrap">
+              <img src="assets/images/baits/bait_type_b.jpg" alt="Type B" onerror="this.src='assets/images/photos/img_gongju_activity_03.jpg'">
             </div>
-            <div style="font-weight: 800; color: #f8fafc; font-size: 0.82rem;">Type C: 밤모양 투명 젤리</div>
-            <p style="font-size: 0.72rem; color: #94a3b8; margin: 2px 0 0 0; line-height: 1.3;">
-              천연 밤 외형 + 고탄성 겔 매트릭스<br>
-              • 최고 선호 자연 먹이원 모방<br>
-              • 강우 저항성: 80.0% 이상 (우수)
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+              <span class="category-tag existing" style="font-size: 0.65rem; padding: 1px 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-color: #38bdf8;">기성품 대조 2</span>
+              <span style="font-size: 0.68rem; color: #38bdf8; font-weight: 700;">지속 10~14일</span>
+            </div>
+            <div style="font-weight: 800; color: #f8fafc; font-size: 0.8rem;">Type B: 옥수수모양 젤리 (기성품)</div>
+            <p style="font-size: 0.68rem; color: #94a3b8; margin: 2px 0 0 0; line-height: 1.25;">
+              시판 사출 젤리 (개별 밀봉 포장)<br>
+              • 옥수수퓌레 25%, 카라기난, 옥수수향 0.04%<br>
+              • 100g당 319kcal, 수분 흡수 시 탄성 연화
+            </p>
+          </div>
+          <div class="final-bait-card" style="border-top: 3px solid #10b981;">
+            <div class="bait-img-wrap">
+              <img src="assets/images/baits/bait_type_c.jpg" alt="Type C" onerror="this.src='assets/images/photos/img_gongju_activity_03.jpg'">
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+              <span class="category-tag new" style="font-size: 0.65rem; padding: 1px 4px; background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: #10b981;">신규 개발 1</span>
+              <span style="font-size: 0.68rem; color: #34d399; font-weight: 700;">지속 20일 이상</span>
+            </div>
+            <div style="font-weight: 800; color: #f8fafc; font-size: 0.8rem;">Type C: 밤모양 옥수수 젤리</div>
+            <p style="font-size: 0.68rem; color: #94a3b8; margin: 2px 0 0 0; line-height: 1.25;">
+              식용 젤라틴 + 옥수수 알곡 <b>1:1 배합</b><br>
+              • 가을철 최고 선호 밤 외형 모방 반구형<br>
+              • 고탄성 겔 매트릭스, 강우 저항 80% 이상
             </p>
           </div>
           <div class="final-bait-card" style="border-top: 3px solid #a78bfa;">
+            <div class="bait-img-wrap">
+              <img src="assets/images/baits/bait_type_d.jpg" alt="Type D" onerror="this.src='assets/images/photos/img_gongju_activity_03.jpg'">
+            </div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-              <span class="category-tag new" style="font-size: 0.65rem; padding: 1px 4px;">신규 개발 2</span>
+              <span class="category-tag new" style="font-size: 0.65rem; padding: 1px 4px; background: rgba(167, 139, 250, 0.15); color: #a78bfa; border-color: #a78bfa;">신규 개발 2</span>
               <span style="font-size: 0.68rem; color: #a78bfa; font-weight: 700;">지속 25일 이상</span>
             </div>
-            <div style="font-weight: 800; color: #f8fafc; font-size: 0.82rem;">Type D: 과일향 사각형 젤리</div>
-            <p style="font-size: 0.72rem; color: #94a3b8; margin: 2px 0 0 0; line-height: 1.3;">
-              고농도 과일향 + 사각 큐브 젤리<br>
-              • 원거리 후각 유인 극대화, 최장 보존<br>
-              • 강우 저항성: 85.0% 이상 (최상)
+            <div style="font-weight: 800; color: #f8fafc; font-size: 0.8rem;">Type D: 자두복숭아 젤리바</div>
+            <p style="font-size: 0.68rem; color: #94a3b8; margin: 2px 0 0 0; line-height: 1.25;">
+              국내산 젤라틴 36% + 자두복숭아청 50%<br>
+              • 수제젤리 GOCHE 제작 정형 사각 바(60g)<br>
+              • 돼지고기 젤라틴 후각 극대화, 강우 85%↑
             </p>
           </div>
+        </div>
+        <div style="background: rgba(56, 189, 248, 0.08); border: 1px dashed rgba(56, 189, 248, 0.35); border-radius: 6px; padding: 4px 8px; margin-bottom: 10px; font-size: 0.7rem; color: #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <b style="color: #38bdf8;">★ 10/17 공주 C지점(문금리 142-5) 5종 비교 실증:</b>
+            테스트 미끼 4종(A·B·C·D)과 <span style="color: #fca5a5; font-weight: 700;">기존 동물사료 미끼틀 1종(대조군)</span>을 동일 지점에 동시 설치하여 2주간(10.17~10.31) 직접 비교 검증을 수행합니다.
+          </div>
+          <span style="background: #0284c7; color: #fff; font-weight: 700; font-size: 0.65rem; padding: 1px 6px; border-radius: 4px; white-space: nowrap;">C지점 2주 실증</span>
         </div>
 
         <!-- 4. 최종보고서 평가 집계 기준 (KPI 100점) -->
@@ -581,13 +600,16 @@ class FinalReportManager {
         <p><b>🔬 과학적 교차 검증 설계 원칙:</b> ${s2.rationale}</p>
       </div>
 
-      <!-- 4 Candidate Bait Types Cards -->
+      <!-- 5 Candidate Bait Types Cards -->
       <h4 style="font-size: 0.95rem; color: #e2e8f0; margin: 16px 0 10px 0; font-weight: 700;">
-        💡 10월 15일 투입 4대 후보 제형 기본 설계안
+        💡 10월 17일 공주 C지점 집중 비교 투입 5종(테스트 4종 + 미끼틀 1종) 상세 제원 및 실물 사진
       </h4>
-      <div class="final-baits-grid">
+      <div class="final-baits-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
         ${s2.candidate_baits.map((b, idx) => `
           <div class="final-bait-card ${b.is_new ? 'is-new-bait' : 'is-existing-bait'}" style="${b.is_new ? 'border-color: rgba(56, 189, 248, 0.35); background: rgba(14, 30, 55, 0.85);' : 'border-color: rgba(255, 255, 255, 0.08);'}">
+            <div class="bait-img-wrap" style="height: 140px;">
+              <img src="${b.photo}" alt="${b.name}" onerror="this.src='assets/images/photos/img_gongju_activity_03.jpg'">
+            </div>
             <div class="bait-card-header">
               <span class="badge-type" style="${b.is_new ? 'background: rgba(56, 189, 248, 0.25); border-color: #38bdf8; color: #38bdf8;' : ''}">${b.type}</span>
               <span class="badge-status" style="${b.is_new ? 'background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: #34d399;' : 'background: rgba(148, 163, 184, 0.15); color: #cbd5e1; border-color: #64748b;'}">
@@ -598,9 +620,20 @@ class FinalReportManager {
             <div class="bait-concept">${b.concept}</div>
             <div class="bait-specs">
               <div class="spec-row"><span>상세 형태:</span> <b>${b.spec}</b></div>
+              <div class="spec-row" style="align-items: flex-start;">
+                <span style="white-space: nowrap;">주요 성분:</span>
+                <b style="color: #cbd5e1; font-size: 0.72rem; text-align: right; max-width: 65%;">${b.ingredients || '-'}</b>
+              </div>
               <div class="spec-row"><span>목표 잔존:</span> <b style="color: #38bdf8;">${b.target_days}</b></div>
               <div class="spec-row"><span>강우 저항:</span> <b style="color: #34d399;">${b.target_rain_resistance}</b></div>
               <div class="spec-row"><span>구분/상태:</span> <b style="color: ${b.is_new ? '#a78bfa' : '#94a3b8'};">${b.status}</b></div>
+              ${b.spec_photo ? `
+                <div style="border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 4px; margin-top: 4px; text-align: right;">
+                  <a href="${b.spec_photo}" target="_blank" style="color: #38bdf8; font-size: 0.7rem; text-decoration: underline;">
+                    <i class="fa-solid fa-file-invoice"></i> 공인 성분표 원본 보기
+                  </a>
+                </div>
+              ` : ''}
             </div>
           </div>
         `).join('')}

@@ -2524,10 +2524,28 @@ body {
   margin-bottom: 14px;
 }
 
-@media (max-width: 900px) {
-  .briefing-grid-3, .briefing-grid-4 {
-    grid-template-columns: 1fr;
-  }
+.bait-img-wrap {
+  width: 100%;
+  height: 90px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 6px;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bait-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bait-img-wrap.modal-preview {
+  height: 120px;
 }
 
 /* Print Styles for Final Report */
@@ -2725,6 +2743,13 @@ body {
   body.print-briefing-mode .briefing-kpi-table td {
     padding: 2px 4px !important;
     line-height: 1.15 !important;
+  }
+
+  body.print-briefing-mode .bait-img-wrap {
+    height: 48px !important;
+    margin-bottom: 3px !important;
+    border: 0.5pt solid #cbd5e1 !important;
+    background: #f1f5f9 !important;
   }
 }
 
