@@ -1441,6 +1441,24 @@
             "location": "공주시 문금리 59-3"
           }
         ]
+      },
+      {
+        "date": "2026-10-17",
+        "time": "08:25 ~ 08:35",
+        "category": "현장 점검",
+        "work_content": "문금리 59-3 사면 수풀 경계면 무인 센서 카메라 거치 상태 및 주변 지표 환경 현장 점검 완료",
+        "animal_appearance": "-",
+        "boar_count": "-",
+        "reaction_stage": "현장 점검 완료",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-17_IMG_2471.JPG",
+            "title": "문금리 59-3 B지점 수풀 경계면 및 카메라 설치 상태 점검",
+            "location": "공주시 문금리 59-3 (B지점)"
+          }
+        ]
       }
     ],
     "total_clips": 417,
@@ -2948,6 +2966,48 @@
             "category": "멧돼지확정",
             "time": "21:46:40",
             "is_night": true
+          }
+        ]
+      },
+      {
+        "date": "2026-10-17",
+        "time": "08:00 ~ 08:35",
+        "category": "차세대 실험 미끼 4종 및 대조군 지표면 그리드 배치 설치 및 카메라 화각 재조정",
+        "work_content": "10/15 야간 멧돼지 4마리 집중 출현 지점인 142-5 살포지에 기호도·섭취 순위 비교 실증을 위한 차세대 미끼 4종(Type A 밀랍 큐브, Type B 노란 옥수수 젤리, Type C 밤모양 젤리, Type D 자두복숭아 젤리바) 및 옥수수 알곡 대조군을 지표면에 열별로 정밀 배치하고, 개체별 섭취 반응 정밀 포착을 위해 무인 센서 카메라 각도 및 감도 정밀 재조정 완료",
+        "animal_appearance": "-",
+        "boar_count": "-",
+        "reaction_stage": "실험용 미끼 4종 및 대조군 현장 배치 완료, 카메라 화각 정밀 세팅",
+        "workers": "권용태(사무국장)",
+        "evidences": [
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-17_IMG_2466.JPG",
+            "title": "문금리 142-5 멧돼지 섭취 흔적 지표 점검 및 설치 구역 정비",
+            "location": "공주시 문금리 142-5 (C지점)"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-17_IMG_2467(1).JPG",
+            "title": "문금리 142-5 차세대 실험용 미끼 4종 및 대조군 지표면 배치 설치 전경",
+            "location": "공주시 문금리 142-5 (C지점)"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-17_IMG_2468.JPG",
+            "title": "문금리 142-5 실험용 미끼 제형별 배열 및 지면 안착 상세",
+            "location": "공주시 문금리 142-5 (C지점)"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-17_IMG_2469.JPG",
+            "title": "문금리 142-5 미끼 배치 구역 측면 전경 및 야생동물 접근로",
+            "location": "공주시 문금리 142-5 (C지점)"
+          },
+          {
+            "type": "photo",
+            "thumb": "assets/photos/2026-10-17_IMG_2470.JPG",
+            "title": "문금리 142-5 무인 센서 카메라 화각 정밀 재조정 및 감지 범위 점검",
+            "location": "공주시 문금리 142-5 (C지점)"
           }
         ]
       }
