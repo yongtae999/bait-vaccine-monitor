@@ -230,7 +230,7 @@ class InterimReportManager {
           <span class="val">${totalConfirmed} <small>건</small></span>
         </div>
         <div class="summary-kpi-item">
-          <span class="lbl">비대상(고라니) 통과</span>
+          <span class="lbl">비대상(고라니·오소리) 통과</span>
           <span class="val">${totalIgnored} <small>건</small></span>
         </div>
         <div class="summary-kpi-item">
@@ -399,7 +399,7 @@ class InterimReportManager {
           </tr>
           <tr>
             <th>멧돼지 출현 확정</th>
-            <td><b style="color: #f43f5e; font-size: 0.95rem;">🐗 총 ${site.confirmed_boar_count}건</b> (비대상 고라니 ${site.ignored_animal_count}건)</td>
+            <td><b style="color: #f43f5e; font-size: 0.95rem;">🐗 총 ${site.confirmed_boar_count}건</b> (비대상 고라니·오소리 ${site.ignored_animal_count}건)</td>
             <th>실증 기호도 평가</th>
             <td><b style="color: #38bdf8;">${site.bait_palatability}</b></td>
           </tr>

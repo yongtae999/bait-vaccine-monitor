@@ -124,8 +124,8 @@ class FinalReportManager {
     // Destroy existing charts before re-rendering
     this.destroyCharts();
 
-    let totalScanned = 858;
-    let totalConfirmed = 69;
+    let totalScanned = 878;
+    let totalConfirmed = 80;
     if (window.camerasData && Array.isArray(window.camerasData)) {
       totalScanned = window.camerasData.reduce((acc, c) => acc + (c.total_clips || 0), 0);
     }
@@ -183,11 +183,11 @@ class FinalReportManager {
           </div>
           <div class="summary-kpi-item highlight">
             <span class="lbl">멧돼지 선별 확정</span>
-            <span class="val">${totalConfirmed.toLocaleString()} <small>건 (최근 4마리 포착)</small></span>
+            <span class="val">${totalConfirmed.toLocaleString()} <small>건 (C지점 35건 최다)</small></span>
           </div>
           <div class="summary-kpi-item">
             <span class="lbl">2단계 교차 실증</span>
-            <span class="val" style="color: #a78bfa;">5종 <small>비교 (10.17~10.31 C지점)</small></span>
+            <span class="val" style="color: #a78bfa;">5종 <small>실증중 (10.17~10.31 C지점)</small></span>
           </div>
         </div>
       `;
@@ -248,15 +248,15 @@ class FinalReportManager {
         <div class="report-sheet-header briefing-header">
           <div class="header-left-group">
             <h2 class="sheet-title" style="margin-top: 0;">
-              2026년 야생 멧돼지 미끼백신 향후 실험 일정 및 실증 계획
+              2026년 야생 멧돼지 미끼백신 향후 실험 일정 및 실증 현황
             </h2>
             <div class="sheet-subtitle">
-              10/11 유인제 살포 완료 • 10/15 야간 멧돼지 4마리 집중 출현(테스트 최적 조건 충족) • 10/16 미끼 4종 제작완료 • 10/17 공주 C지점 5종 비교 2주간 집중 실증 로드맵
+              10/11 유인제 살포 완료 • 10/15 야간 멧돼지 4마리 집중 출현(C지점 누적 35건) • 10/16 미끼 4종 제작완료 • 10/17 공주 C지점 5종 실증 설치 완료 및 2주간 집중 실증 진행 중
             </div>
             <div class="sheet-meta">
-              <span><b>보고일자:</b> 2026년 10월 16일</span>
+              <span><b>보고일자:</b> 2026년 10월 18일 (10/17 현장 설치 반영)</span>
               <span><b>보고자:</b> 야생생물관리협회 사무국장 권용태</span>
-              <span><b>실증거점:</b> 공주 C지점(문금리 142-5, 최근 멧돼지 4개체 출몰지 집중) 및 공주 A·B, 경산 D</span>
+              <span><b>실증거점:</b> 공주 C지점(문금리 142-5, 멧돼지 35건 확정·집중 출현지) 및 공주 A·B, 경산 D</span>
             </div>
           </div>
         </div>
@@ -273,11 +273,11 @@ class FinalReportManager {
           </div>
           <div class="summary-kpi-item highlight">
             <span class="lbl">멧돼지 출현 확정</span>
-            <span class="val">${totalConfirmed.toLocaleString()} <small>건 (10/15 야간 4마리 집중, 테스트 조건 충족)</small></span>
+            <span class="val">${totalConfirmed.toLocaleString()} <small>건 (C지점 35건·10/15 4마리 집중)</small></span>
           </div>
           <div class="summary-kpi-item">
             <span class="lbl">10/17 실증 제형</span>
-            <span class="val" style="color: #a78bfa;">5 <small>종 (미끼4 + 틀1)</small></span>
+            <span class="val" style="color: #a78bfa;">5 <small>종 (미끼4 + 대조군1 설치완료)</small></span>
           </div>
         </div>
 
@@ -309,15 +309,15 @@ class FinalReportManager {
               🔍 비대상 동물 관찰
             </div>
             <p style="font-size: 0.74rem; color: #cbd5e1; margin: 0; line-height: 1.35;">
-              <b>단순 통과 및 자연 채식 (누적 35건)</b><br>
-              고라니 23건, 오소리 12건 출현 시 미끼틀 주변 단순 통과 및 자연 초생 채식만 관찰됨 (미끼 섭취 시도 미확인)
+              <b>단순 통과 및 자연 채식 (누적 37건)</b><br>
+              고라니 25건(공주C 22·공주B 3), 오소리 12건 출현 시 미끼틀 주변 단순 통과 및 자연 초생 채식만 관찰됨 (미끼 섭취 시도 미확인)
             </p>
           </div>
         </div>
 
         <!-- 2. 향후 핵심 실험 일정 로드맵 -->
         <div class="table-section-title">
-          <i class="fa-solid fa-calendar-check text-cyan"></i> 2. 향후 핵심 실험 일정 로드맵 (2026.10.11 ~ 11.15)
+          <i class="fa-solid fa-calendar-check text-cyan"></i> 2. 핵심 실험 일정 로드맵 및 진행 현황 (2026.10.11 ~ 11.15)
         </div>
         <table class="report-table briefing-roadmap-table">
           <thead>
@@ -339,7 +339,7 @@ class FinalReportManager {
               </td>
               <td>
                 • 작업자: 권용태(사무국장)<br>
-                • 10/11 살포 후 **10/15 야간 멧돼지 4마리 집중 출현(10건 연속)** 확인 ➔ **비교 테스트 최적 조건 충족**
+                • 10/11 살포 후 <b>10/15 야간 멧돼지 4마리 집중 출현(10건 연속, 누적 35건)</b> 확인 ➔ <b>비교 테스트 최적 조건 충족</b>
               </td>
             </tr>
             <tr>
@@ -357,17 +357,17 @@ class FinalReportManager {
                 • 공인 성분표 분석 및 패키징 완료
               </td>
             </tr>
-            <tr>
-              <td class="text-center font-bold" style="color: #fbbf24;">Step 3 (실행예정)</td>
-              <td class="text-center font-bold">10.17 ~ 10.31<br><small style="color: #94a3b8;">2주간 집중</small></td>
+            <tr style="background: rgba(56, 189, 248, 0.06);">
+              <td class="text-center font-bold" style="color: #fbbf24;">Step 3 (설치완료·진행중)</td>
+              <td class="text-center font-bold">10.17 ~ 10.31<br><small style="color: #38bdf8;">10/17 현장설치 완료</small></td>
               <td>
-                <b>공주 C지점(문금리 142-5) 미끼 4종 + 미끼틀 1종(총 5종) 2주간 비교 실증</b><br>
-                • **10/15 야간 멧돼지 4마리 집중 출현으로 테스트 최적 조건이 충족**된 C지점에 5종 동시 비교 설치<br>
-                • 무인 센서 카메라 24시간 초단위 감시 + 2~3일 주기 잔여 중량/형태/경도 정밀 실측
+                <b>공주 C지점(문금리 142-5) 미끼 4종 + 대조군(총 5종) 실증 설치 완료 및 2주간 집중 비교</b><br>
+                • <b>10/17(토) 08:00~08:35</b> C지점 섭식 흔적 지표 정비 후 차세대 미끼 4종(A·B·C·D) 및 대조군 지표면 그리드(Array) 정밀 배치 완료<br>
+                • 무인 센서 카메라 화각 밀착 재조정 완료(24시간 감시) + 2~3일 주기 잔여 중량/형태/경도 실측 진행 중
               </td>
               <td>
-                • 총 5종 동시 비교 실증<br>
-                • 섭취 반응, 형태 내구성, 환경 변화 실측 데이터 확보
+                • 작업자: 권용태(사무국장)<br>
+                • 10/17 C지점 5종 설치 및 B지점(59-3) 점검 완료 (현장사진 6장 기록)
               </td>
             </tr>
             <tr style="background: rgba(148, 163, 184, 0.05);">
@@ -386,9 +386,9 @@ class FinalReportManager {
           </tbody>
         </table>
 
-        <!-- 3. 차세대 미끼 4종 비교 및 공주 C지점 5종 비교 설치 계획 -->
+        <!-- 3. 차세대 미끼 4종 비교 및 공주 C지점 5종 비교 설치 현황 -->
         <div class="table-section-title">
-          <i class="fa-solid fa-flask-vial text-purple"></i> 3. 차세대 미끼 4종 실물 스펙 및 공주 C지점(10/17) 5종 비교 실증 계획
+          <i class="fa-solid fa-flask-vial text-purple"></i> 3. 차세대 미끼 4종 실물 스펙 및 공주 C지점(10/17 설치 완료) 5종 비교 실증 현황
         </div>
         <div class="briefing-grid-4">
           <div class="final-bait-card" style="border-top: 3px solid #f59e0b;">
@@ -454,10 +454,10 @@ class FinalReportManager {
         </div>
         <div style="background: rgba(56, 189, 248, 0.08); border: 1px dashed rgba(56, 189, 248, 0.35); border-radius: 6px; padding: 4px 8px; margin-bottom: 10px; font-size: 0.7rem; color: #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
           <div>
-            <b style="color: #38bdf8;">★ 10/17 공주 C지점(문금리 142-5) 5종 비교 실증 (테스트 최적 조건 충족):</b>
-            10/15 야간 멧돼지 4마리가 집중 출현(10건 연속, 7분 이상 집중 체류)하여 비교 테스트를 실시하기 위한 최상의 현장 조건이 충족된 C지점에 테스트 미끼 4종(A·B·C·D)과 <span style="color: #fca5a5; font-weight: 700;">기존 동물사료 미끼틀 1종(대조군)</span>을 동시 설치하여 2주간(10.17~10.31) 직접 비교 검증을 수행합니다.
+            <b style="color: #38bdf8;">★ 10/17 공주 C지점(문금리 142-5) 5종 비교 실증 설치 완료 (2주 집중 실증 진행 중):</b>
+            10/15 야간 멧돼지 4마리 집중 출현(10건 연속, 누적 35건 확정)으로 최적 테스트 조건이 충족된 C지점에 10/17 차세대 미끼 4종(A·B·C·D)과 <span style="color: #fca5a5; font-weight: 700;">기존 동물사료 미끼틀/알곡 대조군</span>을 그리드 배열로 동시 설치 완료하여 2주간(10.17~10.31) 직접 비교 검증을 수행 중입니다.
           </div>
-          <span style="background: #0284c7; color: #fff; font-weight: 700; font-size: 0.65rem; padding: 1px 6px; border-radius: 4px; white-space: nowrap;">C지점 2주 실증</span>
+          <span style="background: #059669; color: #fff; font-weight: 700; font-size: 0.65rem; padding: 1px 6px; border-radius: 4px; white-space: nowrap;">10/17 설치완료 · 진행중</span>
         </div>
 
         <!-- 4. [참고용 예시안] 최종보고서 수치화 평가 기준 -->

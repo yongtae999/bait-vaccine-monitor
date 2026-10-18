@@ -29,7 +29,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-  <link rel="stylesheet" href="styles.css?v=20261012_1500">
+  <link rel="stylesheet" href="styles.css?v=20261018_1100">
 </head>
 <body>
 
@@ -42,7 +42,7 @@
           야생 멧돼지 미끼백신 섭취 모니터링 시스템
           <span class="data-range-badge" id="header-data-range-badge" title="데이터 갱신 시 자동 반영되는 실측 데이터 기간">
             <i class="fa-solid fa-calendar-check" style="color: #34d399;"></i>
-            <span id="data-range-text">2026.07.01 ~ 2026.09.01 데이터 반영</span>
+            <span id="data-range-text">2026.07.01 ~ 2026.10.17 데이터 반영</span>
           </span>
           <small>국립야생동물질병관리원 · (사)야생생물관리협회</small>
         </h1>
@@ -114,7 +114,7 @@
               <i id="sort-order-icon" class="fa-solid fa-arrow-down-wide-short"></i>
               <span id="sort-order-label">최신순</span>
             </button>
-            <span id="video-count-badge" style="font-size: 0.7rem; color: var(--hud-cyan);">72건 판독</span>
+            <span id="video-count-badge" style="font-size: 0.7rem; color: var(--hud-cyan);">120건 판독</span>
           </div>
         </div>
         
@@ -173,11 +173,11 @@
         <div class="kpi-grid">
           <div class="kpi-box primary">
             <span class="kpi-label">전체 분석 영상</span>
-            <span class="kpi-val"><span id="kpi-scanned-clips">682</span> <small>건</small></span>
+            <span class="kpi-val"><span id="kpi-scanned-clips">878</span> <small>건</small></span>
           </div>
           <div class="kpi-box accent">
             <span class="kpi-label">멧돼지 확정 판독</span>
-            <span class="kpi-val"><span id="kpi-confirmed-boar">47</span> <small>건</small></span>
+            <span class="kpi-val"><span id="kpi-confirmed-boar">80</span> <small>건</small></span>
           </div>
           <div class="kpi-box emerald">
             <span class="kpi-label">현장 점검 사진</span>
@@ -193,7 +193,7 @@
       <!-- Two Experimental Bait Frames Info Card -->
       <div class="sidebar-section">
         <div class="section-title">
-          <i class="fa-solid fa-cubes-stacked"></i> 실험 미끼 2종 실물 & 제원
+          <i class="fa-solid fa-cubes-stacked"></i> 실험 미끼 실물 & 차세대 4대 제형
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
           <!-- Bait 1: 멧돼지미끼틀 -->
@@ -212,6 +212,9 @@
               <span style="color: #94a3b8; font-size: 0.67rem;">멧돼지 유인제를 배합하여 굳힌 사료</span>
             </div>
           </div>
+        </div>
+        <div style="margin-top: 6px; padding: 6px 8px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 4px; font-size: 0.68rem; color: #cbd5e1; line-height: 1.35;">
+          <b style="color: #34d399;">[10/17 C지점 5종 비교실증 설치완료]</b> 차세대 4종(Type A 옥수수사료·B 옥수수젤리·C 밤모양젤리·D 과일향젤리) + 대조군 2주간 실증 진행 중
         </div>
       </div>
 
@@ -531,13 +534,13 @@
   </div>
 
   <!-- App Modules (Cache-busted) -->
-  <script src="map-controller.js?v=20261012_1500"></script>
-  <script src="video-manager.js?v=20261012_1500"></script>
-  <script src="photo-manager.js?v=20261012_1500"></script>
-  <script src="interim-report.js?v=20261012_1500"></script>
-  <script src="final-report.js?v=20261012_1500"></script>
-  <script src="analytics.js?v=20261012_1500"></script>
-  <script src="activity-report.js?v=20261012_1500"></script>
-  <script src="app.js?v=20261012_1500"></script>
+  <script src="map-controller.js?v=20261018_1100"></script>
+  <script src="video-manager.js?v=20261018_1100"></script>
+  <script src="photo-manager.js?v=20261018_1100"></script>
+  <script src="interim-report.js?v=20261018_1100"></script>
+  <script src="final-report.js?v=20261018_1100"></script>
+  <script src="analytics.js?v=20261018_1100"></script>
+  <script src="activity-report.js?v=20261018_1100"></script>
+  <script src="app.js?v=20261018_1100"></script>
 </body>
 </html>
