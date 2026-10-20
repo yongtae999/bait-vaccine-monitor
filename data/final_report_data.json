@@ -71,7 +71,8 @@
         "photo": "assets/images/baits/bait_type_a.jpg",
         "target_days": "20일 이상 지속 (우천 시 붕괴 완전 차단)",
         "target_rain_resistance": "85.0% 이상 (강우 방수 피막 유지)",
-        "status": "10/16 제작 완료 ➔ 10/17 C지점 설치 완료"
+        "status": "10/16 제작 완료 ➔ 10/17 C지점 설치 완료",
+        "field_result_1020": "10/20 실측: 10개 중 1개 섭취 (10.0%, 9개 방수 형태 완벽 유지)"
       },
       {
         "type": "Type B",
@@ -85,7 +86,8 @@
         "spec_photo": "assets/images/baits/bait_spec_b.png",
         "target_days": "10~14일 지속",
         "target_rain_resistance": "58.0% (수분 흡수 후 탄성 연화)",
-        "status": "성분표 분석 완료 ➔ 10/17 C지점 설치 완료"
+        "status": "성분표 분석 완료 ➔ 10/17 C지점 설치 완료",
+        "field_result_1020": "10/20 실측: 10개 전량 완식 (100.0%, 기호도 1위)"
       },
       {
         "type": "Type C",
@@ -98,7 +100,8 @@
         "photo": "assets/images/baits/bait_type_c.jpg",
         "target_days": "20일 이상 지속",
         "target_rain_resistance": "80.0% 이상 (고탄성 겔 지속)",
-        "status": "10/16 제작 완료 ➔ 10/17 C지점 설치 완료"
+        "status": "10/16 제작 완료 ➔ 10/17 C지점 설치 완료",
+        "field_result_1020": "10/20 실측: 10개 중 3개 섭취 (30.0%, 기호도 2위, 7개 고탄성 유지)"
       },
       {
         "type": "Type D",
@@ -112,7 +115,8 @@
         "spec_photo": "assets/images/baits/bait_spec_d.jpg",
         "target_days": "25일 이상 지속 (최장 보존)",
         "target_rain_resistance": "85.0% 이상 (강우 저항 및 지속 후각 발산)",
-        "status": "성분표 분석 완료 ➔ 10/17 C지점 설치 완료"
+        "status": "성분표 분석 완료 ➔ 10/17 C지점 설치 완료",
+        "field_result_1020": "10/20 실측: 10개 중 1개 섭취 (10.0%, 9개 형태 및 향 지속)"
       },
       {
         "type": "Control",
@@ -125,7 +129,8 @@
         "photo": "assets/images/photos/img_gongju_activity_03.jpg",
         "target_days": "20~25일 (틀 보호)",
         "target_rain_resistance": "65.0%",
-        "status": "10/17 C지점 동시 설치 완료"
+        "status": "10/17 C지점 동시 설치 완료",
+        "field_result_1020": "10/20 실측: 10개 중 1개 섭취 (10.0%, 사료 반응성 상대적 저조)"
       }
     ],
     "sites_matrix": [
@@ -157,7 +162,54 @@
         "installed_baits": "경북 산악형 대조 실험지 (젤리형 미끼)",
         "monitoring_method": "무인 카메라 상시 감시"
       }
-    ]
+    ],
+    "field_consumption_record_1020": {
+      "inspection_date": "2026.10.20 14:20~15:00",
+      "elapsed_days": "설치 3일 경과",
+      "inspector": "권용태(사무국장)",
+      "results": [
+        {
+          "type": "Type B (옥수수 젤리)",
+          "initial_count": 10,
+          "consumed_count": 10,
+          "consumption_rate": "100.0%",
+          "rank": "1위 (완식)",
+          "opinion": "개체 진입 즉시 10개 전량 집중 완식, 기호도 최상 입증"
+        },
+        {
+          "type": "Type C (밤모양 옥수수 젤리)",
+          "initial_count": 10,
+          "consumed_count": 3,
+          "consumption_rate": "30.0%",
+          "rank": "2위",
+          "opinion": "3개 섭취 개시, 7개 잔여 및 탄성 유지"
+        },
+        {
+          "type": "Type A (밀랍 성형형)",
+          "initial_count": 10,
+          "consumed_count": 1,
+          "consumption_rate": "10.0%",
+          "rank": "3위(공동)",
+          "opinion": "1개 섭취, 9개 방수 형태 완벽 유지"
+        },
+        {
+          "type": "Type D (자두복숭아 젤리바)",
+          "initial_count": 10,
+          "consumed_count": 1,
+          "consumption_rate": "10.0%",
+          "rank": "3위(공동)",
+          "opinion": "1개 섭취, 9개 형태 유지 및 후각 발산 지속"
+        },
+        {
+          "type": "기존 미끼틀 대조군",
+          "initial_count": 10,
+          "consumed_count": 1,
+          "consumption_rate": "10.0%",
+          "rank": "3위(공동)",
+          "opinion": "1개 섭취, 사료 반응성 상대적 저조"
+        }
+      ]
+    }
   },
   "evaluation_kpi": [
     {

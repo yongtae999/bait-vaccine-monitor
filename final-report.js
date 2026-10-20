@@ -358,16 +358,20 @@ class FinalReportManager {
               </td>
             </tr>
             <tr style="background: rgba(56, 189, 248, 0.06);">
-              <td class="text-center font-bold" style="color: #fbbf24;">Step 3 (설치완료·진행중)</td>
-              <td class="text-center font-bold">10.17 ~ 10.31<br><small style="color: #38bdf8;">10/17 현장설치 완료</small></td>
+              <td class="text-center font-bold" style="color: #fbbf24;">Step 3 (설치완료·실측진행)</td>
+              <td class="text-center font-bold">10.17 ~ 10.31<br><small style="color: #38bdf8;">10/20 3일차 실측 완료</small></td>
               <td>
-                <b>공주 C지점(문금리 142-5) 미끼 4종 + 대조군(총 5종) 실증 설치 완료 및 2주간 집중 비교</b><br>
-                • <b>10/17(토) 08:00~08:35</b> C지점 섭식 흔적 지표 정비 후 차세대 미끼 4종(A·B·C·D) 및 대조군 지표면 그리드(Array) 정밀 배치 완료<br>
-                • 무인 센서 카메라 화각 밀착 재조정 완료(24시간 상시 감시 및 모니터링 진행 중)
+                <b>공주 C지점(문금리 142-5) 미끼 4종 + 대조군(총 5종) 실증 설치 및 3일차 섭취율 실측 완료</b><br>
+                • <b>10/17(토)</b> C지점 차세대 미끼 4종(A·B·C·D) 및 대조군(총 5종, 각 10개씩) 그리드 배치 완료<br>
+                • <b>10/20(화) 3일 경과 현장 실측 확인 결과</b>:<br>
+                &nbsp;&nbsp;- <b>미끼B (옥수수 젤리)</b>: 10개 중 <b>10개 전량 완식 (100.0%, 기호도 1위)</b><br>
+                &nbsp;&nbsp;- <b>미끼C (밤모양 옥수수 젤리)</b>: 10개 중 <b>3개 섭취 (30.0%, 기호도 2위)</b><br>
+                &nbsp;&nbsp;- <b>기존미끼틀 / 미끼A / 미끼D</b>: 각 10개 중 <b>1개씩 섭취 (각 10.0%)</b><br>
+                • 10/20 새벽 02:31 멧돼지 섭취 영상 3건 포착 및 03:24 오소리 통과 1건 확인 (24시간 상시 감시 지속)
               </td>
               <td>
                 • 작업자: 권용태(사무국장)<br>
-                • 10/17 C지점 5종 설치 및 B지점(59-3) 점검 완료 (현장사진 6장 기록)
+                • 10/17 설치 ➔ 10/20 현장 실측 완료 (현장사진 12장, 10/20 영상 4건 기록)
               </td>
             </tr>
             <tr style="background: rgba(148, 163, 184, 0.05);">
@@ -452,12 +456,41 @@ class FinalReportManager {
             </p>
           </div>
         </div>
-        <div style="background: rgba(56, 189, 248, 0.08); border: 1px dashed rgba(56, 189, 248, 0.35); border-radius: 6px; padding: 4px 8px; margin-bottom: 10px; font-size: 0.7rem; color: #cbd5e1; display: flex; justify-content: space-between; align-items: center;">
-          <div>
-            <b style="color: #38bdf8;">★ 10/17 공주 C지점(문금리 142-5) 5종 비교 실증 설치 완료 (2주 집중 실증 진행 중):</b>
-            10/15 야간 멧돼지 4마리 집중 출현(10건 연속, 누적 35건 확정)으로 최적 테스트 조건이 충족된 C지점에 10/17 차세대 미끼 4종(A·B·C·D)과 <span style="color: #fca5a5; font-weight: 700;">기존 동물사료 미끼틀/알곡 대조군</span>을 그리드 배열로 동시 설치 완료하여 2주간(10.17~10.31) 직접 비교 검증을 수행 중입니다.
+        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 6px; padding: 8px 12px; margin-bottom: 12px; font-size: 0.72rem; color: #f1f5f9; display: flex; flex-direction: column; gap: 6px;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <b style="color: #34d399; font-size: 0.78rem;"><i class="fa-solid fa-square-poll-vertical"></i> ★ 10/20 공주 C지점(문금리 142-5) 5종 비교 설치 3일차 현장 실측 섭취율 집계:</b>
+            <span style="background: #059669; color: #fff; font-weight: 800; font-size: 0.65rem; padding: 2px 8px; border-radius: 4px;">10/20 실측 완료</span>
           </div>
-          <span style="background: #059669; color: #fff; font-weight: 700; font-size: 0.65rem; padding: 1px 6px; border-radius: 4px; white-space: nowrap;">10/17 설치완료 · 진행중</span>
+          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-top: 2px;">
+            <div style="background: rgba(56, 189, 248, 0.15); border: 1px solid #38bdf8; border-radius: 4px; padding: 4px; text-align: center;">
+              <div style="color: #38bdf8; font-weight: 700; font-size: 0.65rem;">미끼B (옥수수 젤리)</div>
+              <div style="color: #38bdf8; font-size: 0.95rem; font-weight: 900;">10/10 (100%)</div>
+              <div style="color: #94a3b8; font-size: 0.6rem;">기호도 1위 (전량 완식)</div>
+            </div>
+            <div style="background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; border-radius: 4px; padding: 4px; text-align: center;">
+              <div style="color: #34d399; font-weight: 700; font-size: 0.65rem;">미끼C (밤모양 젤리)</div>
+              <div style="color: #34d399; font-size: 0.95rem; font-weight: 900;">3/10 (30.0%)</div>
+              <div style="color: #94a3b8; font-size: 0.6rem;">기호도 2위 (7개 보존)</div>
+            </div>
+            <div style="background: rgba(245, 158, 11, 0.15); border: 1px solid #f59e0b; border-radius: 4px; padding: 4px; text-align: center;">
+              <div style="color: #fbbf24; font-weight: 700; font-size: 0.65rem;">미끼A (밀랍 성형)</div>
+              <div style="color: #fbbf24; font-size: 0.95rem; font-weight: 900;">1/10 (10.0%)</div>
+              <div style="color: #94a3b8; font-size: 0.6rem;">9개 방수 형태 유지</div>
+            </div>
+            <div style="background: rgba(167, 139, 250, 0.15); border: 1px solid #a78bfa; border-radius: 4px; padding: 4px; text-align: center;">
+              <div style="color: #c084fc; font-weight: 700; font-size: 0.65rem;">미끼D (과일 젤리바)</div>
+              <div style="color: #c084fc; font-size: 0.95rem; font-weight: 900;">1/10 (10.0%)</div>
+              <div style="color: #94a3b8; font-size: 0.6rem;">9개 형태·향 유지</div>
+            </div>
+            <div style="background: rgba(148, 163, 184, 0.15); border: 1px solid #94a3b8; border-radius: 4px; padding: 4px; text-align: center;">
+              <div style="color: #cbd5e1; font-weight: 700; font-size: 0.65rem;">기존 미끼틀 대조군</div>
+              <div style="color: #cbd5e1; font-size: 0.95rem; font-weight: 900;">1/10 (10.0%)</div>
+              <div style="color: #94a3b8; font-size: 0.6rem;">사료 반응성 저조</div>
+            </div>
+          </div>
+          <div style="font-size: 0.65rem; color: #cbd5e1; margin-top: 2px;">
+            ※ 10/20 새벽 02:31~02:32 멧돼지 출현 섭취 영상 3건 확인 및 03:24 오소리 통과(미끼 무관심) 확인. 젤리형 매트릭스(Type B 100%, Type C 30%)에 대한 섭식 선호도가 기존 배합사료 대비 월등히 우수함을 현장 실증.
+          </div>
         </div>
 
         <!-- 4. [참고용 예시안] 최종보고서 수치화 평가 기준 -->
