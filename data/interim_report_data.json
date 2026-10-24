@@ -1473,7 +1473,7 @@
     "coordinates": "36.639449° N, 127.010684° E (고도 343.8m, 방위 285°)",
     "camera_spec": "IP Wildcam 4K TrailCam (동작감지 적외선 야간센서, LTE 모듈)",
     "install_date": "2026-07-01",
-    "total_scanned_clips": 198,
+    "total_scanned_clips": 199,
     "confirmed_boar_count": 39,
     "ignored_animal_count": 34,
     "bait_palatability": "최상 (10/20 미끼B 100% 완식, 미끼C 30% 섭취 입증)",
@@ -3098,9 +3098,31 @@
             "location": "공주시 문금리 142-5"
           }
         ]
+      },
+      {
+        "date": "2026-10-21",
+        "time": "23:18:47",
+        "category": "심야 비대상 동물(오소리) 유인제 살포 구역 지면 냄새 탐색 및 배회 (미끼 미접근, 안전성 확인)",
+        "work_content": "심야 23:18경 비대상 동물인 오소리(Meles leucurus) 1마리가 출현하여 20초 동안 유인선이 살포된 주변 지면의 냄새를 맡으며 배회하였으나, 설치된 실험용 미끼에는 전혀 접근하거나 섭취하지 않고 지나감 (비대상 동물 미끼 안전성 및 배제율 우수 입증)",
+        "animal_appearance": "오소리 (Meles leucurus) 1마리",
+        "boar_count": "0마리 (비대상)",
+        "reaction_stage": "유인제 살포지 지면 탐색 및 배회 (미끼 미접근, 비대상 안전 입증)",
+        "workers": "무인 센서 카메라 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20261021_231847_000_20_P.jpg",
+            "video_url": "assets/videos/ignored/20261021_231847_000_20_P.mp4",
+            "title": "23:18:47 오소리 1마리 유인제 살포 구역 지면 냄새 탐색 및 배회 (20초 영상)",
+            "animal": "오소리 (Meles leucurus)",
+            "category": "오소리 (비대상)",
+            "time": "23:18:47",
+            "is_night": true
+          }
+        ]
       }
     ],
-    "total_clips": 198,
+    "total_clips": 199,
     "bait_name": "멧돼지 미끼틀과 유인제배합 고형사료"
   },
   {
