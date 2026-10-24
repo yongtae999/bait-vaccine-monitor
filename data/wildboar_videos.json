@@ -1,5 +1,26 @@
 [
   {
+    "id": "vid-badger-1024-032946",
+    "filename": "20261024_032946_000_20_P.mp4",
+    "video_url": "assets/videos/ignored/20261024_032946_000_20_P.mp4",
+    "thumbnail_url": "assets/thumbnails/20261024_032946_000_20_P.jpg",
+    "camera_id": "cam-gj-142-5",
+    "site_name": "C지점 (문금리 142-5)",
+    "date": "2026-10-24",
+    "time": "03:29:46",
+    "is_night": true,
+    "animal_type": "오소리 (Meles leucurus) 1마리",
+    "category": "오소리 (비대상)",
+    "reaction": "새벽(03:29) 오소리 1마리 출현, 살포지 주변 냄새만 맡고 지나감 (미끼 미섭취)",
+    "bait_type": "실험용 미끼 4종(A·B·C·D) 및 테스트용 고형사료",
+    "lat": 36.639449,
+    "lng": 127.010684,
+    "confidence": 0.99,
+    "behavior": "새벽 03:29경 오소리 1마리가 출현하여 미끼 살포지 주변의 냄새만 가볍게 맡으며 지나감 (실험 미끼 및 고형사료에 접촉하거나 섭취하지 않고 단순 통과하여 비대상 동물 안전성 재확인)",
+    "recorded_date": "2026-10-24",
+    "recorded_time": "03:29:46"
+  },
+  {
     "id": "vid-badger-1023-221138",
     "filename": "20261023_221138_000_20_P.mp4",
     "video_url": "assets/videos/ignored/20261023_221138_000_20_P.mp4",
