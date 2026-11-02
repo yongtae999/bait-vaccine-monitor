@@ -1473,12 +1473,114 @@
     "coordinates": "36.639449° N, 127.010684° E (고도 343.8m, 방위 285°)",
     "camera_spec": "IP Wildcam 4K TrailCam (동작감지 적외선 야간센서, LTE 모듈)",
     "install_date": "2026-07-01",
-    "total_scanned_clips": 256,
+    "total_scanned_clips": 265,
     "confirmed_boar_count": 52,
-    "ignored_animal_count": 78,
+    "ignored_animal_count": 87,
     "bait_palatability": "최상 (10/20 미끼B 100% 완식, 미끼C 30% 섭취 입증)",
     "summary_opinion": "진입로 능선 이동통로에 위치하여 7월~10월 주야간 지속적인 멧돼지 개체 접근 및 고형사료 섭취가 실증되었으며, 9월 6일~7일 주간(새끼 4마리) 및 9월 9일 새벽·9월 15일 아침 새끼 8마리 대군집 방문에 이어, 10월 1일 심야(03:01~03:11) 성체 및 아성체 멧돼지 2마리의 집중 먹이 탐색, 10월 8일 새벽(05:51) 멧돼지 2마리 및 아침(06:19) 멧돼지 4마리 군집 이동, 10월 11일 유인제 2통 추가 살포 후 10월 15일 심야(21:39~21:46) 멧돼지 4마리 군집의 7분간 연속 10건 먹이 탐색 및 출현이 실증됨. 아울러 9월 10일·13일·15일·17일·10월 14일 오소리 및 9월 16일·21일·23일·24일·29일·30일·10월 3일·6일·11일·12일 고라니 등 비대상 야생동물이 지속 관찰되었으나 미끼를 섭취하지 않고 주변 풀숲 채식 및 단순 통과 행태만 보여 비대상 동물에 대한 백신 안전성 및 선택적 타깃팅 효과를 철저히 검증함. ?? ?? 10? 17? ??? ?? ?? 4?(Type A~D)? ???? ??? ??? ??? ???? 2??(10.17~10.31) ?? ?? ??? ???.",
     "timeline": [
+      {
+        "date": "2026-10-31",
+        "time": "00:06 / 01:16 / 20:17 ~ 22:51",
+        "category": "심야 및 야간 비대상 야생동물(오소리 1마리) 출현(9건), 미끼 배치 구역 접근 및 토양 굴착(땅파기) 탐색 확인",
+        "work_content": "새벽(00:06, 01:16) 2건 및 야간(20:17~22:51) 7건 등 총 9회에 걸쳐 오소리 1마리가 살포지 주변에 출현함. 특히 야간 20:22경(20261031T202215) 오소리가 미끼 배치 구역으로 밀착 접근하여 앞발로 지면 토양을 파헤치며(굴착/땅파기 행동) 10/27 멧돼지 매립 섭식 잔여 냄새를 집중 탐색하는 특이 행동이 포착됨. 오소리는 굴착 후 냄새만 확인하였을 뿐 백신 미끼 및 미끼틀 사료는 일체 섭취하지 않고 능선으로 퇴장하여 비대상 동물에 대한 백신 안전성을 완벽히 재입증함.",
+        "animal_appearance": "오소리 1마리 (총 9회)",
+        "boar_count": "없음 (비대상 야생동물 출현)",
+        "reaction_stage": "오소리 미끼 배치 구역 토양 굴착(땅파기) 및 지면 냄새 탐색 통과 (9건, 미끼 미섭취)",
+        "workers": "무인 센서 카메라 및 지능형 센서 자동 촬영",
+        "evidences": [
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20261031_225110_000_20_P.jpg",
+            "video_url": "assets/videos/ignored/20261031_225110_000_20_P.mp4",
+            "title": "22:51:10 오소리 1마리 오소리 (20261031_225110_000_20_P.mp4)",
+            "animal": "오소리 (Meles leucurus) 1마리",
+            "category": "오소리 (비대상)",
+            "time": "22:51:10",
+            "is_night": true
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20261031_214214_000_20_P.jpg",
+            "video_url": "assets/videos/ignored/20261031_214214_000_20_P.mp4",
+            "title": "21:42:14 오소리 1마리 오소리 (20261031_214214_000_20_P.mp4)",
+            "animal": "오소리 (Meles leucurus) 1마리",
+            "category": "오소리 (비대상)",
+            "time": "21:42:14",
+            "is_night": true
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20261031_213834_000_20_P.jpg",
+            "video_url": "assets/videos/ignored/20261031_213834_000_20_P.mp4",
+            "title": "21:38:34 오소리 1마리 오소리 (20261031_213834_000_20_P.mp4)",
+            "animal": "오소리 (Meles leucurus) 1마리",
+            "category": "오소리 (비대상)",
+            "time": "21:38:34",
+            "is_night": true
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20261031T213455_facefront_hardware148.jpg",
+            "video_url": "assets/videos/ignored/20261031T213455_facefront_hardware148.mp4",
+            "title": "21:34:55 오소리 1마리 오소리 (20261031T213455_facefront_hardware148.mp4)",
+            "animal": "오소리 (Meles leucurus) 1마리",
+            "category": "오소리 (비대상)",
+            "time": "21:34:55",
+            "is_night": true
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20261031_213408_000_20_P.jpg",
+            "video_url": "assets/videos/ignored/20261031_213408_000_20_P.mp4",
+            "title": "21:34:08 오소리 1마리 오소리 (20261031_213408_000_20_P.mp4)",
+            "animal": "오소리 (Meles leucurus) 1마리",
+            "category": "오소리 (비대상)",
+            "time": "21:34:08",
+            "is_night": true
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20261031T202215_facefront_hardware148.jpg",
+            "video_url": "assets/videos/ignored/20261031T202215_facefront_hardware148.mp4",
+            "title": "20:22:15 오소리 1마리 오소리 (20261031T202215_facefront_hardware148.mp4)",
+            "animal": "오소리 (Meles leucurus) 1마리",
+            "category": "오소리 (비대상)",
+            "time": "20:22:15",
+            "is_night": true
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20261031_201712_000_20_P.jpg",
+            "video_url": "assets/videos/ignored/20261031_201712_000_20_P.mp4",
+            "title": "20:17:12 오소리 1마리 오소리 (20261031_201712_000_20_P.mp4)",
+            "animal": "오소리 (Meles leucurus) 1마리",
+            "category": "오소리 (비대상)",
+            "time": "20:17:12",
+            "is_night": true
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20261031_011619_000_20_P.jpg",
+            "video_url": "assets/videos/ignored/20261031_011619_000_20_P.mp4",
+            "title": "01:16:19 오소리 1마리 오소리 (20261031_011619_000_20_P.mp4)",
+            "animal": "오소리 (Meles leucurus) 1마리",
+            "category": "오소리 (비대상)",
+            "time": "01:16:19",
+            "is_night": true
+          },
+          {
+            "type": "video",
+            "thumb": "assets/thumbnails/20261031_000630_000_20_P.jpg",
+            "video_url": "assets/videos/ignored/20261031_000630_000_20_P.mp4",
+            "title": "00:06:30 오소리 1마리 오소리 (20261031_000630_000_20_P.mp4)",
+            "animal": "오소리 (Meles leucurus) 1마리",
+            "category": "오소리 (비대상)",
+            "time": "00:06:30",
+            "is_night": true
+          }
+        ]
+      },
       {
         "date": "2026-10-30",
         "time": "03:58 / 14:24 ~ 14:29",
@@ -3908,7 +4010,7 @@
         ]
       }
     ],
-    "total_clips": 256,
+    "total_clips": 265,
     "bait_name": "멧돼지 미끼틀과 유인제배합 고형사료"
   },
   {
