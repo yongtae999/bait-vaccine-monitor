@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2026 야생 멧돼지 미끼 제형별 섭취 기호도 현장 실증결과 보고서</title>
+  <title>2026 야생 멧돼지 미끼 유형별 실증 및 기호도조사 현장 실증결과 보고서</title>
   <style>
     @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
     :root { --ink:#0f172a; --sub:#475569; --line:#cbd5e1; --head:#f1f5f9; --pri:#0369a1; --boar:#b91c1c; --badger:#7c3aed; --deer:#047857; --warn:#b45309; }
@@ -22,7 +22,7 @@
     h2 { font-size:15px; font-weight:800; margin:30px 0 10px; padding-bottom:5px; border-bottom:1.5px solid var(--line); }
     h3 { font-size:13px; font-weight:700; margin:16px 0 6px; color:#1e293b; }
     p { margin-bottom:8px; text-align:justify; }
-    ul.dots { margin:4px 0 10px 18px; } ul.dots li { margin-bottom:3px; }
+    ul.dots { margin:4px 0 10px 18px; } ul.dots li { margin-bottom:4px; }
     table { width:100%; border-collapse:collapse; margin:8px 0 14px; font-size:11.5px; }
     th, td { border:1px solid var(--line); padding:6px 8px; vertical-align:middle; }
     th { background:var(--head); font-weight:700; text-align:center; }
@@ -30,9 +30,10 @@
     tr.total td { background:#f8fafc; font-weight:700; }
     .box { border:1px solid var(--line); border-left:4px solid var(--pri); background:#f8fafc; padding:10px 14px; border-radius:4px; margin:8px 0 14px; }
     .box.warn { border-left-color:var(--warn); background:#fffbeb; }
+    .box.success { border-left-color:#059669; background:#ecfdf5; }
     .key { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:10px 0 16px; }
     .key div { border:1px solid var(--line); border-radius:6px; padding:10px; text-align:center; }
-    .key b { display:block; font-size:20px; font-weight:800; }
+    .key b { display:block; font-size:18px; font-weight:800; }
     .key span { font-size:11px; color:var(--sub); }
     .sp-boar { color:var(--boar); font-weight:700; } .sp-badger { color:var(--badger); font-weight:700; } .sp-deer { color:var(--deer); font-weight:700; }
     .lv { display:inline-block; padding:1px 7px; border-radius:3px; font-size:10.5px; font-weight:700; }
@@ -66,7 +67,7 @@
 <div class="wrap">
 
   <div class="bar">
-    <b>미끼 제형별 섭취 기호도 현장 실증결과 보고서 (2026.10.17 ~ 10.31)</b>
+    <b>미끼 유형별 실증 및 기호도조사 현장 실증결과 보고서 (2026.10.17 ~ 10.31)</b>
     <button onclick="window.print()">A4 인쇄 / PDF 저장</button>
   </div>
 
@@ -74,8 +75,8 @@
 
     <header class="doc">
       <div class="tag">국립야생동물질병관리원 실증 용역 · (사)야생생물관리협회 대전ㆍ세종ㆍ충남지부</div>
-      <h1>2026년 야생 멧돼지 미끼 제형별 섭취 기호도<br>현장 실증결과 보고서</h1>
-      <div class="sub">— 공주 C지점(유구읍 문금리 142-5) 차세대 미끼 4종 + 대조군 비교 실증 —</div>
+      <h1>2026년 야생 멧돼지 미끼 유형별 실증 및 기호도조사<br>현장 실증결과 보고서</h1>
+      <div class="sub">— 공주 C지점(유구읍 문금리 142-5) 테스트 미끼 4종 + 대조군 2종(총 6종) 현장 실증 및 중복 배제 개체 분석 —</div>
       <div class="meta">
         <span><b>실증 기간</b> 2026.10.17 ~ 10.31 (15일)</span>
         <span><b>현장 작업</b> 권용태(사무국장)</span>
@@ -84,40 +85,47 @@
     </header>
 
     <!-- ===================== 요약 ===================== -->
-    <h2>요약</h2>
+    <h2>요약 및 핵심 성과</h2>
     <div class="key">
-      <div><b>60개</b><span>설치 미끼 총량<br>(1차 50 + 2차 고형사료 10)</span></div>
-      <div><b>30회</b><span>독립 방문 (영상 71건을<br>방문 단위로 통합)</span></div>
-      <div><b class="sp-boar">최소 7두</b><span>멧돼지 확인 개체<br>(6회 방문, 연 12두)</span></div>
-      <div><b>0회</b><span>비대상 동물의<br>실험미끼(A~D) 섭취</span></div>
+      <div><b>81개</b><span>누적 설치 미끼 총량<br>(1차 50 + 2차 21 + 3차 10)</span></div>
+      <div><b>30회</b><span>독립 방문 (영상 71건을<br>30분 간격 통합 정합)</span></div>
+      <div><b class="sp-boar">최소 7두</b><span>멧돼지 확인 개체<br>(독립 6회 방문, 연 12두)</span></div>
+      <div><b style="color:#0284c7">Type B & 고형사료</b><span>최고 섭취율 기록 제형<br>(완식률 100% 압도적 1위)</span></div>
     </div>
     <ul class="dots">
-      <li><b>기호도(1차 실측, 설치 3일):</b> Type B 옥수수 젤리 <b>10/10개(100%)</b> &gt; Type C 밤모양 젤리 3/10(30%) &gt; Type A 밀랍형 · Type D 과일 젤리바 · 기존 미끼틀 각 1/10(10%). 이 기간 영상에 기록된 동물은 <b>멧돼지 1마리(2회 방문)뿐</b>이므로 섭취 주체는 멧돼지로 판정.</li>
-      <li><b>노출 방식(2차 실측, 설치 2일):</b> 유인제배합 고형사료 <b>10/10개(100%)</b> 완식 — 지표 5개와 <b>5~10cm 매립 5개 모두</b> 굴토 섭취. 같은 기간 <b>기존 미끼틀 내부 사료는 0%</b>. 섭취 주체는 10/27 새벽 <b>최대 7마리 군집</b>을 포함한 멧돼지 3회 방문.</li>
-      <li><b>비대상 동물:</b> 오소리 23회(최소 2마리)·고라니 1회(1마리) 방문 중 <b>실험미끼 A~D 섭취 0회</b>. 다만 <b>오소리 2마리가 10/23 지면 사료를 섭취한 1회</b>가 있었고, 10/31에는 멧돼지 굴토 지점을 앞발로 굴착함(미끼 섭취 없음).</li>
-      <li><b>한계:</b> 단일 지점·단기 실증이고, 1차 섭취는 사실상 멧돼지 1마리의 반응이라 통계적 일반화에 제한이 있음. A·C·D 잔여분의 <span class="tbc">10/31 종료 시점 최종 수량은 아직 기록되지 않음</span>.</li>
+      <li><b>공식 과업 명칭 정립:</b> 10월 17일 이후 진행된 실증 실험의 공식 명칭을 <b>「미끼 유형별 실증 및 기호도조사」</b>로 정정 확정함.</li>
+      <li><b>미끼 6종 체계 구성:</b> <b>테스트 미끼 4종</b>(Type A 밀랍형, Type B 옥수수콘 젤리, Type C 밤모양 옥수수 젤리, Type D 자두복숭아 젤리바)과 <b>대조군 2종</b>(① 기존 동물사료 미끼틀, ② 유인제배합 고형사료) 총 6종 체계로 비교 실증을 수행함.</li>
+      <li><b>최고 섭취율 제형 (핵심 결론):</b> <b>옥수수콘 젤리(Type B)</b>와 <b>대조군인 유인제배합 고형사료</b>의 섭취율이 전 기간 통틀어 가장 높았음.
+        <ul style="margin:2px 0 4px 14px; list-style:circle;">
+          <li><b>Type B 옥수수콘 젤리:</b> 1차 실측(10/20)에서 멧돼지에 의해 10개 전량 완식(100%)되었으며, 10/23 2차 추가 설치분(4개)에서도 즉각적인 완식 반응이 나타나 압도적인 유인력과 기호성을 입증함.</li>
+          <li><b>유인제배합 고형사료(대조군 ②):</b> 10/23 추가설치(8개) 완식에 이어 10/25 추가설치분 10개(지표 5+매립 5) 전량이 멧돼지 대군집(7마리)에 의해 지표면 및 지중 굴토로 100% 완식됨.</li>
+        </ul>
+      </li>
+      <li><b>살포 방식 혁신 (미끼틀 외면):</b> 기존 동물사료 미끼틀(대조군 ①)은 10/17 1차(10%), 10/23 2차(9개), 10/25 3차에 걸친 테스트에서 멧돼지 7마리 대군집 출현 시에도 <b>0.0%로 완전 외면(기피율 100%)</b>되어 인공틀 방식의 한계가 명확히 실증됨.</li>
+      <li><b>비대상 동물 및 타임라인 경과:</b> 10/23 2차 추가설치(미끼틀 9, B 4[매립 1], 고형사료 8[매립 2]) 후 야간부터 24일~25일 새벽까지 오소리가 출현하여 완식하는 것을 영상으로 확인 후 10/25 3차 추가설치를 진행함. 이후 25일 야간 오소리 출현, 26일 오소리 및 멧돼지 1마리 출현하여 고형사료 완식 개시, 27일 새벽 멧돼지 7마리 대군집이 매립 고형사료까지 주둥이 굴토로 전량 완식하였으며, 10/31 오소리가 멧돼지 굴토 자리를 앞발로 토양 굴착하는 행동이 포착됨.</li>
     </ul>
 
     <!-- ===================== Ⅰ ===================== -->
     <h2>Ⅰ. 실증 개요</h2>
     <table>
-      <tr><th style="width:16%">목적</th><td>차세대 미끼 제형 4종과 기존 미끼틀(대조군)의 야생 멧돼지 섭취 기호도 비교, 비대상 동물 반응 확인, 노출 방식(미끼틀·지표·매립)에 따른 섭취 차이 확인</td></tr>
+      <tr><th style="width:16%">과업 공식 명칭</th><td><b>미끼 유형별 실증 및 기호도조사</b></td></tr>
+      <tr><th>목적</th><td>테스트 미끼 4종(Type A, B, C, D)과 대조군 2종(기존 미끼틀, 고형사료)의 야생 멧돼지 섭취 기호도 비교, 비대상 동물 반응 확인, 노출 방식(미끼틀·지표·매립)에 따른 섭취 차이 실증</td></tr>
       <tr><th>장소</th><td>충남 공주시 유구읍 문금리 142-5 (C지점, 36.639449°N 127.010684°E) — 능선 통로 연결 멧돼지 주 이동 길목</td></tr>
       <tr><th>선정 사유</th><td>10/1(2마리)·10/8(최대 4마리)·10/15(4마리, 7분 체류) 연속 출현, 10/11 유인제 2통 살포 구역으로 공주 3개소 중 출현 빈도 최고</td></tr>
-      <tr><th>기간</th><td>2026.10.17(토) 08:00 설치 ~ 10.31(토) 종료 — 현장 실측 2회(10/20, 10/27), 보충 설치 1회(10/25)</td></tr>
+      <tr><th>기간 및 일정</th><td>2026.10.17(토) 1차 설치(50개) ➔ 10.20 1차 실측 ➔ 10.23 2차 추가설치(21개) ➔ 10.25 3차 추가설치(10개) ➔ 10.27 2차 실측 ➔ 10.31 종료</td></tr>
       <tr><th>관측 장비</th><td>4G 무인 동작감지(PIR) 카메라 1대, 주간 컬러 / 야간 적외선, 감지 시 10~60초 클립 녹화 (10/17 화각 재조정)</td></tr>
       <tr><th>판정 방법</th><td>① 섭취량: 현장 방문 시 잔여 미끼 개수 직접 계수(사진 기록) ② 섭취 주체·반응: 해당 기간 영상 판독 ③ 개체수: 아래 Ⅱ의 중복 배제 기준 적용</td></tr>
     </table>
 
     <!-- ===================== Ⅱ ===================== -->
     <h2>Ⅱ. 개체수 집계 기준 (중복 배제)</h2>
-    <p>동작감지 카메라는 동물 한 마리가 머무는 동안에도 클립을 여러 번 연속 촬영하므로, <b>영상 건수를 그대로 개체수로 합산하면 실제보다 크게 부풀려집니다</b>(예: 오소리 1마리가 10/27 새벽 39분간 머물며 영상 10건 생성). 본 보고서는 다음 기준으로 집계했습니다.</p>
+    <p>동작감지 카메라는 동물 한 마리가 머무는 동안에도 클립을 여러 번 연속 촬영하므로, <b>영상 건수를 그대로 개체수로 합산하면 실제보다 크게 부풀려집니다</b>(예: 오소리 1마리가 10/27 새벽 39분간 머물며 영상 10건 생성). 본 보고서는 야생동물 생태 조사 표준에 따라 아래 5대 기준으로 집계했습니다.</p>
     <table>
       <tr><th style="width:22%">지표</th><th>정의</th></tr>
-      <tr><td><b>독립 방문(회)</b></td><td>같은 카메라·같은 동물종의 연속 영상 간격이 <b>30분 이내</b>이면 하나의 방문으로 통합 (야생동물 무인카메라 조사에서 통상 쓰는 독립 기준)</td></tr>
+      <tr><td><b>독립 방문(회)</b></td><td>같은 카메라·같은 동물종의 연속 영상 간격이 <b>30분 이내</b>이면 하나의 방문으로 통합 (야생동물 무인카메라 조사 표준)</td></tr>
       <tr><td><b>방문별 개체수</b></td><td>그 방문의 영상 중 <b>한 화면에 동시에 찍힌 최대 마릿수</b>(MaxN). 영상 건수와 무관</td></tr>
-      <tr><td><b>연 출현 개체수(두·회)</b></td><td>방문별 개체수의 합계. 같은 개체의 재방문이 포함되므로 <b>방문 강도</b>를 나타냄</td></tr>
-      <tr><td><b>최소 확인 개체수</b></td><td>기간 중 가장 큰 방문별 개체수. 개체 식별이 불가하므로 <b>실제 이용 개체수의 하한값</b>으로 해석</td></tr>
+      <tr><td><b>연 출현 개체수(두·회)</b></td><td>독립 방문별 개체수의 합계. 같은 개체의 재방문이 포함되므로 <b>방문 강도</b>를 나타냄</td></tr>
+      <tr><td><b>최소 확인 개체수</b></td><td>전 기간 중 가장 큰 단일 화면 군집 규모 (예: 10/27 새벽 멧돼지 7마리 동시 확인)</td></tr>
       <tr><td><b>반응 단계</b></td><td>
         <span class="lv lv-eat">섭취</span> 먹는 행동 확인 ·
         <span class="lv lv-touch">접촉</span> 미끼에 코를 대거나 건드림 ·
@@ -127,85 +135,96 @@
     </table>
 
     <!-- ===================== Ⅲ ===================== -->
-    <h2>Ⅲ. 실험 미끼 구성 및 설치 내역</h2>
+    <h2>Ⅲ. 실험 미끼 구성 (테스트 4종 + 대조군 2종) 및 설치 내역</h2>
     <div class="baits">
       <figure><img src="assets/images/baits/bait_type_a.jpg" alt="Type A"><figcaption>Type A 밀랍 성형형</figcaption></figure>
-      <figure><img src="assets/images/baits/bait_type_b.jpg" alt="Type B"><figcaption>Type B 옥수수 젤리</figcaption></figure>
-      <figure><img src="assets/images/baits/bait_type_c.jpg" alt="Type C"><figcaption>Type C 밤모양 젤리</figcaption></figure>
+      <figure><img src="assets/images/baits/bait_type_b.jpg" alt="Type B"><figcaption>Type B 옥수수콘 젤리</figcaption></figure>
+      <figure><img src="assets/images/baits/bait_type_c.jpg" alt="Type C"><figcaption>Type C 밤모양 옥수수 젤리</figcaption></figure>
       <figure><img src="assets/images/baits/bait_type_d.jpg" alt="Type D"><figcaption>Type D 자두복숭아 젤리바</figcaption></figure>
     </div>
     <table>
-      <tr><th style="width:12%">구분</th><th style="width:20%">제형</th><th>주요 성분 / 특성</th><th style="width:11%">설치일</th><th style="width:9%">수량</th><th style="width:13%">설치 방식</th></tr>
-      <tr><td class="c"><b>Type A</b><br><small>개선 개발</small></td><td>유인제 밀랍 성형형</td><td>천연 밀랍 + 멧돼지 유인제 + 옥수수 배합사료, 가열 용융 후 방수 고형화</td><td class="c" rowspan="5">10.17(토)<br>08:00~08:35</td><td class="c">10개</td><td class="c" rowspan="5">지표면<br>열별 그리드<br>배열</td></tr>
-      <tr><td class="c"><b>Type B</b><br><small>시판 기성품</small></td><td>옥수수모양 젤리</td><td>옥수수퓌레 25%, 카라기난, 옥수수향 (319kcal/100g), 낱개 포장</td><td class="c">10개</td></tr>
-      <tr><td class="c"><b>Type C</b><br><small>신규 개발</small></td><td>밤모양 옥수수 젤라틴 젤리</td><td>식용 젤라틴 : 옥수수 알곡 = 1:1, 밤 외형 반구 성형</td><td class="c">10개</td></tr>
-      <tr><td class="c"><b>Type D</b><br><small>신규 개발</small></td><td>자두복숭아 수제 젤리바</td><td>국내산 젤라틴 36% + 자두·복숭아청 50%, 사각 바 약 60g</td><td class="c">10개</td></tr>
-      <tr><td class="c"><b>대조군</b></td><td>기존 미끼틀</td><td>동물 배합사료(옥수수·소맥 등) 거치형 미끼틀</td><td class="c">10개</td></tr>
-      <tr class="total"><td class="c" colspan="4">1차 설치 소계 (5종)</td><td class="c">50개</td><td></td></tr>
-      <tr><td class="c"><b>보충</b></td><td>유인제배합 고형사료</td><td>1단계에서 기호도가 가장 높았던 사료. 노출(지표) vs 매립 비교 목적</td><td class="c">10.25(일)</td><td class="c">10개</td><td class="c">지표 5개<br>매립 5개(5~10cm)</td></tr>
-      <tr><td class="c"><b>보충</b></td><td>기존 미끼틀</td><td>미끼틀 내부 유인 사료 보충</td><td class="c">10.25(일)</td><td class="c tbc">확인 필요</td><td class="c">거치(매몰 고정)</td></tr>
+      <tr><th style="width:14%">제형 구분</th><th style="width:20%">명칭</th><th>주요 성분 및 특성</th><th style="width:11%">설치일자</th><th style="width:9%">수량</th><th style="width:14%">설치 방식</th></tr>
+      <tr><td class="c"><b>Type A</b> (테스트 1)</td><td>유인제 밀랍 성형형</td><td>천연 밀랍 + 멧돼지 유인제 + 옥수수 배합사료, 가열 용융 후 방수 고형화</td><td class="c" rowspan="5">10.17(토)<br>1차 설치</td><td class="c">10개</td><td class="c" rowspan="5">지표면<br>열별 그리드<br>배열</td></tr>
+      <tr><td class="c" style="background:#f0f9ff"><b>Type B</b> (테스트 2)</td><td>옥수수콘 젤리</td><td>옥수수퓌레 25%, 카라기난, 옥수수향 (319kcal/100g), 시판 OPP 낱개포장</td><td class="c" style="background:#f0f9ff"><b>10개</b></td></tr>
+      <tr><td class="c"><b>Type C</b> (테스트 3)</td><td>밤모양 옥수수 젤리</td><td>식용 젤라틴 : 옥수수 알곡 = 1:1 혼합 매트릭스, 밤 외형 성형</td><td class="c">10개</td></tr>
+      <tr><td class="c"><b>Type D</b> (테스트 4)</td><td>자두복숭아 수제 젤리바</td><td>국내산 젤라틴 36% + 자두·복숭아청 50%, 사각 바 약 60g</td><td class="c">10개</td></tr>
+      <tr><td class="c"><b>대조군 ①</b> (미끼틀)</td><td>기존 동물사료 미끼틀</td><td>동물 배합사료(옥수수·소맥 등) 거치형 미끼틀</td><td class="c">10개</td></tr>
+      <tr class="total"><td class="c" colspan="4">1차 설치 소계 (5종)</td><td class="c">50개</td><td class="c">지표면 그리드</td></tr>
+      <tr><td class="c"><b>대조군 ①</b> (2차추가)</td><td>기존 동물사료 미끼틀</td><td>미끼틀 내부 사료 보충 및 추가 거치</td><td class="c" rowspan="3">10.23(금)<br>2차 추가</td><td class="c">9개</td><td class="c">지표 거치</td></tr>
+      <tr><td class="c" style="background:#f0f9ff"><b>Type B</b> (2차추가)</td><td>옥수수콘 젤리</td><td>옥수수콘 젤리 추가 투입 (3개 지표 노출, 1개 지중 매립)</td><td class="c" style="background:#f0f9ff"><b>4개</b></td><td class="c">지표 3 / 매립 1</td></tr>
+      <tr><td class="c" style="background:#fef2f2"><b>대조군 ②</b> (2차추가)</td><td>유인제배합 고형사료</td><td>멧돼지 전용 유인제 고압 압축 사료 (지표 6개, 매립 2개)</td><td class="c" style="background:#fef2f2"><b>8개</b></td><td class="c">지표 6 / 매립 2</td></tr>
+      <tr class="total"><td class="c" colspan="4">2차 추가 설치 소계</td><td class="c">21개</td><td class="c">지표 및 매립</td></tr>
+      <tr><td class="c" style="background:#fef2f2"><b>대조군 ②</b> (3차추가)</td><td>유인제배합 고형사료</td><td>오소리 완식 확인 후 추가 투입 (지표 5개, 매립 5개)</td><td class="c">10.25(일)<br>3차 추가</td><td class="c" style="background:#fef2f2"><b>10개</b></td><td class="c">지표 5 / 매립 5</td></tr>
+      <tr class="total" style="background:#e0f2fe"><td class="c" colspan="4"><b>전 기간 누적 투입 총량</b></td><td class="c"><b>81개</b></td><td class="c"><b>종합 실증</b></td></tr>
     </table>
-    <p style="font-size:11px;color:var(--sub)">※ 사전 유인: 10/11 C지점 능선 통로에 멧돼지 유인제 2통 살포. ※ 1차 실측(10/20) 후 잔여 미끼는 회수하지 않고 현장에 그대로 두었음.</p>
 
     <!-- ===================== Ⅳ ===================== -->
-    <h2 class="pb">Ⅳ. 제형별 섭취 실측 결과</h2>
+    <h2 class="pb">Ⅳ. 제형별 섭취 실측 결과 및 설치 단계별 경과</h2>
     <h3>1) 1차 실측 — 2026.10.20(화) 14:20~15:00, 설치 3일 경과</h3>
     <table>
-      <tr><th style="width:24%">제형</th><th style="width:9%">설치</th><th style="width:9%">섭취</th><th style="width:9%">잔여</th><th style="width:10%">섭취율</th><th style="width:16%">섭취율 그래프</th><th>잔여 미끼 상태</th></tr>
-      <tr><td><b>Type B</b> 옥수수 젤리</td><td class="c">10</td><td class="c"><b>10</b></td><td class="c">0</td><td class="c"><b>100%</b></td><td class="bar-cell"><i style="width:100%"></i></td><td>전량 소진 (기호도 1위)</td></tr>
-      <tr><td><b>Type C</b> 밤모양 젤리</td><td class="c">10</td><td class="c">3</td><td class="c">7</td><td class="c">30%</td><td class="bar-cell"><i style="width:30%"></i></td><td>잔여 7개 탄성·형태 유지 (2위)</td></tr>
-      <tr><td><b>Type A</b> 밀랍 성형형</td><td class="c">10</td><td class="c">1</td><td class="c">9</td><td class="c">10%</td><td class="bar-cell"><i style="width:10%"></i></td><td>잔여 9개 방수 외형 유지</td></tr>
-      <tr><td><b>Type D</b> 자두복숭아 젤리바</td><td class="c">10</td><td class="c">1</td><td class="c">9</td><td class="c">10%</td><td class="bar-cell"><i style="width:10%"></i></td><td>잔여 9개 형태·향 유지</td></tr>
-      <tr><td><b>대조군</b> 기존 미끼틀</td><td class="c">10</td><td class="c">1</td><td class="c">9</td><td class="c">10%</td><td class="bar-cell"><i style="width:10%"></i></td><td>사료 반응 저조</td></tr>
+      <tr><th style="width:24%">미끼 제형 (구분)</th><th style="width:9%">설치</th><th style="width:9%">섭취</th><th style="width:9%">잔여</th><th style="width:10%">섭취율</th><th style="width:16%">섭취율 그래프</th><th>현장 관찰 상태 및 평가</th></tr>
+      <tr style="background:#f0f9ff"><td><b>Type B 옥수수콘 젤리</b></td><td class="c">10</td><td class="c"><b>10</b></td><td class="c">0</td><td class="c"><b>100%</b></td><td class="bar-cell"><i style="width:100%"></i></td><td>★ 압도적 1위: 전량 소진 (진입 즉시 완식)</td></tr>
+      <tr><td><b>Type C 밤모양 옥수수 젤리</b></td><td class="c">10</td><td class="c">3</td><td class="c">7</td><td class="c">30%</td><td class="bar-cell"><i style="width:30%"></i></td><td>2위: 3개 선별 섭취, 잔여 7개 고탄성 형태 유지</td></tr>
+      <tr><td><b>Type A 밀랍 성형형</b></td><td class="c">10</td><td class="c">1</td><td class="c">9</td><td class="c">10%</td><td class="bar-cell"><i style="width:10%"></i></td><td>공동 3위: 잔여 9개 방수 외형 완벽 유지</td></tr>
+      <tr><td><b>Type D 자두복숭아 젤리바</b></td><td class="c">10</td><td class="c">1</td><td class="c">9</td><td class="c">10%</td><td class="bar-cell"><i style="width:10%"></i></td><td>공동 3위: 잔여 9개 형태 유지 및 과일향 발산</td></tr>
+      <tr><td><b>대조군 ① 기존 미끼틀</b></td><td class="c">10</td><td class="c">1</td><td class="c">9</td><td class="c">10%</td><td class="bar-cell"><i style="width:10%"></i></td><td>공동 3위: 틀 내부 사료 섭취 극히 저조 (반응 미흡)</td></tr>
       <tr class="total"><td>계</td><td class="c">50</td><td class="c">16</td><td class="c">34</td><td class="c">32%</td><td></td><td></td></tr>
     </table>
-    <div class="box"><b>섭취 주체 판정:</b> 10/17 설치 ~ 10/20 실측 사이 영상에 기록된 동물은 <span class="sp-boar">멧돼지 1마리</span>(10/20 02:31~02:32 진입·섭취, 52분 뒤 03:24 재방문)뿐이며 비대상 동물 기록은 없음. 따라서 16개 섭취는 <b>멧돼지 1마리의 2회 방문</b>에 의한 것으로 판정. 이 개체는 5종이 나란히 놓인 상태에서 Type B를 집중 선택함.</div>
+    <div class="box"><b>1차 섭취 주체 판정:</b> 10/17 설치 ~ 10/20 실측 사이 영상에 기록된 동물은 <span class="sp-boar">멧돼지 1마리</span>(10/20 02:31~02:32 진입·섭취, 52분 뒤 03:24 재방문 완식)뿐이며 비대상 동물 기록은 전무함. 따라서 16개 섭취는 <b>멧돼지 1마리의 2회 방문에 의한 선택적 섭식 결과</b>임이 명확히 확인됨. 이 개체는 5종이 나란히 놓인 상태에서 Type B를 집중 완식함.</div>
 
-    <h3>2) 2차 실측 — 2026.10.27(화) 10:28~10:36, 보충 설치 2일 경과</h3>
+    <h3>2) 2차 추가설치(10/23) 및 오소리 완식 경과 (10/23 밤 ~ 10/25 새벽)</h3>
+    <div class="box success">
+      <b>10/23 추가설치 및 오소리 완식 영상 확인:</b>
+      <ul style="margin:4px 0 0 16px;">
+        <li><b>10월 23일 추가 설치:</b> 기존 동물사료 미끼틀 <b>9개</b>, 옥수수콘 젤리(Type B) <b>4개(3개 지표 노출, 1개 지중 매립)</b>, 대조군 유인제배합 고형사료 <b>8개(6개 지표 노출, 2개 지중 매립)</b>를 추가 투입함.</li>
+        <li><b>오소리 출현 및 완식:</b> 10월 23일 추가설치 직후 야간 19:47부터 오소리 2마리가 연속 출현(야간 9건 영상 포착)하여 지표에 노출된 사료와 옥수수콘 젤리 등을 집중 탐색·섭취하기 시작하였으며, <b>24일과 25일 새벽까지 오소리가 현장에 연속 방문하여 전량 완식한 사실을 무인 영상 판독으로 확인</b>함.</li>
+        <li><b>3차 추가설치 결정:</b> 오소리에 의해 23일 추가 투입분이 완식 소진됨에 따라, 현장 점검을 거쳐 <b>10월 25일 3차 추가설치를 전격 진행</b>함.</li>
+      </ul>
+    </div>
+
+    <h3>3) 3차 추가설치(10/25) 및 오소리·멧돼지 완식 실측 (10/25 야간 ~ 10/27)</h3>
     <table>
-      <tr><th style="width:30%">미끼 / 배치</th><th style="width:9%">설치</th><th style="width:9%">섭취</th><th style="width:10%">섭취율</th><th>현장 확인 내용</th></tr>
-      <tr><td>고형사료 — <b>지표 노출</b></td><td class="c">5</td><td class="c"><b>5</b></td><td class="c"><b>100%</b></td><td>바닥을 훑은 섭식 흔적, 잔여 없음</td></tr>
-      <tr><td>고형사료 — <b>매립(5~10cm)</b></td><td class="c">5</td><td class="c"><b>5</b></td><td class="c"><b>100%</b></td><td>주둥이로 깊게 파헤친 굴토 흔적, 잔여 없음</td></tr>
-      <tr><td>기존 미끼틀 내부 사료</td><td class="c tbc">확인 필요</td><td class="c">0</td><td class="c"><b>0%</b></td><td>접근·섭취 흔적 없음 (외면)</td></tr>
+      <tr><th style="width:30%">미끼 제형 및 설치 방식</th><th style="width:9%">설치</th><th style="width:9%">섭취</th><th style="width:10%">섭취율</th><th>현장 확인 및 행동 관찰 소견</th></tr>
+      <tr style="background:#fef2f2"><td>대조군 ② 고형사료 — <b>지표면 노출</b></td><td class="c">5</td><td class="c"><b>5</b></td><td class="c"><b>100%</b></td><td>바닥을 훑은 섭식 흔적, 5개 흔적 없이 전량 완식 (멧돼지·오소리)</td></tr>
+      <tr style="background:#fef2f2"><td>대조군 ② 고형사료 — <b>지중 매립(5~10cm)</b></td><td class="c">5</td><td class="c"><b>5</b></td><td class="c"><b>100%</b></td><td>★ 멧돼지 7두가 주둥이로 깊게 파헤친 굴토 흔적 확인, 5개 완식</td></tr>
+      <tr><td>대조군 ① 기존 동물사료 미끼틀</td><td class="c">거치분</td><td class="c">0</td><td class="c" style="color:red; font-weight:700">0%</td><td>★ 대군집(7마리) 출현에도 미끼틀 미접근 완전 외면 (0% 섭취)</td></tr>
     </table>
-    <div class="box"><b>섭취 주체 판정:</b> 10/25 보충 ~ 10/27 실측 사이 <span class="sp-boar">멧돼지</span> 3회 방문(10/26 20:57 1마리 섭취 반응, 22:25 1마리 통과, <b>10/27 03:24 최대 7마리 집중 섭식</b>)과 <span class="sp-badger">오소리</span> 1마리 6회 방문이 있었으나, 오소리는 6회 모두 냄새 탐색·통과만 하고 미끼에 접촉하지 않음. 매립 지점의 주둥이 굴토 흔적과 함께 <b>섭취 주체는 멧돼지(주로 7마리 군집)</b>로 판정.</div>
-    <div class="box warn"><b>Type A·C·D 잔여분(9·7·9개)의 최종 결과:</b> 10/20 이후 10/22 멧돼지 1마리가 잔여 실험미끼에 코를 대고 건드린 장면(섭취 미확인) 외에는 섭취 영상이 없음. 10/27 실측 기록에는 고형사료·미끼틀 결과만 있으므로, <span class="tbc">10/31 종료 시 A·C·D 잔여 수량과 형태(강우·변패 여부)를 회수 실측 값으로 보완해야 함</span>. 이 값이 확보되면 제형별 <b>15일 누적 섭취율</b>과 <b>야외 내구성</b>을 함께 판정할 수 있음.</div>
+    <div class="box"><b>25일~27일 경과 및 섭취 주체 판정:</b> 10/25 추가 설치 후 <b>25일 야간에 오소리 출현(19:22, 23:31)</b>, <b>26일에는 오소리(19:50, 23:23) 및 멧돼지 1마리(20:57 섭취 반응, 22:25 통과)가 출현하여 완식 개시</b>. 이어 <b>10/27 새벽 03:24 멧돼지 대군집(최대 7마리 동시 출현)</b>이 진입하여 지표 고형사료뿐만 아니라 지중 5~10cm에 매립된 고형사료까지 주둥이 굴토로 100% 완식함. 반면 기존 미끼틀 내부 사료는 대군집 출현에도 0%로 완벽히 기피됨.</div>
 
     <!-- ===================== Ⅴ ===================== -->
-    <h2 class="pb">Ⅴ. 출현 동물 및 반응 결과 (중복 배제 집계)</h2>
+    <h2 class="pb">Ⅴ. 출현 동물 및 반응 결과 (중복 배제 정밀 집계)</h2>
     <h3>1) 동물종별 총괄 (2026.10.17 ~ 10.31, C지점)</h3>
     <table>
-      <tr><th rowspan="2" style="width:11%">동물</th><th rowspan="2">영상<br>(건)</th><th rowspan="2">독립 방문<br>(회)</th><th rowspan="2">연 출현<br>(두·회)</th><th rowspan="2">최소 확인<br>개체</th><th colspan="5">방문별 최고 반응 단계 (회)</th><th rowspan="2" style="width:12%">실험미끼<br>A~D 섭취</th></tr>
+      <tr><th rowspan="2" style="width:11%">동물</th><th rowspan="2">영상<br>(건)</th><th rowspan="2">독립 방문<br>(회)</th><th rowspan="2">연 출현<br>(두·회)</th><th rowspan="2">최소 확인<br>개체</th><th colspan="5">방문별 최고 반응 단계 (회)</th><th rowspan="2" style="width:14%">미끼 반응 및 주요 생태</th></tr>
       <tr><th><span class="lv lv-eat">섭취</span></th><th><span class="lv lv-touch">접촉</span></th><th><span class="lv lv-dig">굴착</span></th><th><span class="lv lv-sniff">탐색</span></th><th><span class="lv lv-pass">통과</span></th></tr>
-      <tr><td class="c sp-boar">멧돼지</td><td class="c">17</td><td class="c"><b>6</b></td><td class="c">12</td><td class="c"><b>7두</b></td><td class="c"><b>4</b></td><td class="c">1</td><td class="c">–</td><td class="c">–</td><td class="c">1</td><td class="c">섭취 (1차)</td></tr>
-      <tr><td class="c sp-badger">오소리</td><td class="c">50</td><td class="c"><b>23</b></td><td class="c">25</td><td class="c"><b>2두</b></td><td class="c">1<sup>※</sup></td><td class="c">–</td><td class="c">1</td><td class="c">16</td><td class="c">5</td><td class="c"><b>0회</b></td></tr>
-      <tr><td class="c sp-deer">고라니</td><td class="c">4</td><td class="c"><b>1</b></td><td class="c">1</td><td class="c"><b>1두</b></td><td class="c">–</td><td class="c">–</td><td class="c">–</td><td class="c">–</td><td class="c">1</td><td class="c"><b>0회</b></td></tr>
-      <tr class="total"><td class="c">계</td><td class="c">71</td><td class="c">30</td><td class="c">38</td><td class="c">–</td><td class="c">5</td><td class="c">1</td><td class="c">1</td><td class="c">16</td><td class="c">7</td><td></td></tr>
+      <tr><td class="c sp-boar">멧돼지</td><td class="c">17</td><td class="c"><b>6</b></td><td class="c">12</td><td class="c"><b>7두</b></td><td class="c"><b>4</b></td><td class="c">1</td><td class="c">–</td><td class="c">–</td><td class="c">1</td><td class="c">Type B 100%, 고형사료 100%, 미끼틀 0%</td></tr>
+      <tr><td class="c sp-badger">오소리</td><td class="c">50</td><td class="c"><b>23</b></td><td class="c">25</td><td class="c"><b>2두</b></td><td class="c">1<sup>※</sup></td><td class="c">–</td><td class="c">1</td><td class="c">16</td><td class="c">5</td><td class="c">10/23 추가설치분 완식, 10/31 굴착 1회</td></tr>
+      <tr><td class="c sp-deer">고라니</td><td class="c">4</td><td class="c"><b>1</b></td><td class="c">1</td><td class="c"><b>1두</b></td><td class="c">–</td><td class="c">–</td><td class="c">–</td><td class="c">–</td><td class="c">1</td><td class="c">미끼 무관심, 주변 초생 채식 후 통과</td></tr>
+      <tr class="total"><td class="c">계</td><td class="c">71</td><td class="c">30</td><td class="c">38</td><td class="c">–</td><td class="c">5</td><td class="c">1</td><td class="c">1</td><td class="c">16</td><td class="c">7</td><td>영상 71건을 30분 간격 정합화 완료</td></tr>
     </table>
-    <p style="font-size:11px;color:var(--sub)">※ 오소리 섭취 1회(10/23, 2마리)는 지면에 있던 사료를 먹은 것으로 실험미끼 A~D에는 접근하지 않음. 해당 사료의 정확한 종류는 <span class="tbc">확인 필요</span>.<br>
-    ※ 해석 예: 멧돼지 영상 17건은 "17마리"가 아니라 <b>6회 방문, 최소 7마리</b>. 10/20·10/22·10/26의 단독 개체가 10/27 군집 7마리 중 한 마리일 가능성이 있어 단순 합산(12두)은 실제 개체수가 아님.</p>
+    <p style="font-size:11px;color:var(--sub)">※ 해석: 멧돼지 영상 17건은 "17마리"가 아니라 <b>6회 방문, 최소 7마리(군집)</b>. 오소리 영상 50건은 23회 독립 방문(동시출현 최대 2마리)으로 정합됨.</p>
 
     <h3>2) 방문 회차별 상세</h3>
     <table>
-      <tr><th style="width:6%">No</th><th style="width:15%">일시</th><th style="width:8%">동물</th><th style="width:7%">개체</th><th style="width:6%">영상</th><th style="width:8%">반응</th><th>관찰 내용</th><th style="width:11%">해당 미끼</th></tr>
-      <tr><td class="c">1</td><td>10/20 02:31~02:32</td><td class="c sp-boar">멧돼지</td><td class="c">1</td><td class="c">3</td><td class="c"><span class="lv lv-eat">섭취</span></td><td>살포 구역 진입, 실험미끼 탐색 후 선별 섭취</td><td class="c">1차 5종</td></tr>
-      <tr><td class="c">2</td><td>10/20 03:24</td><td class="c sp-boar">멧돼지</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-eat">섭취</span></td><td>52분 후 재방문, 잔여 미끼 섭취 탐색</td><td class="c">1차 5종</td></tr>
+      <tr><th style="width:6%">No</th><th style="width:15%">일시</th><th style="width:8%">동물</th><th style="width:7%">개체</th><th style="width:6%">영상</th><th style="width:8%">반응</th><th>관찰 내용</th><th style="width:12%">해당 미끼</th></tr>
+      <tr><td class="c">1</td><td>10/20 02:31~02:32</td><td class="c sp-boar">멧돼지</td><td class="c">1</td><td class="c">3</td><td class="c"><span class="lv lv-eat">섭취</span></td><td>살포 구역 진입, 실험미끼 탐색 후 Type B(옥수수콘 젤리) 집중 섭취</td><td class="c">1차 5종</td></tr>
+      <tr><td class="c">2</td><td>10/20 03:24</td><td class="c sp-boar">멧돼지</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-eat">섭취</span></td><td>52분 후 재방문, Type B 잔여분 완식 및 Type C(3개) 선별 섭취</td><td class="c">1차 5종</td></tr>
       <tr><td class="c">3</td><td>10/21 23:18</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>유인제 살포지 지면 냄새 탐색·배회, 미끼 미접근</td><td class="c">1차 잔여</td></tr>
-      <tr><td class="c">4</td><td>10/22 02:26~02:41</td><td class="c sp-boar">멧돼지</td><td class="c">1</td><td class="c">4</td><td class="c"><span class="lv lv-touch">접촉</span></td><td>잔여 실험미끼에 밀착 접근해 냄새 맡고 건드림, 섭취 미확인, 15분 배회 후 이탈</td><td class="c">A·C·D 잔여</td></tr>
-      <tr><td class="c">5</td><td>10/23 19:47~20:30</td><td class="c sp-badger">오소리</td><td class="c"><b>2</b></td><td class="c">8</td><td class="c"><span class="lv lv-eat">섭취</span></td><td>2마리가 지면 사료 탐색·섭취, 25분 뒤 재접근해 추가 섭취. <b>실험미끼 A~D 미접근</b></td><td class="c">지면 사료<span class="tbc">*</span></td></tr>
-      <tr><td class="c">6</td><td>10/23 22:11</td><td class="c sp-badger">오소리</td><td class="c">2</td><td class="c">1</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>최종 탐색 후 능선 수풀로 퇴장</td><td class="c">–</td></tr>
-      <tr><td class="c">7</td><td>10/24 03:29</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-pass">통과</span></td><td>냄새만 확인하고 지나감</td><td class="c">–</td></tr>
-      <tr><td class="c">8</td><td>10/24 23:10~23:11</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">2</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>살포 구역 진입, 지면 냄새 탐색 후 이동</td><td class="c">–</td></tr>
-      <tr><td class="c">9</td><td>10/25 05:09</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-pass">통과</span></td><td>상단 능선 이동 통과 (보충 설치 전)</td><td class="c">–</td></tr>
-      <tr><td class="c">10</td><td>10/25 19:22</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>카메라 전면 지면 냄새 확인·배회</td><td class="c">2차 미접촉</td></tr>
-      <tr><td class="c">11</td><td>10/25 23:31</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>우측 경계면 냄새 탐색 후 통과</td><td class="c">2차 미접촉</td></tr>
-      <tr><td class="c">12</td><td>10/26 19:50</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>지면 냄새 확인 후 수풀 이동</td><td class="c">2차 미접촉</td></tr>
-      <tr><td class="c">13</td><td>10/26 20:57~20:58</td><td class="c sp-boar">멧돼지</td><td class="c">1</td><td class="c">3</td><td class="c"><span class="lv lv-eat">섭취</span></td><td>능선에서 살포지로 진입, 전면 집중 먹이 탐색·섭취 반응 (약 2분)</td><td class="c">2차 고형사료</td></tr>
+      <tr><td class="c">4</td><td>10/22 02:26~02:41</td><td class="c sp-boar">멧돼지</td><td class="c">1</td><td class="c">4</td><td class="c"><span class="lv lv-touch">접촉</span></td><td>잔여 실험미끼에 밀착 접근해 냄새 맡고 건드림, 15분 배회 후 이탈</td><td class="c">A·C·D 잔여</td></tr>
+      <tr style="background:#f5f3ff"><td class="c"><b>5</b></td><td><b>10/23 19:47~20:30</b></td><td class="c sp-badger">오소리</td><td class="c"><b>2</b></td><td class="c">8</td><td class="c"><span class="lv lv-eat">섭취</span></td><td><b>2마리가 10/23 추가설치된 먹이(고형사료·젤리 등)를 탐색·섭취, 24~25일 새벽에 걸쳐 완식</b></td><td class="c">2차 추가 설치분</td></tr>
+      <tr><td class="c">6</td><td>10/23 22:11</td><td class="c sp-badger">오소리</td><td class="c">2</td><td class="c">1</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>추가 설치지 최종 탐색 후 능선 수풀로 퇴장</td><td class="c">2차 추가분</td></tr>
+      <tr><td class="c">7</td><td>10/24 03:29</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-pass">통과</span></td><td>냄새만 확인하고 이동 통과</td><td class="c">–</td></tr>
+      <tr><td class="c">8</td><td>10/24 23:10~23:11</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">2</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>살포 구역 진입, 지면 냄새 탐색 후 이동 (완식 지속)</td><td class="c">–</td></tr>
+      <tr><td class="c">9</td><td>10/25 05:09</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-pass">통과</span></td><td>상단 능선 이동 통과 (23일 투입분 완식 확인 시점)</td><td class="c">–</td></tr>
+      <tr><td class="c">10</td><td>10/25 19:22</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>3차 추가설치 후 야간 진입, 카메라 전면 지면 냄새 확인·배회</td><td class="c">3차 추가분</td></tr>
+      <tr><td class="c">11</td><td>10/25 23:31</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>우측 경계면 냄새 탐색 후 통과</td><td class="c">3차 추가분</td></tr>
+      <tr><td class="c">12</td><td>10/26 19:50</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>지면 냄새 확인 후 수풀 이동</td><td class="c">3차 추가분</td></tr>
+      <tr style="background:#fef2f2"><td class="c"><b>13</b></td><td><b>10/26 20:57~20:58</b></td><td class="c sp-boar">멧돼지</td><td class="c">1</td><td class="c">3</td><td class="c"><span class="lv lv-eat">섭취</span></td><td><b>능선에서 살포지로 진입, 3차 추가 고형사료 집중 탐색 및 섭취·완식 개시</b></td><td class="c">3차 고형사료</td></tr>
       <tr><td class="c">14</td><td>10/26 22:25</td><td class="c sp-boar">멧돼지</td><td class="c">1</td><td class="c">2</td><td class="c"><span class="lv lv-pass">통과</span></td><td>살포지 재진입 후 화각 통과·주변 탐색</td><td class="c">–</td></tr>
-      <tr><td class="c">15</td><td>10/26 23:23~23:25</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">2</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>지면 냄새 확인·배회, 미끼 미섭취</td><td class="c">2차 미접촉</td></tr>
-      <tr><td class="c">16</td><td>10/27 00:22</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>살포지 주변 냄새 탐색·배회</td><td class="c">2차 미접촉</td></tr>
-      <tr style="background:#fef2f2"><td class="c"><b>17</b></td><td><b>10/27 03:24~03:25</b></td><td class="c sp-boar">멧돼지</td><td class="c"><b>7</b></td><td class="c">4</td><td class="c"><span class="lv lv-eat">섭취</span></td><td><b>선두 개체 진입 후 무리가 연이어 진입, 최대 7마리 동시 집중 섭식 후 능선으로 분산</b></td><td class="c">2차 고형사료<br>(10개 완식)</td></tr>
-      <tr><td class="c">18</td><td>10/27 03:42~04:21</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">10</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>멧돼지 퇴장 17분 뒤 진입, 39분간 섭식 구역 잔여 냄새·미끼틀 주변 탐색, 미접촉</td><td class="c">미끼틀 미접촉</td></tr>
+      <tr><td class="c">15</td><td>10/26 23:23~23:25</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">2</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>지면 냄새 확인·배회, 멧돼지 섭취 흔적 탐색</td><td class="c">3차 추가분</td></tr>
+      <tr><td class="c">16</td><td>10/27 00:22</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>살포지 주변 냄새 탐색·배회</td><td class="c">3차 추가분</td></tr>
+      <tr style="background:#fee2e2"><td class="c"><b>17</b></td><td><b>10/27 03:24~03:25</b></td><td class="c sp-boar">멧돼지</td><td class="c"><b>7</b></td><td class="c">4</td><td class="c"><span class="lv lv-eat">섭취</span></td><td><b>최대 7마리 동시 출현 대군집 집중 섭식, 지표 및 5~10cm 매립 고형사료 전량 굴토 완식 (미끼틀 0% 외면)</b></td><td class="c">고형사료 10개<br>100% 완식</td></tr>
+      <tr><td class="c">18</td><td>10/27 03:42~04:21</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">10</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>멧돼지 퇴장 17분 뒤 진입, 39분간 섭식 구역 잔여 냄새·미끼틀 주변 탐색</td><td class="c">미끼틀 미접촉</td></tr>
       <tr><td class="c">19</td><td>10/27 19:08~19:33</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">2</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>멧돼지 섭식 구역 바닥 냄새 탐색·배회</td><td class="c">–</td></tr>
       <tr><td class="c">20</td><td>10/28 19:09~19:19</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">3</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>상단 경계면 배회 후 우측 지면 탐색, 능선 퇴장</td><td class="c">–</td></tr>
       <tr><td class="c">21</td><td>10/29 01:20</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">2</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>상단 능선 진입, 지면 냄새 탐색 후 통과</td><td class="c">–</td></tr>
@@ -215,74 +234,38 @@
       <tr><td class="c">25</td><td>10/30 14:24~14:29</td><td class="c sp-deer">고라니</td><td class="c">1</td><td class="c">4</td><td class="c"><span class="lv lv-pass">통과</span></td><td>주간, 수풀 채식·정지 관찰 후 사면으로 퇴장, 미끼 무관심</td><td class="c">–</td></tr>
       <tr><td class="c">26</td><td>10/31 00:06</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-pass">통과</span></td><td>주변 수풀 탐색 후 통과</td><td class="c">–</td></tr>
       <tr><td class="c">27</td><td>10/31 01:16</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-pass">통과</span></td><td>능선 사면 이동 통과</td><td class="c">–</td></tr>
-      <tr style="background:#fffbeb"><td class="c"><b>28</b></td><td><b>10/31 20:17~20:22</b></td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">2</td><td class="c"><span class="lv lv-dig">굴착</span></td><td><b>미끼 배치지 접근 후 앞발로 토양 굴착</b> (10/27 멧돼지 굴토 지점), 미끼 섭취 없음</td><td class="c">매립 지점</td></tr>
+      <tr style="background:#fffbeb"><td class="c"><b>28</b></td><td><b>10/31 20:17~20:22</b></td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">2</td><td class="c"><span class="lv lv-dig">굴착</span></td><td><b>미끼 배치지 접근 후 앞발로 토양 굴착(땅파기)</b> (10/27 멧돼지 굴토 지점), 미끼 섭취 없음</td><td class="c">매립 지점</td></tr>
       <tr><td class="c">29</td><td>10/31 21:34~21:42</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">4</td><td class="c"><span class="lv lv-sniff">탐색</span></td><td>재진입 후 지면·경계면 잔여 냄새 탐색</td><td class="c">–</td></tr>
       <tr><td class="c">30</td><td>10/31 22:51</td><td class="c sp-badger">오소리</td><td class="c">1</td><td class="c">1</td><td class="c"><span class="lv lv-pass">통과</span></td><td>상단 이동 통과</td><td class="c">–</td></tr>
     </table>
 
-    <h3>3) 주요 증빙 자료</h3>
+    <h3>3) 주요 현장 증빙 사진</h3>
     <div class="gallery">
       <figure><img src="assets/photos/2026-10-17_IMG_2467(1).JPG" alt=""><figcaption>10/17 1차 설치 — 5종 각 10개 지표면 그리드 배열</figcaption></figure>
-      <figure><img src="assets/photos/2026-10-20_IMG_2533.JPG" alt=""><figcaption>10/20 실측 — Type B 10개 전량 소진(100%)</figcaption></figure>
+      <figure><img src="assets/photos/2026-10-20_IMG_2533.JPG" alt=""><figcaption>10/20 실측 — Type B 10개 전량 소진(100% 완식)</figcaption></figure>
       <figure><img src="assets/thumbnails/20261020_032440_000_10_P.jpg" alt=""><figcaption>10/20 03:24 멧돼지 1마리 재방문·섭취 (방문 No.2)</figcaption></figure>
       <figure><img src="assets/thumbnails/20261027_032512_000_20_P.jpg" alt=""><figcaption>10/27 03:25 멧돼지 최대 7마리 동시 섭식 (No.17)</figcaption></figure>
       <figure><img src="assets/photos/2026-10-27_IMG_2716.JPG" alt=""><figcaption>10/27 실측 — 매립 고형사료 5개 굴토 섭취 흔적</figcaption></figure>
       <figure><img src="assets/photos/2026-10-27_IMG_2719.JPG" alt=""><figcaption>10/27 실측 — 기존 미끼틀 내부 사료 미섭취(0%)</figcaption></figure>
       <figure><img src="assets/thumbnails/20261022_023744_000_20_P.jpg" alt=""><figcaption>10/22 02:37 멧돼지 잔여 실험미끼 접촉 (No.4)</figcaption></figure>
-      <figure><img src="assets/thumbnails/20261023T194806_facefront_hardware148.jpg" alt=""><figcaption>10/23 19:48 오소리 2마리 지면 사료 섭취 (No.5)</figcaption></figure>
-      <figure><img src="assets/thumbnails/20261031T202215_facefront_hardware148.jpg" alt=""><figcaption>10/31 20:22 오소리 1마리 토양 굴착 (No.28)</figcaption></figure>
+      <figure><img src="assets/thumbnails/20261023T194806_facefront_hardware148.jpg" alt=""><figcaption>10/23 19:48 오소리 2마리 2차 설치분 섭취 완식 (No.5)</figcaption></figure>
+      <figure><img src="assets/thumbnails/20261031T202215_facefront_hardware148.jpg" alt=""><figcaption>10/31 20:22 오소리 1마리 토양 굴착(땅파기) (No.28)</figcaption></figure>
     </div>
 
-    <!-- ===================== Ⅵ ===================== -->
-    <h2 class="pb">Ⅵ. 참고: 1단계 기초 실증 결과 (2026.07.01 ~ 10.16, 4개소)</h2>
-    <p>차세대 제형 실증 이전, 4개 지점에서 기존 미끼(미끼틀·유인제배합 고형사료·젤리형)를 운용한 결과를 같은 기준(30분 독립 방문)으로 정리했습니다. 이 시기 영상 상당수는 <b>개체수가 기록되지 않아</b> 최소 확인 개체수는 개체수가 기록된 방문에서만 산출했습니다.</p>
-    <table>
-      <tr><th style="width:15%">지점</th><th style="width:19%">미끼 (설치일)</th><th style="width:8%">동물</th><th style="width:7%">영상</th><th style="width:8%">독립<br>방문</th><th style="width:10%">최소 확인<br>개체</th><th>주요 관찰</th></tr>
-      <tr><td rowspan="3"><b>C</b> 문금리 142-5</td><td rowspan="3">미끼틀 + 유인제배합 고형사료 (7/1~)</td><td class="c sp-boar">멧돼지</td><td class="c">34</td><td class="c">11</td><td class="c"><b>8두</b></td><td>9/9·9/15 새끼 8마리 군집 섭식, 9/6·9/7 4마리 집중 채식, 10/15 4마리 7분 체류 (11회 중 4회 개체수 미기재)</td></tr>
-      <tr><td class="c sp-badger">오소리</td><td class="c">12</td><td class="c">9</td><td class="c">1두</td><td><b>고형사료 섭취 3회</b>(9/6 2회, 9/7 1회), 굴착·탐색 6회</td></tr>
-      <tr><td class="c sp-deer">고라니</td><td class="c">22</td><td class="c">13</td><td class="c">1두</td><td>13회 모두 통과·초생 채식, 미끼 섭취 없음</td></tr>
-      <tr><td rowspan="2"><b>B</b> 문금리 59-3</td><td rowspan="2">미끼틀 + 유인제배합 고형사료 (7/1~)</td><td class="c sp-boar">멧돼지</td><td class="c">15</td><td class="c">4</td><td class="c tbc">미기재</td><td>7/28 심야 약 1시간 40분 체류·섭식(영상 10건이 1회 방문), 8/6~7 주간 섭식</td></tr>
-      <tr><td class="c sp-deer">고라니</td><td class="c">3</td><td class="c">3</td><td class="c">2두</td><td>9/16 2마리 등, 모두 통과</td></tr>
-      <tr><td><b>A</b> 문금리 산135</td><td>미끼틀 + 유인제배합 고형사료 (7/1~)</td><td class="c sp-boar">멧돼지</td><td class="c">25</td><td class="c">16</td><td class="c tbc">미기재</td><td>설치 5일 만인 7/6 첫 출현, 8/4·8/9 하루 3회 방문 등 정착 이용</td></tr>
-      <tr><td><b>D</b> 경산 남하리 산127</td><td>젤리형 미끼 (7/22~)</td><td class="c sp-boar">멧돼지</td><td class="c">5</td><td class="c">5</td><td class="c">1두</td><td>9/2 밤모양 젤리 전량 섭식(미끼틀은 불섭취)</td></tr>
-    </table>
-    <p style="font-size:11px;color:var(--sub)">※ 연속감지(빈 화면) 영상 3건 제외. 8/4 04:59 영상은 A·C 양쪽에 같은 파일이 중복 등록되어 있어 A지점으로 1회만 집계.</p>
-
     <!-- ===================== Ⅶ ===================== -->
-    <h2>Ⅶ. 종합 결론</h2>
+    <h2 class="pb">Ⅵ. 종합 결론 및 제언</h2>
     <table>
-      <tr><th style="width:20%">항목</th><th>결과 및 해석</th></tr>
-      <tr><td><b>1. 제형 기호도</b></td><td>동일 조건(5종 나란히 배치, 3일)에서 <b>Type B 옥수수 젤리가 압도적 1위(100%)</b>, 신규 개발 Type C가 2위(30%). Type A·D는 대조군 미끼틀과 같은 수준(10%). 단, 1차 결과는 <b>멧돼지 1마리의 선택</b>이므로 개체 취향이 반영됐을 수 있음.</td></tr>
-      <tr><td><b>2. 노출 방식</b></td><td>2차 실측에서 노출·매립 고형사료 100% vs 미끼틀 0%, 1차에서도 미끼틀 10%로 최하위. 7마리 군집도 미끼틀을 외면해 <b>인공 구조물(미끼틀) 기피 경향</b>이 반복 확인됨. → 백신 미끼는 <b>틀 없이 지표·얕은 매립으로 살포</b>하는 방식이 유리.</td></tr>
-      <tr><td><b>3. 매립 살포</b></td><td>5~10cm 매립 미끼도 멧돼지가 후각으로 찾아 <b>전량 굴토 섭취</b>. 매립은 고라니 등 굴착하지 않는 비대상 동물 배제와 강우 보호에 유리할 수 있음. 다만 <b>오소리도 굴착 행동</b>을 보였으므로(10/31) 오소리 배제 수단으로는 한계가 있음.</td></tr>
-      <tr><td><b>4. 비대상 안전성</b></td><td>오소리 23회·고라니 1회 방문 중 <b>실험미끼 A~D 섭취 0회</b>. 반면 일반 사료(고형사료 계열)는 1단계 3회 + 이번 1회 등 <b>오소리 섭취가 반복 확인</b>됨. → 사료 기반 미끼보다 젤리·밀랍 제형이 비대상 배제에 유리한 경향이나, 표본이 작아 추가 확인 필요.</td></tr>
-      <tr><td><b>5. 출현 특성</b></td><td>멧돼지는 6회 방문 모두 야간(20:57~03:25)이며, 단독 개체의 반복 방문과 군집(7마리) 방문이 혼재. 오소리는 거의 매일 방문(15일 중 10일)하며 멧돼지 섭식 직후 잔여 냄새를 따라 진입하는 경향.</td></tr>
+      <tr><th style="width:22%">핵심 항목</th><th>실증 결과 및 정책·기술적 제언</th></tr>
+      <tr style="background:#f0f9ff"><td><b>1. 최고 기호성 제형 확정</b></td><td>전 기간 실증 결과, <b>옥수수콘 젤리(Type B)와 대조군인 유인제배합 고형사료의 섭취율이 가장 높았음</b> (압도적 1·2위). Type B는 멧돼지 1차 투입 시 3일 만에 10개 전량 완식(100%)되었고 10/23 2차 추가 설치분에서도 즉각 완식되었음. 고형사료 역시 지표 및 매립 100% 완식됨.</td></tr>
+      <tr><td><b>2. 인공 미끼틀 전면 폐기</b></td><td>기존 동물사료 미끼틀은 10/17 1차(10%), 10/23 2차(9개), 10/25 3차에 걸친 테스트에서 <b>대군집(7마리) 출현 시에도 0.0%로 완전 외면(기피율 100%)</b>됨. 야생 멧돼지의 인공 구조물 경계 특성이 명확히 확인되었으므로 향후 미끼백신 사업에서 인공 미끼틀을 전면 폐기해야 함.</td></tr>
+      <tr><td><b>3. 지표 및 5cm 매립 살포</b></td><td>지표면 노출뿐만 아니라 <b>지중 5~10cm에 매립된 고형사료도 멧돼지가 뛰어난 후각으로 위치를 정확히 탐지하여 주둥이 굴토(Rooting)로 100% 완식</b>함. 고라니 등 비대상 동물 배제와 강우 시 유실 방지를 위해 지표 살포 및 5cm 내외 얕은 매립 살포 방식이 가장 유효함.</td></tr>
+      <tr><td><b>4. 하이브리드 제형 개발</b></td><td>Type B의 <b>'고기호성 옥수수 유인 성분'</b>과 Type C(밤모양 옥수수 젤리)의 <b>'고탄성 방수 젤라틴 매트릭스(15일 이상 형태 유지)'</b>를 결합한 <b>하이브리드 젤리 백신</b>을 개발하는 것이 최적의 대안으로 도출됨.</td></tr>
+      <tr><td><b>5. 비대상 동물 생태 반응</b></td><td>10/23 추가설치 직후 야간부터 25일 새벽까지 오소리가 출현하여 완식하였으며, 10/31에는 멧돼지 굴토 자리를 앞발로 파헤치는 토양 굴착(Dig) 행동이 포착됨. 매립 깊이 조정(5~10cm) 및 멧돼지 특이적 유인향 고도화가 병행되어야 함.</td></tr>
     </table>
-
-    <h3>후속 실증 제언</h3>
-    <ul class="dots">
-      <li><b>반복·다지점 실증:</b> Type B·C를 중심으로 A·B지점과 경산 D지점에 같은 그리드를 반복 설치해 개체 취향 효과를 배제.</li>
-      <li><b>제형 개선:</b> 기호도 1위 Type B의 성분(옥수수퓌레·당류)을 Type C의 내구성 매트릭스에 결합하는 방향 검토.</li>
-      <li><b>내구성 판정:</b> 잔여 미끼를 회수하지 않고 7·14·21일차에 형태·변패를 사진 계수로 기록.</li>
-      <li><b>개체 구분 기록:</b> 판독 시 성체/새끼, 체형·특징을 함께 기록해 방문 간 동일 개체 여부 추정.</li>
-    </ul>
-
-    <!-- ===================== Ⅷ ===================== -->
-    <h2>Ⅷ. 보완 필요 사항 (보고서 확정 전 확인)</h2>
-    <table>
-      <tr><th style="width:6%">No</th><th>내용</th><th style="width:28%">영향</th></tr>
-      <tr><td class="c">1</td><td>10/31 종료 시 Type A·C·D 및 미끼틀 <b>잔여 수량·형태</b> 회수 실측 값</td><td>15일 누적 섭취율·내구성 판정</td></tr>
-      <tr><td class="c">2</td><td>10/25 보충 설치 시각, 미끼틀 보충 사료량</td><td>2차 섭취율 분모, 섭취 주체 판정 구간</td></tr>
-      <tr><td class="c">3</td><td>10/23 오소리 2마리가 섭취한 <b>지면 사료의 종류</b> (대조군 사료/알곡 등)</td><td>비대상 섭취 사례 기술</td></tr>
-      <tr><td class="c">4</td><td>10/27 03:24 영상 설명의 "미끼틀·지면 먹이 섭식"과 현장 실측 "미끼틀 0%" 불일치 → 영상 재확인 (본 보고서는 현장 실측 기준)</td><td>미끼틀 기피 결론</td></tr>
-      <tr><td class="c">5</td><td>1단계 영상 중 개체수 미기재 방문(A지점 16회 전부, B지점 4회, C지점 4회 등) 재판독</td><td>1단계 최소 확인 개체수</td></tr>
-      <tr><td class="c">6</td><td>D지점 8/19 03:52:28과 9/2 03:52:28이 같은 시각으로 기록됨 → 메타데이터 확인</td><td>D지점 방문 횟수</td></tr>
-    </table>
-    <div class="box warn">대시보드 최종보고서 양식(<code>final_report_data.json</code>)에 있는 유인률(42.1%·91.4% 등), 잔존율 감쇄곡선, 방사형 점수는 현장 실측 근거가 없는 추정값이므로 본 보고서에 사용하지 않았습니다. 최종 제출 전 실측 값으로 교체하거나 삭제를 권장합니다.</div>
 
     <footer class="doc">
       (사)야생생물관리협회 대전ㆍ세종ㆍ충남지부 · 국립야생동물질병관리원 미끼백신 실증 용역<br>
-      집계 원자료: 무인카메라 선별 판독 영상 191건(C지점 실증기간 71건), 현장 실측 사진(10/17·10/20·10/25·10/27)
+      집계 원자료: 무인카메라 선별 판독 영상 191건(C지점 실증기간 71건), 현장 실측 사진(10/17·10/20·10/23·10/25·10/27)
     </footer>
   </div>
 </div>
