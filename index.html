@@ -42,7 +42,7 @@
           야생 멧돼지 미끼백신 섭취 모니터링 시스템
           <span class="data-range-badge" id="header-data-range-badge" title="데이터 갱신 시 자동 반영되는 실측 데이터 기간">
             <i class="fa-solid fa-calendar-check" style="color: #34d399;"></i>
-            <span id="data-range-text">2026.07.01 ~ 2026.10.17 데이터 반영</span>
+            <span id="data-range-text">2026.07.01 ~ 2026.10.31 데이터 반영</span>
           </span>
           <small>국립야생동물질병관리원 · (사)야생생물관리협회</small>
         </h1>
@@ -65,6 +65,10 @@
       <button id="btn-open-final-report" class="btn-action primary" style="background: linear-gradient(135deg, #4f46e5, #4338ca); border-color: #818cf8; box-shadow: 0 0 10px rgba(129,140,248,0.35);" title="2026년도 사업 종료 최종보고서 양식 및 차세대 4대 제형 4×4 교차실증 집계">
         <i class="fa-solid fa-file-contract text-cyan"></i> <span>최종보고서 양식</span>
       </button>
+
+      <a href="bait_test_result_report.html" target="_blank" class="btn-action emerald" style="background: linear-gradient(135deg, #059669, #047857); border-color: #34d399; box-shadow: 0 0 10px rgba(52,211,153,0.3); text-decoration: none; display: inline-flex; align-items: center; gap: 6px;" title="10/17~10/31 미끼 유형별 실증 및 기호도조사 실증결과 최종보고서 (웹 열람 / A4 인쇄 / PDF 저장)">
+        <i class="fa-solid fa-file-shield" style="color: #6ee7b7;"></i> <span>실증결과 보고서</span>
+      </a>
 
       <button id="btn-open-photo-gallery" class="btn-action secondary" title="날짜별 현장 점검 사진 갤러리 열기">
         <i class="fa-solid fa-images text-cyan"></i> <span>현장 사진</span>
@@ -193,28 +197,55 @@
       <!-- Two Experimental Bait Frames Info Card -->
       <div class="sidebar-section">
         <div class="section-title">
-          <i class="fa-solid fa-cubes-stacked"></i> 실험 미끼 실물 & 차세대 4대 제형
+          <i class="fa-solid fa-cubes-stacked"></i> 「미끼 유형별 실증」 6종 체계 및 실증 결과
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-          <!-- Bait 1: 멧돼지미끼틀 -->
-          <div style="background: rgba(6, 9, 14, 0.7); padding: 8px; border-radius: var(--radius-sm); border: 1px solid rgba(56, 189, 248, 0.3); display: flex; flex-direction: column; gap: 6px;">
-            <img src="assets/photos/미끼틀_실물사진.jpg" alt="멧돼지미끼틀 실물 사진" style="width: 100%; height: 74px; object-fit: cover; border-radius: 4px; border: 1px solid var(--hud-cyan);">
+          <!-- Bait 1: Type B 옥수수콘 젤리 (1위) -->
+          <div style="background: rgba(6, 9, 14, 0.7); padding: 7px; border-radius: var(--radius-sm); border: 1px solid rgba(56, 189, 248, 0.4); display: flex; flex-direction: column; gap: 5px;">
+            <img src="assets/images/baits/bait_type_b.jpg" alt="Type B 옥수수콘 젤리" style="width: 100%; height: 68px; object-fit: cover; border-radius: 4px; border: 1px solid var(--hud-cyan);">
             <div style="font-size: 0.72rem; line-height: 1.3;">
-              <b style="color: #38bdf8;">① 멧돼지미끼틀</b><br>
-              <span style="color: #94a3b8; font-size: 0.67rem;">동물사료를 틀 형태로 굳혀서 제작</span>
+              <b style="color: #38bdf8;">🥇 Type B (옥수수콘 젤리)</b><br>
+              <span style="color: #34d399; font-size: 0.67rem; font-weight: 700;">섭취율 100% (1위 완식)</span>
             </div>
           </div>
-          <!-- Bait 2: 유인제배합 고형사료 -->
-          <div style="background: rgba(6, 9, 14, 0.7); padding: 8px; border-radius: var(--radius-sm); border: 1px solid rgba(251, 191, 36, 0.3); display: flex; flex-direction: column; gap: 6px;">
-            <img src="assets/photos/고형사료_실물사진.jpg" alt="유인제배합 고형사료 실물 사진" style="width: 100%; height: 74px; object-fit: cover; border-radius: 4px; border: 1px solid #fbbf24;">
+          <!-- Bait 2: 대조군 고형사료 (1위) -->
+          <div style="background: rgba(6, 9, 14, 0.7); padding: 7px; border-radius: var(--radius-sm); border: 1px solid rgba(251, 191, 36, 0.4); display: flex; flex-direction: column; gap: 5px;">
+            <img src="assets/photos/고형사료_실물사진.jpg" alt="유인제배합 고형사료" style="width: 100%; height: 68px; object-fit: cover; border-radius: 4px; border: 1px solid #fbbf24;">
             <div style="font-size: 0.72rem; line-height: 1.3;">
-              <b style="color: #fbbf24;">② 유인제배합 고형사료</b><br>
-              <span style="color: #94a3b8; font-size: 0.67rem;">멧돼지 유인제를 배합하여 굳힌 사료</span>
+              <b style="color: #fbbf24;">🥇 대조군 고형사료</b><br>
+              <span style="color: #34d399; font-size: 0.67rem; font-weight: 700;">지표·매립 100% 굴토 완식</span>
             </div>
           </div>
         </div>
+        <!-- 4 Sub Types Pills -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin-top: 6px;">
+          <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; padding: 3px; text-align: center; font-size: 0.62rem;">
+            <span style="color: #fbbf24; font-weight: 700;">Type A</span><br><span style="color: #94a3b8;">밀랍형 10%</span>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; padding: 3px; text-align: center; font-size: 0.62rem;">
+            <span style="color: #34d399; font-weight: 700;">Type C</span><br><span style="color: #94a3b8;">밤모양 30%</span>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; padding: 3px; text-align: center; font-size: 0.62rem;">
+            <span style="color: #c084fc; font-weight: 700;">Type D</span><br><span style="color: #94a3b8;">과일바 10%</span>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; padding: 3px; text-align: center; font-size: 0.62rem;">
+            <span style="color: #f87171; font-weight: 700;">미끼틀</span><br><span style="color: #94a3b8;">외면 0%</span>
+          </div>
+        </div>
+        <!-- Status & Report Link Pill -->
         <div style="margin-top: 6px; padding: 6px 8px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 4px; font-size: 0.68rem; color: #cbd5e1; line-height: 1.35;">
-          <b style="color: #34d399;">[10/17 C지점 5종 비교실증 설치완료]</b> 차세대 4종(Type A 옥수수사료·B 옥수수젤리·C 밤모양젤리·D 과일향젤리) + 대조군 2주간 실증 진행 중
+          <b style="color: #34d399;">[10/17~10/31 실증 완료]</b> 옥수수콘 젤리(B) & 대조군 고형사료 100% 완식(1위) vs 미끼틀 0% 외면
+          <div style="margin-top: 4px; display: flex; gap: 4px;">
+            <a href="bait_test_result_report.html" target="_blank" style="flex: 1; text-align: center; background: #0284c7; color: #fff; padding: 3px 0; border-radius: 3px; text-decoration: none; font-weight: 700; font-size: 0.65rem;">
+              <i class="fa-solid fa-file-lines"></i> 웹 보고서
+            </a>
+            <a href="assets/documents/2026_야생멧돼지_미끼실험_실증결과보고서.hwpx" download style="flex: 1; text-align: center; background: rgba(56, 189, 248, 0.2); border: 1px solid #38bdf8; color: #38bdf8; padding: 3px 0; border-radius: 3px; text-decoration: none; font-weight: 700; font-size: 0.65rem;">
+              <i class="fa-solid fa-download"></i> 한글 HWPX
+            </a>
+            <a href="assets/documents/2026_야생멧돼지_미끼실험_실증결과보고서.docx" download style="flex: 1; text-align: center; background: rgba(56, 189, 248, 0.2); border: 1px solid #38bdf8; color: #38bdf8; padding: 3px 0; border-radius: 3px; text-decoration: none; font-weight: 700; font-size: 0.65rem;">
+              <i class="fa-solid fa-download"></i> 워드 DOCX
+            </a>
+          </div>
         </div>
       </div>
 
